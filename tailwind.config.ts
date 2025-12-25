@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        serif: ["Cormorant Garamond", "Georgia", "serif"],
+        sans: ["Space Grotesk", "system-ui", "sans-serif"],
+        display: ["Syne", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -62,14 +62,15 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         kaya: {
-          navy: "hsl(var(--kaya-navy))",
-          "navy-light": "hsl(var(--kaya-navy-light))",
-          "navy-dark": "hsl(var(--kaya-navy-dark))",
+          dark: "hsl(var(--kaya-dark))",
+          "dark-elevated": "hsl(var(--kaya-dark-elevated))",
+          "dark-surface": "hsl(var(--kaya-dark-surface))",
+          cyan: "hsl(var(--kaya-cyan))",
+          "cyan-glow": "hsl(var(--kaya-cyan-glow))",
+          magenta: "hsl(var(--kaya-magenta))",
+          "magenta-soft": "hsl(var(--kaya-magenta-soft))",
           gold: "hsl(var(--kaya-gold))",
-          "gold-light": "hsl(var(--kaya-gold-light))",
-          cream: "hsl(var(--kaya-cream))",
-          "cream-dark": "hsl(var(--kaya-cream-dark))",
-          teal: "hsl(var(--kaya-teal))",
+          purple: "hsl(var(--kaya-purple))",
         },
       },
       borderRadius: {
@@ -106,6 +107,15 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "glow-pulse": {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(175 85% 50% / 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(175 85% 50% / 0.5)" },
+        },
+        "border-rotate": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -115,6 +125,8 @@ export default {
         "slide-in-right": "slide-in-right 0.6s ease-out forwards",
         "scale-up": "scale-up 0.4s ease-out forwards",
         float: "float 3s ease-in-out infinite",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
+        "border-rotate": "border-rotate 4s ease infinite",
       },
     },
   },
