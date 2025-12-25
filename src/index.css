@@ -2,84 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
 
-/* Kaya Dental - Bold & Modern Dark Theme */
+/* Kaya Dental - Luxury Spa Theme */
 
 @layer base {
   :root {
-    /* Dark Base - Deep Charcoal */
-    --background: 240 10% 6%;
-    --foreground: 0 0% 98%;
+    /* Warm Cream Base */
+    --background: 40 30% 98%;
+    --foreground: 30 20% 15%;
 
-    /* Cards - Elevated Dark */
-    --card: 240 10% 10%;
-    --card-foreground: 0 0% 98%;
+    /* Cards - Soft White */
+    --card: 0 0% 100%;
+    --card-foreground: 30 20% 15%;
 
-    --popover: 240 10% 10%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 20% 15%;
 
-    /* Primary - Electric Cyan */
-    --primary: 175 85% 50%;
-    --primary-foreground: 240 10% 6%;
+    /* Primary - Rich Gold */
+    --primary: 38 65% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Dark Surface */
-    --secondary: 240 10% 14%;
-    --secondary-foreground: 0 0% 98%;
+    /* Secondary - Warm Cream */
+    --secondary: 40 25% 94%;
+    --secondary-foreground: 30 20% 20%;
 
-    /* Muted - Subtle Gray */
-    --muted: 240 10% 18%;
-    --muted-foreground: 240 5% 60%;
+    /* Muted - Soft Taupe */
+    --muted: 35 15% 90%;
+    --muted-foreground: 30 15% 45%;
 
-    /* Accent - Vibrant Magenta */
-    --accent: 325 80% 60%;
+    /* Accent - Rose Gold */
+    --accent: 15 50% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 10% 20%;
-    --input: 240 10% 20%;
-    --ring: 175 85% 50%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 38 65% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Custom Kaya Bold Colors */
-    --kaya-dark: 240 10% 6%;
-    --kaya-dark-elevated: 240 10% 10%;
-    --kaya-dark-surface: 240 10% 14%;
-    --kaya-cyan: 175 85% 50%;
-    --kaya-cyan-glow: 175 85% 60%;
-    --kaya-magenta: 325 80% 60%;
-    --kaya-magenta-soft: 325 60% 70%;
-    --kaya-gold: 45 90% 55%;
-    --kaya-purple: 270 70% 60%;
+    /* Custom Luxury Colors */
+    --kaya-gold: 38 65% 50%;
+    --kaya-gold-light: 42 60% 65%;
+    --kaya-gold-dark: 35 70% 40%;
+    --kaya-champagne: 40 40% 85%;
+    --kaya-cream: 40 30% 96%;
+    --kaya-ivory: 45 30% 98%;
+    --kaya-rose: 15 50% 60%;
+    --kaya-sage: 140 20% 60%;
+    --kaya-charcoal: 30 20% 20%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(240 10% 6%) 0%, hsl(240 10% 12%) 100%);
-    --gradient-cyan: linear-gradient(135deg, hsl(175 85% 50%) 0%, hsl(190 80% 45%) 100%);
-    --gradient-magenta: linear-gradient(135deg, hsl(325 80% 60%) 0%, hsl(280 70% 55%) 100%);
-    --gradient-mesh: radial-gradient(ellipse at 20% 20%, hsl(175 85% 50% / 0.15) 0%, transparent 50%),
-                     radial-gradient(ellipse at 80% 80%, hsl(325 80% 60% / 0.15) 0%, transparent 50%),
-                     radial-gradient(ellipse at 60% 40%, hsl(270 70% 60% / 0.1) 0%, transparent 50%);
-    --gradient-card: linear-gradient(145deg, hsl(240 10% 12%) 0%, hsl(240 10% 8%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(38 65% 50%) 0%, hsl(42 60% 60%) 100%);
+    --gradient-cream: linear-gradient(180deg, hsl(40 30% 98%) 0%, hsl(40 25% 94%) 100%);
+    --gradient-shimmer: linear-gradient(110deg, transparent 25%, hsl(38 65% 50% / 0.1) 50%, transparent 75%);
+    --gradient-warm: linear-gradient(135deg, hsl(40 30% 98%) 0%, hsl(35 25% 95%) 50%, hsl(40 20% 97%) 100%);
 
-    /* Shadows & Glows */
-    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.5);
-    --shadow-medium: 0 8px 30px -8px hsl(0 0% 0% / 0.6);
-    --shadow-card: 0 2px 15px -3px hsl(0 0% 0% / 0.4);
-    --glow-cyan: 0 0 40px hsl(175 85% 50% / 0.3);
-    --glow-magenta: 0 0 40px hsl(325 80% 60% / 0.3);
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(30 20% 20% / 0.08);
+    --shadow-medium: 0 8px 30px -8px hsl(30 20% 20% / 0.12);
+    --shadow-card: 0 2px 15px -3px hsl(30 20% 20% / 0.06);
+    --shadow-gold: 0 4px 25px -4px hsl(38 65% 50% / 0.25);
+    --shadow-elegant: 0 20px 50px -15px hsl(30 20% 20% / 0.1);
 
     /* Sidebar */
-    --sidebar-background: 240 10% 8%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 175 85% 50%;
-    --sidebar-primary-foreground: 240 10% 6%;
-    --sidebar-accent: 325 80% 60%;
+    --sidebar-background: 30 20% 15%;
+    --sidebar-foreground: 40 30% 96%;
+    --sidebar-primary: 38 65% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 15 50% 60%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 240 10% 20%;
-    --sidebar-ring: 175 85% 50%;
+    --sidebar-border: 30 15% 25%;
+    --sidebar-ring: 38 65% 50%;
   }
 }
 
@@ -93,47 +90,41 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    background-image: var(--gradient-mesh);
+    @apply bg-background text-foreground font-body antialiased;
+    background: var(--gradient-warm);
     background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-bold tracking-tight;
+    @apply font-display font-medium tracking-tight;
   }
 }
 
 @layer components {
   /* Text Gradients */
-  .text-gradient-cyan {
-    @apply bg-gradient-to-r from-kaya-cyan to-kaya-cyan-glow bg-clip-text text-transparent;
-  }
-
-  .text-gradient-magenta {
-    @apply bg-gradient-to-r from-kaya-magenta to-kaya-purple bg-clip-text text-transparent;
-  }
-
-  .text-gradient-multi {
-    background: linear-gradient(135deg, hsl(175 85% 50%), hsl(270 70% 60%), hsl(325 80% 60%));
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(38 65% 50%), hsl(42 60% 60%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  /* Background Gradients */
-  .bg-gradient-hero {
-    background: var(--gradient-hero);
+  /* Background Utilities */
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
   }
 
-  .bg-gradient-card {
-    background: var(--gradient-card);
+  .bg-gradient-cream {
+    background: var(--gradient-cream);
   }
 
-  .bg-gradient-mesh {
-    background-image: var(--gradient-mesh);
+  .bg-shimmer {
+    background: var(--gradient-shimmer);
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
   }
 
-  /* Shadows & Glows */
+  /* Shadows */
   .shadow-soft {
     box-shadow: var(--shadow-soft);
   }
@@ -146,78 +137,66 @@
     box-shadow: var(--shadow-card);
   }
 
-  .glow-cyan {
-    box-shadow: var(--glow-cyan);
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
   }
 
-  .glow-magenta {
-    box-shadow: var(--glow-magenta);
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
   }
 
-  /* Geometric Patterns */
-  .pattern-grid {
-    background-image: 
-      linear-gradient(hsl(240 10% 15%) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(240 10% 15%) 1px, transparent 1px);
-    background-size: 50px 50px;
+  /* Luxury Card Styles */
+  .luxury-card {
+    @apply bg-card rounded-lg shadow-card border border-border/50;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .pattern-dots {
-    background-image: radial-gradient(circle, hsl(175 85% 50% / 0.15) 1px, transparent 1px);
-    background-size: 30px 30px;
+  .luxury-card:hover {
+    @apply shadow-elegant;
+    transform: translateY(-4px);
   }
 
-  /* Glassmorphism */
-  .glass {
-    @apply bg-card/50 backdrop-blur-xl border border-border/50;
+  /* Gold Accent Line */
+  .gold-line {
+    @apply h-px bg-gradient-to-r from-transparent via-primary to-transparent;
   }
 
-  .glass-dark {
-    @apply bg-background/80 backdrop-blur-xl border border-border/30;
+  .gold-line-vertical {
+    @apply w-px bg-gradient-to-b from-transparent via-primary to-transparent;
   }
 
-  /* Animated Border */
-  .border-gradient {
+  /* Elegant Borders */
+  .border-elegant {
+    @apply border border-primary/20;
+  }
+
+  /* Ornamental Decorations */
+  .ornament {
     position: relative;
-    background: linear-gradient(var(--background), var(--background)) padding-box,
-                linear-gradient(135deg, hsl(175 85% 50%), hsl(325 80% 60%)) border-box;
-    border: 2px solid transparent;
   }
 
-  /* Neon Text */
-  .neon-cyan {
-    text-shadow: 0 0 10px hsl(175 85% 50% / 0.5),
-                 0 0 20px hsl(175 85% 50% / 0.3),
-                 0 0 40px hsl(175 85% 50% / 0.2);
-  }
-
-  .neon-magenta {
-    text-shadow: 0 0 10px hsl(325 80% 60% / 0.5),
-                 0 0 20px hsl(325 80% 60% / 0.3),
-                 0 0 40px hsl(325 80% 60% / 0.2);
+  .ornament::before,
+  .ornament::after {
+    content: '✦';
+    @apply text-primary/40 mx-3;
   }
 }
 
 @layer utilities {
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeIn 0.8s ease-out forwards;
   }
 
   .animate-slide-up {
-    animation: slideUp 0.6s ease-out forwards;
+    animation: slideUp 0.8s ease-out forwards;
   }
 
   .animate-scale-in {
-    animation: scaleIn 0.4s ease-out forwards;
+    animation: scaleIn 0.5s ease-out forwards;
   }
 
-  .animate-glow-pulse {
-    animation: glowPulse 2s ease-in-out infinite;
-  }
-
-  .animate-gradient {
-    animation: gradientShift 8s ease infinite;
-    background-size: 200% 200%;
+  .animate-shimmer {
+    animation: shimmer 3s ease-in-out infinite;
   }
 
   @keyframes fadeIn {
@@ -232,7 +211,7 @@
   @keyframes slideUp {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
@@ -251,21 +230,21 @@
     }
   }
 
-  @keyframes glowPulse {
-    0%, 100% {
-      box-shadow: 0 0 20px hsl(175 85% 50% / 0.3);
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
     }
-    50% {
-      box-shadow: 0 0 40px hsl(175 85% 50% / 0.5);
+    100% {
+      background-position: 200% 0;
     }
   }
 
-  @keyframes gradientShift {
+  @keyframes float {
     0%, 100% {
-      background-position: 0% 50%;
+      transform: translateY(0);
     }
     50% {
-      background-position: 100% 50%;
+      transform: translateY(-10px);
     }
   }
 }
