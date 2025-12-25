@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Clock, MapPin, ChevronDown, Sparkles } from 'lucide-react';
+import { Menu, X, Phone, Clock, MapPin, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 import kayaLogo from '@/assets/kaya-logo.png';
@@ -51,21 +51,21 @@ export function Header() {
   return (
     <>
       {/* Top Bar */}
-      <div className="hidden lg:block bg-secondary border-b border-border py-2">
+      <div className="hidden lg:block bg-kaya-charcoal text-kaya-cream py-2.5">
         <div className="container flex items-center justify-between text-sm">
-          <div className="flex items-center gap-6">
-            <a href="tel:978-534-4000" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+          <div className="flex items-center gap-8">
+            <a href="tel:978-534-4000" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Phone className="w-4 h-4 text-primary" />
-              <span>(978) 534-4000</span>
+              <span className="font-sans tracking-wide">(978) 534-4000</span>
             </a>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <MapPin className="w-4 h-4 text-accent" />
-              <span>130 N Main St Suite 1, Leominster, MA 01453</span>
+            <div className="flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-primary" />
+              <span className="font-sans tracking-wide">130 N Main St Suite 1, Leominster, MA 01453</span>
             </div>
           </div>
-          <div className="flex items-center gap-2 text-muted-foreground">
+          <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-primary" />
-            <span>Mon-Fri: 8AM-5PM | Sat: By Appointment</span>
+            <span className="font-sans tracking-wide">Mon-Fri: 8AM-5PM | Sat: By Appointment</span>
           </div>
         </div>
       </div>
@@ -74,18 +74,21 @@ export function Header() {
       <header
         className={`sticky top-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? 'glass-dark shadow-medium'
-            : 'bg-background/50 backdrop-blur-sm'
+            ? 'bg-card/95 backdrop-blur-md shadow-soft py-2'
+            : 'bg-card/80 backdrop-blur-sm py-4'
         }`}
       >
+        {/* Gold accent line */}
+        <div className="absolute bottom-0 left-0 right-0 gold-line" />
+
         <div className="container">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0 group">
               <img
                 src={kayaLogo}
                 alt="Kaya Dental - Redefining Comfort & Aesthetics"
-                className="h-14 w-auto brightness-0 invert group-hover:scale-105 transition-transform"
+                className="h-16 w-auto group-hover:scale-105 transition-transform duration-300"
               />
             </Link>
 
@@ -100,7 +103,7 @@ export function Header() {
                 >
                   <Link
                     to={item.path}
-                    className={`flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-secondary ${
+                    className={`flex items-center gap-1 px-4 py-2 text-sm font-sans font-medium tracking-wide transition-colors ${
                       location.pathname === item.path || location.pathname.startsWith(item.path + '/')
                         ? 'text-primary'
                         : 'text-foreground hover:text-primary'
@@ -118,13 +121,13 @@ export function Header() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 w-56 glass rounded-xl shadow-medium border border-border py-2 mt-1"
+                        className="absolute top-full left-0 w-56 bg-card rounded-lg shadow-elegant border border-border py-2 mt-2"
                       >
                         {item.children.map((child) => (
                           <Link
                             key={child.name}
                             to={child.path}
-                            className="block px-4 py-2.5 text-sm hover:bg-secondary hover:text-primary transition-colors"
+                            className="block px-5 py-2.5 text-sm font-sans hover:bg-secondary hover:text-primary transition-colors"
                           >
                             {child.name}
                           </Link>
@@ -140,12 +143,11 @@ export function Header() {
             <div className="hidden lg:flex items-center gap-4">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold glow-cyan"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans font-medium tracking-wide shadow-gold"
                 asChild
               >
                 <a href="tel:978-534-4000">
-                  <Sparkles className="w-4 h-4 mr-2" />
-                  Book Now
+                  Schedule Your Visit
                 </a>
               </Button>
             </div>
@@ -169,14 +171,14 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="fixed inset-x-0 top-20 z-40 glass-dark border-b border-border xl:hidden overflow-hidden"
+            className="fixed inset-x-0 top-[72px] z-40 bg-card border-b border-border xl:hidden overflow-hidden shadow-elegant"
           >
-            <nav className="container py-4">
+            <nav className="container py-6">
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <Link
                     to={item.path}
-                    className={`block py-3 text-base font-medium border-b border-border/50 ${
+                    className={`block py-3 text-base font-body border-b border-border/50 ${
                       location.pathname === item.path ? 'text-primary' : 'text-foreground'
                     }`}
                   >
@@ -184,18 +186,17 @@ export function Header() {
                   </Link>
                 </div>
               ))}
-              <div className="pt-4 space-y-3">
+              <div className="pt-6 space-y-4">
                 <a
                   href="tel:978-534-4000"
                   className="flex items-center gap-2 text-foreground hover:text-primary"
                 >
                   <Phone className="w-5 h-5 text-primary" />
-                  (978) 534-4000
+                  <span className="font-sans">(978) 534-4000</span>
                 </a>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold" size="lg" asChild>
+                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-sans shadow-gold" size="lg" asChild>
                   <a href="tel:978-534-4000">
-                    <Sparkles className="w-4 h-4 mr-2" />
-                    Book Appointment
+                    Schedule Your Visit
                   </a>
                 </Button>
               </div>

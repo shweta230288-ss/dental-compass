@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Star, Quote, Sparkles } from 'lucide-react';
+import { Star, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -28,67 +28,63 @@ export function ReviewsPreview() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-24 relative overflow-hidden" ref={ref}>
-      {/* Background */}
-      <div className="absolute inset-0 bg-secondary/50" />
-      <div className="absolute inset-0 pattern-dots opacity-20" />
+    <section className="py-24 bg-secondary relative overflow-hidden" ref={ref}>
+      {/* Decorative Lines */}
+      <div className="absolute top-0 left-0 right-0 gold-line" />
+      <div className="absolute bottom-0 left-0 right-0 gold-line" />
 
       <div className="container relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-kaya-gold/10 border border-kaya-gold/30 text-kaya-gold rounded-full text-sm font-medium mb-4">
-            <Sparkles className="w-4 h-4" />
-            Patient Reviews
+          <span className="text-primary font-sans text-sm uppercase tracking-[0.3em] mb-4 block">
+            Patient Testimonials
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-            What Our Patients{' '}
-            <span className="text-gradient-multi">Say</span>
+          <h2 className="font-display text-4xl md:text-5xl font-medium text-foreground mb-6">
+            What Our <span className="text-gradient-gold italic">Patients Say</span>
           </h2>
           <div className="flex items-center justify-center gap-2 mb-4">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-7 h-7 fill-kaya-gold text-kaya-gold" />
+              <Star key={i} className="w-6 h-6 fill-primary text-primary" />
             ))}
           </div>
-          <p className="text-muted-foreground text-lg">
-            Over <span className="text-primary font-bold">3,400+</span> five-star reviews on Google
+          <p className="text-muted-foreground font-body">
+            Over <span className="text-primary font-medium">3,400+</span> five-star reviews on Google
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {reviews.map((review, index) => (
             <motion.div
               key={review.name}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass p-8 rounded-2xl relative group hover:border-primary/30 transition-all duration-500"
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="luxury-card p-8 relative"
             >
               {/* Quote Icon */}
-              <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/10 group-hover:text-primary/20 transition-colors" />
+              <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/10" />
               
               {/* Stars */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-5">
                 {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-kaya-gold text-kaya-gold" />
+                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
                 ))}
               </div>
               
               {/* Review Text */}
-              <p className="text-foreground mb-6 leading-relaxed">
+              <p className="text-foreground font-body mb-6 leading-relaxed italic">
                 "{review.text}"
               </p>
               
+              {/* Divider */}
+              <div className="w-12 h-px bg-gradient-gold mb-4" />
+              
               {/* Author */}
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-primary-foreground font-bold">
-                  {review.name.charAt(0)}
-                </div>
-                <p className="font-display font-bold text-foreground">{review.name}</p>
-              </div>
+              <p className="font-display font-medium text-foreground">{review.name}</p>
             </motion.div>
           ))}
         </div>
@@ -96,12 +92,12 @@ export function ReviewsPreview() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center"
         >
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold glow-cyan"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans tracking-wide shadow-gold"
             asChild
           >
             <Link to="/reviews">Read All Reviews</Link>
