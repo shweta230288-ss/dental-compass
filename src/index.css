@@ -2,109 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
-/* Kaya Dental Design System - Navy Blue, White, Gold */
+/* Kaya Dental - Bold & Modern Dark Theme */
 
 @layer base {
   :root {
-    /* Primary Navy Blue Palette */
-    --background: 0 0% 100%;
-    --foreground: 210 50% 15%;
+    /* Dark Base - Deep Charcoal */
+    --background: 240 10% 6%;
+    --foreground: 0 0% 98%;
 
-    /* Cards and surfaces */
-    --card: 0 0% 100%;
-    --card-foreground: 210 50% 15%;
+    /* Cards - Elevated Dark */
+    --card: 240 10% 10%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 50% 15%;
+    --popover: 240 10% 10%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Primary - Deep Navy */
-    --primary: 210 50% 20%;
-    --primary-foreground: 0 0% 98%;
+    /* Primary - Electric Cyan */
+    --primary: 175 85% 50%;
+    --primary-foreground: 240 10% 6%;
 
-    /* Secondary - Soft Cream */
-    --secondary: 45 30% 96%;
-    --secondary-foreground: 210 50% 20%;
+    /* Secondary - Dark Surface */
+    --secondary: 240 10% 14%;
+    --secondary-foreground: 0 0% 98%;
 
-    /* Muted - Light Gray */
-    --muted: 210 20% 96%;
-    --muted-foreground: 210 20% 45%;
+    /* Muted - Subtle Gray */
+    --muted: 240 10% 18%;
+    --muted-foreground: 240 5% 60%;
 
-    /* Accent - Warm Gold */
-    --accent: 38 70% 50%;
+    /* Accent - Vibrant Magenta */
+    --accent: 325 80% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 210 50% 20%;
-
-    --radius: 0.5rem;
-
-    /* Custom Kaya Colors */
-    --kaya-navy: 210 50% 20%;
-    --kaya-navy-light: 210 40% 35%;
-    --kaya-navy-dark: 210 55% 12%;
-    --kaya-gold: 38 70% 50%;
-    --kaya-gold-light: 40 60% 70%;
-    --kaya-cream: 45 30% 96%;
-    --kaya-cream-dark: 40 20% 92%;
-    --kaya-teal: 180 30% 45%;
-
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(210 50% 20%) 0%, hsl(210 55% 12%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(38 70% 50%) 0%, hsl(35 80% 55%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(45 30% 98%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
-
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(210 50% 20% / 0.1);
-    --shadow-medium: 0 8px 30px -8px hsl(210 50% 20% / 0.15);
-    --shadow-card: 0 2px 15px -3px hsl(210 50% 20% / 0.08);
-    --shadow-gold: 0 4px 20px -4px hsl(38 70% 50% / 0.3);
-
-    /* Sidebar */
-    --sidebar-background: 210 50% 20%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 38 70% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 40% 30%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 210 40% 30%;
-    --sidebar-ring: 38 70% 50%;
-  }
-
-  .dark {
-    --background: 210 55% 8%;
-    --foreground: 0 0% 98%;
-
-    --card: 210 50% 12%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 210 50% 12%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 38 70% 50%;
-    --primary-foreground: 210 55% 10%;
-
-    --secondary: 210 40% 20%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 210 40% 18%;
-    --muted-foreground: 210 20% 65%;
-
-    --accent: 38 70% 50%;
-    --accent-foreground: 210 55% 10%;
-
-    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 210 40% 20%;
-    --input: 210 40% 20%;
-    --ring: 38 70% 50%;
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 175 85% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom Kaya Bold Colors */
+    --kaya-dark: 240 10% 6%;
+    --kaya-dark-elevated: 240 10% 10%;
+    --kaya-dark-surface: 240 10% 14%;
+    --kaya-cyan: 175 85% 50%;
+    --kaya-cyan-glow: 175 85% 60%;
+    --kaya-magenta: 325 80% 60%;
+    --kaya-magenta-soft: 325 60% 70%;
+    --kaya-gold: 45 90% 55%;
+    --kaya-purple: 270 70% 60%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 6%) 0%, hsl(240 10% 12%) 100%);
+    --gradient-cyan: linear-gradient(135deg, hsl(175 85% 50%) 0%, hsl(190 80% 45%) 100%);
+    --gradient-magenta: linear-gradient(135deg, hsl(325 80% 60%) 0%, hsl(280 70% 55%) 100%);
+    --gradient-mesh: radial-gradient(ellipse at 20% 20%, hsl(175 85% 50% / 0.15) 0%, transparent 50%),
+                     radial-gradient(ellipse at 80% 80%, hsl(325 80% 60% / 0.15) 0%, transparent 50%),
+                     radial-gradient(ellipse at 60% 40%, hsl(270 70% 60% / 0.1) 0%, transparent 50%);
+    --gradient-card: linear-gradient(145deg, hsl(240 10% 12%) 0%, hsl(240 10% 8%) 100%);
+
+    /* Shadows & Glows */
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.5);
+    --shadow-medium: 0 8px 30px -8px hsl(0 0% 0% / 0.6);
+    --shadow-card: 0 2px 15px -3px hsl(0 0% 0% / 0.4);
+    --glow-cyan: 0 0 40px hsl(175 85% 50% / 0.3);
+    --glow-magenta: 0 0 40px hsl(325 80% 60% / 0.3);
+
+    /* Sidebar */
+    --sidebar-background: 240 10% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 175 85% 50%;
+    --sidebar-primary-foreground: 240 10% 6%;
+    --sidebar-accent: 325 80% 60%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 10% 20%;
+    --sidebar-ring: 175 85% 50%;
   }
 }
 
@@ -119,18 +94,33 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    background-image: var(--gradient-mesh);
+    background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-display font-bold tracking-tight;
   }
 }
 
 @layer components {
-  .text-gradient-gold {
-    @apply bg-gradient-to-r from-kaya-gold to-kaya-gold-light bg-clip-text text-transparent;
+  /* Text Gradients */
+  .text-gradient-cyan {
+    @apply bg-gradient-to-r from-kaya-cyan to-kaya-cyan-glow bg-clip-text text-transparent;
   }
 
+  .text-gradient-magenta {
+    @apply bg-gradient-to-r from-kaya-magenta to-kaya-purple bg-clip-text text-transparent;
+  }
+
+  .text-gradient-multi {
+    background: linear-gradient(135deg, hsl(175 85% 50%), hsl(270 70% 60%), hsl(325 80% 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Background Gradients */
   .bg-gradient-hero {
     background: var(--gradient-hero);
   }
@@ -139,6 +129,11 @@
     background: var(--gradient-card);
   }
 
+  .bg-gradient-mesh {
+    background-image: var(--gradient-mesh);
+  }
+
+  /* Shadows & Glows */
   .shadow-soft {
     box-shadow: var(--shadow-soft);
   }
@@ -151,8 +146,55 @@
     box-shadow: var(--shadow-card);
   }
 
-  .shadow-gold {
-    box-shadow: var(--shadow-gold);
+  .glow-cyan {
+    box-shadow: var(--glow-cyan);
+  }
+
+  .glow-magenta {
+    box-shadow: var(--glow-magenta);
+  }
+
+  /* Geometric Patterns */
+  .pattern-grid {
+    background-image: 
+      linear-gradient(hsl(240 10% 15%) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(240 10% 15%) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .pattern-dots {
+    background-image: radial-gradient(circle, hsl(175 85% 50% / 0.15) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  /* Glassmorphism */
+  .glass {
+    @apply bg-card/50 backdrop-blur-xl border border-border/50;
+  }
+
+  .glass-dark {
+    @apply bg-background/80 backdrop-blur-xl border border-border/30;
+  }
+
+  /* Animated Border */
+  .border-gradient {
+    position: relative;
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+                linear-gradient(135deg, hsl(175 85% 50%), hsl(325 80% 60%)) border-box;
+    border: 2px solid transparent;
+  }
+
+  /* Neon Text */
+  .neon-cyan {
+    text-shadow: 0 0 10px hsl(175 85% 50% / 0.5),
+                 0 0 20px hsl(175 85% 50% / 0.3),
+                 0 0 40px hsl(175 85% 50% / 0.2);
+  }
+
+  .neon-magenta {
+    text-shadow: 0 0 10px hsl(325 80% 60% / 0.5),
+                 0 0 20px hsl(325 80% 60% / 0.3),
+                 0 0 40px hsl(325 80% 60% / 0.2);
   }
 }
 
@@ -167,6 +209,15 @@
 
   .animate-scale-in {
     animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .animate-glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite;
+  }
+
+  .animate-gradient {
+    animation: gradientShift 8s ease infinite;
+    background-size: 200% 200%;
   }
 
   @keyframes fadeIn {
@@ -197,6 +248,24 @@
     to {
       opacity: 1;
       transform: scale(1);
+    }
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(175 85% 50% / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(175 85% 50% / 0.5);
+    }
+  }
+
+  @keyframes gradientShift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
     }
   }
 }
