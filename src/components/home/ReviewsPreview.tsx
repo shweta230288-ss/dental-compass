@@ -28,63 +28,49 @@ export function ReviewsPreview() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-24 bg-secondary relative overflow-hidden" ref={ref}>
-      {/* Decorative Lines */}
-      <div className="absolute top-0 left-0 right-0 gold-line" />
-      <div className="absolute bottom-0 left-0 right-0 gold-line" />
-
-      <div className="container relative">
+    <section className="py-20 bg-secondary" ref={ref}>
+      <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-14"
         >
-          <span className="text-primary font-sans text-sm uppercase tracking-[0.3em] mb-4 block">
-            Patient Testimonials
+          <span className="text-accent font-medium text-sm uppercase tracking-wider">
+            Patient Reviews
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-medium text-foreground mb-6">
-            What Our <span className="text-gradient-gold italic">Patients Say</span>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
+            What Our Patients Say
           </h2>
           <div className="flex items-center justify-center gap-2 mb-4">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-6 h-6 fill-primary text-primary" />
+              <Star key={i} className="w-6 h-6 fill-accent text-accent" />
             ))}
           </div>
-          <p className="text-muted-foreground font-body">
-            Over <span className="text-primary font-medium">3,400+</span> five-star reviews on Google
+          <p className="text-muted-foreground">
+            Over 3,400+ five-star reviews on Google
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {reviews.map((review, index) => (
             <motion.div
               key={review.name}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="luxury-card p-8 relative"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-card p-8 rounded-xl shadow-card relative"
             >
-              {/* Quote Icon */}
-              <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/10" />
-              
-              {/* Stars */}
-              <div className="flex gap-1 mb-5">
+              <Quote className="absolute top-6 right-6 w-8 h-8 text-accent/20" />
+              <div className="flex gap-1 mb-4">
                 {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                  <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                 ))}
               </div>
-              
-              {/* Review Text */}
-              <p className="text-foreground font-body mb-6 leading-relaxed italic">
+              <p className="text-foreground mb-6 leading-relaxed">
                 "{review.text}"
               </p>
-              
-              {/* Divider */}
-              <div className="w-12 h-px bg-gradient-gold mb-4" />
-              
-              {/* Author */}
-              <p className="font-display font-medium text-foreground">{review.name}</p>
+              <p className="font-semibold text-foreground">{review.name}</p>
             </motion.div>
           ))}
         </div>
@@ -92,14 +78,10 @@ export function ReviewsPreview() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center"
         >
-          <Button 
-            size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans tracking-wide shadow-gold"
-            asChild
-          >
+          <Button variant="default" size="lg" asChild>
             <Link to="/reviews">Read All Reviews</Link>
           </Button>
         </motion.div>

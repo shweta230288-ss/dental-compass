@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Phone, ArrowRight } from 'lucide-react';
+import { Phone, Play } from 'lucide-react';
 import { useState } from 'react';
 
 export function HeroSection() {
@@ -20,15 +20,9 @@ export function HeroSection() {
         >
           <source src="/videos/office-tour.mp4" type="video/mp4" />
         </video>
-        {/* Elegant Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-kaya-charcoal/95 via-kaya-charcoal/80 to-kaya-charcoal/40" />
-        {/* Gold shimmer overlay */}
-        <div className="absolute inset-0 bg-shimmer opacity-30" />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-kaya-navy/90 via-kaya-navy/70 to-transparent" />
       </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute top-20 right-20 w-32 h-32 border border-primary/20 rounded-full hidden lg:block" />
-      <div className="absolute bottom-20 right-40 w-20 h-20 border border-primary/20 rounded-full hidden lg:block" />
 
       {/* Content */}
       <div className="container relative z-10">
@@ -36,9 +30,9 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="inline-block text-primary font-sans text-sm uppercase tracking-[0.3em] mb-6">
+            <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
               Welcome to Kaya Dental
             </span>
           </motion.div>
@@ -46,26 +40,19 @@ export function HeroSection() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="font-display text-5xl md:text-6xl lg:text-7xl font-medium text-kaya-cream leading-[1.1] mb-6"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
           >
             Redefining{' '}
-            <span className="text-gradient-gold italic">Comfort</span>
-            <br />& <span className="text-gradient-gold italic">Aesthetics</span>
+            <span className="text-accent">Comfort</span> &{' '}
+            <span className="text-accent">Aesthetics</span>
           </motion.h1>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="w-24 h-px bg-gradient-gold mb-8"
-          />
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="text-lg md:text-xl text-kaya-cream/80 mb-10 leading-relaxed font-body"
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed"
           >
             Experience personalized dental care rooted in warmth, trust, and compassion. 
             At Kaya Dental, we bring expertise and passion together to craft radiant, 
@@ -75,27 +62,26 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4"
           >
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans tracking-wide shadow-gold group"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-8"
               asChild
             >
               <a href="tel:978-534-4000">
                 <Phone className="w-5 h-5 mr-2" />
-                Schedule Your Visit
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                Book Appointment
               </a>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-kaya-cream/30 text-kaya-cream hover:bg-kaya-cream/10 hover:border-kaya-cream/50 font-sans tracking-wide"
+              className="border-white/30 text-white hover:bg-white/10 text-base px-8 backdrop-blur-sm"
               asChild
             >
-              <a href="#about">Discover Our Story</a>
+              <a href="#about">Learn More</a>
             </Button>
           </motion.div>
         </div>
@@ -106,10 +92,15 @@ export function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
-        <span className="text-kaya-cream/50 font-sans text-xs uppercase tracking-[0.2em]">Scroll</span>
-        <div className="w-px h-12 bg-gradient-to-b from-primary/50 to-transparent" />
+        <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
+          <motion.div
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            className="w-1.5 h-1.5 rounded-full bg-white"
+          />
+        </div>
       </motion.div>
     </section>
   );
