@@ -2,45 +2,53 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Stethoscope, Sparkles, Puzzle, AlignCenter, AlertCircle, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import type { LucideIcon } from 'lucide-react';
 
-const services = [
+interface Service {
+  title: string;
+  description: string;
+  path: string;
+  icon: LucideIcon;
+}
+
+const services: Service[] = [
   {
     title: 'General Dentistry',
     description: 'Comprehensive exams, cleanings, and preventive care for optimal oral health.',
     path: '/services/general-dentistry',
-    icon: '🦷',
+    icon: Stethoscope,
   },
   {
     title: 'Cosmetic Dentistry',
     description: 'Transform your smile with veneers, bonding, and aesthetic treatments.',
     path: '/services/cosmetic-dentistry',
-    icon: '✨',
+    icon: Sparkles,
   },
   {
     title: 'Dental Implants',
     description: 'Permanent, natural-looking tooth replacements that restore your confidence.',
     path: '/services/dental-implants',
-    icon: '🔧',
+    icon: Puzzle,
   },
   {
     title: 'Invisalign',
     description: 'Straighten your teeth discreetly with clear, comfortable aligners.',
     path: '/services/invisalign',
-    icon: '😁',
+    icon: AlignCenter,
   },
   {
     title: 'Emergency Care',
     description: 'Prompt treatment for dental emergencies when you need it most.',
     path: '/services/emergency-dentistry',
-    icon: '🚨',
+    icon: AlertCircle,
   },
   {
     title: 'Family Dentistry',
     description: 'Gentle, comprehensive care for every member of your family.',
     path: '/services/family-dentistry',
-    icon: '👨‍👩‍👧‍👦',
+    icon: Users,
   },
 ];
 
@@ -86,7 +94,9 @@ export function ServicesPreview() {
                 to={service.path}
                 className="block h-full p-8 rounded-xl border border-border bg-card hover:border-accent hover:shadow-medium transition-all duration-300 group"
               >
-                <span className="text-4xl mb-4 block">{service.icon}</span>
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                  <service.icon className="w-7 h-7 text-primary group-hover:text-accent-foreground transition-colors" />
+                </div>
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
                   {service.title}
                 </h3>
