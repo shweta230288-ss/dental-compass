@@ -1,52 +1,113 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
-import { Sparkle } from 'lucide-react';
+import { Smile } from 'lucide-react';
+import heroImage from '@/assets/service-cosmetic-dentistry.jpg';
 
 export default function CosmeticDentistry() {
   return (
     <ServicePageLayout
       title="Cosmetic Dentistry"
-      metaDescription="Transform your smile with cosmetic dentistry at Kaya Dental in Leominster, MA. Veneers, bonding, whitening, and smile makeovers."
+      metaDescription="Transform your smile with cosmetic dentistry at Kaya Dental in Leominster, MA. Veneers, whitening, bonding, and smile makeovers. Schedule your consultation."
       heroSubtitle="Smile Transformation"
-      heroDescription="Your smile is one of the first things people notice about you. At Kaya Dental, our cosmetic dentistry services can transform your smile, boosting your confidence and enhancing your natural beauty. From subtle improvements to complete smile makeovers, we create stunning results."
-      icon={Sparkle}
+      heroDescription="Your smile is one of the first things people notice about you. At Kaya Dental, we offer a full range of cosmetic dentistry services designed to enhance your smile's appearance and boost your confidence. From subtle improvements to complete smile makeovers, we help you achieve the smile you've always wanted."
+      heroImage={heroImage}
+      icon={Smile}
+      detailedDescription={[
+        {
+          title: 'The Art and Science of Beautiful Smiles',
+          content: `Cosmetic dentistry combines artistic vision with advanced dental techniques to create stunning, natural-looking results. Dr. Dani takes a personalized approach to cosmetic treatment, considering your facial features, skin tone, and personal preferences to design a smile that looks naturally beautiful.
+
+Whether you want to fix a single imperfection or transform your entire smile, we have the expertise and technology to help you achieve your goals. We use digital imaging to show you potential results before treatment begins, so you can see your new smile before committing.`,
+        },
+        {
+          title: 'Our Cosmetic Services',
+          content: `We offer a comprehensive range of cosmetic treatments including professional teeth whitening, dental veneers, bonding, crowns, and Invisalign clear aligners. Many patients benefit from a combination of treatments to achieve their ideal smile.
+
+During your cosmetic consultation, we'll discuss your goals, examine your teeth and gums, and recommend the best treatments to achieve the results you want. We believe in conservative treatment whenever possible, preserving as much natural tooth structure as we can.`,
+        },
+      ]}
       benefits={[
-        'Customized smile design tailored to your facial features',
-        'Advanced techniques for natural-looking results',
-        'Multiple treatment options to fit your goals and budget',
-        'Digital smile preview before treatment begins',
-        'Minimally invasive approaches when possible',
+        'Personalized smile design',
+        'Natural-looking results',
+        'Boost in confidence and self-esteem',
+        'Multiple treatment options available',
+        'Digital preview of potential results',
+        'Conservative, tooth-preserving approach',
+        'Experienced cosmetic dentist',
         'Long-lasting, beautiful results',
       ]}
       whatToExpect={[
         {
-          title: 'Smile Consultation',
-          description: 'We discuss your smile goals and concerns, examining your teeth and facial structure.',
+          title: 'Cosmetic Consultation',
+          description: 'We discuss your smile goals, take photos, and examine your teeth to understand what changes you\'d like to make.',
         },
         {
-          title: 'Treatment Planning',
-          description: 'Using digital imaging, we create a customized treatment plan to achieve your ideal smile.',
+          title: 'Smile Design',
+          description: 'We create a personalized treatment plan and may use digital imaging to preview your potential results.',
         },
         {
-          title: 'Personalized Treatment',
-          description: 'We perform your chosen cosmetic procedures with precision and artistic skill.',
+          title: 'Treatment Phase',
+          description: 'Depending on your treatment plan, we perform the necessary procedures to transform your smile.',
         },
         {
           title: 'Reveal Your New Smile',
-          description: 'See your transformed smile and receive care instructions for long-lasting results.',
+          description: 'Enjoy your beautiful new smile! We provide care instructions to maintain your results long-term.',
+        },
+      ]}
+      additionalInfo={[
+        {
+          title: 'Popular Treatments',
+          items: [
+            'Professional teeth whitening',
+            'Porcelain veneers',
+            'Dental bonding',
+            'Invisalign clear aligners',
+            'Smile makeovers',
+            'Gum contouring',
+          ],
+        },
+        {
+          title: 'Issues We Address',
+          items: [
+            'Stained or discolored teeth',
+            'Chipped or cracked teeth',
+            'Gaps between teeth',
+            'Misshapen teeth',
+            'Uneven gum line',
+            'Crooked or crowded teeth',
+          ],
+        },
+        {
+          title: 'Why Choose Us',
+          items: [
+            'Artistic eye for smile design',
+            'Advanced technology',
+            'Natural-looking materials',
+            'Personalized approach',
+            'Comfortable experience',
+            'Lasting results',
+          ],
         },
       ]}
       faqs={[
         {
-          question: 'What cosmetic procedures do you offer?',
-          answer: 'We offer teeth whitening, dental veneers, bonding, crown lengthening, gum contouring, and complete smile makeovers.',
+          question: 'What can cosmetic dentistry fix?',
+          answer: 'Cosmetic dentistry can address many concerns including stained or yellowed teeth, chips and cracks, gaps between teeth, misshapen teeth, gummy smiles, and crooked or crowded teeth. Almost any aesthetic concern can be improved with the right treatment.',
         },
         {
-          question: 'How long does a smile makeover take?',
-          answer: 'Treatment time varies based on your needs. Some improvements can be made in one visit, while comprehensive makeovers may take several weeks.',
+          question: 'How long do cosmetic treatments last?',
+          answer: 'Treatment longevity varies: whitening results last 1-3 years with touch-ups, veneers can last 10-15+ years, and bonding typically lasts 5-10 years. With proper care, many cosmetic treatments provide long-lasting results.',
         },
         {
-          question: 'Is cosmetic dentistry covered by insurance?',
-          answer: 'Most cosmetic procedures are not covered by insurance, but some treatments that also restore function may have partial coverage. We offer flexible payment options.',
+          question: 'Are cosmetic procedures painful?',
+          answer: 'Most cosmetic procedures involve little to no discomfort. We use local anesthesia when needed and prioritize your comfort throughout treatment. Many patients are surprised at how easy the procedures are.',
+        },
+        {
+          question: 'How much does cosmetic dentistry cost?',
+          answer: 'Costs vary widely depending on the treatments needed. During your consultation, we\'ll provide a detailed treatment plan with costs. We offer financing options to make your dream smile affordable.',
+        },
+        {
+          question: 'What are dental veneers?',
+          answer: 'Veneers are thin shells of porcelain or composite resin that are bonded to the front of teeth to improve their appearance. They can change the color, shape, size, and length of teeth for a dramatic smile transformation.',
         },
       ]}
       relatedServices={[
