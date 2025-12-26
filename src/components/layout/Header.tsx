@@ -96,10 +96,10 @@ export function Header() {
       {/* Main Header */}
       <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-md shadow-soft' : 'bg-background'}`}>
         <div className="container">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-24">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
-              <img src={kayaLogo} alt="Kaya Dental - Redefining Comfort & Aesthetics" className="h-20 w-auto" />
+              <img src={kayaLogo} alt="Kaya Dental - Redefining Comfort & Aesthetics" className="h-28 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
