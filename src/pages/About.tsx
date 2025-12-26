@@ -5,13 +5,82 @@ import { useRef } from 'react';
 import { Heart, Award, Users, GraduationCap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import drKunalDani from '@/assets/dr-kunal-dani.jpg';
+import staffCarolyn from '@/assets/staff-carolyn.jpg';
+import staffKeri from '@/assets/staff-keri.jpg';
+import staffAnnie from '@/assets/staff-annie.jpg';
+import staffMarianne from '@/assets/staff-marianne.jpg';
+import staffTrinh from '@/assets/staff-trinh.jpg';
+import staffErika from '@/assets/staff-erika.jpg';
+import staffJenn from '@/assets/staff-jenn.jpg';
+import staffMaggie from '@/assets/staff-maggie.jpg';
+import staffKatie from '@/assets/staff-katie.jpg';
+
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,
     margin: '-100px'
   });
-  return <Layout>
+
+  const staffMembers = [
+    {
+      name: 'Carolyn',
+      role: 'Administrative Assistant',
+      image: staffCarolyn,
+      bio: "Carolyn Baker is our full-time Administrative Assistant. Carolyn is a graduate of St. Bernard's High School and Montachusett Technical where she received her degree in Dental Assisting. Carolyn began working at our office in 1992 where she worked as a part time assistant and part time at the front desk. In 1995 Carolyn became the full time Administrative Assistant. Having assisted chairside for years, Carolyn has an excellent knowledge of the field and can assist you greatly with many of your questions when you call. Carolyn has two grown children, and enjoys her time walking, hiking and relaxing along the Maine coast."
+    },
+    {
+      name: 'Keri',
+      role: 'Registered Dental Hygienist',
+      image: staffKeri,
+      bio: "Keri is a graduate of St. Bernard's High School. She received her RDH degree from University of New England in Biddeford for dental hygiene. Keri has been with our practice since 1995. Keri is terrific with patients and will always have your concerns at heart. She and her husband Chris have two grown children and grandchildren and enjoy spending their free time with friends and family, Patriots tailgates and relaxing at Oak Hill Country Club for the weekend."
+    },
+    {
+      name: 'Annie',
+      role: 'Registered Dental Hygienist',
+      image: staffAnnie,
+      bio: "Annie is a Registered Dental Hygienist who joined our staff in May of 2014. Annie is a 2009 graduate of Rockport High School, and received her RDH degree from the Massachusetts College of Pharmacy in 2011. Annie is a personable, mature young woman who has been a wonderful fit in our office. Annie and her husband Matt enjoy spending time with their three children."
+    },
+    {
+      name: 'Marianne',
+      role: 'Registered Dental Hygienist',
+      image: staffMarianne,
+      bio: "Marianne is a Registered Dental Hygienist who joined our staff in the fall of 2015. Marianne was raised in Leominster and is a 1998 graduate of St. Bernard's High School. Looking for a new career, Marianne enrolled at Mount Wachusett College and received her RDH degree in May of 2015. Marianne is an excellent clinician and a better person. She is a natural leader who takes every patient on as an individual case and has your best treatment plan in mind. Marianne and her husband Matt enjoy spending time with their daughter and son and still live locally."
+    },
+    {
+      name: 'Trinh',
+      role: 'Dental Assistant',
+      image: staffTrinh,
+      bio: "Trinh Trieu works full-time mainly as a Dental Assistant but also is proficient at the front desk and with instrument sterilization. Trinh was born in Vietnam and moved to the United States in 1987. With a limited English background, Trinh worked hard to eventually graduate from Montachusett Technical in 1993 with a degree in Dental Assisting. Her high school instructor says that she was the best student that she ever had. Trinh has been with our practice since 1995. She is an exceptional worker. Her clinical skills are exemplary. Trinh and her husband Khuong enjoy watching their daughters ventures in track, basketball, soccer and martial arts."
+    },
+    {
+      name: 'Erika',
+      role: 'Registered Dental Hygienist',
+      image: staffErika,
+      bio: "Erika is a Registered Dental Hygienist. She began working in our office as a temp and was such a great fit here that we decided to offer her a position to stay on. Further impressing, she is now full time. Erika graduated from Burlington High School and is the proud mom of two great kids. She bravely decided to go back to school while her children were young and in 2015 completed her RDH degree at Mount Wachusett Community College. Erika is a gregarious soul who loves country music, the Patriots, and spending time with her husband Justin and their six children (yes six!)."
+    },
+    {
+      name: 'Jenn',
+      role: 'Registered Dental Hygienist',
+      image: staffJenn,
+      bio: "Jenn is a Registered Dental Hygienist. Jenn is a 1998 graduate of St. Bernard's High School and received her BA in Psychology from Assumption College in 2002. Jenn was always interested in dentistry and in 2007 got her RDH degree from Mount Wachusett Community College. After working for a few years in the Boston area, she and her husband Matt moved back to the Leominster area and she began working with us in 2018. Jenn is always smiling and is a wonderful hygienist and person. She is very busy with her five (yes, five!) children."
+    },
+    {
+      name: 'Maggie',
+      role: 'Dental Assistant',
+      image: staffMaggie,
+      bio: "Maggie is a Dental Assistant. She began working here in October of 2018. Maggie has had an interesting journey. She graduated from Assabet Valley High School with a degree in Cosmetology and Interior Design. She worked as a stylist at a salon, bartended, painted, and waitressed before going to Quinsigamond Community College where she received her Certified Dental Assisting Degree. Maggie is full of life, easy going, gregarious and always smiling. She brings energy and a swag to our office. Maggie loves her times with her family, her friends and her music."
+    },
+    {
+      name: 'Katie',
+      role: 'Registered Dental Hygienist',
+      image: staffKatie,
+      bio: "Katie is a Registered Dental Hygienist. Katie started here filling in on a temporary basis. She worked out so well, and patients liked her so much that we figured out a way to keep her on. Katie got her RDH degree as a 2007 graduate of Mount Wachusett Community College. She worked in Belmont for 12 years but with her family growing and the kids in more extracurricular activities, working in Leominster became far more convenient. Katie has a quick sense of humor, loves her wide variety of music and enjoys the camaraderie of the dental office. Katie is busy with her family and enjoys watching her children's baseball, football and basketball games."
+    }
+  ];
+
+  return (
+    <Layout>
       <Helmet>
         <title>About Us | Kaya Dental Leominster MA</title>
         <meta name="description" content="Meet Dr. Kunal Dani and the Kaya Dental team. Learn about our philosophy of personalized care rooted in warmth, trust, and compassion in Leominster, MA." />
@@ -20,15 +89,12 @@ export default function About() {
       {/* Hero */}
       <section className="bg-primary py-20 text-primary-foreground">
         <div className="container">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6
-        }} className="max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl"
+          >
             <span className="text-accent font-medium text-sm uppercase tracking-wider">REDEFINING COMFORT AND ESTHETICS</span>
             <h1 className="font-serif text-4xl md:text-5xl font-bold mt-2 mb-6">
               Redefining Comfort & Aesthetics
@@ -45,15 +111,11 @@ export default function About() {
       <section className="py-20 bg-background" ref={ref}>
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{
-            opacity: 0,
-            x: -30
-          }} animate={isInView ? {
-            opacity: 1,
-            x: 0
-          } : {}} transition={{
-            duration: 0.6
-          }}>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6 }}
+            >
               <span className="text-accent font-medium text-sm uppercase tracking-wider">
                 Our Office
               </span>
@@ -91,16 +153,12 @@ export default function About() {
                 </div>
               </div>
             </motion.div>
-            <motion.div initial={{
-            opacity: 0,
-            x: 30
-          }} animate={isInView ? {
-            opacity: 1,
-            x: 0
-          } : {}} transition={{
-            duration: 0.6,
-            delay: 0.2
-          }} className="rounded-2xl overflow-hidden shadow-medium">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="rounded-2xl overflow-hidden shadow-medium"
+            >
               <video autoPlay muted loop playsInline className="w-full h-auto">
                 <source src="/videos/office-tour.mp4" type="video/mp4" />
               </video>
@@ -113,32 +171,24 @@ export default function About() {
       <section className="py-20 bg-secondary">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{
-            opacity: 0,
-            scale: 0.95
-          }} whileInView={{
-            opacity: 1,
-            scale: 1
-          }} transition={{
-            duration: 0.6
-          }} viewport={{
-            once: true
-          }} className="order-2 lg:order-1">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="order-2 lg:order-1"
+            >
               <div className="rounded-2xl overflow-hidden shadow-medium">
                 <img src={drKunalDani} alt="Dr. Kunal Dani, DMD" className="w-full h-auto object-cover" />
               </div>
             </motion.div>
-            <motion.div initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.6
-          }} viewport={{
-            once: true
-          }} className="order-1 lg:order-2">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="order-1 lg:order-2"
+            >
               <span className="text-accent font-medium text-sm uppercase tracking-wider">
                 Meet Our Doctor
               </span>
@@ -199,72 +249,37 @@ export default function About() {
               Our Family
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
-              Great Dental Practices Have Exceptional Staff
+              Great Dental Practices Have Exceptional Staff. Meet Our Family.
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Meet our dedicated team of professionals who are committed to making every visit 
+              Our dedicated team of professionals is committed to making every visit 
               a positive experience. From our front desk to our hygienists, everyone is here to help.
             </p>
           </motion.div>
 
           {/* Staff Grid */}
           <div className="space-y-12">
-            {[
-              {
-                name: 'Sarah',
-                role: 'Office Manager',
-                bio: 'Sarah has been with Kaya Dental since its opening and brings over 15 years of dental office management experience. She ensures that every aspect of your visit runs smoothly, from scheduling to insurance coordination. Sarah is known for her warm personality and dedication to patient satisfaction. When not at the office, she enjoys hiking with her family and volunteering in the community.',
-                initial: 'S'
-              },
-              {
-                name: 'Jessica',
-                role: 'Registered Dental Hygienist',
-                bio: 'Jessica is a Registered Dental Hygienist who joined our team with a passion for preventive care and patient education. She graduated with honors from her dental hygiene program and has extensive training in periodontal therapy. Jessica takes the time to explain proper oral hygiene techniques and makes every cleaning as comfortable as possible. She lives locally with her husband and two children.',
-                initial: 'J'
-              },
-              {
-                name: 'Maria',
-                role: 'Registered Dental Hygienist',
-                bio: 'Maria brings a gentle touch and calming presence to every patient interaction. With a background in both general and pediatric dentistry, she has a special way of making patients of all ages feel at ease. Maria is bilingual in English and Spanish, which helps her connect with our diverse patient community. Outside of work, she enjoys cooking and spending time with her extended family.',
-                initial: 'M'
-              },
-              {
-                name: 'Ashley',
-                role: 'Lead Dental Assistant',
-                bio: 'Ashley is our Lead Dental Assistant who works closely with Dr. Dani during all procedures. Her exceptional clinical skills and attention to detail ensure that every treatment runs smoothly. Ashley has advanced training in dental technology including digital impressions and 3D printing. She is always ready with a reassuring smile and helps patients feel comfortable throughout their visits.',
-                initial: 'A'
-              },
-              {
-                name: 'Emily',
-                role: 'Dental Assistant',
-                bio: 'Emily joined Kaya Dental with a genuine enthusiasm for helping patients achieve their best smiles. She assists with a variety of procedures and is known for her excellent chairside manner. Emily is currently pursuing additional certifications in expanded functions to better serve our patients. In her free time, she enjoys photography and outdoor activities.',
-                initial: 'E'
-              },
-              {
-                name: 'Rachel',
-                role: 'Front Desk Coordinator',
-                bio: 'Rachel is often the first friendly voice you hear when calling Kaya Dental. She handles appointment scheduling, insurance verification, and ensures that every patient feels welcomed and valued. Rachel has a background in customer service and brings exceptional organizational skills to our team. She loves making connections with patients and their families.',
-                initial: 'R'
-              }
-            ].map((staff, index) => (
+            {staffMembers.map((staff, index) => (
               <motion.div
                 key={staff.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="flex flex-col md:flex-row gap-8 items-start"
+                className="flex flex-col md:flex-row gap-8 items-start border-b border-border pb-12 last:border-b-0"
               >
                 <div className="flex-shrink-0">
-                  <div className="w-32 h-40 rounded-xl bg-gradient-to-br from-primary to-kaya-navy-dark flex items-center justify-center shadow-medium">
-                    <span className="text-5xl font-serif font-bold text-accent">{staff.initial}</span>
+                  <div className="w-36 h-44 rounded-xl overflow-hidden shadow-medium">
+                    <img 
+                      src={staff.image} 
+                      alt={staff.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 <div className="flex-1">
-                  <div className="border-b border-border pb-4 mb-4">
-                    <h3 className="font-serif text-2xl font-bold text-foreground">{staff.name}</h3>
-                    <p className="text-accent font-medium">{staff.role}</p>
-                  </div>
+                  <h3 className="font-serif text-2xl font-bold text-foreground">{staff.name}</h3>
+                  <p className="text-accent font-medium mb-4">{staff.role}</p>
                   <p className="text-muted-foreground leading-relaxed">{staff.bio}</p>
                 </div>
               </motion.div>
@@ -295,7 +310,7 @@ export default function About() {
                 title: 'Team Approach',
                 description: 'We work together seamlessly to ensure you receive comprehensive, coordinated care.'
               }
-            ].map((value, index) => (
+            ].map((value) => (
               <div key={value.title} className="text-center p-8 rounded-xl bg-secondary">
                 <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-8 h-8 text-accent" />
@@ -311,5 +326,6 @@ export default function About() {
           </motion.div>
         </div>
       </section>
-    </Layout>;
+    </Layout>
+  );
 }
