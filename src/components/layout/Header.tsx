@@ -14,6 +14,9 @@ const navigationItems = [{
   name: 'Services',
   path: '/services',
   children: [{
+    name: 'View All Services',
+    path: '/services'
+  }, {
     name: 'General Dentistry',
     path: '/services/general-dentistry'
   }, {
@@ -34,9 +37,6 @@ const navigationItems = [{
   }, {
     name: 'Teeth Whitening',
     path: '/services/teeth-whitening'
-  }, {
-    name: 'View All Services',
-    path: '/services'
   }]
 }, {
   name: 'Technology',
