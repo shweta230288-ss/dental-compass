@@ -63,13 +63,18 @@ export function ServicesPreview() {
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
             Comprehensive Dental Care
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
             From routine checkups to advanced treatments, we offer a full range of dental 
             services to meet all your oral health needs.
           </p>
+          <Button variant="outline" size="lg" asChild>
+            <Link to="/services">
+              View All Services <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </Button>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -95,19 +100,6 @@ export function ServicesPreview() {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center"
-        >
-          <Button variant="outline" size="lg" asChild>
-            <Link to="/services">
-              View All Services <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-          </Button>
-        </motion.div>
       </div>
     </section>
   );
