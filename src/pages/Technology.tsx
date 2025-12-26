@@ -2,11 +2,16 @@ import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Zap, Camera, Printer, Brain } from 'lucide-react';
+import techDigitalXray from '@/assets/tech-digital-xray.jpg';
+import techIteroScanner from '@/assets/tech-itero-scanner.jpg';
+import tech3dPrinter from '@/assets/tech-3d-printer.jpg';
+import techAiOverjet from '@/assets/tech-ai-overjet.jpg';
 
 const technologies = [
   {
     icon: Zap,
     title: 'Digital X-Rays',
+    image: techDigitalXray,
     description: 'Our digital X-ray technology provides instant, high-resolution images with up to 90% less radiation than traditional X-rays. This allows for faster diagnoses and more accurate treatment planning while prioritizing your safety.',
     benefits: [
       'Instant image viewing',
@@ -19,6 +24,7 @@ const technologies = [
   {
     icon: Camera,
     title: 'iTero Intraoral Scanner',
+    image: techIteroScanner,
     description: 'Say goodbye to uncomfortable dental impressions. Our iTero scanner creates precise 3D digital models of your teeth in minutes, making treatments like Invisalign more comfortable and accurate than ever before.',
     benefits: [
       'No messy impression materials',
@@ -31,6 +37,7 @@ const technologies = [
   {
     icon: Printer,
     title: '3D Printing Technology',
+    image: tech3dPrinter,
     description: 'With in-house 3D printing, we can create custom dental appliances, surgical guides, and temporary restorations right here in our office. This means faster turnaround times and perfectly fitted solutions.',
     benefits: [
       'Same-day dental appliances',
@@ -43,6 +50,7 @@ const technologies = [
   {
     icon: Brain,
     title: 'AI-Powered Diagnostics (Overjet)',
+    image: techAiOverjet,
     description: 'We utilize Overjet\'s FDA-cleared AI technology to analyze dental X-rays with unprecedented precision. This advanced system helps identify potential issues early, ensuring nothing is missed during your examination.',
     benefits: [
       'FDA-cleared AI analysis',
@@ -120,10 +128,12 @@ export default function Technology() {
                     ))}
                   </ul>
                 </div>
-                <div className={`bg-secondary rounded-2xl p-10 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                  <div className="aspect-video rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                    <tech.icon className="w-24 h-24 text-primary/30" />
-                  </div>
+                <div className={`rounded-2xl overflow-hidden shadow-medium ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                  <img 
+                    src={tech.image} 
+                    alt={tech.title}
+                    className="w-full h-auto aspect-video object-cover"
+                  />
                 </div>
               </motion.div>
             ))}

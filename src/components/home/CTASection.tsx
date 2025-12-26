@@ -44,7 +44,7 @@ export function CTASection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-base px-8"
+                className="border-accent text-accent hover:bg-accent hover:text-accent-foreground text-base px-8"
                 asChild
               >
                 <a href="https://maps.google.com/?q=130+N+Main+St+Suite+1+Leominster+MA+01453" target="_blank" rel="noopener noreferrer">

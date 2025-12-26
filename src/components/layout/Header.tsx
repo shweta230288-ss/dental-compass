@@ -65,7 +65,7 @@ export function Header() {
           </div>
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4" />
-            <span>Mon-Fri: 8AM-5PM | Sat: By Appointment</span>
+            <span>Mon-Thu: 7-8AM-5PM | Fri: 7AM-2PM</span>
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@ export function Header() {
               <img
                 src={kayaLogo}
                 alt="Kaya Dental - Redefining Comfort & Aesthetics"
-                className="h-16 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
 

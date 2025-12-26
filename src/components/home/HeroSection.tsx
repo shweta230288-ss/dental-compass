@@ -27,26 +27,24 @@ export function HeroSection() {
       {/* Content */}
       <div className="container relative z-10">
         <div className="max-w-2xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
-              Welcome to Kaya Dental
-            </span>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4"
           >
-            Redefining{' '}
-            <span className="text-accent">Comfort</span> &{' '}
-            <span className="text-accent">Aesthetics</span>
+            Welcome to{' '}
+            <span className="text-accent">Kaya Dental</span>
           </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl md:text-2xl text-white/90 font-light italic mb-6"
+          >
+            Redefining Comfort & Aesthetics
+          </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -78,7 +76,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 text-base px-8 backdrop-blur-sm"
+              className="border-accent text-accent hover:bg-accent hover:text-accent-foreground text-base px-8 backdrop-blur-sm"
               asChild
             >
               <a href="#about">Learn More</a>
