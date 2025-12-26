@@ -335,7 +335,7 @@ export function ServicePageLayout({
                   Call (978) 534-4000
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+              <Button size="lg" variant="secondary" asChild>
                 <Link to="/contact">Contact Us Online</Link>
               </Button>
             </div>
