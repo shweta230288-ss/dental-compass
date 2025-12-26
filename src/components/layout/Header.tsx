@@ -88,7 +88,7 @@ export function Header() {
           </div>
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4" />
-            <span>Mon, Tue, Thu: 8AM - 5PM/ 2PM Fri: 7AM-2PM</span>
+            <span>MoN - Thu: 8AM - 5PM/ Fri: 7AM-2PM</span>
           </div>
         </div>
       </div>
