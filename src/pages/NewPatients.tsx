@@ -16,14 +16,14 @@ const newPatientInfo = [
     description: 'Complete your paperwork before your visit to save time. New patient forms are available at our office or can be completed upon arrival.',
   },
   {
-    icon: CreditCard,
-    title: 'Payment Options',
-    description: 'We accept most major credit cards, cash, and offer flexible payment plans. We also work with CareCredit for financing options.',
-  },
-  {
     icon: Clock,
     title: 'First Visit',
     description: 'Your first appointment will include a comprehensive exam, X-rays, and a personalized treatment plan. Please arrive 15 minutes early.',
+  },
+  {
+    icon: CreditCard,
+    title: 'Payment Options',
+    description: 'We accept most major credit cards, cash, and offer flexible payment plans. We also work with CareCredit for financing options.',
   },
 ];
 
