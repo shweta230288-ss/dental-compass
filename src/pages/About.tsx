@@ -185,65 +185,130 @@ export default function About() {
         </div>
       </section>
 
-      {/* Meet the Team */}
+      {/* Meet the Staff */}
       <section className="py-20 bg-background">
         <div className="container">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6
-        }} viewport={{
-          once: true
-        }} className="text-center mb-14">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-14"
+          >
             <span className="text-accent font-medium text-sm uppercase tracking-wider">
-              Our Team
+              Our Family
             </span>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
-              Meet the Kaya Dental Team
+              Great Dental Practices Have Exceptional Staff
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our dedicated team of professionals is committed to making every visit a positive 
-              experience. From our front desk to our hygienists, everyone is here to help.
+              Meet our dedicated team of professionals who are committed to making every visit 
+              a positive experience. From our front desk to our hygienists, everyone is here to help.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[{
-            role: 'Front Office Team',
-            description: 'Our friendly administrative staff ensures seamless scheduling and handles all insurance and billing questions.'
-          }, {
-            role: 'Dental Hygienists',
-            description: 'Our skilled hygienists provide thorough, gentle cleanings and educate patients on optimal oral health.'
-          }, {
-            role: 'Dental Assistants',
-            description: 'Our assistants work alongside Dr. Dani to ensure every procedure runs smoothly and comfortably.'
-          }].map((team, index) => <motion.div key={team.role} initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.5,
-            delay: index * 0.1
-          }} viewport={{
-            once: true
-          }} className="text-center p-8 rounded-xl bg-secondary">
+          {/* Staff Grid */}
+          <div className="space-y-12">
+            {[
+              {
+                name: 'Sarah',
+                role: 'Office Manager',
+                bio: 'Sarah has been with Kaya Dental since its opening and brings over 15 years of dental office management experience. She ensures that every aspect of your visit runs smoothly, from scheduling to insurance coordination. Sarah is known for her warm personality and dedication to patient satisfaction. When not at the office, she enjoys hiking with her family and volunteering in the community.',
+                initial: 'S'
+              },
+              {
+                name: 'Jessica',
+                role: 'Registered Dental Hygienist',
+                bio: 'Jessica is a Registered Dental Hygienist who joined our team with a passion for preventive care and patient education. She graduated with honors from her dental hygiene program and has extensive training in periodontal therapy. Jessica takes the time to explain proper oral hygiene techniques and makes every cleaning as comfortable as possible. She lives locally with her husband and two children.',
+                initial: 'J'
+              },
+              {
+                name: 'Maria',
+                role: 'Registered Dental Hygienist',
+                bio: 'Maria brings a gentle touch and calming presence to every patient interaction. With a background in both general and pediatric dentistry, she has a special way of making patients of all ages feel at ease. Maria is bilingual in English and Spanish, which helps her connect with our diverse patient community. Outside of work, she enjoys cooking and spending time with her extended family.',
+                initial: 'M'
+              },
+              {
+                name: 'Ashley',
+                role: 'Lead Dental Assistant',
+                bio: 'Ashley is our Lead Dental Assistant who works closely with Dr. Dani during all procedures. Her exceptional clinical skills and attention to detail ensure that every treatment runs smoothly. Ashley has advanced training in dental technology including digital impressions and 3D printing. She is always ready with a reassuring smile and helps patients feel comfortable throughout their visits.',
+                initial: 'A'
+              },
+              {
+                name: 'Emily',
+                role: 'Dental Assistant',
+                bio: 'Emily joined Kaya Dental with a genuine enthusiasm for helping patients achieve their best smiles. She assists with a variety of procedures and is known for her excellent chairside manner. Emily is currently pursuing additional certifications in expanded functions to better serve our patients. In her free time, she enjoys photography and outdoor activities.',
+                initial: 'E'
+              },
+              {
+                name: 'Rachel',
+                role: 'Front Desk Coordinator',
+                bio: 'Rachel is often the first friendly voice you hear when calling Kaya Dental. She handles appointment scheduling, insurance verification, and ensures that every patient feels welcomed and valued. Rachel has a background in customer service and brings exceptional organizational skills to our team. She loves making connections with patients and their families.',
+                initial: 'R'
+              }
+            ].map((staff, index) => (
+              <motion.div
+                key={staff.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex flex-col md:flex-row gap-8 items-start"
+              >
+                <div className="flex-shrink-0">
+                  <div className="w-32 h-40 rounded-xl bg-gradient-to-br from-primary to-kaya-navy-dark flex items-center justify-center shadow-medium">
+                    <span className="text-5xl font-serif font-bold text-accent">{staff.initial}</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <div className="border-b border-border pb-4 mb-4">
+                    <h3 className="font-serif text-2xl font-bold text-foreground">{staff.name}</h3>
+                    <p className="text-accent font-medium">{staff.role}</p>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">{staff.bio}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Team Values */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
+          >
+            {[
+              {
+                icon: Heart,
+                title: 'Compassionate Care',
+                description: 'Every team member is trained to provide gentle, understanding care that puts patients at ease.'
+              },
+              {
+                icon: Award,
+                title: 'Continuous Learning',
+                description: 'Our staff regularly attends training and seminars to stay current with the latest dental practices.'
+              },
+              {
+                icon: Users,
+                title: 'Team Approach',
+                description: 'We work together seamlessly to ensure you receive comprehensive, coordinated care.'
+              }
+            ].map((value, index) => (
+              <div key={value.title} className="text-center p-8 rounded-xl bg-secondary">
                 <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-accent" />
+                  <value.icon className="w-8 h-8 text-accent" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
-                  {team.role}
+                  {value.title}
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  {team.description}
+                  {value.description}
                 </p>
-              </motion.div>)}
-          </div>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
     </Layout>;
