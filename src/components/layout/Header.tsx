@@ -73,54 +73,39 @@ export function Header() {
     setIsMobileMenuOpen(false);
   }, [location]);
   return <>
-      {/* Top Section - Contact | Logo | CTAs */}
-      <div className="hidden lg:block bg-primary text-primary-foreground py-4">
-        <div className="container">
-          <div className="flex items-center justify-between">
-            {/* Left - Contact Info */}
-            <div className="flex flex-col gap-1">
-              <a href="tel:978-534-4000" className="flex items-center gap-2 text-lg font-semibold hover:text-accent transition-colors">
-                <Phone className="w-5 h-5" />
-                <span>(978) 534-4000</span>
-              </a>
-              <span className="text-sm text-primary-foreground/80">Dental Emergency?</span>
+      {/* Top Bar */}
+      <div className="hidden lg:block bg-primary text-primary-foreground py-2">
+        <div className="container flex items-center justify-between text-sm">
+          <div className="flex items-center gap-6">
+            <a href="tel:978-534-4000" className="flex items-center gap-2 hover:text-accent transition-colors">
+              <Phone className="w-4 h-4" />
+              <span>(978) 534-4000</span>
+            </a>
+            <div className="flex items-center gap-2">
+              <MapPin className="w-4 h-4" />
+              <span>130 N Main St Suite 1, Leominster, MA 01453</span>
             </div>
-
-            {/* Center - Logo */}
-            <Link to="/" className="flex-shrink-0">
-              <img 
-                src={kayaLogo} 
-                alt="Kaya Dental - Redefining Comfort & Aesthetics" 
-                className="h-24 w-auto" 
-              />
-            </Link>
-
-            {/* Right - CTAs */}
-            <div className="flex flex-col gap-2">
-              <Button variant="outline" size="default" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-                <a href="tel:978-534-4000">Request An Appointment</a>
-              </Button>
-              <Button variant="outline" size="default" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-                <Link to="/new-patients">New Patient Info</Link>
-              </Button>
-            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <Clock className="w-4 h-4" />
+            <span>MoN - Thu: 8AM - 5PM/ Fri: 7AM-2PM</span>
           </div>
         </div>
       </div>
 
-      {/* Navigation Bar */}
-      <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-md shadow-soft' : 'bg-background border-b border-border'}`}>
+      {/* Main Header */}
+      <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-md shadow-soft' : 'bg-background'}`}>
         <div className="container">
-          <div className="flex items-center justify-center h-14">
-            {/* Mobile Logo - shown only on mobile */}
-            <Link to="/" className="lg:hidden absolute left-4">
-              <img src={kayaLogo} alt="Kaya Dental" className="h-10 w-auto" />
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <Link to="/" className="flex-shrink-0">
+              <img src={kayaLogo} alt="Kaya Dental - Redefining Comfort & Aesthetics" className="h-20 w-auto" />
             </Link>
 
-            {/* Desktop Navigation - Centered */}
-            <nav className="hidden xl:flex items-center justify-center gap-1">
+            {/* Desktop Navigation */}
+            <nav className="hidden xl:flex items-center gap-1">
               {navigationItems.map(item => <div key={item.name} className="relative" onMouseEnter={() => item.children && setActiveDropdown(item.name)} onMouseLeave={() => setActiveDropdown(null)}>
-                  <Link to={item.path} className={`flex items-center gap-1 px-4 py-2 text-sm font-medium uppercase tracking-wide transition-colors hover:text-accent ${location.pathname === item.path || location.pathname.startsWith(item.path + '/') ? 'text-accent' : 'text-foreground'}`}>
+                  <Link to={item.path} className={`flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors rounded-md hover:text-accent ${location.pathname === item.path || location.pathname.startsWith(item.path + '/') ? 'text-accent' : 'text-foreground'}`}>
                     {item.name}
                     {item.children && <ChevronDown className="w-4 h-4" />}
                   </Link>
@@ -147,8 +132,15 @@ export function Header() {
                 </div>)}
             </nav>
 
+            {/* CTA Button */}
+            <div className="hidden lg:flex items-center gap-4">
+              <Button variant="default" size="lg" asChild>
+                <a href="tel:978-534-4000">Book Appointment</a>
+              </Button>
+            </div>
+
             {/* Mobile Menu Toggle */}
-            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="xl:hidden absolute right-4 p-2 text-foreground hover:text-accent transition-colors" aria-label="Toggle menu">
+            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="xl:hidden p-2 text-foreground hover:text-accent transition-colors" aria-label="Toggle menu">
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
