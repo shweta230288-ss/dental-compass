@@ -4,6 +4,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Heart, Award, Users, GraduationCap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import drKunalDani from '@/assets/dr-kunal-dani.jpg';
 
 export default function About() {
   const ref = useRef(null);
@@ -116,31 +117,12 @@ export default function About() {
               viewport={{ once: true }}
               className="order-2 lg:order-1"
             >
-              <div className="bg-gradient-to-br from-primary to-kaya-navy-dark rounded-2xl p-8 text-primary-foreground">
-                <GraduationCap className="w-12 h-12 text-accent mb-4" />
-                <h3 className="font-serif text-2xl font-bold mb-4">Education & Credentials</h3>
-                <ul className="space-y-3 text-primary-foreground/90">
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent">•</span>
-                    Doctor of Dental Medicine (DMD)
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent">•</span>
-                    Advanced training in cosmetic dentistry
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent">•</span>
-                    Invisalign Certified Provider
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent">•</span>
-                    Continuing education in implant dentistry
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-accent">•</span>
-                    Member, American Dental Association
-                  </li>
-                </ul>
+              <div className="rounded-2xl overflow-hidden shadow-medium">
+                <img 
+                  src={drKunalDani} 
+                  alt="Dr. Kunal Dani, DMD"
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </motion.div>
             <motion.div
@@ -168,11 +150,29 @@ export default function About() {
                 to each patient's concerns and develops personalized treatment plans that address 
                 their unique needs and goals.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
-                When not in the office, Dr. Dani enjoys spending time with family and staying 
-                active in the local community. He believes in giving back and regularly 
-                participates in dental outreach programs.
-              </p>
+              
+              <div className="bg-gradient-to-br from-primary to-kaya-navy-dark rounded-xl p-6 text-primary-foreground">
+                <GraduationCap className="w-8 h-8 text-accent mb-3" />
+                <h3 className="font-serif text-lg font-bold mb-3">Education & Credentials</h3>
+                <ul className="space-y-2 text-primary-foreground/90 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">•</span>
+                    Doctor of Dental Medicine (DMD)
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">•</span>
+                    Advanced training in cosmetic dentistry
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">•</span>
+                    Invisalign Certified Provider
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">•</span>
+                    Member, American Dental Association
+                  </li>
+                </ul>
+              </div>
             </motion.div>
           </div>
         </div>

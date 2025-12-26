@@ -106,7 +106,7 @@ export default function Contact() {
                       </div>
                       <div className="flex justify-between gap-8">
                         <span>Wednesday</span>
-                        <span>8:00 AM - 5:00 PM</span>
+                        <span>7:00 AM - 5:00 PM</span>
                       </div>
                       <div className="flex justify-between gap-8">
                         <span>Thursday</span>
@@ -114,11 +114,11 @@ export default function Contact() {
                       </div>
                       <div className="flex justify-between gap-8">
                         <span>Friday</span>
-                        <span>8:00 AM - 5:00 PM</span>
+                        <span>7:00 AM - 2:00 PM</span>
                       </div>
                       <div className="flex justify-between gap-8">
                         <span>Saturday</span>
-                        <span>By Appointment</span>
+                        <span>Closed</span>
                       </div>
                       <div className="flex justify-between gap-8">
                         <span>Sunday</span>

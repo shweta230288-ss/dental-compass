@@ -8,6 +8,8 @@ const quickLinks = [
   { name: 'Technology', path: '/technology' },
   { name: 'Smile Gallery', path: '/gallery' },
   { name: 'Patient Reviews', path: '/reviews' },
+  { name: 'Membership Plans', path: '/membership' },
+  { name: 'New Patients', path: '/new-patients' },
   { name: 'Contact', path: '/contact' },
 ];
 
@@ -31,7 +33,7 @@ export function Footer() {
             <img
               src={kayaLogo}
               alt="Kaya Dental"
-              className="h-20 w-auto mb-4 brightness-0 invert"
+              className="h-20 w-auto mb-4"
             />
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
               "Kaya" meaning body, wellness, and wholeness. We bring expertise and passion 
@@ -134,9 +136,9 @@ export function Footer() {
               <li className="flex items-start gap-3 text-primary-foreground/80">
                 <Clock className="w-5 h-5 mt-0.5 flex-shrink-0" />
                 <span className="text-sm">
-                  Mon - Fri: 8:00 AM - 5:00 PM<br />
-                  Sat: By Appointment<br />
-                  Sun: Closed
+                  Mon, Tue, Thu: 8AM - 5PM<br />
+                  Wed, Fri: 7AM - 5PM / 2PM<br />
+                  Sat & Sun: Closed
                 </span>
               </li>
             </ul>
