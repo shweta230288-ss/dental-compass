@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const insurances = [
-  'Delta Dental', 'MetLife', 'Cigna', 'Aetna', 'Guardian', 'United Healthcare',
+  'Delta Dental Premier', 'MetLife', 'Cigna', 'Aetna', 'Guardian', 'United Healthcare',
   'Blue Cross Blue Shield', 'Humana', 'Anthem', 'Principal', 'And many more...'
 ];
 
