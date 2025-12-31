@@ -22,7 +22,6 @@ const allServices = [
       { title: 'Cosmetic Dentistry', path: '/services/cosmetic-dentistry', description: 'Transform your smile with veneers, bonding, and more.' },
       { title: 'Teeth Whitening', path: '/services/teeth-whitening', description: 'Professional whitening for a brighter, radiant smile.' },
       { title: 'Invisalign', path: '/services/invisalign', description: 'Clear aligners for discreet teeth straightening.' },
-      { title: 'Dental Crowns', path: '/services/dental-crowns', description: 'Custom crowns to restore strength and beauty.' },
     ],
   },
   {
