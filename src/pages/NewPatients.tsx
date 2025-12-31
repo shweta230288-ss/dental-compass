@@ -190,7 +190,7 @@ export default function NewPatients() {
           >
             <Link to="/membership" className="block group">
               <div className="bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10 border-2 border-accent/30 rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent/60 hover:shadow-lg hover:shadow-accent/10">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
                   <div className="flex items-center gap-5">
                     <div className="flex-shrink-0 w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <CreditCard className="w-7 h-7 text-accent" />
