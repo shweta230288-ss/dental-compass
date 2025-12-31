@@ -20,11 +20,13 @@ export function PhilosophySection() {
             className="relative"
           >
             <div className="relative">
-              <img
-                src={teamPhoto}
-                alt="Kaya Dental team providing compassionate care"
-                className="w-full rounded-2xl shadow-2xl"
-              />
+              <div className="rounded-2xl shadow-2xl overflow-hidden h-80 md:h-96">
+                <img
+                  src={teamPhoto}
+                  alt="Kaya Dental team providing compassionate care"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
