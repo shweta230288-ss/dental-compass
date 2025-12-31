@@ -65,6 +65,16 @@ export function HeroSection() {
           >
             <Button
               size="lg"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-8"
+              asChild
+            >
+              <a href="tel:978-534-4000">
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
+              </a>
+            </Button>
+            <Button
+              size="lg"
               variant="outline"
               className="border-accent text-accent hover:bg-accent hover:text-accent-foreground text-base px-8 backdrop-blur-sm"
               asChild

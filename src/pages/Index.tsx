@@ -2,6 +2,7 @@ import { Layout } from '@/components/layout/Layout';
 import { HeroSection } from '@/components/home/HeroSection';
 import { HighlightsSection } from '@/components/home/HighlightsSection';
 import { PhilosophySection } from '@/components/home/PhilosophySection';
+import { DoctorSection } from '@/components/home/DoctorSection';
 import { ServicesPreview } from '@/components/home/ServicesPreview';
 import { ReviewsPreview } from '@/components/home/ReviewsPreview';
 import { CTASection } from '@/components/home/CTASection';
@@ -19,6 +20,7 @@ const Index = () => {
       <HeroSection />
       <HighlightsSection />
       <PhilosophySection />
+      <DoctorSection />
       <ServicesPreview />
       <ReviewsPreview />
       <CTASection />
