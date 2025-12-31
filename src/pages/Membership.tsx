@@ -8,12 +8,14 @@ const plans = [
   {
     name: 'Child Plan',
     price: '$400',
+    retailValue: 'Retail Value $722',
     period: '/year',
     description: 'For children through the age of 13 years old',
     features: [
-      'Two Exams per year',
+      'Two Routine Check-up Exams',
+      '1 Additional Emergency Check-up & X-ray',
       'Two Cleanings (Fluoride Treatments Included)',
-      'Unlimited X-Rays per Visit (As needed)',
+      'Unlimited X-Rays per Visit (As needed and at the discretion of the doctor)',
       '15% off Dental Procedures (excluding Invisalign, Implants and Whitening)',
     ],
     popular: false,
@@ -21,12 +23,14 @@ const plans = [
   {
     name: 'Adult Plan',
     price: '$500',
+    retailValue: 'Retail Value $798',
     period: '/year',
     description: 'Ideal for patients over the age of 14',
     features: [
-      'Two Exams per year',
+      'Two Routine Check-up Exams',
+      '1 Additional Emergency Check-up & X-ray',
       'Two Cleanings (Fluoride Treatments Included)',
-      'Unlimited X-Rays per Visit (As needed)',
+      'Unlimited X-Rays per Visit (As needed and at the discretion of the doctor)',
       '15% off Dental Procedures (excluding Invisalign, Implants and Whitening)',
     ],
     popular: true,
@@ -34,13 +38,14 @@ const plans = [
   {
     name: 'Periodontal Plan',
     price: '$700',
+    retailValue: '',
     period: '/year',
     description: 'For patients requiring periodontal care',
     features: [
       '15% off Initial Deep Cleaning',
-      'Two Exams per year',
+      'Two Exams',
       'Two Periodontal Maintenances',
-      'Unlimited X-Rays per Visit (As needed)',
+      'Unlimited X-Rays per Visit (As needed and at the discretion of the doctor)',
       'Fluoride Treatment (Twice per Year)',
       '15% off Dental Procedures (excluding Invisalign, Implants and Whitening)',
     ],
@@ -155,13 +160,20 @@ export default function Membership() {
                 <h3 className={`font-serif text-2xl font-bold mb-2 ${plan.popular ? '' : 'text-foreground'}`}>
                   {plan.name}
                 </h3>
-                <div className="flex items-baseline gap-1 mb-4">
-                  <span className={`text-4xl font-bold ${plan.popular ? 'text-accent' : 'text-accent'}`}>
-                    {plan.price}
-                  </span>
-                  <span className={plan.popular ? 'text-primary-foreground/70' : 'text-muted-foreground'}>
-                    {plan.period}
-                  </span>
+                <div className="mb-4">
+                  <div className="flex items-baseline gap-1">
+                    <span className={`text-4xl font-bold ${plan.popular ? 'text-accent' : 'text-accent'}`}>
+                      {plan.price}
+                    </span>
+                    <span className={plan.popular ? 'text-primary-foreground/70' : 'text-muted-foreground'}>
+                      {plan.period}
+                    </span>
+                  </div>
+                  {plan.retailValue && (
+                    <span className={`text-sm ${plan.popular ? 'text-primary-foreground/70' : 'text-muted-foreground'}`}>
+                      ({plan.retailValue})
+                    </span>
+                  )}
                 </div>
                 <p className={`text-sm mb-6 ${plan.popular ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>
                   {plan.description}
