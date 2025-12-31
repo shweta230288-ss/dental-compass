@@ -132,12 +132,6 @@ export function Header() {
                 </div>)}
             </nav>
 
-            {/* CTA Button */}
-            <div className="hidden lg:flex items-center gap-4">
-              <Button variant="default" size="lg" asChild>
-                <a href="tel:978-534-4000">Book Appointment</a>
-              </Button>
-            </div>
 
             {/* Mobile Menu Toggle */}
             <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="xl:hidden p-2 text-foreground hover:text-accent transition-colors" aria-label="Toggle menu">
@@ -170,9 +164,6 @@ export function Header() {
                   <Phone className="w-5 h-5" />
                   (978) 534-4000
                 </a>
-                <Button variant="default" className="w-full" size="lg" asChild>
-                  <a href="tel:978-534-4000">Book Appointment</a>
-                </Button>
               </div>
             </nav>
           </motion.div>}
