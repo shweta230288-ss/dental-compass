@@ -14,16 +14,34 @@ const newPatientInfo = [
     icon: FileText,
     title: 'Patient Forms',
     description: 'Complete your paperwork before your visit to save time. New patient forms are available at our office or can be completed upon arrival.',
+    details: [
+      'Medical history questionnaire',
+      'Dental history form',
+      'Insurance information',
+      'HIPAA consent form',
+    ],
   },
   {
     icon: Clock,
     title: 'First Visit',
     description: 'Your first appointment will include a comprehensive exam, X-rays, and a personalized treatment plan. Please arrive 15 minutes early.',
+    details: [
+      'Comprehensive oral exam',
+      'Digital X-rays',
+      'Oral cancer screening',
+      'Treatment plan discussion',
+    ],
   },
   {
     icon: CreditCard,
     title: 'Payment Options',
     description: 'We accept most major credit cards, cash, and offer flexible payment plans. We also work with CareCredit for financing options.',
+    details: [
+      'All major credit cards',
+      'CareCredit financing',
+      'Flexible payment plans',
+      'Insurance assistance',
+    ],
   },
 ];
 
@@ -64,17 +82,25 @@ export default function NewPatients() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-8 rounded-xl bg-secondary"
+                className="p-8 rounded-xl bg-secondary"
               >
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4">
                   <info.icon className="w-8 h-8 text-accent" />
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
                   {info.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-sm mb-4">
                   {info.description}
                 </p>
+                <ul className="space-y-2">
+                  {info.details.map((detail) => (
+                    <li key={detail} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>

@@ -6,39 +6,54 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
+import serviceGeneralDentistry from '@/assets/service-general-dentistry-new.jpg';
+import serviceExamCleaning from '@/assets/service-exam-cleaning-new.jpg';
+import serviceFamilyDentistry from '@/assets/service-family-dentistry-new.jpg';
+import serviceDentalFillings from '@/assets/service-dental-fillings-new.jpg';
+import serviceCosmeticDentistry from '@/assets/service-cosmetic-dentistry-new.jpg';
+import serviceTeethWhitening from '@/assets/service-teeth-whitening-new.jpg';
+import serviceInvisalign from '@/assets/service-invisalign-new.jpg';
+import serviceDentalImplants from '@/assets/service-dental-implants-new.jpg';
+import serviceRootCanal from '@/assets/service-root-canal-new.jpg';
+import serviceDentures from '@/assets/service-dentures-new.jpg';
+import serviceDentalCrowns from '@/assets/service-dental-crowns-new.jpg';
+import serviceEmergencyDentistry from '@/assets/service-emergency-dentistry-new.jpg';
+import serviceOrthodontics from '@/assets/service-orthodontics-new.jpg';
+import serviceWisdomTooth from '@/assets/service-wisdom-tooth-new.jpg';
+
 const allServices = [
   {
     category: 'General Care',
     services: [
-      { title: 'General Dentistry', path: '/services/general-dentistry', description: 'Comprehensive dental exams, cleanings, and preventive care.' },
-      { title: 'Exam and Cleaning', path: '/services/exam-cleaning', description: 'Regular checkups and professional cleaning for optimal oral health.' },
-      { title: 'Family Dentistry', path: '/services/family-dentistry', description: 'Gentle, comprehensive care for every family member.' },
-      { title: 'Dental Fillings', path: '/services/dental-fillings', description: 'Tooth-colored fillings to restore damaged teeth.' },
+      { title: 'General Dentistry', path: '/services/general-dentistry', description: 'Comprehensive dental exams, cleanings, and preventive care.', image: serviceGeneralDentistry },
+      { title: 'Exam and Cleaning', path: '/services/exam-cleaning', description: 'Regular checkups and professional cleaning for optimal oral health.', image: serviceExamCleaning },
+      { title: 'Family Dentistry', path: '/services/family-dentistry', description: 'Gentle, comprehensive care for every family member.', image: serviceFamilyDentistry },
+      { title: 'Dental Fillings', path: '/services/dental-fillings', description: 'Tooth-colored fillings to restore damaged teeth.', image: serviceDentalFillings },
     ],
   },
   {
     category: 'Cosmetic Services',
     services: [
-      { title: 'Cosmetic Dentistry', path: '/services/cosmetic-dentistry', description: 'Transform your smile with veneers, bonding, and more.' },
-      { title: 'Teeth Whitening', path: '/services/teeth-whitening', description: 'Professional whitening for a brighter, radiant smile.' },
-      { title: 'Invisalign', path: '/services/invisalign', description: 'Clear aligners for discreet teeth straightening.' },
+      { title: 'Cosmetic Dentistry', path: '/services/cosmetic-dentistry', description: 'Transform your smile with veneers, bonding, and more.', image: serviceCosmeticDentistry },
+      { title: 'Teeth Whitening', path: '/services/teeth-whitening', description: 'Professional whitening for a brighter, radiant smile.', image: serviceTeethWhitening },
+      { title: 'Invisalign', path: '/services/invisalign', description: 'Clear aligners for discreet teeth straightening.', image: serviceInvisalign },
     ],
   },
   {
     category: 'Restorative Care',
     services: [
-      { title: 'Dental Implants', path: '/services/dental-implants', description: 'Permanent tooth replacement that looks and feels natural.' },
-      { title: 'Root Canal', path: '/services/root-canal', description: 'Pain-free treatment to save infected teeth.' },
-      { title: 'Dentures', path: '/services/dentures', description: 'Custom dentures for a natural-looking smile.' },
-      { title: 'Dental Crowns', path: '/services/dental-crowns', description: 'Restore damaged teeth with custom-fitted crowns.' },
+      { title: 'Dental Implants', path: '/services/dental-implants', description: 'Permanent tooth replacement that looks and feels natural.', image: serviceDentalImplants },
+      { title: 'Root Canal', path: '/services/root-canal', description: 'Pain-free treatment to save infected teeth.', image: serviceRootCanal },
+      { title: 'Dentures', path: '/services/dentures', description: 'Custom dentures for a natural-looking smile.', image: serviceDentures },
+      { title: 'Dental Crowns', path: '/services/dental-crowns', description: 'Restore damaged teeth with custom-fitted crowns.', image: serviceDentalCrowns },
     ],
   },
   {
     category: 'Specialized Care',
     services: [
-      { title: 'Emergency Dentistry', path: '/services/emergency-dentistry', description: 'Prompt care when dental emergencies strike.' },
-      { title: 'Orthodontics', path: '/services/orthodontics', description: 'Traditional braces and modern alignment solutions.' },
-      { title: 'Wisdom Tooth Removal', path: '/services/wisdom-tooth-removal', description: 'Safe extraction of problematic wisdom teeth.' },
+      { title: 'Emergency Dentistry', path: '/services/emergency-dentistry', description: 'Prompt care when dental emergencies strike.', image: serviceEmergencyDentistry },
+      { title: 'Orthodontics', path: '/services/orthodontics', description: 'Traditional braces and modern alignment solutions.', image: serviceOrthodontics },
+      { title: 'Wisdom Tooth Removal', path: '/services/wisdom-tooth-removal', description: 'Safe extraction of problematic wisdom teeth.', image: serviceWisdomTooth },
     ],
   },
 ];
@@ -90,7 +105,7 @@ export default function Services() {
               >
                 {category.category}
               </motion.h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {category.services.map((service, index) => (
                   <motion.div
                     key={service.title}
@@ -100,17 +115,26 @@ export default function Services() {
                   >
                     <Link
                       to={service.path}
-                      className="block h-full p-6 rounded-xl border border-border bg-card hover:border-accent hover:shadow-medium transition-all duration-300 group"
+                      className="block h-full rounded-xl border border-border bg-card hover:border-accent hover:shadow-medium transition-all duration-300 group overflow-hidden"
                     >
-                      <h3 className="font-serif text-lg font-semibold text-foreground mb-2 group-hover:text-accent transition-colors">
-                        {service.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm mb-4">
-                        {service.description}
-                      </p>
-                      <span className="inline-flex items-center text-accent text-sm font-medium">
-                        Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                      </span>
+                      <div className="aspect-[4/3] overflow-hidden">
+                        <img 
+                          src={service.image} 
+                          alt={service.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                      <div className="p-5">
+                        <h3 className="font-serif text-lg font-semibold text-foreground mb-2 group-hover:text-accent transition-colors">
+                          {service.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-3">
+                          {service.description}
+                        </p>
+                        <span className="inline-flex items-center text-accent text-sm font-medium">
+                          Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                        </span>
+                      </div>
                     </Link>
                   </motion.div>
                 ))}
