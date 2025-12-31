@@ -1,6 +1,6 @@
 import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
-import { Star, Quote } from 'lucide-react';
+import { Star, Quote, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const reviews = [
@@ -123,18 +123,55 @@ export default function Reviews() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="text-center space-y-4"
           >
             <p className="text-muted-foreground mb-4">
-              Want to see more reviews? Check us out on Google!
+              Love your experience? Leave us a review on Google!
             </p>
-            <Button variant="outline" size="lg" asChild>
-              <a 
-                href="https://www.google.com/search?q=Kaya+Dental+Reviews+Leominster+MA" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                View All Google Reviews
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" asChild>
+                <a 
+                  href="https://search.google.com/local/writereview?placeid=ChIJr0Tv3_pW44kRl6xPQBxJQgg" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Leave a Google Review
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <a 
+                  href="https://www.google.com/search?q=Kaya+Dental+Reviews+Leominster+MA" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  View All Reviews
+                </a>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-primary">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+              Ready to Experience the Difference?
+            </h2>
+            <p className="text-primary-foreground/80 text-lg mb-8">
+              Join thousands of satisfied patients. Schedule your appointment today!
+            </p>
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
+              <a href="tel:978-534-4000">
+                <Phone className="w-5 h-5 mr-2" />
+                Call (978) 534-4000
               </a>
             </Button>
           </motion.div>

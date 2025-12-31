@@ -3,6 +3,12 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Check, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 const plans = [
   {
@@ -70,6 +76,33 @@ const provisions = [
   'Plans must be paid in full upon enrollment',
   'No refunds will be provided for dues of the plan annual fee under any circumstances including failure to schedule and maintain appointments',
   'Benefits are provided for ONE YEAR from the date the plan was purchased',
+];
+
+const faqs = [
+  {
+    question: 'Who is eligible for a membership plan?',
+    answer: 'Anyone without dental insurance is eligible to join our membership plans. Whether you are self-employed, retired, or simply do not have dental coverage through your employer, our plans offer an affordable way to maintain your oral health.'
+  },
+  {
+    question: 'Can I use the membership plan with my insurance?',
+    answer: 'No, membership plans cannot be combined with dental insurance. These plans are designed specifically for patients who do not have insurance coverage.'
+  },
+  {
+    question: 'When do my benefits start?',
+    answer: 'Your benefits begin immediately upon enrollment! There are no waiting periods, so you can start using your plan right away.'
+  },
+  {
+    question: 'Can I cancel my membership?',
+    answer: 'Membership plans are non-refundable once purchased. Benefits are provided for one full year from the date of enrollment.'
+  },
+  {
+    question: 'Are there any hidden fees?',
+    answer: 'Absolutely not! The price you see is the price you pay. There are no hidden fees, deductibles, or pre-authorizations required.'
+  },
+  {
+    question: 'What happens if I need additional treatment?',
+    answer: 'Members receive 15% off most dental procedures (excluding Invisalign, implants, and whitening). This discount applies to any treatment beyond what is included in your plan.'
+  },
 ];
 
 export default function Membership() {
@@ -212,6 +245,46 @@ export default function Membership() {
           >
             All Cleaning appointments include Oral Cancer Screening & Periodontal Disease Evaluation.
           </motion.p>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-background">
+        <div className="container max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="text-accent font-medium text-sm uppercase tracking-wider">
+              Got Questions?
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2">
+              Frequently Asked Questions
+            </h2>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-left font-semibold">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
         </div>
       </section>
 
