@@ -5,14 +5,10 @@ import { useRef } from 'react';
 import { Heart, Award, Users, GraduationCap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import drKunalDani from '@/assets/dr-kunal-dani.jpg';
-import staffCarolyn from '@/assets/staff-carolyn.jpg';
-import staffKeri from '@/assets/staff-keri.jpg';
 import staffAnnie from '@/assets/staff-annie.jpg';
 import staffMarianne from '@/assets/staff-marianne.jpg';
 import staffTrinh from '@/assets/staff-trinh.jpg';
 import staffErika from '@/assets/staff-erika.jpg';
-import staffJenn from '@/assets/staff-jenn.jpg';
-import staffMaggie from '@/assets/staff-maggie.jpg';
 import staffKatie from '@/assets/staff-katie.jpg';
 export default function About() {
   const ref = useRef(null);
@@ -21,16 +17,6 @@ export default function About() {
     margin: '-100px'
   });
   const staffMembers = [{
-    name: 'Carolyn',
-    role: 'Administrative Assistant',
-    image: staffCarolyn,
-    bio: "Carolyn Baker is our full-time Administrative Assistant. Carolyn is a graduate of St. Bernard's High School and Montachusett Technical where she received her degree in Dental Assisting. Carolyn began working at our office in 1992 where she worked as a part time assistant and part time at the front desk. In 1995 Carolyn became the full time Administrative Assistant. Having assisted chairside for years, Carolyn has an excellent knowledge of the field and can assist you greatly with many of your questions when you call. Carolyn has two grown children, and enjoys her time walking, hiking and relaxing along the Maine coast."
-  }, {
-    name: 'Keri',
-    role: 'Registered Dental Hygienist',
-    image: staffKeri,
-    bio: "Keri is a graduate of St. Bernard's High School. She received her RDH degree from University of New England in Biddeford for dental hygiene. Keri has been with our practice since 1995. Keri is terrific with patients and will always have your concerns at heart. She and her husband Chris have two grown children and grandchildren and enjoy spending their free time with friends and family, Patriots tailgates and relaxing at Oak Hill Country Club for the weekend."
-  }, {
     name: 'Annie',
     role: 'Registered Dental Hygienist',
     image: staffAnnie,
@@ -50,16 +36,6 @@ export default function About() {
     role: 'Registered Dental Hygienist',
     image: staffErika,
     bio: "Erika is a Registered Dental Hygienist. She began working in our office as a temp and was such a great fit here that we decided to offer her a position to stay on. Further impressing, she is now full time. Erika graduated from Burlington High School and is the proud mom of two great kids. She bravely decided to go back to school while her children were young and in 2015 completed her RDH degree at Mount Wachusett Community College. Erika is a gregarious soul who loves country music, the Patriots, and spending time with her husband Justin and their six children (yes six!)."
-  }, {
-    name: 'Jenn',
-    role: 'Registered Dental Hygienist',
-    image: staffJenn,
-    bio: "Jenn is a Registered Dental Hygienist. Jenn is a 1998 graduate of St. Bernard's High School and received her BA in Psychology from Assumption College in 2002. Jenn was always interested in dentistry and in 2007 got her RDH degree from Mount Wachusett Community College. After working for a few years in the Boston area, she and her husband Matt moved back to the Leominster area and she began working with us in 2018. Jenn is always smiling and is a wonderful hygienist and person. She is very busy with her five (yes, five!) children."
-  }, {
-    name: 'Maggie',
-    role: 'Dental Assistant',
-    image: staffMaggie,
-    bio: "Maggie is a Dental Assistant. She began working here in October of 2018. Maggie has had an interesting journey. She graduated from Assabet Valley High School with a degree in Cosmetology and Interior Design. She worked as a stylist at a salon, bartended, painted, and waitressed before going to Quinsigamond Community College where she received her Certified Dental Assisting Degree. Maggie is full of life, easy going, gregarious and always smiling. She brings energy and a swag to our office. Maggie loves her times with her family, her friends and her music."
   }, {
     name: 'Katie',
     role: 'Registered Dental Hygienist',
