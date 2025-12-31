@@ -74,69 +74,74 @@ export default function About() {
         </div>
       </section>
 
+      {/* Office Photo */}
+      <section className="py-12 bg-background">
+        <div className="container">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="rounded-2xl overflow-hidden shadow-medium"
+          >
+            <img 
+              src={officeFrontDesk} 
+              alt="Kaya Dental front desk" 
+              className="w-full h-auto object-cover"
+            />
+          </motion.div>
+        </div>
+      </section>
+
       {/* Our Office */}
       <section className="py-20 bg-background" ref={ref}>
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{
+          <motion.div initial={{
             opacity: 0,
-            x: -30
+            y: 20
           }} animate={isInView ? {
             opacity: 1,
-            x: 0
+            y: 0
           } : {}} transition={{
             duration: 0.6
-          }}>
-              <span className="text-accent font-medium text-sm uppercase tracking-wider">
-                Our Office
-              </span>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
-                A Modern, Welcoming Space
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Our state-of-the-art facility is designed with your comfort in mind. From the moment 
-                you walk through our doors, you'll experience a warm, welcoming environment equipped 
-                with the latest dental technology.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Located at 130 North Main Street in Leominster, MA, our office features modern 
-                treatment rooms, advanced digital imaging equipment, and a relaxing atmosphere 
-                that helps put even the most anxious patients at ease.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Award className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Advanced Technology</h4>
-                    <p className="text-sm text-muted-foreground">Digital X-rays, 3D printing</p>
-                  </div>
+          }} className="max-w-4xl mx-auto text-center">
+            <span className="text-accent font-medium text-sm uppercase tracking-wider">
+              Our Office
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
+              A Modern, Welcoming Space
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Our state-of-the-art facility is designed with your comfort in mind. From the moment 
+              you walk through our doors, you'll experience a warm, welcoming environment equipped 
+              with the latest dental technology.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Located at 130 North Main Street in Leominster, MA, our office features modern 
+              treatment rooms, advanced digital imaging equipment, and a relaxing atmosphere 
+              that helps put even the most anxious patients at ease.
+            </p>
+            <div className="flex flex-wrap justify-center gap-8">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Award className="w-5 h-5 text-accent" />
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Heart className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Patient Comfort</h4>
-                    <p className="text-sm text-muted-foreground">Relaxing atmosphere</p>
-                  </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-foreground">Advanced Technology</h4>
+                  <p className="text-sm text-muted-foreground">Digital X-rays, 3D printing</p>
                 </div>
               </div>
-            </motion.div>
-            <motion.div initial={{
-            opacity: 0,
-            x: 30
-          }} animate={isInView ? {
-            opacity: 1,
-            x: 0
-          } : {}} transition={{
-            duration: 0.6,
-            delay: 0.2
-          }} className="rounded-2xl overflow-hidden shadow-medium lg:col-span-1 lg:row-span-2">
-              <img src={officeFrontDesk} alt="Kaya Dental front desk" className="w-full h-full object-cover min-h-[400px] lg:min-h-[500px]" />
-            </motion.div>
-          </div>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Heart className="w-5 h-5 text-accent" />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-foreground">Patient Comfort</h4>
+                  <p className="text-sm text-muted-foreground">Relaxing atmosphere</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
