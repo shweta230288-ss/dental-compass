@@ -149,7 +149,7 @@ export function Header() {
       }} exit={{
         opacity: 0,
         height: 0
-      }} className="fixed inset-x-0 top-20 z-40 bg-background border-b border-border xl:hidden overflow-hidden">
+      }} className="fixed inset-x-0 top-20 z-40 bg-background border-b border-border xl:hidden overflow-y-auto max-h-[calc(100vh-5rem)]">
             <nav className="container py-4">
               {navigationItems.map(item => <div key={item.name}>
                   <Link to={item.path} className={`block py-3 text-base font-medium border-b border-border/50 ${location.pathname === item.path ? 'text-accent' : 'text-foreground'}`}>
