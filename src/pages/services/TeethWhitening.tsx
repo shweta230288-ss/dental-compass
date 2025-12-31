@@ -1,6 +1,6 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { Sparkles } from 'lucide-react';
-import heroImage from '@/assets/service-teeth-whitening.jpg';
+import heroImage from '@/assets/service-teeth-whitening-new.jpg';
 
 export default function TeethWhitening() {
   return (

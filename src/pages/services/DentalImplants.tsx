@@ -1,6 +1,6 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { Layers } from 'lucide-react';
-import heroImage from '@/assets/service-dental-implants.jpg';
+import heroImage from '@/assets/service-dental-implants-new.jpg';
 
 export default function DentalImplants() {
   return (

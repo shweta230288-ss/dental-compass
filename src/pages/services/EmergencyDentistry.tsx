@@ -1,6 +1,6 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { AlertTriangle } from 'lucide-react';
-import heroImage from '@/assets/service-emergency-dentistry.jpg';
+import heroImage from '@/assets/service-emergency-dentistry-new.jpg';
 
 export default function EmergencyDentistry() {
   return (

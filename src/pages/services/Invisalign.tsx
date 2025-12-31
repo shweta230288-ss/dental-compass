@@ -1,6 +1,6 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { AlignCenter } from 'lucide-react';
-import heroImage from '@/assets/service-invisalign.jpg';
+import heroImage from '@/assets/service-invisalign-new.jpg';
 
 export default function Invisalign() {
   return (

@@ -1,6 +1,6 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { Circle } from 'lucide-react';
-import heroImage from '@/assets/service-dental-fillings.jpg';
+import heroImage from '@/assets/service-dental-fillings-new.jpg';
 
 export default function DentalFillings() {
   return (

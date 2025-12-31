@@ -1,6 +1,6 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { Target } from 'lucide-react';
-import heroImage from '@/assets/service-root-canal.jpg';
+import heroImage from '@/assets/service-root-canal-new.jpg';
 
 export default function RootCanal() {
   return (
