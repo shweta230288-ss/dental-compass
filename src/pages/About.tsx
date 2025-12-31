@@ -253,12 +253,12 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="mb-14 rounded-2xl overflow-hidden shadow-medium"
+            className="mb-14 rounded-2xl overflow-hidden shadow-medium h-[400px] md:h-[500px]"
           >
             <img 
               src={teamPhoto} 
               alt="The Kaya Dental team" 
-              className="w-full h-auto object-cover"
+              className="w-full h-full object-cover object-[center_60%]"
             />
           </motion.div>
 
