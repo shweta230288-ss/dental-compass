@@ -93,10 +93,10 @@ export function Header() {
       {/* Main Header */}
       <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-md shadow-soft' : 'bg-background'}`}>
         <div className="container">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-24 md:h-20">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
-              <img src={kayaLogo} alt="Kaya Dental - Redefining Comfort & Aesthetics" className="h-20 w-auto" />
+              <img src={kayaLogo} alt="Kaya Dental - Redefining Comfort & Aesthetics" className="h-24 md:h-20 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -149,7 +149,7 @@ export function Header() {
       }} exit={{
         opacity: 0,
         height: 0
-      }} className="fixed inset-x-0 top-20 z-40 bg-background border-b border-border xl:hidden overflow-y-auto max-h-[calc(100vh-5rem)]">
+      }} className="fixed inset-x-0 top-24 md:top-20 z-40 bg-background border-b border-border xl:hidden overflow-y-auto max-h-[calc(100vh-6rem)] md:max-h-[calc(100vh-5rem)]">
             <nav className="container py-4">
               {navigationItems.map(item => <div key={item.name}>
                   <Link to={item.path} className={`block py-3 text-base font-medium border-b border-border/50 ${location.pathname === item.path ? 'text-accent' : 'text-foreground'}`}>
