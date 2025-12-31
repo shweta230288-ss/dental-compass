@@ -189,25 +189,28 @@ export default function NewPatients() {
             viewport={{ once: true }}
           >
             <Link to="/membership" className="block group">
-              <div className="bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10 border-2 border-accent/30 rounded-2xl p-8 md:p-10 text-center transition-all duration-300 hover:border-accent/60 hover:shadow-lg hover:shadow-accent/10">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/20 mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <CreditCard className="w-8 h-8 text-accent" />
+              <div className="bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10 border-2 border-accent/30 rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent/60 hover:shadow-lg hover:shadow-accent/10">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div className="flex items-center gap-5">
+                    <div className="flex-shrink-0 w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <CreditCard className="w-7 h-7 text-accent" />
+                    </div>
+                    <div className="text-center md:text-left">
+                      <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground mb-1">
+                        No Insurance? No Problem!
+                      </h3>
+                      <p className="text-muted-foreground text-sm">
+                        Save up to <span className="text-accent font-semibold">$300+</span> annually • Plans from $400/year • No deductibles
+                      </p>
+                    </div>
+                  </div>
+                  <span className="flex-shrink-0 inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-full font-medium group-hover:gap-3 transition-all duration-300">
+                    View Plans
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
                 </div>
-                <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-3">
-                  No Insurance? No Problem!
-                </h3>
-                <p className="text-muted-foreground mb-2 max-w-xl mx-auto">
-                  Save up to <span className="text-accent font-semibold">$300+</span> annually with our affordable membership plans
-                </p>
-                <p className="text-sm text-muted-foreground/80 mb-6">
-                  Plans starting at just $400/year • No deductibles • No waiting periods
-                </p>
-                <span className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-full font-medium group-hover:gap-3 transition-all duration-300">
-                  Explore Membership Plans
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
               </div>
             </Link>
           </motion.div>
