@@ -1,6 +1,6 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { Crown } from 'lucide-react';
-import heroImage from '@/assets/service-dental-crowns.jpg';
+import heroImage from '@/assets/service-dental-crowns-new.jpg';
 
 export default function DentalCrowns() {
   return (

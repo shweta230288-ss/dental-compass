@@ -1,6 +1,6 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { Minus } from 'lucide-react';
-import heroImage from '@/assets/service-wisdom-tooth.jpg';
+import heroImage from '@/assets/service-wisdom-tooth-new.jpg';
 
 export default function WisdomToothRemoval() {
   return (

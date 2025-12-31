@@ -1,6 +1,6 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { Stethoscope } from 'lucide-react';
-import heroImage from '@/assets/service-general-dentistry.jpg';
+import heroImage from '@/assets/service-general-dentistry-new.jpg';
 
 export default function GeneralDentistry() {
   return (

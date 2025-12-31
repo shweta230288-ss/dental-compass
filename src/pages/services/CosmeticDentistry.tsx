@@ -1,6 +1,6 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { Smile } from 'lucide-react';
-import heroImage from '@/assets/service-cosmetic-dentistry.jpg';
+import heroImage from '@/assets/service-cosmetic-dentistry-new.jpg';
 
 export default function CosmeticDentistry() {
   return (

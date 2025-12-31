@@ -1,6 +1,6 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { Ruler } from 'lucide-react';
-import heroImage from '@/assets/service-orthodontics.jpg';
+import heroImage from '@/assets/service-orthodontics-new.jpg';
 
 export default function Orthodontics() {
   return (

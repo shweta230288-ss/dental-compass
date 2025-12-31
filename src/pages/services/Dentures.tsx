@@ -1,6 +1,6 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { LayoutGrid } from 'lucide-react';
-import heroImage from '@/assets/service-dentures.jpg';
+import heroImage from '@/assets/service-dentures-new.jpg';
 
 export default function Dentures() {
   return (

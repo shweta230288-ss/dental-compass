@@ -1,6 +1,6 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { Users } from 'lucide-react';
-import heroImage from '@/assets/service-family-dentistry.jpg';
+import heroImage from '@/assets/service-family-dentistry-new.jpg';
 
 export default function FamilyDentistry() {
   return (

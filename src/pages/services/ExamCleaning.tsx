@@ -1,6 +1,6 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { ClipboardCheck } from 'lucide-react';
-import heroImage from '@/assets/service-exam-cleaning.jpg';
+import heroImage from '@/assets/service-exam-cleaning-new.jpg';
 
 export default function ExamCleaning() {
   return (
