@@ -5,6 +5,7 @@ import { useRef } from 'react';
 import { Heart, Award, Users, GraduationCap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import drKunalDani from '@/assets/dr-kunal-dani.jpg';
+import officeFrontDesk from '@/assets/office-front-desk.jpg';
 import staffAnnie from '@/assets/staff-annie.jpg';
 import staffMarianne from '@/assets/staff-marianne.jpg';
 import staffTrinh from '@/assets/staff-trinh.jpg';
@@ -132,9 +133,7 @@ export default function About() {
             duration: 0.6,
             delay: 0.2
           }} className="rounded-2xl overflow-hidden shadow-medium">
-              <video autoPlay muted loop playsInline className="w-full h-auto">
-                <source src="/videos/office-tour.mp4" type="video/mp4" />
-              </video>
+              <img src={officeFrontDesk} alt="Kaya Dental front desk" className="w-full h-auto object-cover" />
             </motion.div>
           </div>
         </div>
