@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import teamPhoto from '@/assets/team-photo-new.jpg';
-import officeFrontDesk from '@/assets/office-front-desk.jpg';
 
 export function PhilosophySection() {
   const ref = useRef(null);
@@ -17,27 +16,12 @@ export function PhilosophySection() {
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="relative"
           >
-            <div className="relative">
-              <img
-                src={teamPhoto}
-                alt="Kaya Dental team providing compassionate care"
-                className="w-full rounded-2xl shadow-2xl"
-              />
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="absolute -bottom-6 -right-6 w-48 md:w-56 rounded-xl overflow-hidden shadow-xl border-4 border-primary hidden md:block"
-              >
-                <img
-                  src={officeFrontDesk}
-                  alt="Kaya Dental welcoming front desk"
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-            </div>
+            <img
+              src={teamPhoto}
+              alt="Kaya Dental team providing compassionate care"
+              className="w-full rounded-2xl shadow-2xl"
+            />
           </motion.div>
 
           {/* Text Column */}
