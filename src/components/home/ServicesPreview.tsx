@@ -2,15 +2,22 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Stethoscope, Sparkles, Puzzle, AlignCenter, AlertCircle, Users } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import type { LucideIcon } from 'lucide-react';
+
+// Service images
+import generalDentistryImg from '@/assets/service-general-dentistry-new.jpg';
+import cosmeticDentistryImg from '@/assets/service-cosmetic-dentistry-new.jpg';
+import dentalImplantsImg from '@/assets/service-dental-implants-new.jpg';
+import invisalignImg from '@/assets/service-invisalign-new.jpg';
+import emergencyDentistryImg from '@/assets/service-emergency-dentistry-new.jpg';
+import familyDentistryImg from '@/assets/service-family-dentistry-new.jpg';
 
 interface Service {
   title: string;
   description: string;
   path: string;
-  icon: LucideIcon;
+  image: string;
 }
 
 const services: Service[] = [
@@ -18,37 +25,37 @@ const services: Service[] = [
     title: 'General Dentistry',
     description: 'Comprehensive exams, cleanings, and preventive care for optimal oral health.',
     path: '/services/general-dentistry',
-    icon: Stethoscope,
+    image: generalDentistryImg,
   },
   {
     title: 'Cosmetic Dentistry',
     description: 'Transform your smile with veneers, bonding, and aesthetic treatments.',
     path: '/services/cosmetic-dentistry',
-    icon: Sparkles,
+    image: cosmeticDentistryImg,
   },
   {
     title: 'Dental Implants',
     description: 'Permanent, natural-looking tooth replacements that restore your confidence.',
     path: '/services/dental-implants',
-    icon: Puzzle,
+    image: dentalImplantsImg,
   },
   {
     title: 'Invisalign',
     description: 'Straighten your teeth discreetly with clear, comfortable aligners.',
     path: '/services/invisalign',
-    icon: AlignCenter,
+    image: invisalignImg,
   },
   {
     title: 'Emergency Care',
     description: 'Prompt treatment for dental emergencies when you need it most.',
     path: '/services/emergency-dentistry',
-    icon: AlertCircle,
+    image: emergencyDentistryImg,
   },
   {
     title: 'Family Dentistry',
     description: 'Gentle, comprehensive care for every member of your family.',
     path: '/services/family-dentistry',
-    icon: Users,
+    image: familyDentistryImg,
   },
 ];
 
@@ -92,20 +99,27 @@ export function ServicesPreview() {
             >
               <Link
                 to={service.path}
-                className="block h-full p-8 rounded-xl border border-border bg-card hover:border-accent hover:shadow-medium transition-all duration-300 group"
+                className="block h-full rounded-xl border border-border bg-card overflow-hidden hover:border-accent hover:shadow-medium transition-all duration-300 group"
               >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                  <service.icon className="w-7 h-7 text-primary group-hover:text-accent-foreground transition-colors" />
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                  {service.description}
-                </p>
-                <span className="inline-flex items-center text-accent text-sm font-medium group-hover:gap-2 transition-all">
-                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                </span>
+                <div className="p-6">
+                  <h3 className="font-serif text-xl font-semibold text-foreground mb-2 group-hover:text-accent transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <span className="inline-flex items-center text-accent text-sm font-medium group-hover:gap-2 transition-all">
+                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                  </span>
+                </div>
               </Link>
             </motion.div>
           ))}
