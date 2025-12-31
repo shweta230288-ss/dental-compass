@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import teamPhoto from '@/assets/team-photo-new.jpg';
+import teamPhoto from '@/assets/team-photo.jpg';
 import officeFrontDesk from '@/assets/office-front-desk.jpg';
 
 export function PhilosophySection() {
@@ -20,13 +20,11 @@ export function PhilosophySection() {
             className="relative"
           >
             <div className="relative">
-              <div className="rounded-2xl shadow-2xl overflow-hidden h-80 md:h-[420px]">
-                <img
-                  src={teamPhoto}
-                  alt="Kaya Dental team providing compassionate care"
-                  className="w-full h-[112%] object-cover object-[center_55%]"
-                />
-              </div>
+              <img
+                src={teamPhoto}
+                alt="Kaya Dental team providing compassionate care"
+                className="w-full rounded-2xl shadow-2xl"
+              />
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
