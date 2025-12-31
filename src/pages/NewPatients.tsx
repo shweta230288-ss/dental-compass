@@ -3,60 +3,37 @@ import { motion } from 'framer-motion';
 import { Phone, MapPin, Clock, Mail, FileText, CreditCard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-
-const insurances = [
-  'Delta Dental Premier', 'MetLife', 'Cigna', 'Aetna', 'Guardian', 'United Healthcare',
-  'Blue Cross Blue Shield', 'Humana', 'Anthem', 'Principal', 'And many more...'
-];
-
-const newPatientInfo = [
-  {
-    icon: FileText,
-    title: 'Patient Forms',
-    description: 'Complete your paperwork before your visit to save time. New patient forms are available at our office or can be completed upon arrival.',
-    details: [
-      'Medical history questionnaire',
-      'Dental history form',
-      'Insurance information',
-      'HIPAA consent form',
-    ],
-  },
-  {
-    icon: Clock,
-    title: 'First Visit',
-    description: 'Your first appointment will include a comprehensive exam, X-rays, and a personalized treatment plan. Please arrive 15 minutes early.',
-    details: [
-      'Comprehensive oral exam',
-      'Digital X-rays',
-      'Oral cancer screening',
-      'Treatment plan discussion',
-    ],
-  },
-  {
-    icon: CreditCard,
-    title: 'Payment Options',
-    description: 'We accept most major credit cards, cash, and offer flexible payment plans. We also work with CareCredit for financing options.',
-    details: [
-      'All major credit cards',
-      'CareCredit financing',
-      'Flexible payment plans',
-      'Insurance assistance',
-    ],
-  },
-];
-
+const insurances = ['Delta Dental Premier', 'MetLife', 'Cigna', 'Aetna', 'Guardian', 'United Healthcare', 'Blue Cross Blue Shield', 'Humana', 'Anthem', 'Principal', 'And many more...'];
+const newPatientInfo = [{
+  icon: FileText,
+  title: 'Patient Forms',
+  description: 'Complete your paperwork before your visit to save time. New patient forms are available at our office or can be completed upon arrival.',
+  details: ['Medical history questionnaire', 'Dental history form', 'Insurance information', 'HIPAA consent form']
+}, {
+  icon: Clock,
+  title: 'First Visit',
+  description: 'Your first appointment will include a comprehensive exam, X-rays, and a personalized treatment plan. Please arrive 15 minutes early.',
+  details: ['Comprehensive oral exam', 'Digital X-rays', 'Oral cancer screening', 'Treatment plan discussion']
+}, {
+  icon: CreditCard,
+  title: 'Payment Options',
+  description: 'We accept most major credit cards, cash, and offer flexible payment plans. We also work with CareCredit for financing options.',
+  details: ['All major credit cards', 'CareCredit financing', 'Flexible payment plans', 'Insurance assistance']
+}];
 export default function NewPatients() {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero */}
       <section className="bg-primary py-20 text-primary-foreground">
         <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6
+        }} className="max-w-3xl">
             <span className="text-accent font-medium text-sm uppercase tracking-wider">
               New Patients
             </span>
@@ -75,15 +52,18 @@ export default function NewPatients() {
       <section className="py-20 bg-background">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {newPatientInfo.map((info, index) => (
-              <motion.div
-                key={info.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="p-8 rounded-xl bg-secondary"
-              >
+            {newPatientInfo.map((info, index) => <motion.div key={info.title} initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5,
+            delay: index * 0.1
+          }} viewport={{
+            once: true
+          }} className="p-8 rounded-xl bg-secondary">
                 <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4">
                   <info.icon className="w-8 h-8 text-accent" />
                 </div>
@@ -94,25 +74,26 @@ export default function NewPatients() {
                   {info.description}
                 </p>
                 <ul className="space-y-2">
-                  {info.details.map((detail) => (
-                    <li key={detail} className="flex items-center gap-2 text-sm text-muted-foreground">
+                  {info.details.map(detail => <li key={detail} className="flex items-center gap-2 text-sm text-muted-foreground">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
                       {detail}
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </div>
 
           {/* What to Expect */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto mb-16"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6
+        }} viewport={{
+          once: true
+        }} className="max-w-3xl mx-auto mb-16">
             <h2 className="font-serif text-3xl font-bold text-foreground mb-6 text-center">
               What to Expect at Your First Visit
             </h2>
@@ -151,13 +132,17 @@ export default function NewPatients() {
       {/* Insurance */}
       <section className="py-16 bg-secondary">
         <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-10"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6
+        }} viewport={{
+          once: true
+        }} className="text-center mb-10">
             <h2 className="font-serif text-3xl font-bold text-foreground mb-4">
               Insurance We Accept
             </h2>
@@ -168,26 +153,33 @@ export default function NewPatients() {
           </motion.div>
 
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto mb-10">
-            {insurances.map((insurance, index) => (
-              <motion.span
-                key={insurance}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.03 }}
-                viewport={{ once: true }}
-                className="bg-card px-4 py-2 rounded-full text-sm font-medium text-foreground shadow-sm"
-              >
+            {insurances.map((insurance, index) => <motion.span key={insurance} initial={{
+            opacity: 0,
+            scale: 0.9
+          }} whileInView={{
+            opacity: 1,
+            scale: 1
+          }} transition={{
+            duration: 0.3,
+            delay: index * 0.03
+          }} viewport={{
+            once: true
+          }} className="bg-card px-4 py-2 rounded-full text-sm font-medium text-foreground shadow-sm">
                 {insurance}
-              </motion.span>
-            ))}
+              </motion.span>)}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6
+        }} viewport={{
+          once: true
+        }}>
             <Link to="/membership" className="block group">
               <div className="bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10 border-2 border-accent/30 rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent/60 hover:shadow-lg hover:shadow-accent/10">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
@@ -200,7 +192,8 @@ export default function NewPatients() {
                         No Insurance? No Problem!
                       </h3>
                       <p className="text-muted-foreground text-sm">
-                        Save up to <span className="text-accent font-semibold">$300+</span> annually • Plans from $400/year • No deductibles
+                        Save up to <span className="text-accent font-semibold">$300+</span> annually 
+Plans from $400/year • No deductibles
                       </p>
                     </div>
                   </div>
@@ -220,24 +213,24 @@ export default function NewPatients() {
       {/* CTA */}
       <section className="py-20 bg-background">
         <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-primary rounded-2xl p-10 md:p-16 text-center"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6
+        }} viewport={{
+          once: true
+        }} className="bg-primary rounded-2xl p-10 md:p-16 text-center">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
               Ready to Schedule Your First Visit?
             </h2>
             <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
               We can't wait to meet you! Call us today to schedule your appointment.
             </p>
-            <Button
-              size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground"
-              asChild
-            >
+            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
               <a href="tel:978-534-4000">
                 <Phone className="w-5 h-5 mr-2" />
                 Call (978) 534-4000
@@ -246,6 +239,5 @@ export default function NewPatients() {
           </motion.div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 }
