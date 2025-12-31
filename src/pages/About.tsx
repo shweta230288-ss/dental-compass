@@ -133,8 +133,8 @@ export default function About() {
           } : {}} transition={{
             duration: 0.6,
             delay: 0.2
-          }} className="rounded-2xl overflow-hidden shadow-medium">
-              <img src={officeFrontDesk} alt="Kaya Dental front desk" className="w-full h-auto object-cover" />
+          }} className="rounded-2xl overflow-hidden shadow-medium lg:col-span-1 lg:row-span-2">
+              <img src={officeFrontDesk} alt="Kaya Dental front desk" className="w-full h-full object-cover min-h-[400px] lg:min-h-[500px]" />
             </motion.div>
           </div>
         </div>
