@@ -42,9 +42,6 @@ const navigationItems = [{
   name: 'Technology',
   path: '/technology'
 }, {
-  name: 'Smile Gallery',
-  path: '/gallery'
-}, {
   name: 'Membership',
   path: '/membership'
 }, {
