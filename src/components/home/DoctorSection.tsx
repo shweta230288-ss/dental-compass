@@ -14,8 +14,26 @@ export function DoctorSection() {
     <section className="py-20 bg-background" ref={ref}>
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="relative"
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src={drDaniPhoto}
+                alt="Dr. Kunal Dani, DDS - Kaya Dental"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            {/* Decorative accent */}
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/10 rounded-2xl -z-10" />
+          </motion.div>
+
           {/* Content */}
-          <div className="lg:pr-8">
+          <div className="lg:pl-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -66,24 +84,6 @@ export function DoctorSection() {
               </Button>
             </motion.div>
           </div>
-
-          {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src={drDaniPhoto}
-                alt="Dr. Kunal Dani, DDS - Kaya Dental"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            {/* Decorative accent */}
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/10 rounded-2xl -z-10" />
-          </motion.div>
         </div>
       </div>
     </section>
