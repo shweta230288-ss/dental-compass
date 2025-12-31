@@ -77,34 +77,34 @@ export default function About() {
       {/* Office Photo */}
       <section className="py-12 bg-background">
         <div className="container">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="rounded-2xl overflow-hidden shadow-medium"
-          >
-            <img 
-              src={officeFrontDesk} 
-              alt="Kaya Dental front desk" 
-              className="w-full h-auto object-cover"
-            />
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6
+        }} viewport={{
+          once: true
+        }} className="rounded-2xl overflow-hidden shadow-medium">
+            <img src={officeFrontDesk} alt="Kaya Dental front desk" className="w-full h-auto object-cover" />
           </motion.div>
         </div>
       </section>
 
       {/* Our Office */}
-      <section className="py-20 bg-background" ref={ref}>
+      <section ref={ref} className="bg-background py-[50px] pb-[50px] pt-[10px]">
         <div className="container">
           <motion.div initial={{
-            opacity: 0,
-            y: 20
-          }} animate={isInView ? {
-            opacity: 1,
-            y: 0
-          } : {}} transition={{
-            duration: 0.6
-          }} className="max-w-4xl mx-auto text-center">
+          opacity: 0,
+          y: 20
+        }} animate={isInView ? {
+          opacity: 1,
+          y: 0
+        } : {}} transition={{
+          duration: 0.6
+        }} className="max-w-4xl mx-auto text-center">
             <span className="text-accent font-medium text-sm uppercase tracking-wider">
               Our Office
             </span>
@@ -248,18 +248,19 @@ export default function About() {
           </motion.div>
 
           {/* Team Photo */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="mb-14 rounded-2xl overflow-hidden shadow-medium h-[400px] md:h-[500px]"
-          >
-            <img 
-              src={teamPhoto} 
-              alt="The Kaya Dental team" 
-              className="w-full h-full object-cover object-[center_60%]"
-            />
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6,
+          delay: 0.2
+        }} viewport={{
+          once: true
+        }} className="mb-14 rounded-2xl overflow-hidden shadow-medium h-[400px] md:h-[500px]">
+            <img src={teamPhoto} alt="The Kaya Dental team" className="w-full h-full object-cover object-[center_60%]" />
           </motion.div>
 
           {/* Staff Grid */}
