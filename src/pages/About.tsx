@@ -6,6 +6,7 @@ import { Heart, Award, Users, GraduationCap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import drKunalDani from '@/assets/dr-kunal-dani.jpg';
 import officeFrontDesk from '@/assets/office-front-desk.jpg';
+import teamPhoto from '@/assets/team-photo.jpg';
 import staffAnnie from '@/assets/staff-annie.jpg';
 import staffMarianne from '@/assets/staff-marianne.jpg';
 import staffTrinh from '@/assets/staff-trinh.jpg';
@@ -239,6 +240,21 @@ export default function About() {
               Our dedicated team of professionals is committed to making every visit 
               a positive experience. From our front desk to our hygienists, everyone is here to help.
             </p>
+          </motion.div>
+
+          {/* Team Photo */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mb-14 rounded-2xl overflow-hidden shadow-medium"
+          >
+            <img 
+              src={teamPhoto} 
+              alt="The Kaya Dental team" 
+              className="w-full h-auto object-cover"
+            />
           </motion.div>
 
           {/* Staff Grid */}
