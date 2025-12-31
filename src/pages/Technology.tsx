@@ -1,7 +1,8 @@
 import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { Zap, Camera, Printer, Brain } from 'lucide-react';
+import { Zap, Camera, Printer, Brain, Phone } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import techDigitalXray from '@/assets/tech-digital-xray.jpg';
 import techIteroScanner from '@/assets/tech-itero-scanner.jpg';
 import tech3dPrinter from '@/assets/tech-3d-printer.jpg';
@@ -138,6 +139,37 @@ export default function Technology() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-secondary">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-primary rounded-2xl p-10 md:p-16 text-center"
+          >
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+              Experience the Difference
+            </h2>
+            <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
+              Ready to experience modern dentistry with state-of-the-art technology? 
+              Schedule your appointment today and see the difference advanced care can make.
+            </p>
+            <Button
+              size="lg"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground"
+              asChild
+            >
+              <a href="tel:978-534-4000">
+                <Phone className="w-5 h-5 mr-2" />
+                Call (978) 534-4000
+              </a>
+            </Button>
+          </motion.div>
         </div>
       </section>
     </Layout>
