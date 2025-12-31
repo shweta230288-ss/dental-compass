@@ -20,11 +20,11 @@ export function PhilosophySection() {
             className="relative"
           >
             <div className="relative">
-              <div className="rounded-2xl shadow-2xl overflow-hidden h-80 md:h-96">
+              <div className="rounded-2xl shadow-2xl overflow-hidden">
                 <img
                   src={teamPhoto}
                   alt="Kaya Dental team providing compassionate care"
-                  className="w-full h-full object-cover object-[center_25%]"
+                  className="w-full h-auto object-cover"
                 />
               </div>
               <motion.div
