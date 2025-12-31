@@ -24,7 +24,7 @@ export function PhilosophySection() {
                 <img
                   src={teamPhoto}
                   alt="Kaya Dental team providing compassionate care"
-                  className="w-full h-[112%] object-cover object-[center_42%]"
+                  className="w-full h-[112%] object-cover object-[center_55%]"
                 />
               </div>
               <motion.div
