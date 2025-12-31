@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import teamPhoto from '@/assets/team-photo.jpg';
+import teamPhoto from '@/assets/team-photo-new.jpg';
 import officeFrontDesk from '@/assets/office-front-desk.jpg';
 
 export function PhilosophySection() {
