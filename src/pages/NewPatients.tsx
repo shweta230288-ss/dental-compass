@@ -183,18 +183,33 @@ export default function NewPatients() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center"
           >
-            <p className="text-muted-foreground mb-4">
-              No insurance? Check out our affordable membership plans!
-            </p>
-            <Button variant="default" asChild>
-              <Link to="/membership">View Membership Plans</Link>
-            </Button>
+            <Link to="/membership" className="block group">
+              <div className="bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10 border-2 border-accent/30 rounded-2xl p-8 md:p-10 text-center transition-all duration-300 hover:border-accent/60 hover:shadow-lg hover:shadow-accent/10">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/20 mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <CreditCard className="w-8 h-8 text-accent" />
+                </div>
+                <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-3">
+                  No Insurance? No Problem!
+                </h3>
+                <p className="text-muted-foreground mb-2 max-w-xl mx-auto">
+                  Save up to <span className="text-accent font-semibold">$300+</span> annually with our affordable membership plans
+                </p>
+                <p className="text-sm text-muted-foreground/80 mb-6">
+                  Plans starting at just $400/year • No deductibles • No waiting periods
+                </p>
+                <span className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-full font-medium group-hover:gap-3 transition-all duration-300">
+                  Explore Membership Plans
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </Link>
           </motion.div>
         </div>
       </section>
