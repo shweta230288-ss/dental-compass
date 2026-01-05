@@ -58,22 +58,22 @@ export function HighlightsSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
           {highlights.map((item, index) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-card p-8 rounded-xl shadow-card hover:shadow-medium transition-all duration-300 group"
+              className="bg-card p-4 md:p-8 rounded-xl shadow-card hover:shadow-medium transition-all duration-300 group"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                <item.icon className="w-7 h-7 text-primary group-hover:text-accent-foreground transition-colors" />
+              <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-3 md:mb-5 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                <item.icon className="w-5 h-5 md:w-7 md:h-7 text-primary group-hover:text-accent-foreground transition-colors" />
               </div>
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+              <h3 className="font-serif text-base md:text-xl font-semibold text-foreground mb-1 md:mb-3">
                 {item.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-xs md:text-sm leading-relaxed hidden md:block">
                 {item.description}
               </p>
             </motion.div>
