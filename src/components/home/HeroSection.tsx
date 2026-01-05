@@ -1,27 +1,35 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Phone, Play } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { useState } from 'react';
 
 export function HeroSection() {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(true);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <video
+        <motion.video
           autoPlay
           muted
           loop
           playsInline
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isVideoLoaded ? 1 : 0 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
           className="w-full h-full object-cover"
-          onCanPlay={() => setIsVideoPlaying(true)}
+          onCanPlayThrough={() => setIsVideoLoaded(true)}
         >
           <source src="/videos/office-tour.mp4" type="video/mp4" />
-        </video>
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-kaya-navy/90 via-kaya-navy/70 to-transparent" />
+        </motion.video>
+        {/* Overlay with smooth transition */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2, delay: 0.3 }}
+          className="absolute inset-0 bg-gradient-to-r from-kaya-navy/90 via-kaya-navy/70 to-transparent" 
+        />
       </div>
 
       {/* Content */}
