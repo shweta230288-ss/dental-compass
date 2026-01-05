@@ -28,49 +28,49 @@ export function ReviewsPreview() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-20 bg-secondary" ref={ref}>
+    <section className="py-12 md:py-20 bg-secondary" ref={ref}>
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          className="text-center mb-8 md:mb-14"
         >
-          <span className="text-accent font-medium text-sm uppercase tracking-wider">
+          <span className="text-accent font-medium text-xs md:text-sm uppercase tracking-wider">
             Patient Reviews
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
+          <h2 className="font-serif text-2xl md:text-4xl font-bold text-foreground mt-1 md:mt-2 mb-2 md:mb-4">
             What Our Patients Say
           </h2>
-          <div className="flex items-center justify-center gap-2 mb-4">
+          <div className="flex items-center justify-center gap-1 md:gap-2 mb-2 md:mb-4">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-6 h-6 fill-accent text-accent" />
+              <Star key={i} className="w-5 h-5 md:w-6 md:h-6 fill-accent text-accent" />
             ))}
           </div>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground text-sm md:text-base">
             Over 3,400+ five-star reviews on Google
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10">
           {reviews.map((review, index) => (
             <motion.div
               key={review.name}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-card p-8 rounded-xl shadow-card relative"
+              className="bg-card p-5 md:p-8 rounded-xl shadow-card relative"
             >
-              <Quote className="absolute top-6 right-6 w-8 h-8 text-accent/20" />
-              <div className="flex gap-1 mb-4">
+              <Quote className="absolute top-4 right-4 md:top-6 md:right-6 w-6 h-6 md:w-8 md:h-8 text-accent/20" />
+              <div className="flex gap-1 mb-3 md:mb-4">
                 {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                  <Star key={i} className="w-3.5 h-3.5 md:w-4 md:h-4 fill-accent text-accent" />
                 ))}
               </div>
-              <p className="text-foreground mb-6 leading-relaxed">
+              <p className="text-foreground mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
                 "{review.text}"
               </p>
-              <p className="font-semibold text-foreground">{review.name}</p>
+              <p className="font-semibold text-foreground text-sm md:text-base">{review.name}</p>
             </motion.div>
           ))}
         </div>
