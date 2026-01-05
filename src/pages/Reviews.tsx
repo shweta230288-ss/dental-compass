@@ -90,7 +90,7 @@ export default function Reviews() {
       {/* Reviews Grid */}
       <section className="py-20 bg-background">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-12">
             {reviews.map((review, index) => (
               <motion.div
                 key={review.name}
@@ -98,20 +98,20 @@ export default function Reviews() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="bg-card p-8 rounded-xl shadow-card relative"
+                className="bg-card p-4 md:p-8 rounded-xl shadow-card relative"
               >
-                <Quote className="absolute top-6 right-6 w-8 h-8 text-accent/20" />
-                <div className="flex gap-1 mb-4">
+                <Quote className="absolute top-4 right-4 md:top-6 md:right-6 w-6 h-6 md:w-8 md:h-8 text-accent/20" />
+                <div className="flex gap-1 mb-3 md:mb-4">
                   {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                    <Star key={i} className="w-3 h-3 md:w-4 md:h-4 fill-accent text-accent" />
                   ))}
                 </div>
-                <p className="text-foreground mb-6 leading-relaxed">
+                <p className="text-foreground text-sm md:text-base mb-4 md:mb-6 leading-relaxed line-clamp-4 md:line-clamp-none">
                   "{review.text}"
                 </p>
                 <div className="flex items-center justify-between">
-                  <p className="font-semibold text-foreground">{review.name}</p>
-                  <p className="text-sm text-muted-foreground">{review.date}</p>
+                  <p className="font-semibold text-foreground text-sm md:text-base">{review.name}</p>
+                  <p className="text-xs md:text-sm text-muted-foreground">{review.date}</p>
                 </div>
               </motion.div>
             ))}

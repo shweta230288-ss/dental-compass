@@ -105,7 +105,7 @@ export default function Services() {
               >
                 {category.category}
               </motion.h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
                 {category.services.map((service, index) => (
                   <motion.div
                     key={service.title}
@@ -124,15 +124,15 @@ export default function Services() {
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
-                      <div className="p-5">
-                        <h3 className="font-serif text-lg font-semibold text-foreground mb-2 group-hover:text-accent transition-colors">
+                      <div className="p-3 md:p-5">
+                        <h3 className="font-serif text-sm md:text-lg font-semibold text-foreground mb-1 md:mb-2 group-hover:text-accent transition-colors">
                           {service.title}
                         </h3>
-                        <p className="text-muted-foreground text-sm mb-3">
+                        <p className="text-muted-foreground text-xs md:text-sm mb-2 md:mb-3 hidden md:block">
                           {service.description}
                         </p>
-                        <span className="inline-flex items-center text-accent text-sm font-medium">
-                          Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                        <span className="inline-flex items-center text-accent text-xs md:text-sm font-medium">
+                          Learn More <ArrowRight className="w-3 h-3 md:w-4 md:h-4 ml-1" />
                         </span>
                       </div>
                     </Link>

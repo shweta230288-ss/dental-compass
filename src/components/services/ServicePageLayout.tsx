@@ -160,20 +160,20 @@ export function ServicePageLayout({
               <h2 className="font-serif text-3xl font-bold text-foreground mb-6">
                 Why Choose Kaya Dental for {title}
               </h2>
-              <ul className="space-y-4">
+              <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-2 md:gap-4">
                 {benefits.map((benefit, index) => (
                   <motion.li
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
                     viewport={{ once: true }}
-                    className="flex items-start gap-3"
+                    className="flex items-start gap-2 md:gap-3"
                   >
-                    <span className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-accent" />
+                    <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 md:w-4 md:h-4 text-accent" />
                     </span>
-                    <span className="text-muted-foreground">{benefit}</span>
+                    <span className="text-muted-foreground text-sm md:text-base">{benefit}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -287,7 +287,7 @@ export function ServicePageLayout({
               Related Services
             </h2>
           </motion.div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
             {relatedServices.map((service, index) => (
               <motion.div
                 key={service.path}
@@ -298,13 +298,13 @@ export function ServicePageLayout({
               >
                 <Link
                   to={service.path}
-                  className="block p-6 rounded-xl border border-border bg-card hover:border-accent hover:shadow-medium transition-all duration-300 group"
+                  className="block p-4 md:p-6 rounded-xl border border-border bg-card hover:border-accent hover:shadow-medium transition-all duration-300 group"
                 >
-                  <h3 className="font-serif text-lg font-semibold text-foreground mb-2 group-hover:text-accent transition-colors">
+                  <h3 className="font-serif text-sm md:text-lg font-semibold text-foreground mb-1 md:mb-2 group-hover:text-accent transition-colors">
                     {service.title}
                   </h3>
-                  <span className="inline-flex items-center text-accent text-sm font-medium">
-                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                  <span className="inline-flex items-center text-accent text-xs md:text-sm font-medium">
+                    Learn More <ArrowRight className="w-3 h-3 md:w-4 md:h-4 ml-1" />
                   </span>
                 </Link>
               </motion.div>

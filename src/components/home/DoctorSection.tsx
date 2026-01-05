@@ -11,9 +11,9 @@ export function DoctorSection() {
     once: true,
     margin: '-100px'
   });
-  return <section className="py-20 bg-background" ref={ref}>
+  return <section className="py-12 md:py-20 bg-background" ref={ref}>
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center">
           {/* Content */}
           <div className="lg:pr-8">
             <motion.div initial={{

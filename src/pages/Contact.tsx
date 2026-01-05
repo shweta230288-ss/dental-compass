@@ -43,26 +43,26 @@ export default function Contact() {
                 Contact Information
               </h2>
 
-              <div className="space-y-6">
-                <div className="flex items-start gap-4 p-6 rounded-xl bg-secondary">
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-accent" />
+              <div className="space-y-4 md:space-y-6">
+                <div className="flex items-start gap-3 md:gap-4 p-4 md:p-6 rounded-xl bg-secondary">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 md:w-6 md:h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                    <a href="tel:978-534-4000" className="text-accent hover:underline text-lg font-medium">
+                    <h3 className="font-semibold text-foreground text-sm md:text-base mb-1">Phone</h3>
+                    <a href="tel:978-534-4000" className="text-accent hover:underline text-base md:text-lg font-medium">
                       (978) 534-4000
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 rounded-xl bg-secondary">
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-accent" />
+                <div className="flex items-start gap-3 md:gap-4 p-4 md:p-6 rounded-xl bg-secondary">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 md:w-6 md:h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Address</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="font-semibold text-foreground text-sm md:text-base mb-1">Address</h3>
+                    <p className="text-muted-foreground text-sm md:text-base">
                       130 N Main St Suite 1<br />
                       Leominster, MA 01453
                     </p>
@@ -70,41 +70,41 @@ export default function Contact() {
                       href="https://maps.google.com/?q=130+N+Main+St+Suite+1+Leominster+MA+01453"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-accent text-sm hover:underline mt-2 inline-block"
+                      className="text-accent text-xs md:text-sm hover:underline mt-2 inline-block"
                     >
                       Get Directions →
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 rounded-xl bg-secondary">
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-accent" />
+                <div className="flex items-start gap-3 md:gap-4 p-4 md:p-6 rounded-xl bg-secondary">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 md:w-6 md:h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                    <a href="mailto:info@kayadental.com" className="text-accent hover:underline">
+                    <h3 className="font-semibold text-foreground text-sm md:text-base mb-1">Email</h3>
+                    <a href="mailto:info@kayadental.com" className="text-accent hover:underline text-sm md:text-base">
                       info@kayadental.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 rounded-xl bg-secondary">
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-accent" />
+                <div className="flex items-start gap-3 md:gap-4 p-4 md:p-6 rounded-xl bg-secondary">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 md:w-6 md:h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Office Hours</h3>
-                    <div className="text-muted-foreground text-sm space-y-1">
-                      <div className="flex justify-between gap-8">
+                    <h3 className="font-semibold text-foreground text-sm md:text-base mb-2">Office Hours</h3>
+                    <div className="text-muted-foreground text-xs md:text-sm space-y-1">
+                      <div className="flex justify-between gap-6 md:gap-8">
                         <span>Mon - Thu</span>
                         <span>8:00 AM - 5:00 PM</span>
                       </div>
-                      <div className="flex justify-between gap-8">
+                      <div className="flex justify-between gap-6 md:gap-8">
                         <span>Friday</span>
                         <span>7:00 AM - 2:00 PM</span>
                       </div>
-                      <div className="flex justify-between gap-8">
+                      <div className="flex justify-between gap-6 md:gap-8">
                         <span>Sat - Sun</span>
                         <span>Closed</span>
                       </div>
