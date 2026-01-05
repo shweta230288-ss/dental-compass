@@ -97,7 +97,7 @@ export default function Technology() {
       {/* Technology Cards */}
       <section className="py-20 bg-background">
         <div className="container">
-          <div className="space-y-16">
+          <div className="space-y-10 md:space-y-16">
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech.title}
@@ -105,25 +105,27 @@ export default function Technology() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center ${
                   index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                 }`}
               >
                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-                    <tech.icon className="w-8 h-8 text-accent" />
+                  <div className="flex items-center gap-3 mb-4 md:mb-6 md:block">
+                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                      <tech.icon className="w-6 h-6 md:w-8 md:h-8 text-accent" />
+                    </div>
+                    <h2 className="font-serif text-xl md:text-3xl font-bold text-foreground md:mt-6">
+                      {tech.title}
+                    </h2>
                   </div>
-                  <h2 className="font-serif text-3xl font-bold text-foreground mb-4">
-                    {tech.title}
-                  </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4 md:mb-6">
                     {tech.description}
                   </p>
-                  <h4 className="font-semibold text-foreground mb-3">Key Benefits:</h4>
-                  <ul className="space-y-2">
+                  <h4 className="font-semibold text-foreground text-sm md:text-base mb-2 md:mb-3">Key Benefits:</h4>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-1 md:gap-2">
                     {tech.benefits.map((benefit) => (
-                      <li key={benefit} className="flex items-center gap-3 text-muted-foreground">
-                        <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
+                      <li key={benefit} className="flex items-center gap-2 md:gap-3 text-muted-foreground text-xs md:text-base">
+                        <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-accent flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}

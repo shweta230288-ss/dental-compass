@@ -171,7 +171,7 @@ export default function Membership() {
       {/* Plans */}
       <section className="py-20 bg-background">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-5xl mx-auto">
             {plans.map((plan, index) => (
               <motion.div
                 key={plan.name}
@@ -179,7 +179,7 @@ export default function Membership() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative rounded-2xl p-8 ${
+                className={`relative rounded-2xl p-5 md:p-8 ${
                   plan.popular 
                     ? 'bg-primary text-primary-foreground ring-4 ring-accent' 
                     : 'bg-card border border-border'
@@ -190,12 +190,12 @@ export default function Membership() {
                     MOST POPULAR
                   </span>
                 )}
-                <h3 className={`font-serif text-2xl font-bold mb-2 ${plan.popular ? '' : 'text-foreground'}`}>
+                <h3 className={`font-serif text-xl md:text-2xl font-bold mb-2 ${plan.popular ? '' : 'text-foreground'}`}>
                   {plan.name}
                 </h3>
-                <div className="mb-4">
+                <div className="mb-3 md:mb-4">
                   <div className="flex items-baseline gap-1">
-                    <span className={`text-4xl font-bold ${plan.popular ? 'text-accent' : 'text-accent'}`}>
+                    <span className={`text-3xl md:text-4xl font-bold ${plan.popular ? 'text-accent' : 'text-accent'}`}>
                       {plan.price}
                     </span>
                     <span className={plan.popular ? 'text-primary-foreground/70' : 'text-muted-foreground'}>
@@ -203,18 +203,18 @@ export default function Membership() {
                     </span>
                   </div>
                   {plan.retailValue && (
-                    <span className={`text-sm ${plan.popular ? 'text-primary-foreground/70' : 'text-muted-foreground'}`}>
+                    <span className={`text-xs md:text-sm ${plan.popular ? 'text-primary-foreground/70' : 'text-muted-foreground'}`}>
                       ({plan.retailValue})
                     </span>
                   )}
                 </div>
-                <p className={`text-sm mb-6 ${plan.popular ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>
+                <p className={`text-xs md:text-sm mb-4 md:mb-6 ${plan.popular ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>
                   {plan.description}
                 </p>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
                   {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3 text-sm">
-                      <Check className={`w-4 h-4 mt-0.5 flex-shrink-0 ${plan.popular ? 'text-accent' : 'text-accent'}`} />
+                    <li key={feature} className="flex items-start gap-2 md:gap-3 text-xs md:text-sm">
+                      <Check className={`w-3 h-3 md:w-4 md:h-4 mt-0.5 flex-shrink-0 ${plan.popular ? 'text-accent' : 'text-accent'}`} />
                       <span className={plan.popular ? 'text-primary-foreground/90' : 'text-foreground'}>
                         {feature}
                       </span>
@@ -224,6 +224,7 @@ export default function Membership() {
                 <Button 
                   className={`w-full ${plan.popular ? 'bg-accent hover:bg-accent/90 text-accent-foreground' : ''}`}
                   variant={plan.popular ? 'default' : 'outline'}
+                  size="sm"
                   asChild
                 >
                   <a href="tel:978-534-4000">

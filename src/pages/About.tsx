@@ -264,7 +264,7 @@ export default function About() {
           </motion.div>
 
           {/* Staff Grid */}
-          <div className="space-y-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
             {staffMembers.map((staff, index) => <motion.div key={staff.name} initial={{
             opacity: 0,
             y: 30
@@ -276,16 +276,13 @@ export default function About() {
             delay: index * 0.05
           }} viewport={{
             once: true
-          }} className="flex flex-col md:flex-row gap-8 items-start border-b border-border pb-12 last:border-b-0">
-                <div className="flex-shrink-0">
-                  <div className="w-36 h-44 rounded-xl overflow-hidden shadow-medium">
-                    <img src={staff.image} alt={staff.name} className="w-full h-full object-cover" />
-                  </div>
+          }} className="bg-card rounded-xl overflow-hidden shadow-card">
+                <div className="aspect-[3/4] overflow-hidden">
+                  <img src={staff.image} alt={staff.name} className="w-full h-full object-cover" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-serif text-2xl font-bold text-foreground">{staff.name}</h3>
-                  <p className="text-accent font-medium mb-4">{staff.role}</p>
-                  <p className="text-muted-foreground leading-relaxed">{staff.bio}</p>
+                <div className="p-3 md:p-4">
+                  <h3 className="font-serif text-base md:text-lg font-bold text-foreground">{staff.name}</h3>
+                  <p className="text-accent text-xs md:text-sm font-medium">{staff.role}</p>
                 </div>
               </motion.div>)}
           </div>
@@ -301,7 +298,7 @@ export default function About() {
           duration: 0.6
         }} viewport={{
           once: true
-        }} className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        }} className="mt-12 md:mt-16 grid grid-cols-3 gap-3 md:gap-8">
             {[{
             icon: Heart,
             title: 'Compassionate Care',
@@ -314,14 +311,14 @@ export default function About() {
             icon: Users,
             title: 'Team Approach',
             description: 'We work together seamlessly to ensure you receive comprehensive, coordinated care.'
-          }].map(value => <div key={value.title} className="text-center p-8 rounded-xl bg-secondary">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-8 h-8 text-accent" />
+          }].map(value => <div key={value.title} className="text-center p-3 md:p-8 rounded-xl bg-secondary">
+                <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-2 md:mb-4">
+                  <value.icon className="w-5 h-5 md:w-8 md:h-8 text-accent" />
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                <h3 className="font-serif text-sm md:text-xl font-semibold text-foreground mb-1 md:mb-3">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-xs md:text-sm hidden md:block">
                   {value.description}
                 </p>
               </div>)}

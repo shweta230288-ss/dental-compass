@@ -51,7 +51,7 @@ export default function NewPatients() {
       {/* New Patient Info */}
       <section className="py-20 bg-background">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-12 md:mb-16">
             {newPatientInfo.map((info, index) => <motion.div key={info.title} initial={{
             opacity: 0,
             y: 20
@@ -63,18 +63,20 @@ export default function NewPatients() {
             delay: index * 0.1
           }} viewport={{
             once: true
-          }} className="p-8 rounded-xl bg-secondary">
-                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4">
-                  <info.icon className="w-8 h-8 text-accent" />
+          }} className="p-4 md:p-8 rounded-xl bg-secondary">
+                <div className="flex items-center gap-3 md:block mb-3 md:mb-4">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <info.icon className="w-6 h-6 md:w-8 md:h-8 text-accent" />
+                  </div>
+                  <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground md:mt-4">
+                    {info.title}
+                  </h3>
                 </div>
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
-                  {info.title}
-                </h3>
-                <p className="text-muted-foreground text-sm mb-4">
+                <p className="text-muted-foreground text-sm mb-3 md:mb-4 hidden md:block">
                   {info.description}
                 </p>
-                <ul className="space-y-2">
-                  {info.details.map(detail => <li key={detail} className="flex items-center gap-2 text-sm text-muted-foreground">
+                <ul className="space-y-1 md:space-y-2">
+                  {info.details.map(detail => <li key={detail} className="flex items-center gap-2 text-xs md:text-sm text-muted-foreground">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
                       {detail}
                     </li>)}
