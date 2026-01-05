@@ -51,7 +51,7 @@ export function CTASection() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-primary-foreground/80 text-sm">
               <div className="flex items-center justify-center gap-2">
                 <Calendar className="w-5 h-5 text-accent flex-shrink-0" />
-                <span>Mon–Thu: 8AM–5PM | Fri: 7AM–2PM</span>
+                <span>Mon, Tue, Thu: 8AM–5PM | Wed, Fri: 7AM–5PM / 2PM</span>
               </div>
               <div className="flex items-center justify-center gap-2">
                 <MapPin className="w-5 h-5 text-accent flex-shrink-0" />
