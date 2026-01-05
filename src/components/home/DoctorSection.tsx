@@ -93,7 +93,7 @@ export function DoctorSection() {
           duration: 0.6
         }} className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
-              <img src={drDaniPhoto} alt="Dr. Kunal Dani, DDS - Kaya Dental" className="w-full h-auto object-cover" />
+              <img alt="Dr. Kunal Dani, DDS - Kaya Dental" className="w-full h-auto object-cover" src="/lovable-uploads/03eeafb9-a86b-4bc7-a8e8-fc311ba5d7df.jpg" />
             </div>
             {/* Decorative accent */}
             <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/10 rounded-2xl -z-10" />
