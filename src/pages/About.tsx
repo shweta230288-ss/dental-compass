@@ -12,6 +12,7 @@ import staffMarianne from '@/assets/staff-marianne.jpg';
 import staffTrinh from '@/assets/staff-trinh.jpg';
 import staffErika from '@/assets/staff-erika.jpg';
 import staffKatie from '@/assets/staff-katie.jpg';
+import staffAfsah from '@/assets/staff-afsah.jpg';
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -43,6 +44,11 @@ export default function About() {
     role: 'Registered Dental Hygienist',
     image: staffKatie,
     bio: "Katie is a Registered Dental Hygienist. Katie started here filling in on a temporary basis. She worked out so well, and patients liked her so much that we figured out a way to keep her on. Katie got her RDH degree as a 2007 graduate of Mount Wachusett Community College. She worked in Belmont for 12 years but with her family growing and the kids in more extracurricular activities, working in Leominster became far more convenient. Katie has a quick sense of humor, loves her wide variety of music and enjoys the camaraderie of the dental office. Katie is busy with her family and enjoys watching her children's baseball, football and basketball games."
+  }, {
+    name: 'Afsah',
+    role: 'Registered Dental Hygienist',
+    image: staffAfsah,
+    bio: "Afsah is a Registered Dental Hygienist. A career change led her to enrolling in the dental hygiene program at MCPHS. She then graduated with her RDH degree in 2023 and feels it was one of the best decisions she's ever made. You can always find her wearing her favorite color purple scrubs in the office. She enjoys going to concerts, exploring new foods, and spending time with her family and her cat, Boba."
   }];
   return <Layout>
       <Helmet>
