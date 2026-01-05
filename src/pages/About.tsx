@@ -171,7 +171,7 @@ export default function About() {
             duration: 0.6
           }} viewport={{
             once: true
-          }} className="order-2 lg:order-1">
+          }} className="order-1 lg:order-1">
               <div className="rounded-2xl overflow-hidden shadow-medium">
                 <img alt="Dr. Kunal Dani, DMD" className="w-full h-auto object-cover" src="/lovable-uploads/13216b6c-7730-42cd-94e5-9f9e7e9fa5e5.jpg" />
               </div>
@@ -186,7 +186,7 @@ export default function About() {
             duration: 0.6
           }} viewport={{
             once: true
-          }} className="order-1 lg:order-2">
+          }} className="order-2 lg:order-2">
               <span className="text-accent font-medium text-sm uppercase tracking-wider">
                 Meet Our Doctor
               </span>
