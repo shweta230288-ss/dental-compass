@@ -306,7 +306,8 @@ export default function About() {
                   <img src={staff.image} alt={staff.name} className="w-full h-full object-cover" />
                 </div>
                 <h3 className="font-serif text-lg font-bold text-foreground">{staff.name}</h3>
-                <p className="text-accent text-sm font-medium mb-2">{staff.role}</p>
+                <p className="text-accent text-sm font-medium mb-3">{staff.role}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">{staff.bio}</p>
               </motion.div>)}
           </div>
 
