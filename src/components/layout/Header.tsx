@@ -161,6 +161,10 @@ export function Header() {
                   <Phone className="w-5 h-5" />
                   (978) 534-4000
                 </a>
+                <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                  <Clock className="w-4 h-4" />
+                  <span>Mon, Tue, Thu: 8AM - 5PM | Wed, Fri: 7AM - 5PM / 2PM</span>
+                </div>
               </div>
             </nav>
           </motion.div>}
