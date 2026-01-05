@@ -161,7 +161,7 @@ export default function About() {
             once: true
           }} className="order-2 lg:order-1">
               <div className="rounded-2xl overflow-hidden shadow-medium">
-                <img src={drKunalDani} alt="Dr. Kunal Dani, DMD" className="w-full h-auto object-cover" />
+                <img alt="Dr. Kunal Dani, DMD" className="w-full h-auto object-cover" src="/lovable-uploads/13216b6c-7730-42cd-94e5-9f9e7e9fa5e5.jpg" />
               </div>
             </motion.div>
             <motion.div initial={{
