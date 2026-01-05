@@ -263,8 +263,9 @@ export default function About() {
             <img src={teamPhoto} alt="The Kaya Dental team" className="w-full h-full object-cover object-[center_60%]" />
           </motion.div>
 
-          {/* Staff Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+          {/* Staff Grid - Mobile: compact cards, Desktop: full bios */}
+          {/* Mobile View */}
+          <div className="grid grid-cols-2 gap-4 md:hidden">
             {staffMembers.map((staff, index) => <motion.div key={staff.name} initial={{
             opacity: 0,
             y: 30
@@ -280,10 +281,32 @@ export default function About() {
                 <div className="aspect-[3/4] overflow-hidden">
                   <img src={staff.image} alt={staff.name} className="w-full h-full object-cover" />
                 </div>
-                <div className="p-3 md:p-4">
-                  <h3 className="font-serif text-base md:text-lg font-bold text-foreground">{staff.name}</h3>
-                  <p className="text-accent text-xs md:text-sm font-medium">{staff.role}</p>
+                <div className="p-3">
+                  <h3 className="font-serif text-base font-bold text-foreground">{staff.name}</h3>
+                  <p className="text-accent text-xs font-medium">{staff.role}</p>
                 </div>
+              </motion.div>)}
+          </div>
+
+          {/* Desktop View - Full bios */}
+          <div className="hidden md:grid grid-cols-5 gap-8">
+            {staffMembers.map((staff, index) => <motion.div key={staff.name} initial={{
+            opacity: 0,
+            y: 30
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5,
+            delay: index * 0.1
+          }} viewport={{
+            once: true
+          }} className="text-left">
+                <div className="aspect-[3/4] rounded-xl overflow-hidden shadow-medium mb-4">
+                  <img src={staff.image} alt={staff.name} className="w-full h-full object-cover" />
+                </div>
+                <h3 className="font-serif text-lg font-bold text-foreground">{staff.name}</h3>
+                <p className="text-accent text-sm font-medium mb-2">{staff.role}</p>
               </motion.div>)}
           </div>
 
