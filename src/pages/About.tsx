@@ -13,6 +13,7 @@ import staffTrinh from '@/assets/staff-trinh.jpg';
 import staffErika from '@/assets/staff-erika.jpg';
 import staffKatie from '@/assets/staff-katie.jpg';
 import staffAfsah from '@/assets/staff-afsah.jpg';
+import staffRachel from '@/assets/staff-rachel.jpg';
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -49,6 +50,11 @@ export default function About() {
     role: 'Registered Dental Hygienist',
     image: staffAfsah,
     bio: "Afsah is a Registered Dental Hygienist. A career change led her to enrolling in the dental hygiene program at MCPHS. She then graduated with her RDH degree in 2023 and feels it was one of the best decisions she's ever made. You can always find her wearing her favorite color purple scrubs in the office. She enjoys going to concerts, exploring new foods, and spending time with her family and her cat, Boba."
+  }, {
+    name: 'Rachel',
+    role: 'Registered Dental Hygienist',
+    image: staffRachel,
+    bio: "Rachel is one of our newest dental hygienists, graduating from Mount Wachusett Community College's dental hygiene program in 2025, and has been with us since July of that year. She is very personable, and tries to connect with every patient she sees. Rachel has a passion for dental hygiene and helping patients become more knowledgeable in their oral health. Outside of the office, she enjoys spending time with her family, going camping, fishing and playing ice hockey."
   }];
   return <Layout>
       <Helmet>
