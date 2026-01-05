@@ -21,11 +21,6 @@ export default function About() {
     margin: '-100px'
   });
   const staffMembers = [{
-    name: 'Annie',
-    role: 'Registered Dental Hygienist',
-    image: staffAnnie,
-    bio: "Annie is a Registered Dental Hygienist who joined our staff in May of 2014. Annie is a 2009 graduate of Rockport High School, and received her RDH degree from the Massachusetts College of Pharmacy in 2011. Annie is a personable, mature young woman who has been a wonderful fit in our office. Annie and her husband Matt enjoy spending time with their three children."
-  }, {
     name: 'Marianne',
     role: 'Registered Dental Hygienist',
     image: staffMarianne,
@@ -55,6 +50,11 @@ export default function About() {
     role: 'Registered Dental Hygienist',
     image: staffRachel,
     bio: "Rachel is one of our newest dental hygienists, graduating from Mount Wachusett Community College's dental hygiene program in 2025, and has been with us since July of that year. She is very personable, and tries to connect with every patient she sees. Rachel has a passion for dental hygiene and helping patients become more knowledgeable in their oral health. Outside of the office, she enjoys spending time with her family, going camping, fishing and playing ice hockey."
+  }, {
+    name: 'Annie',
+    role: 'Registered Dental Hygienist',
+    image: staffAnnie,
+    bio: "Annie is a Registered Dental Hygienist who joined our staff in May of 2014. Annie is a 2009 graduate of Rockport High School, and received her RDH degree from the Massachusetts College of Pharmacy in 2011. Annie is a personable, mature young woman who has been a wonderful fit in our office. Annie and her husband Matt enjoy spending time with their three children."
   }];
   return <Layout>
       <Helmet>
