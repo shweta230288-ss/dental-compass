@@ -15,7 +15,7 @@ export function DoctorSection() {
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center">
           {/* Content */}
-          <div className="lg:pr-8">
+          <div className="lg:pr-8 order-2 lg:order-1">
             <motion.div initial={{
             opacity: 0,
             y: 20
@@ -91,7 +91,7 @@ export function DoctorSection() {
           x: 0
         } : {}} transition={{
           duration: 0.6
-        }} className="relative">
+        }} className="relative order-1 lg:order-2">
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img alt="Dr. Kunal Dani, DDS - Kaya Dental" className="w-full h-auto object-cover" src="/lovable-uploads/03eeafb9-a86b-4bc7-a8e8-fc311ba5d7df.jpg" />
             </div>
