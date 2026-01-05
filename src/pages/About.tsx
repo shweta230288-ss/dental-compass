@@ -288,8 +288,8 @@ export default function About() {
               </motion.div>)}
           </div>
 
-          {/* Desktop View - Full bios */}
-          <div className="hidden md:grid grid-cols-5 gap-8">
+          {/* Desktop View - Full bios in horizontal layout */}
+          <div className="hidden md:flex flex-col gap-8">
             {staffMembers.map((staff, index) => <motion.div key={staff.name} initial={{
             opacity: 0,
             y: 30
@@ -301,13 +301,15 @@ export default function About() {
             delay: index * 0.1
           }} viewport={{
             once: true
-          }} className="text-left">
-                <div className="aspect-[3/4] rounded-xl overflow-hidden shadow-medium mb-4">
+          }} className="flex gap-6 items-start">
+                <div className="w-48 h-64 flex-shrink-0 rounded-xl overflow-hidden shadow-medium">
                   <img src={staff.image} alt={staff.name} className="w-full h-full object-cover" />
                 </div>
-                <h3 className="font-serif text-lg font-bold text-foreground">{staff.name}</h3>
-                <p className="text-accent text-sm font-medium mb-3">{staff.role}</p>
-                <p className="text-muted-foreground text-sm leading-relaxed">{staff.bio}</p>
+                <div className="flex-1 pt-2">
+                  <h3 className="font-serif text-xl font-bold text-foreground">{staff.name}</h3>
+                  <p className="text-accent text-sm font-medium mb-3">{staff.role}</p>
+                  <p className="text-muted-foreground text-base leading-relaxed">{staff.bio}</p>
+                </div>
               </motion.div>)}
           </div>
 
