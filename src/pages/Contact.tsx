@@ -97,15 +97,15 @@ export default function Contact() {
                     <h3 className="font-semibold text-foreground text-sm md:text-base mb-2">Office Hours</h3>
                     <div className="text-muted-foreground text-xs md:text-sm space-y-1">
                       <div className="flex justify-between gap-6 md:gap-8">
-                        <span>Mon - Thu</span>
-                        <span>8:00 AM - 5:00 PM</span>
+                        <span>Mon, Tue, Thu</span>
+                        <span>8AM - 5PM</span>
                       </div>
                       <div className="flex justify-between gap-6 md:gap-8">
-                        <span>Friday</span>
-                        <span>7:00 AM - 2:00 PM</span>
+                        <span>Wed, Fri</span>
+                        <span>7AM - 5PM / 2PM</span>
                       </div>
                       <div className="flex justify-between gap-6 md:gap-8">
-                        <span>Sat - Sun</span>
+                        <span>Sat & Sun</span>
                         <span>Closed</span>
                       </div>
                     </div>
