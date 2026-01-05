@@ -92,7 +92,7 @@ export function DoctorSection() {
         } : {}} transition={{
           duration: 0.6
         }} className="relative order-1 lg:order-2">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-sm lg:max-w-md mx-auto">
               <img alt="Dr. Kunal Dani, DDS - Kaya Dental" className="w-full h-auto object-cover" src="/lovable-uploads/03eeafb9-a86b-4bc7-a8e8-fc311ba5d7df.jpg" />
             </div>
             {/* Decorative accent */}
