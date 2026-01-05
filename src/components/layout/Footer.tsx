@@ -49,7 +49,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <img src={kayaLogo} alt="Kaya Dental" className="h-20 w-auto mb-4" />
+            <img src={kayaLogo} alt="Kaya Dental" className="h-28 w-auto mb-4" />
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
               "Kaya" meaning body, wellness, and wholeness. We bring expertise and passion 
               together to craft radiant, healthy smiles so you can shine with confidence.
