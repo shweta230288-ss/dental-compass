@@ -291,7 +291,7 @@ export default function About() {
             once: true
           }} className="bg-card rounded-xl overflow-hidden shadow-card">
                 <div className="aspect-[3/4] overflow-hidden">
-                  <img src={staff.image} alt={staff.name} className="w-full h-full object-cover" />
+                  <img src={staff.image} alt={staff.name} className="w-full h-full object-cover object-top" />
                 </div>
                 <div className="p-3">
                   <h3 className="font-serif text-base font-bold text-foreground">{staff.name}</h3>
@@ -315,7 +315,7 @@ export default function About() {
             once: true
           }} className="flex gap-6 items-start">
                 <div className="w-48 h-64 flex-shrink-0 rounded-xl overflow-hidden shadow-medium">
-                  <img src={staff.image} alt={staff.name} className="w-full h-full object-cover" />
+                  <img src={staff.image} alt={staff.name} className="w-full h-full object-cover object-top" />
                 </div>
                 <div className="flex-1 pt-2">
                   <h3 className="font-serif text-xl font-bold text-foreground">{staff.name}</h3>
