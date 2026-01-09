@@ -15,10 +15,10 @@ export function HeroSection() {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-105"
           onCanPlay={() => setIsVideoPlaying(true)}
         >
-          <source src="/videos/office-tour.mp4" type="video/mp4" />
+          <source src="/videos/hero-video.mp4" type="video/mp4" />
         </video>
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-kaya-navy/90 via-kaya-navy/70 to-transparent" />
