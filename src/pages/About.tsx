@@ -15,6 +15,7 @@ import staffKatie from '@/assets/staff-katie.jpg';
 import staffAfsah from '@/assets/staff-afsah.jpg';
 import staffRachel from '@/assets/staff-rachel.jpg';
 import staffShaz from '@/assets/staff-shaz.jpg';
+import staffYari from '@/assets/staff-yari.jpg';
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -31,6 +32,11 @@ export default function About() {
     role: 'Dental Assistant',
     image: staffTrinh,
     bio: "Trinh Trieu works full-time mainly as a Dental Assistant but also is proficient at the front desk and with instrument sterilization. Trinh was born in Vietnam and moved to the United States in 1987. With a limited English background, Trinh worked hard to eventually graduate from Montachusett Technical in 1993 with a degree in Dental Assisting. Her high school instructor says that she was the best student that she ever had. Trinh has been with our practice since 1995. She is an exceptional worker. Her clinical skills are exemplary. Trinh and her husband Khuong enjoy watching their daughters ventures in track, basketball, soccer and martial arts."
+  }, {
+    name: 'Yari',
+    role: 'Certified Dental Assistant',
+    image: staffYari,
+    bio: "Yarines, also known as Yari, was born and raised in Worcester, Massachusetts. She became a Certified Dental Assistant in 2020 and is a graduate of Leominster Senior High School. Outside of the office, Yari is a proud, family-oriented person who cherishes time with her family. She loves to travel, explore new places, and enjoy great food, always embracing new experiences. Yari is grateful to be part of the Kaya family. She is especially passionate about assisting Dr. Dani in changing lives through dentistry and helping patients achieve healthy, confident smiles. Her commitment to excellence and genuine care for others shines through in everything she does!"
   }, {
     name: 'Erika',
     role: 'Registered Dental Hygienist',
