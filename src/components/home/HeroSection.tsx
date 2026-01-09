@@ -15,7 +15,7 @@ export function HeroSection() {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover object-center [transform:translateX(12%)_scale(2.05)] md:[transform:translateX(8%)_scale(1.75)] lg:[transform:translateX(4%)_scale(1.5)] contrast-[1.1] brightness-[1.05] saturate-[1.1]"
+          className="w-full h-full object-cover object-center [transform:translateX(0%)_scale(1.15)] md:[transform:translateX(4%)_scale(1.4)] lg:[transform:translateX(4%)_scale(1.5)] contrast-[1.1] brightness-[1.05] saturate-[1.1]"
           onCanPlay={() => setIsVideoPlaying(true)}
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
