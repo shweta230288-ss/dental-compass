@@ -21,7 +21,7 @@ export function HeroSection() {
           <source src="/videos/hero-video.mp4" type="video/mp4" />
         </video>
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-kaya-navy/90 via-kaya-navy/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-kaya-navy/70 via-kaya-navy/40 to-transparent" />
       </div>
 
       {/* Content */}
