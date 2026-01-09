@@ -14,6 +14,7 @@ import staffErika from '@/assets/staff-erika.jpg';
 import staffKatie from '@/assets/staff-katie.jpg';
 import staffAfsah from '@/assets/staff-afsah.jpg';
 import staffRachel from '@/assets/staff-rachel.jpg';
+import staffShaz from '@/assets/staff-shaz.jpg';
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -50,6 +51,11 @@ export default function About() {
     role: 'Registered Dental Hygienist',
     image: staffRachel,
     bio: "Rachel is one of our newest dental hygienists, graduating from Mount Wachusett Community College's dental hygiene program in 2025, and has been with us since July of that year. She is very personable, and tries to connect with every patient she sees. Rachel has a passion for dental hygiene and helping patients become more knowledgeable in their oral health. Outside of the office, she enjoys spending time with her family, going camping, fishing and playing ice hockey."
+  }, {
+    name: 'Shaz',
+    role: 'Front Desk',
+    image: staffShaz,
+    bio: "Shaz is from Leominster and has always been passionate about the dental field. With over eight years of experience, she loves helping patients and making every visit a positive one. Shaz has been with Kaya Dental since mid 2024 and always brings great energy to the office! Outside of work, she is all about family time, her Shih Tzu Cocoa, traveling whenever she can, and saying yes to adventures! Whether it's beach days, hikes, concerts, or sporting events, if there's good energy, good people & music, or something fun happening, chances are you'll find her right there!"
   }, {
     name: 'Annie',
     role: 'Registered Dental Hygienist',
