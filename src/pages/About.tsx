@@ -102,8 +102,7 @@ export default function About() {
       {/* Office Photos */}
       <section className="py-12 bg-background">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div initial={{
+          <motion.div initial={{
             opacity: 0,
             y: 20
           }} whileInView={{
@@ -113,24 +112,9 @@ export default function About() {
             duration: 0.6
           }} viewport={{
             once: true
-          }} className="rounded-2xl overflow-hidden shadow-medium">
-              <img src={officeFrontDesk} alt="Kaya Dental front desk" className="w-full h-full object-cover" />
-            </motion.div>
-            <motion.div initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.6,
-            delay: 0.1
-          }} viewport={{
-            once: true
-          }} className="rounded-2xl overflow-hidden shadow-medium">
+          }} className="rounded-2xl overflow-hidden shadow-medium max-w-2xl mx-auto">
               <img src={officeReception} alt="Kaya Dental reception area" className="w-full h-full object-cover" />
             </motion.div>
-          </div>
         </div>
       </section>
 
