@@ -28,7 +28,7 @@ const allServices = [
       { title: 'General Dentistry', path: '/services/general-dentistry', description: 'Comprehensive dental exams, cleanings, and preventive care.', image: serviceGeneralDentistry },
       { title: 'Exam and Cleaning', path: '/services/exam-cleaning', description: 'Regular checkups and professional cleaning for optimal oral health.', image: serviceExamCleaning },
       { title: 'Family Dentistry', path: '/services/family-dentistry', description: 'Gentle, comprehensive care for every family member.', image: serviceFamilyDentistry },
-      { title: 'Dental Fillings', path: '/services/dental-fillings', description: 'Tooth-colored fillings to restore damaged teeth.', image: serviceDentalFillings },
+      { title: 'Emergency Dentistry', path: '/services/emergency-dentistry', description: 'Prompt care when dental emergencies strike.', image: serviceEmergencyDentistry },
     ],
   },
   {
@@ -43,7 +43,7 @@ const allServices = [
     category: 'Restorative Care',
     services: [
       { title: 'Dental Implants', path: '/services/dental-implants', description: 'Permanent tooth replacement that looks and feels natural.', image: serviceDentalImplants },
-      { title: 'Root Canal', path: '/services/root-canal', description: 'Pain-free treatment to save infected teeth.', image: serviceRootCanal },
+      { title: 'Dental Fillings', path: '/services/dental-fillings', description: 'Tooth-colored fillings to restore damaged teeth.', image: serviceDentalFillings },
       { title: 'Dentures', path: '/services/dentures', description: 'Custom dentures for a natural-looking smile.', image: serviceDentures },
       { title: 'Dental Crowns', path: '/services/dental-crowns', description: 'Restore damaged teeth with custom-fitted crowns.', image: serviceDentalCrowns },
     ],
@@ -51,7 +51,7 @@ const allServices = [
   {
     category: 'Specialized Care',
     services: [
-      { title: 'Emergency Dentistry', path: '/services/emergency-dentistry', description: 'Prompt care when dental emergencies strike.', image: serviceEmergencyDentistry },
+      { title: 'Root Canal', path: '/services/root-canal', description: 'Pain-free treatment to save infected teeth.', image: serviceRootCanal },
       { title: 'Orthodontics', path: '/services/orthodontics', description: 'Traditional braces and modern alignment solutions.', image: serviceOrthodontics },
       { title: 'Wisdom Tooth Removal', path: '/services/wisdom-tooth-removal', description: 'Safe extraction of problematic wisdom teeth.', image: serviceWisdomTooth },
     ],
