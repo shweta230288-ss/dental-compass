@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet-async';
 import drKunalDani from '@/assets/dr-kunal-dani.jpg';
 import officeFrontDesk from '@/assets/office-front-desk.jpg';
 import teamPhoto from '@/assets/team-photo.jpg';
+import officeReception from '@/assets/office-reception.jpg';
 import staffAnnie from '@/assets/staff-annie.jpg';
 import staffMarianne from '@/assets/staff-marianne.jpg';
 import staffTrinh from '@/assets/staff-trinh.jpg';
@@ -98,22 +99,38 @@ export default function About() {
         </div>
       </section>
 
-      {/* Office Photo */}
+      {/* Office Photos */}
       <section className="py-12 bg-background">
         <div className="container">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6
-        }} viewport={{
-          once: true
-        }} className="rounded-2xl overflow-hidden shadow-medium">
-            <img src={officeFrontDesk} alt="Kaya Dental front desk" className="w-full h-auto object-cover" />
-          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <motion.div initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6
+            }} viewport={{
+              once: true
+            }} className="rounded-2xl overflow-hidden shadow-medium">
+              <img src={officeFrontDesk} alt="Kaya Dental front desk" className="w-full h-full object-cover" />
+            </motion.div>
+            <motion.div initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} transition={{
+              duration: 0.6,
+              delay: 0.1
+            }} viewport={{
+              once: true
+            }} className="rounded-2xl overflow-hidden shadow-medium">
+              <img src={officeReception} alt="Kaya Dental reception area" className="w-full h-full object-cover" />
+            </motion.div>
+          </div>
         </div>
       </section>
 
