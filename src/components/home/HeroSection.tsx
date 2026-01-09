@@ -9,13 +9,13 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Video Background */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden bg-kaya-navy">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover scale-105"
+          className="w-full h-full object-cover object-center [transform:translateX(12%)_scale(2.05)] md:[transform:translateX(8%)_scale(1.75)] lg:[transform:translateX(4%)_scale(1.5)]"
           onCanPlay={() => setIsVideoPlaying(true)}
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
