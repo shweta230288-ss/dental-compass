@@ -114,7 +114,7 @@ export default function About() {
           }} viewport={{
             once: true
           }} className="rounded-2xl overflow-hidden shadow-medium">
-              
+              <img src={officeFrontDesk} alt="Kaya Dental front desk" className="w-full h-full object-cover" />
             </motion.div>
             <motion.div initial={{
             opacity: 0,
