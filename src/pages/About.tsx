@@ -112,7 +112,7 @@ export default function About() {
             duration: 0.6
           }} viewport={{
             once: true
-          }} className="rounded-2xl overflow-hidden shadow-medium max-w-2xl mx-auto">
+          }} className="rounded-2xl overflow-hidden shadow-medium max-w-5xl mx-auto">
               <img src={officeReception} alt="Kaya Dental reception area" className="w-full h-full object-cover" />
             </motion.div>
         </div>
