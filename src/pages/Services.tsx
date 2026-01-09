@@ -42,10 +42,10 @@ const allServices = [
   {
     category: 'Restorative Care',
     services: [
-      { title: 'Dental Implants', path: '/services/dental-implants', description: 'Permanent tooth replacement that looks and feels natural.', image: serviceDentalImplants },
       { title: 'Dental Fillings', path: '/services/dental-fillings', description: 'Tooth-colored fillings to restore damaged teeth.', image: serviceDentalFillings },
-      { title: 'Dentures', path: '/services/dentures', description: 'Custom dentures for a natural-looking smile.', image: serviceDentures },
       { title: 'Dental Crowns', path: '/services/dental-crowns', description: 'Restore damaged teeth with custom-fitted crowns.', image: serviceDentalCrowns },
+      { title: 'Dentures', path: '/services/dentures', description: 'Custom dentures for a natural-looking smile.', image: serviceDentures },
+      { title: 'Dental Implants', path: '/services/dental-implants', description: 'Permanent tooth replacement that looks and feels natural.', image: serviceDentalImplants },
     ],
   },
   {
