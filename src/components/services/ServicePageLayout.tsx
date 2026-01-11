@@ -60,9 +60,24 @@ export function ServicePageLayout({
       </Helmet>
 
       {/* Hero with Image */}
-      <section className="bg-primary py-16 lg:py-20 text-primary-foreground">
+      <section className="bg-primary py-12 lg:py-20 text-primary-foreground">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Mobile Hero Image */}
+          {heroImage && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="lg:hidden mb-6"
+            >
+              <img
+                src={heroImage}
+                alt={`${title} at Kaya Dental`}
+                className="rounded-xl shadow-lg w-full h-48 object-cover"
+              />
+            </motion.div>
+          )}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -71,10 +86,10 @@ export function ServicePageLayout({
               <span className="text-accent font-medium text-sm uppercase tracking-wider">
                 {heroSubtitle}
               </span>
-              <h1 className="font-serif text-4xl md:text-5xl font-bold mt-2 mb-6">
+              <h1 className="font-serif text-3xl md:text-5xl font-bold mt-2 mb-4 lg:mb-6">
                 {title}
               </h1>
-              <p className="text-primary-foreground/80 text-lg leading-relaxed mb-8">
+              <p className="text-primary-foreground/80 text-base lg:text-lg leading-relaxed mb-6 lg:mb-8">
                 {heroDescription}
               </p>
               <Button size="lg" variant="secondary" asChild>
@@ -84,6 +99,7 @@ export function ServicePageLayout({
                 </a>
               </Button>
             </motion.div>
+            {/* Desktop Hero Image */}
             {heroImage && (
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
