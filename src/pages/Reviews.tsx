@@ -81,7 +81,16 @@ export default function Reviews() {
               <span className="text-2xl font-bold">5.0</span>
             </div>
             <p className="text-primary-foreground/80 text-lg">
-              Over 3,400+ five-star reviews on Google and{' '}
+              Over 3,400+ five-star reviews on{' '}
+              <a 
+                href="https://www.google.com/search?q=kaya+dental&rlz=1C5CHFA_enUS1192US1192&oq=kaya+de&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyDQgBEC4YrwEYxwEYgAQyBggCEEUYQDIGCAMQRRg5MgcIBBAuGIAEMgcIBRAAGIAEMgYIBhBFGD0yBggHEEUYPdIBCDQxNTVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8&zx=1768166807866&no_sw_cr=1#lrd=0x89e3ef57446db337:0x1911c06f2e35821,1,,,," 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="underline hover:text-accent transition-colors"
+              >
+                Google
+              </a>
+              {' '}and{' '}
               <a 
                 href="https://local.demandforce.com/b/leominsterdentistry" 
                 target="_blank" 
