@@ -49,7 +49,7 @@ export default function NewPatients() {
       </section>
 
       {/* New Patient Info */}
-      <section className="py-20 bg-background">
+      <section className="bg-background py-[40px] pb-0 pt-[60px]">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-12 md:mb-16">
             {newPatientInfo.map((info, index) => <motion.div key={info.title} initial={{
@@ -178,7 +178,7 @@ export default function NewPatients() {
       </section>
 
       {/* Insurance */}
-      <section className="py-16 bg-secondary">
+      <section className="bg-secondary py-[50px]">
         <div className="container">
           <motion.div initial={{
           opacity: 0,
@@ -258,7 +258,7 @@ export default function NewPatients() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-background">
+      <section className="bg-background py-[50px]">
         <div className="container">
           <motion.div initial={{
           opacity: 0,
