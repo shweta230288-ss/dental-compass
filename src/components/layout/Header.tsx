@@ -45,9 +45,6 @@ const navigationItems = [{
   name: 'Membership Plans',
   path: '/membership'
 }, {
-  name: 'Membership Plans',
-  path: '/membership'
-}, {
   name: 'Patient Success Stories',
   path: '/reviews'
 }, {
