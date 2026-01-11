@@ -83,8 +83,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground text-sm md:text-base mb-1">Email</h3>
-                    <a href="mailto:info@kayadental.com" className="text-accent hover:underline text-sm md:text-base">
-                      info@kayadental.com
+                    <a href="mailto:Cronindental88@gmail.com" className="text-accent hover:underline text-sm md:text-base">
+                      Cronindental88@gmail.com
                     </a>
                   </div>
                 </div>
