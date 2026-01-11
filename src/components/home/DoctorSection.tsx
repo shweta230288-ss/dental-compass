@@ -53,8 +53,8 @@ export function DoctorSection() {
           }} className="space-y-4 text-muted-foreground leading-relaxed mb-8">
               <p>
                 Dr. Kunal Dani brings a passion for dentistry and a commitment to patient-centered 
-                care to every appointment. With advanced training in cosmetic and restorative 
-                dentistry, he combines clinical excellence with a gentle, compassionate approach.
+                care to every appointment. With advanced training in cosmetic, restorative dentistry, 
+                and dental implants, he combines clinical excellence with a gentle, compassionate approach.
               </p>
               <p>
                 "I believe every patient deserves to feel comfortable, informed, and confident 
