@@ -226,19 +226,13 @@ export default function About() {
                 Dr. Kunal Dani, DMD
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Dr. Kunal Dani is a compassionate, detail-oriented dentist who is proud to continue a long-standing tradition of trusted dental care in the community. With a strong commitment to clinical excellence, patient comfort, and ethical dentistry, Dr. Dani leads the practice with the belief that every patient deserves personalized, high-quality care in a welcoming environment.
+                Dr. Kunal Dani is proud to carry forward a trusted tradition of dental care in Leominster—one that dates back to the 1960s. After assuming ownership from Dr. Michael Cronin, he's thoughtfully modernized the practice while preserving the values patients have relied on for generations: honesty, consistency, and exceptional care.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                After earning his Doctor of Dental Medicine degree from Tufts Dental School, Dr. Dani pursued advanced training in restorative, cosmetic, and comprehensive family dentistry. He remains dedicated to continuing education and modern dental technology to ensure his patients receive the most effective, evidence-based care available.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Dr. Dani assumed ownership of the practice from Dr. Michael Cronin with deep respect for its roots in the community, dating back to the 1960s. While thoughtfully modernizing the office, he has preserved the values patients have trusted for generations—honesty, consistency, and exceptional clinical standards.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Known for his calm demeanor and clear communication, Dr. Dani takes the time to listen carefully, explain treatment options thoroughly, and tailor care plans to each patient's goals. Whether providing routine preventive care, cosmetic enhancements, or comprehensive dental treatment, he approaches every case with precision, empathy, and pride in his work.
+                A graduate of Tufts Dental School with advanced training in restorative, cosmetic, and family dentistry, Dr. Dani combines clinical precision with genuine compassion. He's known for his calm demeanor, clear explanations, and personalized approach—taking time to truly listen and craft treatment plans around your goals.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Outside the office, Dr. Dani enjoys spending time with his wife, Shweta, their son, Yuvraj, and their dog, Zoey. A travel enthusiast and self-proclaimed food lover, he is always excited to explore new destinations and cuisines. Dr. Dani looks forward to welcoming you and your family and being your trusted partner in lifelong oral health.
+                When he's not in the office, you'll find Dr. Dani exploring new destinations and cuisines with his wife Shweta, their son Yuvraj, and their dog Zoey. He looks forward to welcoming you and your family as your trusted partner in lifelong oral health.
               </p>
               
               <div className="bg-gradient-to-br from-primary to-kaya-navy-dark rounded-xl p-6 text-primary-foreground">
