@@ -87,8 +87,9 @@ export default function Technology() {
               State-of-the-Art Dental Care
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed">
-              We invest in the latest dental technology to provide you with more accurate diagnoses, 
-              comfortable treatments, and better outcomes. Experience the difference modern dentistry makes.
+              Your comfort and care are at the heart of everything we do. We've invested in advanced 
+              dental technology so your visits are quicker, more comfortable, and stress-free. 
+              We're here to make your smile journey as smooth as possible.
             </p>
           </motion.div>
         </div>
