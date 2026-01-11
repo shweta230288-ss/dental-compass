@@ -1,8 +1,8 @@
 import { Layout } from '@/components/layout/Layout';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Heart, Award, Users, GraduationCap } from 'lucide-react';
+import { useRef, useState } from 'react';
+import { Heart, Award, Users, GraduationCap, X } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import drKunalDani from '@/assets/dr-kunal-dani.jpg';
 import officeFrontDesk from '@/assets/office-front-desk.jpg';
@@ -24,6 +24,7 @@ export default function About() {
     once: true,
     margin: '-100px'
   });
+  const [selectedMember, setSelectedMember] = useState<{ name: string; role: string; image: string; bio: string } | null>(null);
   // Dental Hygienists
   const dentalHygienists = [{
     name: 'Marianne',
@@ -347,10 +348,15 @@ export default function About() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.05 }}
                     viewport={{ once: true }}
-                    className="bg-card rounded-xl overflow-hidden shadow-card"
+                    className="bg-card rounded-xl overflow-hidden shadow-card cursor-pointer active:scale-[0.98] transition-transform"
+                    onClick={() => setSelectedMember(staff)}
                   >
-                    <div className="aspect-[3/4] overflow-hidden">
+                    <div className="aspect-[3/4] overflow-hidden relative">
                       <img src={staff.image} alt={staff.name} className="w-full h-full object-cover object-top" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                      <div className="absolute bottom-2 left-2 right-2 text-white text-xs font-medium">
+                        Tap to read bio
+                      </div>
                     </div>
                     <div className="p-3">
                       <h3 className="font-serif text-base font-bold text-foreground">{staff.name}</h3>
@@ -423,5 +429,46 @@ export default function About() {
           </motion.div>
         </div>
       </section>
+
+      {/* Mobile Bio Modal */}
+      <AnimatePresence>
+        {selectedMember && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/60 flex items-end md:hidden"
+            onClick={() => setSelectedMember(null)}
+          >
+            <motion.div
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              className="bg-card w-full rounded-t-3xl max-h-[85vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="sticky top-0 bg-card pt-4 pb-2 px-5 flex justify-between items-center border-b border-border">
+                <div>
+                  <h3 className="font-serif text-xl font-bold text-foreground">{selectedMember.name}</h3>
+                  <p className="text-accent text-sm font-medium">{selectedMember.role}</p>
+                </div>
+                <button 
+                  onClick={() => setSelectedMember(null)}
+                  className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center"
+                >
+                  <X className="w-5 h-5 text-foreground" />
+                </button>
+              </div>
+              <div className="p-5">
+                <div className="w-32 h-40 rounded-xl overflow-hidden shadow-medium mb-4 mx-auto">
+                  <img src={selectedMember.image} alt={selectedMember.name} className="w-full h-full object-cover object-top" />
+                </div>
+                <p className="text-muted-foreground text-base leading-relaxed">{selectedMember.bio}</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </Layout>;
 }
