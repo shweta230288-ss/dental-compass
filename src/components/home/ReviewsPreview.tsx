@@ -37,7 +37,7 @@ export function ReviewsPreview() {
           className="text-center mb-8 md:mb-14"
         >
           <span className="text-accent font-medium text-xs md:text-sm uppercase tracking-wider">
-            Patient Reviews
+            Patient Success Stories
           </span>
           <h2 className="font-serif text-2xl md:text-4xl font-bold text-foreground mt-1 md:mt-2 mb-2 md:mb-4">
             What Our Patients Say
@@ -82,7 +82,7 @@ export function ReviewsPreview() {
           className="text-center"
         >
           <Button variant="default" size="lg" asChild>
-            <Link to="/reviews">Read All Reviews</Link>
+            <Link to="/reviews">Read All Stories</Link>
           </Button>
         </motion.div>
       </div>

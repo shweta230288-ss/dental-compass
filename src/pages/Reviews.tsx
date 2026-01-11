@@ -67,7 +67,7 @@ export default function Reviews() {
             className="max-w-3xl"
           >
             <span className="text-accent font-medium text-sm uppercase tracking-wider">
-              Patient Reviews
+              Patient Success Stories
             </span>
             <h1 className="font-serif text-4xl md:text-5xl font-bold mt-2 mb-6">
               What Our Patients Say
