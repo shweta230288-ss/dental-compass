@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Phone, MapPin, Clock, Mail, FileText, CreditCard, ClipboardList, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-const insurances = ['Delta Dental Premier', 'MetLife', 'Cigna', 'Aetna', 'Guardian', 'United Healthcare', 'Blue Cross Blue Shield', 'Humana', 'Anthem', 'Principal', 'And many more...'];
+const insurances = ['Delta Dental Premier', 'MetLife', 'United Healthcare', 'Blue Cross Blue Shield', 'And many more...'];
 const newPatientInfo = [{
   icon: FileText,
   title: 'Patient Forms',
