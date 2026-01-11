@@ -7,8 +7,8 @@ const insurances = ['Delta Dental Premier', 'MetLife', 'Cigna', 'Aetna', 'Guardi
 const newPatientInfo = [{
   icon: FileText,
   title: 'Patient Forms',
-  description: 'Complete your paperwork before your visit to save time. New patient forms are available at our office or can be completed upon arrival.',
-  details: ['Medical history questionnaire', 'Dental history form', 'Insurance information', 'HIPAA consent form']
+  description: 'New patient forms will be emailed and sent via text message to you before your visit. Complete them at your convenience to save time.',
+  details: ['Forms sent via email & text', 'Medical history questionnaire', 'Dental history form', 'Insurance information', 'HIPAA consent form']
 }, {
   icon: Clock,
   title: 'First Visit',
@@ -109,7 +109,7 @@ export default function NewPatients() {
                 <li className="flex gap-3">
                   <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0 mt-2" />
                   <span>
-                    <strong className="text-foreground">Complete your Patient Registration form.</strong> Do not fill out anything you feel uncomfortable answering, as we will get that from you during our personal conversation. If you are unable to fill out the form online, we can mail or email it to you. If applicable, we will ask you to come in early for your appointment and we can assist you in filling out the form.
+                    <strong className="text-foreground">Complete your Patient Registration form.</strong> New patient forms will be emailed and sent via text message to you. Do not fill out anything you feel uncomfortable answering, as we will get that from you during our personal conversation. If you are unable to fill out the form online, we can mail it to you. If applicable, we will ask you to come in early for your appointment and we can assist you in filling out the form.
                   </span>
                 </li>
                 <li className="flex gap-3">
