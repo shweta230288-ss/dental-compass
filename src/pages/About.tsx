@@ -239,7 +239,7 @@ export default function About() {
                 Dr. Kunal Dani is proud to carry forward a trusted tradition of dental care in Leominster—one that dates back to the 1960s. After assuming ownership from Dr. Michael Cronin, he's thoughtfully modernized the practice while preserving the values patients have relied on for generations: honesty, consistency, and exceptional care.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                A graduate of Tufts Dental School with advanced training in restorative, cosmetic, and family dentistry, Dr. Dani combines clinical precision with genuine compassion. He's known for his calm demeanor, clear explanations, and personalized approach—taking time to truly listen and craft treatment plans around your goals.
+                A graduate of Tufts Dental School with advanced training in restorative, cosmetic, family dentistry, and dental implants, Dr. Dani combines clinical precision with genuine compassion. He's known for his calm demeanor, clear explanations, and personalized approach—taking time to truly listen and craft treatment plans around your goals.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 When he's not in the office, you'll find Dr. Dani exploring new destinations and cuisines with his wife Shweta, their son Yuvraj, and their dog Zoey. He looks forward to welcoming you and your family as your trusted partner in lifelong oral health.
