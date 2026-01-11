@@ -11,7 +11,7 @@ const quickLinks = [{
   name: 'Technology',
   path: '/technology'
 }, {
-  name: 'Patient Reviews',
+  name: 'Patient Success Stories',
   path: '/reviews'
 }, {
   name: 'Membership Plans',
