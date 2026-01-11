@@ -17,27 +17,19 @@ import staffAfsah from '@/assets/staff-afsah.jpg';
 import staffRachel from '@/assets/staff-rachel.jpg';
 import staffShaz from '@/assets/staff-shaz.jpg';
 import staffYari from '@/assets/staff-yari.jpg';
+import staffIsabela from '@/assets/staff-isabela.jpg';
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,
     margin: '-100px'
   });
-  const staffMembers = [{
+  // Dental Hygienists
+  const dentalHygienists = [{
     name: 'Marianne',
     role: 'Registered Dental Hygienist',
     image: staffMarianne,
     bio: "Marianne is a Registered Dental Hygienist who joined our staff in the fall of 2015. Marianne was raised in Leominster and is a 1998 graduate of St. Bernard's High School. Looking for a new career, Marianne enrolled at Mount Wachusett College and received her RDH degree in May of 2015. Marianne is an excellent clinician and a better person. She is a natural leader who takes every patient on as an individual case and has your best treatment plan in mind. Marianne and her husband Matt enjoy spending time with their daughter and son and still live locally."
-  }, {
-    name: 'Trinh',
-    role: 'Dental Assistant',
-    image: staffTrinh,
-    bio: "Trinh Trieu works full-time mainly as a Dental Assistant but also is proficient at the front desk and with instrument sterilization. Trinh was born in Vietnam and moved to the United States in 1987. With a limited English background, Trinh worked hard to eventually graduate from Montachusett Technical in 1993 with a degree in Dental Assisting. Her high school instructor says that she was the best student that she ever had. Trinh has been with our practice since 1995. She is an exceptional worker. Her clinical skills are exemplary. Trinh and her husband Khuong enjoy watching their daughters ventures in track, basketball, soccer and martial arts."
-  }, {
-    name: 'Yari',
-    role: 'Certified Dental Assistant',
-    image: staffYari,
-    bio: "Yarines, also known as Yari, was born and raised in Worcester, Massachusetts. She became a Certified Dental Assistant in 2020 and is a graduate of Leominster Senior High School. Outside of the office, Yari is a proud, family-oriented person who cherishes time with her family. She loves to travel, explore new places, and enjoy great food, always embracing new experiences. Yari is grateful to be part of the Kaya family. She is especially passionate about assisting Dr. Dani in changing lives through dentistry and helping patients achieve healthy, confident smiles. Her commitment to excellence and genuine care for others shines through in everything she does!"
   }, {
     name: 'Erika',
     role: 'Registered Dental Hygienist',
@@ -59,16 +51,43 @@ export default function About() {
     image: staffRachel,
     bio: "Rachel is one of our newest dental hygienists, graduating from Mount Wachusett Community College's dental hygiene program in 2025, and has been with us since July of that year. She is very personable, and tries to connect with every patient she sees. Rachel has a passion for dental hygiene and helping patients become more knowledgeable in their oral health. Outside of the office, she enjoys spending time with her family, going camping, fishing and playing ice hockey."
   }, {
-    name: 'Shaz',
-    role: 'Front Desk',
-    image: staffShaz,
-    bio: "Shaz is from Leominster and has always been passionate about the dental field. With over eight years of experience, she loves helping patients and making every visit a positive one. Shaz has been with Kaya Dental since mid 2024 and always brings great energy to the office! Outside of work, she is all about family time, her Shih Tzu Cocoa, traveling whenever she can, and saying yes to adventures! Whether it's beach days, hikes, concerts, or sporting events, if there's good energy, good people & music, or something fun happening, chances are you'll find her right there!"
-  }, {
     name: 'Annie',
     role: 'Registered Dental Hygienist',
     image: staffAnnie,
     bio: "Annie is a Registered Dental Hygienist who joined our staff in May of 2014. Annie is a 2009 graduate of Rockport High School, and received her RDH degree from the Massachusetts College of Pharmacy in 2011. Annie is a personable, mature young woman who has been a wonderful fit in our office. Annie and her husband Matt enjoy spending time with their three children."
   }];
+
+  // Dental Assistants
+  const dentalAssistants = [{
+    name: 'Trinh',
+    role: 'Dental Assistant',
+    image: staffTrinh,
+    bio: "Trinh Trieu works full-time mainly as a Dental Assistant but also is proficient at the front desk and with instrument sterilization. Trinh was born in Vietnam and moved to the United States in 1987. With a limited English background, Trinh worked hard to eventually graduate from Montachusett Technical in 1993 with a degree in Dental Assisting. Her high school instructor says that she was the best student that she ever had. Trinh has been with our practice since 1995. She is an exceptional worker. Her clinical skills are exemplary. Trinh and her husband Khuong enjoy watching their daughters ventures in track, basketball, soccer and martial arts."
+  }, {
+    name: 'Yari',
+    role: 'Certified Dental Assistant',
+    image: staffYari,
+    bio: "Yarines, also known as Yari, was born and raised in Worcester, Massachusetts. She became a Certified Dental Assistant in 2020 and is a graduate of Leominster Senior High School. Outside of the office, Yari is a proud, family-oriented person who cherishes time with her family. She loves to travel, explore new places, and enjoy great food, always embracing new experiences. Yari is grateful to be part of the Kaya family. She is especially passionate about assisting Dr. Dani in changing lives through dentistry and helping patients achieve healthy, confident smiles. Her commitment to excellence and genuine care for others shines through in everything she does!"
+  }];
+
+  // Front Office Staff & Treatment Plan Coordinator
+  const frontOfficeStaff = [{
+    name: 'Shaz',
+    role: 'Front Desk',
+    image: staffShaz,
+    bio: "Shaz is from Leominster and has always been passionate about the dental field. With over eight years of experience, she loves helping patients and making every visit a positive one. Shaz has been with Kaya Dental since mid 2024 and always brings great energy to the office! Outside of work, she is all about family time, her Shih Tzu Cocoa, traveling whenever she can, and saying yes to adventures! Whether it's beach days, hikes, concerts, or sporting events, if there's good energy, good people & music, or something fun happening, chances are you'll find her right there!"
+  }, {
+    name: 'Isabela',
+    role: 'Treatment Plan Coordinator',
+    image: staffIsabela,
+    bio: "Isabela is a Treatment Plan Coordinator who enjoys helping patients understand their treatment options and financial plans. In her role, she works closely with patients and the clinical team to keep everything running smoothly. Outside of work, she loves staying busy and keeping an active lifestyle. She's passionate about learning and is currently pursuing further education in the healthcare field. In her free time, she enjoys good conversations, quiet coffee moments, spending time with loved ones, and hanging out with her cat."
+  }];
+
+  const staffGroups = [
+    { title: 'Dental Hygienists', members: dentalHygienists },
+    { title: 'Dental Assistants', members: dentalAssistants },
+    { title: 'Front Office Staff & Treatment Plan Coordinator', members: frontOfficeStaff }
+  ];
   return <Layout>
       <Helmet>
         <title>About Us | Kaya Dental Leominster MA</title>
@@ -288,55 +307,65 @@ export default function About() {
             <img src={teamPhoto} alt="The Kaya Dental team" className="w-full h-full object-cover object-[center_60%]" />
           </motion.div>
 
-          {/* Staff Grid - Mobile: compact cards, Desktop: full bios */}
-          {/* Mobile View */}
-          <div className="grid grid-cols-2 gap-4 md:hidden">
-            {staffMembers.map((staff, index) => <motion.div key={staff.name} initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.5,
-            delay: index * 0.05
-          }} viewport={{
-            once: true
-          }} className="bg-card rounded-xl overflow-hidden shadow-card">
-                <div className="aspect-[3/4] overflow-hidden">
-                  <img src={staff.image} alt={staff.name} className="w-full h-full object-cover object-top" />
-                </div>
-                <div className="p-3">
-                  <h3 className="font-serif text-base font-bold text-foreground">{staff.name}</h3>
-                  <p className="text-accent text-xs font-medium">{staff.role}</p>
-                </div>
-              </motion.div>)}
-          </div>
+          {/* Staff Grid - Grouped by Role */}
+          {staffGroups.map((group, groupIndex) => (
+            <div key={group.title} className={groupIndex > 0 ? 'mt-12' : ''}>
+              <motion.h3
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="font-serif text-2xl font-bold text-foreground mb-6 text-center md:text-left"
+              >
+                {group.title}
+              </motion.h3>
+              
+              {/* Mobile View */}
+              <div className="grid grid-cols-2 gap-4 md:hidden">
+                {group.members.map((staff, index) => (
+                  <motion.div
+                    key={staff.name}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
+                    viewport={{ once: true }}
+                    className="bg-card rounded-xl overflow-hidden shadow-card"
+                  >
+                    <div className="aspect-[3/4] overflow-hidden">
+                      <img src={staff.image} alt={staff.name} className="w-full h-full object-cover object-top" />
+                    </div>
+                    <div className="p-3">
+                      <h3 className="font-serif text-base font-bold text-foreground">{staff.name}</h3>
+                      <p className="text-accent text-xs font-medium">{staff.role}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
 
-          {/* Desktop View - Full bios in horizontal layout */}
-          <div className="hidden md:flex flex-col gap-8">
-            {staffMembers.map((staff, index) => <motion.div key={staff.name} initial={{
-            opacity: 0,
-            y: 30
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.5,
-            delay: index * 0.1
-          }} viewport={{
-            once: true
-          }} className="flex gap-6 items-start">
-                <div className="w-48 h-64 flex-shrink-0 rounded-xl overflow-hidden shadow-medium">
-                  <img src={staff.image} alt={staff.name} className="w-full h-full object-cover object-top" />
-                </div>
-                <div className="flex-1 pt-2">
-                  <h3 className="font-serif text-xl font-bold text-foreground">{staff.name}</h3>
-                  <p className="text-accent text-sm font-medium mb-3">{staff.role}</p>
-                  <p className="text-muted-foreground text-base leading-relaxed">{staff.bio}</p>
-                </div>
-              </motion.div>)}
-          </div>
+              {/* Desktop View - Full bios in horizontal layout */}
+              <div className="hidden md:flex flex-col gap-8">
+                {group.members.map((staff, index) => (
+                  <motion.div
+                    key={staff.name}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex gap-6 items-start"
+                  >
+                    <div className="w-48 h-64 flex-shrink-0 rounded-xl overflow-hidden shadow-medium">
+                      <img src={staff.image} alt={staff.name} className="w-full h-full object-cover object-top" />
+                    </div>
+                    <div className="flex-1 pt-2">
+                      <h3 className="font-serif text-xl font-bold text-foreground">{staff.name}</h3>
+                      <p className="text-accent text-sm font-medium mb-3">{staff.role}</p>
+                      <p className="text-muted-foreground text-base leading-relaxed">{staff.bio}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          ))}
 
           {/* Team Values */}
           <motion.div initial={{
