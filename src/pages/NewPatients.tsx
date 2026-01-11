@@ -240,7 +240,7 @@ export default function NewPatients() {
                         No Insurance? No Problem!
                       </h3>
                       <p className="text-muted-foreground text-sm">
-                        Save up to <span className="text-accent font-semibold">$300+</span> annually • Plans from $400/year • No deductibles
+                        Save up to <span className="text-accent font-semibold">$300+</span> annually • Plans from $400/year
                       </p>
                     </div>
                   </div>
