@@ -26,7 +26,7 @@ const technologies = [
     icon: Camera,
     title: 'Digital Intraoral Scanners',
     image: techIteroScanner,
-    description: 'Say goodbye to uncomfortable dental impressions. Our iTero scanner creates precise 3D digital models of your teeth in minutes, making treatments like Invisalign more comfortable and accurate than ever before.',
+    description: 'Say goodbye to uncomfortable dental impressions. Our iTero and 3Shape scanners create precise 3D digital models of your teeth in minutes, making treatments like Invisalign more comfortable and accurate than ever before.',
     benefits: [
       'No messy impression materials',
       'Highly accurate 3D models',
