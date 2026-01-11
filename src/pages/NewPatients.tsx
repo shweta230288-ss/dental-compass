@@ -1,6 +1,6 @@
 import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
-import { Phone, MapPin, Clock, Mail, FileText, CreditCard } from 'lucide-react';
+import { Phone, MapPin, Clock, Mail, FileText, CreditCard, ClipboardList, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 const insurances = ['Delta Dental Premier', 'MetLife', 'Cigna', 'Aetna', 'Guardian', 'United Healthcare', 'Blue Cross Blue Shield', 'Humana', 'Anthem', 'Principal', 'And many more...'];
@@ -83,6 +83,56 @@ export default function NewPatients() {
                 </ul>
               </motion.div>)}
           </div>
+
+          {/* Before Your Visit Checklist */}
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6
+        }} viewport={{
+          once: true
+        }} className="max-w-3xl mx-auto mb-16">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+                <ClipboardList className="w-6 h-6 text-accent" />
+              </div>
+              <h2 className="font-serif text-3xl font-bold text-foreground">
+                Before Your Visit
+              </h2>
+            </div>
+            <div className="bg-secondary rounded-xl p-6 md:p-8">
+              <ul className="space-y-4 text-muted-foreground">
+                <li className="flex gap-3">
+                  <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0 mt-2" />
+                  <span>
+                    <strong className="text-foreground">Complete your Patient Registration form.</strong> Do not fill out anything you feel uncomfortable answering, as we will get that from you during our personal conversation. If you are unable to fill out the form online, we can mail or email it to you. If applicable, we will ask you to come in early for your appointment and we can assist you in filling out the form.
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0 mt-2" />
+                  <span>Forward your <strong className="text-foreground">referral slip and any x-rays</strong> if applicable from a previous office.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0 mt-2" />
+                  <span>A <strong className="text-foreground">complete list of current medications</strong>.</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0 mt-2" />
+                  <span><strong className="text-foreground">Dental benefit information</strong>, which will save time and allow us to process your claims.</span>
+                </li>
+              </ul>
+              <div className="mt-6 p-4 bg-accent/10 border border-accent/20 rounded-lg flex gap-3">
+                <AlertTriangle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-foreground font-medium">
+                  <strong>IMPORTANT:</strong> All patients under the age of 18 must be accompanied by a parent or guardian at the consultation visit.
+                </p>
+              </div>
+            </div>
+          </motion.div>
 
           {/* What to Expect */}
           <motion.div initial={{
