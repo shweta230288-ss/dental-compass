@@ -150,30 +150,26 @@ export default function NewPatients() {
               What to Expect at Your First Visit
             </h2>
             <div className="space-y-4 text-muted-foreground">
-              <p>
-                We want your first visit to be as comfortable and informative as possible. 
-                Here's what you can expect:
-              </p>
               <ol className="list-decimal pl-6 space-y-3">
                 <li>
-                  <strong className="text-foreground">Warm Welcome:</strong> Our friendly front desk team 
-                  will greet you and help with any paperwork.
+                  <strong className="text-foreground">Warm Welcome</strong> – Our friendly front desk team 
+                  will greet you and help with any paperwork to ensure a smooth check-in.
                 </li>
                 <li>
-                  <strong className="text-foreground">Comprehensive Exam:</strong> Dr. Dani will perform 
-                  a thorough examination of your teeth, gums, and oral health.
+                  <strong className="text-foreground">Comprehensive Exam</strong> – Dr. Dani will perform 
+                  a thorough evaluation of your teeth, gums, and overall oral health.
                 </li>
                 <li>
-                  <strong className="text-foreground">Digital X-Rays:</strong> We'll take digital X-rays 
-                  to get a complete picture of your oral health.
+                  <strong className="text-foreground">Digital X-Rays</strong> – We use advanced digital X-rays 
+                  to safely capture a complete view of your oral health.
                 </li>
                 <li>
-                  <strong className="text-foreground">Treatment Discussion:</strong> We'll discuss our 
-                  findings and create a personalized treatment plan tailored to your needs.
+                  <strong className="text-foreground">Personalized Treatment Discussion</strong> – We'll review our 
+                  findings and create a customized treatment plan tailored to your needs.
                 </li>
                 <li>
-                  <strong className="text-foreground">Questions Answered:</strong> We encourage you to 
-                  ask questions—we're here to help!
+                  <strong className="text-foreground">Questions Welcome</strong> – We encourage open communication 
+                  and are always happy to answer your questions.
                 </li>
               </ol>
             </div>
