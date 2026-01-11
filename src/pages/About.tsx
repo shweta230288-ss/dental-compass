@@ -168,20 +168,29 @@ export default function About() {
             <div className="flex flex-wrap justify-center gap-8">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Award className="w-5 h-5 text-accent" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-foreground">Advanced Technology</h4>
-                  <p className="text-sm text-muted-foreground">Digital X-rays, 3D printing</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
                   <Heart className="w-5 h-5 text-accent" />
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-foreground">Patient Comfort</h4>
                   <p className="text-sm text-muted-foreground">Relaxing atmosphere</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Award className="w-5 h-5 text-accent" />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-foreground">Advanced Technology</h4>
+                  <p className="text-sm text-muted-foreground">Digital scanners, 3D printing</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Users className="w-5 h-5 text-accent" />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-foreground">Family-Friendly</h4>
+                  <p className="text-sm text-muted-foreground">All ages welcome</p>
                 </div>
               </div>
             </div>
