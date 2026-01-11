@@ -225,17 +225,20 @@ export default function About() {
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
                 Dr. Kunal Dani, DMD
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Dr. Kunal Dani is dedicated to providing exceptional dental care with a gentle, 
-                patient-centered approach. With years of experience and a passion for staying 
-                at the forefront of dental technology, Dr. Dani ensures every patient receives 
-                the highest quality treatment.
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Dr. Kunal Dani is a compassionate, detail-oriented dentist who is proud to continue a long-standing tradition of trusted dental care in the community. With a strong commitment to clinical excellence, patient comfort, and ethical dentistry, Dr. Dani leads the practice with the belief that every patient deserves personalized, high-quality care in a welcoming environment.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                After earning his Doctor of Dental Medicine degree from Tufts Dental School, Dr. Dani pursued advanced training in restorative, cosmetic, and comprehensive family dentistry. He remains dedicated to continuing education and modern dental technology to ensure his patients receive the most effective, evidence-based care available.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Dr. Dani assumed ownership of the practice from Dr. Michael Cronin with deep respect for its roots in the community, dating back to the 1960s. While thoughtfully modernizing the office, he has preserved the values patients have trusted for generations—honesty, consistency, and exceptional clinical standards.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Known for his calm demeanor and clear communication, Dr. Dani takes the time to listen carefully, explain treatment options thoroughly, and tailor care plans to each patient's goals. Whether providing routine preventive care, cosmetic enhancements, or comprehensive dental treatment, he approaches every case with precision, empathy, and pride in his work.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                His philosophy centers on building lasting relationships with patients through 
-                trust, transparency, and compassionate care. Dr. Dani takes the time to listen 
-                to each patient's concerns and develops personalized treatment plans that address 
-                their unique needs and goals.
+                Outside the office, Dr. Dani enjoys spending time with his wife, Shweta, their son, Yuvraj, and their dog, Zoey. A travel enthusiast and self-proclaimed food lover, he is always excited to explore new destinations and cuisines. Dr. Dani looks forward to welcoming you and your family and being your trusted partner in lifelong oral health.
               </p>
               
               <div className="bg-gradient-to-br from-primary to-kaya-navy-dark rounded-xl p-6 text-primary-foreground">
@@ -244,11 +247,15 @@ export default function About() {
                 <ul className="space-y-2 text-primary-foreground/90 text-sm">
                   <li className="flex items-start gap-2">
                     <span className="text-accent">•</span>
-                    Doctor of Dental Medicine (DMD)
+                    Bachelor of Dental Surgery (BDS), India
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent">•</span>
-                    Advanced training in cosmetic dentistry
+                    Doctor of Dental Medicine (DMD), Tufts University School of Dental Medicine
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">•</span>
+                    Advanced training in Cosmetic Dentistry and Biomimetic Dentistry
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent">•</span>
@@ -257,6 +264,14 @@ export default function About() {
                   <li className="flex items-start gap-2">
                     <span className="text-accent">•</span>
                     Member, American Dental Association
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">•</span>
+                    Member, Alliance of Independent Dentists
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">•</span>
+                    Chair, Membership Committee, Massachusetts Dental Society
                   </li>
                 </ul>
               </div>
