@@ -61,11 +61,7 @@ const plans = [
 
 const benefits = [
   'Guaranteed Immediate Enrollment',
-  'No Yearly Maximum',
-  'No Deductibles',
-  'No Pre-Authorizations',
   'No Waiting Periods',
-  'No Pre-Existing Condition Limitations',
   'No Hidden Fees',
 ];
 
@@ -97,7 +93,7 @@ const faqs = [
   },
   {
     question: 'Are there any hidden fees?',
-    answer: 'Absolutely not! The price you see is the price you pay. There are no hidden fees, deductibles, or pre-authorizations required.'
+    answer: 'Absolutely not! The price you see is the price you pay. There are no hidden fees.'
   },
   {
     question: 'What happens if I need additional treatment?',
