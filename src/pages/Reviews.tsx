@@ -81,7 +81,15 @@ export default function Reviews() {
               <span className="text-2xl font-bold">5.0</span>
             </div>
             <p className="text-primary-foreground/80 text-lg">
-              Over 3,400+ five-star reviews on Google
+              Over 3,400+ five-star reviews on Google and{' '}
+              <a 
+                href="https://local.demandforce.com/b/leominsterdentistry" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="underline hover:text-accent transition-colors"
+              >
+                Demandforce
+              </a>
             </p>
           </motion.div>
         </div>
