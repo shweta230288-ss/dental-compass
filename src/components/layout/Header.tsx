@@ -8,10 +8,10 @@ const navigationItems = [{
   name: 'Home',
   path: '/'
 }, {
-  name: 'About',
+  name: 'Meet Our Team',
   path: '/about'
 }, {
-  name: 'Services',
+  name: 'Our Services',
   path: '/services',
   children: [{
     name: 'View All Services',
@@ -42,7 +42,10 @@ const navigationItems = [{
   name: 'Technology',
   path: '/technology'
 }, {
-  name: 'Membership',
+  name: 'Membership Plans',
+  path: '/membership'
+}, {
+  name: 'Membership Plans',
   path: '/membership'
 }, {
   name: 'Patient Success Stories',
@@ -51,7 +54,7 @@ const navigationItems = [{
   name: 'New Patients',
   path: '/new-patients'
 }, {
-  name: 'Contact',
+  name: 'Contact Us',
   path: '/contact'
 }];
 export function Header() {
