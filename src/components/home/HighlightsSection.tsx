@@ -21,8 +21,8 @@ const highlights = [
   },
   {
     icon: Building,
-    title: 'Locally Owned',
-    description: 'We\'re a locally owned dental practice, not a chain or corporate conglomerate',
+    title: 'Independently Owned',
+    description: 'We\'re an independently owned dental practice, not a chain or corporate conglomerate',
   },
   {
     icon: Sparkles,
