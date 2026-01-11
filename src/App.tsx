@@ -13,6 +13,7 @@ import Reviews from "./pages/Reviews";
 import NewPatients from "./pages/NewPatients";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 // Service sub-pages
 import GeneralDentistry from "./pages/services/GeneralDentistry";
@@ -39,6 +40,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
