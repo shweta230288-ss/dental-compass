@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Award, Users, Clock, Heart, Sparkles, Shield } from 'lucide-react';
+import { Award, Users, Building, Heart, Sparkles, Shield } from 'lucide-react';
 
 const highlights = [
   {
@@ -20,9 +20,9 @@ const highlights = [
     description: 'Welcoming patients of all ages with personalized treatment plans',
   },
   {
-    icon: Clock,
-    title: 'Convenient Hours',
-    description: 'Flexible scheduling to accommodate your busy lifestyle',
+    icon: Building,
+    title: 'Locally Owned',
+    description: 'We\'re a locally owned dental practice, not a chain or corporate conglomerate',
   },
   {
     icon: Sparkles,
