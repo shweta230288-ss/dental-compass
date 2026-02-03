@@ -276,11 +276,12 @@ export function AccessibilityWidget() {
 
   const panelClassName = cn(
     // Mobile: fixed bottom sheet so it can't render off-screen
-    isMobile ? "fixed left-4 right-4 bottom-20" : "absolute bottom-16 left-0",
+    // Use px-based offsets so it won't collide with the button when text size increases.
+    isMobile ? "fixed left-4 right-4 bottom-[88px]" : "absolute bottom-[72px] left-0",
     "bg-card border border-border rounded-2xl shadow-xl p-4 pr-6",
     isMobile ? "w-auto" : "w-[280px]",
     // Needed so our custom scroll indicator (absolute) is positioned correctly
-    "relative"
+    "relative z-[1]"
   );
 
   const scrollAreaStyle: CSSProperties = {
@@ -324,7 +325,7 @@ export function AccessibilityWidget() {
           onClick={() => setIsOpen(!isOpen)}
           className={cn(
             // Use fixed px sizes so the icon stays correct at higher text scaling
-            "w-[56px] h-[56px] rounded-full shadow-lg flex items-center justify-center transition-all duration-300",
+            "relative z-[2] w-[56px] h-[56px] rounded-full shadow-lg flex items-center justify-center transition-all duration-300",
             "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent",
             isOpen 
               ? "bg-destructive text-destructive-foreground" 
