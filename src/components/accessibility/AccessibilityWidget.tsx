@@ -38,6 +38,8 @@ const defaultSettings: AccessibilitySettings = {
 export function AccessibilityWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(false);
+  const [scrollThumb, setScrollThumb] = useState({ heightPct: 0, topPct: 0 });
   const [settings, setSettings] = useState<AccessibilitySettings>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('accessibility-settings');
@@ -47,6 +49,7 @@ export function AccessibilityWidget() {
   });
   const [guidePosition, setGuidePosition] = useState(0);
   const widgetRef = useRef<HTMLDivElement>(null);
+  const panelScrollRef = useRef<HTMLDivElement>(null);
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -124,6 +127,40 @@ export function AccessibilityWidget() {
     // Save to localStorage
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
   }, [settings]);
+
+  // Custom (always visible) scroll indicator for mobile.
+  // Android/Chrome often hides native scrollbars; this provides a reliable visual cue.
+  const updateScrollIndicator = useCallback(() => {
+    const el = panelScrollRef.current;
+    if (!el) return;
+
+    const scrollHeight = el.scrollHeight;
+    const clientHeight = el.clientHeight;
+    const scrollTop = el.scrollTop;
+    const overflow = scrollHeight - clientHeight;
+
+    const hasOverflow = overflow > 4;
+    setShowScrollIndicator(isMobile && hasOverflow);
+
+    if (!hasOverflow) {
+      setScrollThumb({ heightPct: 0, topPct: 0 });
+      return;
+    }
+
+    // Thumb size reflects how much content is visible. Clamp to keep it usable.
+    const heightPct = Math.max(18, Math.min(60, (clientHeight / scrollHeight) * 100));
+    const topPct = ((scrollTop / overflow) * (100 - heightPct)) || 0;
+    setScrollThumb({ heightPct, topPct });
+  }, [isMobile]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    updateScrollIndicator();
+
+    // Recompute when viewport changes (address bar show/hide, rotation, etc.)
+    window.addEventListener('resize', updateScrollIndicator);
+    return () => window.removeEventListener('resize', updateScrollIndicator);
+  }, [isOpen, settings.fontSize, settings.textSpacing, isMobile, updateScrollIndicator]);
 
   // Reading guide mouse/touch tracking
   const handlePointerMove = useCallback((e: MouseEvent | TouchEvent) => {
@@ -258,7 +295,9 @@ export function AccessibilityWidget() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.9 }}
               transition={{ duration: 0.2 }}
-              className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl p-4 w-[280px] overflow-y-auto scrollbar-thin"
+              ref={panelScrollRef}
+              onScroll={updateScrollIndicator}
+              className="relative absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl p-4 pr-6 w-[280px] overflow-y-auto scrollbar-thin"
               style={{
                 // On mobile (especially iOS), vh can be unstable when browser chrome shows/hides.
                 // Using dvh keeps the panel constrained so it *always* becomes an internal scroll container,
@@ -272,6 +311,21 @@ export function AccessibilityWidget() {
               role="menu"
               aria-label="Accessibility options"
             >
+              {showScrollIndicator && (
+                <div
+                  className="pointer-events-none absolute right-2 top-3 bottom-3 w-1 rounded-full bg-border/60"
+                  aria-hidden="true"
+                >
+                  <div
+                    className="absolute left-0 right-0 rounded-full bg-accent/70"
+                    style={{
+                      height: `${scrollThumb.heightPct}%`,
+                      top: `${scrollThumb.topPct}%`,
+                    }}
+                  />
+                </div>
+              )}
+
               <h3 className="font-semibold text-foreground text-sm mb-4 flex items-center gap-2">
                 <Accessibility className="w-4 h-4 text-accent" aria-hidden="true" />
                 Accessibility Options
