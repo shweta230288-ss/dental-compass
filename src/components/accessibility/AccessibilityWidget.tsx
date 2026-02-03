@@ -379,24 +379,10 @@ export function AccessibilityWidget() {
                 )}
                 style={scrollAreaStyle}
               >
-                {/* Header with close button */}
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-semibold text-foreground text-sm flex items-center gap-2">
-                    <Accessibility className="w-4 h-4 text-accent" aria-hidden="true" />
-                    Accessibility Options
-                  </h3>
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className={cn(
-                      "w-8 h-8 rounded-full flex items-center justify-center transition-colors",
-                      "bg-destructive/10 hover:bg-destructive/20 text-destructive",
-                      "focus:outline-none focus:ring-2 focus:ring-destructive"
-                    )}
-                    aria-label="Close accessibility menu"
-                  >
-                    <X className="w-4 h-4" aria-hidden="true" />
-                  </button>
-                </div>
+                <h3 className="font-semibold text-foreground text-sm mb-4 flex items-center gap-2">
+                  <Accessibility className="w-4 h-4 text-accent" aria-hidden="true" />
+                  Accessibility Options
+                </h3>
 
                 {/* Font Size Controls */}
                 <div className="mb-4 p-3 bg-secondary/50 rounded-xl">
