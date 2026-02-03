@@ -14,6 +14,7 @@ import {
   Eye
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 interface AccessibilitySettings {
   fontSize: number;
@@ -258,123 +259,127 @@ export function AccessibilityWidget() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.9 }}
               transition={{ duration: 0.2 }}
-              className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl p-4 w-[280px] max-h-[70vh] overflow-y-auto"
+              className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl w-[280px] max-h-[60vh] overflow-hidden"
               role="menu"
               aria-label="Accessibility options"
             >
-              <h3 className="font-semibold text-foreground text-sm mb-4 flex items-center gap-2">
-                <Accessibility className="w-4 h-4 text-accent" aria-hidden="true" />
-                Accessibility Options
-              </h3>
+              <ScrollArea className="h-full max-h-[60vh]">
+                <div className="p-4">
+                  <h3 className="font-semibold text-foreground text-sm mb-4 flex items-center gap-2">
+                    <Accessibility className="w-4 h-4 text-accent" aria-hidden="true" />
+                    Accessibility Options
+                  </h3>
 
-              {/* Font Size Controls */}
-              <div className="mb-4 p-3 bg-secondary/50 rounded-xl">
-                <label className="text-xs text-muted-foreground block mb-2 font-medium">
-                  Text Size: {settings.fontSize}%
-                </label>
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={decreaseFontSize}
-                    disabled={settings.fontSize <= 80}
-                    className={cn(
-                      "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
-                      "bg-background hover:bg-background/80 text-foreground border border-border",
-                      "focus:outline-none focus:ring-2 focus:ring-accent",
-                      "disabled:opacity-50 disabled:cursor-not-allowed"
-                    )}
-                    aria-label="Decrease text size"
-                  >
-                    <Minus className="w-4 h-4" aria-hidden="true" />
-                  </button>
-                  
-                  <div className="flex-1 h-2 bg-background rounded-full overflow-hidden border border-border">
-                    <div 
-                      className="h-full bg-accent transition-all duration-300"
-                      style={{ width: `${((settings.fontSize - 80) / 70) * 100}%` }}
-                    />
+                  {/* Font Size Controls */}
+                  <div className="mb-4 p-3 bg-secondary/50 rounded-xl">
+                    <label className="text-xs text-muted-foreground block mb-2 font-medium">
+                      Text Size: {settings.fontSize}%
+                    </label>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={decreaseFontSize}
+                        disabled={settings.fontSize <= 80}
+                        className={cn(
+                          "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
+                          "bg-background hover:bg-background/80 text-foreground border border-border",
+                          "focus:outline-none focus:ring-2 focus:ring-accent",
+                          "disabled:opacity-50 disabled:cursor-not-allowed"
+                        )}
+                        aria-label="Decrease text size"
+                      >
+                        <Minus className="w-4 h-4" aria-hidden="true" />
+                      </button>
+                      
+                      <div className="flex-1 h-2 bg-background rounded-full overflow-hidden border border-border">
+                        <div 
+                          className="h-full bg-accent transition-all duration-300"
+                          style={{ width: `${((settings.fontSize - 80) / 70) * 100}%` }}
+                        />
+                      </div>
+
+                      <button
+                        onClick={increaseFontSize}
+                        disabled={settings.fontSize >= 150}
+                        className={cn(
+                          "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
+                          "bg-background hover:bg-background/80 text-foreground border border-border",
+                          "focus:outline-none focus:ring-2 focus:ring-accent",
+                          "disabled:opacity-50 disabled:cursor-not-allowed"
+                        )}
+                        aria-label="Increase text size"
+                      >
+                        <Plus className="w-4 h-4" aria-hidden="true" />
+                      </button>
+                    </div>
                   </div>
 
+                  {/* Toggle Options */}
+                  <div className="space-y-2 mb-4">
+                    {toggleOptions.map(option => {
+                      const Icon = option.icon;
+                      const isActive = settings[option.key];
+                      
+                      return (
+                        <button
+                          key={option.key}
+                          onClick={() => toggleSetting(option.key)}
+                          className={cn(
+                            "w-full flex items-center gap-3 p-3 rounded-xl transition-colors text-left",
+                            "focus:outline-none focus:ring-2 focus:ring-accent",
+                            isActive 
+                              ? "bg-accent text-accent-foreground" 
+                              : "bg-secondary/50 text-foreground hover:bg-secondary"
+                          )}
+                          role="menuitemcheckbox"
+                          aria-checked={isActive}
+                        >
+                          <div className={cn(
+                            "w-8 h-8 rounded-lg flex items-center justify-center shrink-0",
+                            isActive ? "bg-accent-foreground/20" : "bg-background"
+                          )}>
+                            <Icon className="w-4 h-4" aria-hidden="true" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <span className="text-sm font-medium block">{option.label}</span>
+                            <span className={cn(
+                              "text-xs block truncate",
+                              isActive ? "text-accent-foreground/70" : "text-muted-foreground"
+                            )}>
+                              {option.description}
+                            </span>
+                          </div>
+                          <div className={cn(
+                            "w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0",
+                            isActive 
+                              ? "border-accent-foreground bg-accent-foreground" 
+                              : "border-border"
+                          )}>
+                            {isActive && (
+                              <svg className="w-3 h-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                              </svg>
+                            )}
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {/* Reset Button */}
                   <button
-                    onClick={increaseFontSize}
-                    disabled={settings.fontSize >= 150}
+                    onClick={resetSettings}
                     className={cn(
-                      "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
-                      "bg-background hover:bg-background/80 text-foreground border border-border",
-                      "focus:outline-none focus:ring-2 focus:ring-accent",
-                      "disabled:opacity-50 disabled:cursor-not-allowed"
+                      "w-full flex items-center justify-center gap-2 p-3 rounded-xl transition-colors",
+                      "border border-border text-muted-foreground hover:text-foreground hover:bg-secondary",
+                      "focus:outline-none focus:ring-2 focus:ring-accent"
                     )}
-                    aria-label="Increase text size"
+                    aria-label="Reset all accessibility settings to default"
                   >
-                    <Plus className="w-4 h-4" aria-hidden="true" />
+                    <RotateCcw className="w-4 h-4" aria-hidden="true" />
+                    <span className="text-sm font-medium">Reset All Settings</span>
                   </button>
                 </div>
-              </div>
-
-              {/* Toggle Options */}
-              <div className="space-y-2 mb-4">
-                {toggleOptions.map(option => {
-                  const Icon = option.icon;
-                  const isActive = settings[option.key];
-                  
-                  return (
-                    <button
-                      key={option.key}
-                      onClick={() => toggleSetting(option.key)}
-                      className={cn(
-                        "w-full flex items-center gap-3 p-3 rounded-xl transition-colors text-left",
-                        "focus:outline-none focus:ring-2 focus:ring-accent",
-                        isActive 
-                          ? "bg-accent text-accent-foreground" 
-                          : "bg-secondary/50 text-foreground hover:bg-secondary"
-                      )}
-                      role="menuitemcheckbox"
-                      aria-checked={isActive}
-                    >
-                      <div className={cn(
-                        "w-8 h-8 rounded-lg flex items-center justify-center",
-                        isActive ? "bg-accent-foreground/20" : "bg-background"
-                      )}>
-                        <Icon className="w-4 h-4" aria-hidden="true" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <span className="text-sm font-medium block">{option.label}</span>
-                        <span className={cn(
-                          "text-xs block truncate",
-                          isActive ? "text-accent-foreground/70" : "text-muted-foreground"
-                        )}>
-                          {option.description}
-                        </span>
-                      </div>
-                      <div className={cn(
-                        "w-5 h-5 rounded-full border-2 flex items-center justify-center",
-                        isActive 
-                          ? "border-accent-foreground bg-accent-foreground" 
-                          : "border-border"
-                      )}>
-                        {isActive && (
-                          <svg className="w-3 h-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                          </svg>
-                        )}
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Reset Button */}
-              <button
-                onClick={resetSettings}
-                className={cn(
-                  "w-full flex items-center justify-center gap-2 p-3 rounded-xl transition-colors",
-                  "border border-border text-muted-foreground hover:text-foreground hover:bg-secondary",
-                  "focus:outline-none focus:ring-2 focus:ring-accent"
-                )}
-                aria-label="Reset all accessibility settings to default"
-              >
-                <RotateCcw className="w-4 h-4" aria-hidden="true" />
-                <span className="text-sm font-medium">Reset All Settings</span>
-              </button>
+              </ScrollArea>
             </motion.div>
           )}
         </AnimatePresence>
