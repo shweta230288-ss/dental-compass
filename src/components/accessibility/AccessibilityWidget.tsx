@@ -258,7 +258,8 @@ export function AccessibilityWidget() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.9 }}
               transition={{ duration: 0.2 }}
-              className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl p-4 w-[280px] max-h-[70vh] overflow-y-auto"
+              className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl p-4 w-[280px] max-h-[60vh] overflow-y-scroll scrollbar-thin scrollbar-thumb-accent/50 scrollbar-track-secondary"
+              style={{ scrollbarWidth: 'thin', scrollbarGutter: 'stable' }}
               role="menu"
               aria-label="Accessibility options"
             >
