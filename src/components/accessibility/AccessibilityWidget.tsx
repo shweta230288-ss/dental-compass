@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Accessibility, 
@@ -37,6 +37,7 @@ const defaultSettings: AccessibilitySettings = {
 
 export function AccessibilityWidget() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('accessibility-settings');
@@ -45,6 +46,16 @@ export function AccessibilityWidget() {
     return defaultSettings;
   });
   const [guidePosition, setGuidePosition] = useState(0);
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia('(max-width: 768px)').matches || 'ontouchstart' in window);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Apply settings on mount and when they change
   useEffect(() => {
@@ -90,17 +101,25 @@ export function AccessibilityWidget() {
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
   }, [settings]);
 
-  // Reading guide mouse tracking
+  // Reading guide mouse/touch tracking
+  const handlePointerMove = useCallback((e: MouseEvent | TouchEvent) => {
+    const clientY = 'touches' in e ? e.touches[0]?.clientY : e.clientY;
+    if (clientY !== undefined) {
+      setGuidePosition(clientY);
+    }
+  }, []);
+
   useEffect(() => {
     if (!settings.readingGuide) return;
 
-    const handleMouseMove = (e: MouseEvent) => {
-      setGuidePosition(e.clientY);
+    window.addEventListener('mousemove', handlePointerMove);
+    window.addEventListener('touchmove', handlePointerMove, { passive: true });
+    
+    return () => {
+      window.removeEventListener('mousemove', handlePointerMove);
+      window.removeEventListener('touchmove', handlePointerMove);
     };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [settings.readingGuide]);
+  }, [settings.readingGuide, handlePointerMove]);
 
   const increaseFontSize = () => {
     setSettings(prev => ({
@@ -162,7 +181,8 @@ export function AccessibilityWidget() {
       key: 'readingGuide' as const,
       label: 'Reading Guide',
       icon: BookOpen,
-      description: 'Line follows cursor'
+      description: isMobile ? 'Line follows touch' : 'Line follows cursor',
+      mobileNote: isMobile ? '(Touch to move)' : undefined
     },
   ];
 
