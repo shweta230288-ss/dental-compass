@@ -297,7 +297,7 @@ export function AccessibilityWidget() {
               transition={{ duration: 0.2 }}
               ref={panelScrollRef}
               onScroll={updateScrollIndicator}
-              className="relative absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl p-4 pr-6 w-[280px] overflow-y-auto scrollbar-thin"
+              className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl p-4 pr-6 w-[280px] overflow-y-auto scrollbar-thin"
               style={{
                 // On mobile (especially iOS), vh can be unstable when browser chrome shows/hides.
                 // Using dvh keeps the panel constrained so it *always* becomes an internal scroll container,
