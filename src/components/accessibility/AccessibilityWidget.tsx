@@ -155,11 +155,36 @@ export function AccessibilityWidget() {
 
   useEffect(() => {
     if (!isOpen) return;
-    updateScrollIndicator();
+
+    // The panel is animated in; measure after layout settles so overflow is detected correctly
+    // (especially on Android with large text / dynamic viewport changes).
+    let raf1 = requestAnimationFrame(() => {
+      let raf2 = requestAnimationFrame(() => {
+        updateScrollIndicator();
+      });
+      // store raf2 in raf1 slot for cleanup convenience
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (raf1 as any) = raf2;
+    });
+
+    // Track panel size changes (font size, orientation, address bar, etc.)
+    const el = panelScrollRef.current;
+    let ro: ResizeObserver | undefined;
+    if (el && typeof ResizeObserver !== 'undefined') {
+      ro = new ResizeObserver(() => updateScrollIndicator());
+      ro.observe(el);
+    }
 
     // Recompute when viewport changes (address bar show/hide, rotation, etc.)
     window.addEventListener('resize', updateScrollIndicator);
-    return () => window.removeEventListener('resize', updateScrollIndicator);
+
+    return () => {
+      cancelAnimationFrame(raf1);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      cancelAnimationFrame((raf1 as any) ?? 0);
+      ro?.disconnect();
+      window.removeEventListener('resize', updateScrollIndicator);
+    };
   }, [isOpen, settings.fontSize, settings.textSpacing, isMobile, updateScrollIndicator]);
 
   // Reading guide mouse/touch tracking
