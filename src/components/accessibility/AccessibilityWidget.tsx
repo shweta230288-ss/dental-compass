@@ -508,6 +508,20 @@ export function AccessibilityWidget() {
                   <RotateCcw className="w-4 h-4" aria-hidden="true" />
                   <span className="text-sm font-medium">Reset All Settings</span>
                 </button>
+
+                {/* Close Button at Bottom */}
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "w-full flex items-center justify-center gap-2 p-3 mt-3 rounded-xl transition-colors",
+                    "bg-primary text-primary-foreground hover:bg-primary/90",
+                    "focus:outline-none focus:ring-2 focus:ring-accent"
+                  )}
+                  aria-label="Close accessibility menu"
+                >
+                  <X className="w-4 h-4" aria-hidden="true" />
+                  <span className="text-sm font-medium">Close</span>
+                </button>
               </div>
             </motion.div>
           )}
