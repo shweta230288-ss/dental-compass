@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef, type CSSProperties } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Accessibility, 
@@ -38,8 +38,6 @@ const defaultSettings: AccessibilitySettings = {
 export function AccessibilityWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [showScrollIndicator, setShowScrollIndicator] = useState(false);
-  const [scrollThumb, setScrollThumb] = useState({ heightPct: 0, topPct: 0 });
   const [settings, setSettings] = useState<AccessibilitySettings>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('accessibility-settings');
@@ -49,9 +47,6 @@ export function AccessibilityWidget() {
   });
   const [guidePosition, setGuidePosition] = useState(0);
   const widgetRef = useRef<HTMLDivElement>(null);
-  // Ref for the *scrollable* element inside the panel (keep separate from motion wrapper)
-  // to avoid mobile issues where transforms/animations can break overflow scrolling.
-  const panelScrollRef = useRef<HTMLDivElement>(null);
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -129,65 +124,6 @@ export function AccessibilityWidget() {
     // Save to localStorage
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
   }, [settings]);
-
-  // Custom (always visible) scroll indicator for mobile.
-  // Android/Chrome often hides native scrollbars; this provides a reliable visual cue.
-  const updateScrollIndicator = useCallback(() => {
-    const el = panelScrollRef.current;
-    if (!el) return;
-
-    const scrollHeight = el.scrollHeight;
-    const clientHeight = el.clientHeight;
-    const scrollTop = el.scrollTop;
-    const overflow = scrollHeight - clientHeight;
-
-    const hasOverflow = overflow > 4;
-    setShowScrollIndicator(isMobile && hasOverflow);
-
-    if (!hasOverflow) {
-      setScrollThumb({ heightPct: 0, topPct: 0 });
-      return;
-    }
-
-    // Thumb size reflects how much content is visible. Clamp to keep it usable.
-    const heightPct = Math.max(18, Math.min(60, (clientHeight / scrollHeight) * 100));
-    const topPct = ((scrollTop / overflow) * (100 - heightPct)) || 0;
-    setScrollThumb({ heightPct, topPct });
-  }, [isMobile]);
-
-  useEffect(() => {
-    if (!isOpen) return;
-
-    // The panel is animated in; measure after layout settles so overflow is detected correctly
-    // (especially on Android with large text / dynamic viewport changes).
-    let raf1 = requestAnimationFrame(() => {
-      let raf2 = requestAnimationFrame(() => {
-        updateScrollIndicator();
-      });
-      // store raf2 in raf1 slot for cleanup convenience
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (raf1 as any) = raf2;
-    });
-
-    // Track panel size changes (font size, orientation, address bar, etc.)
-    const el = panelScrollRef.current;
-    let ro: ResizeObserver | undefined;
-    if (el && typeof ResizeObserver !== 'undefined') {
-      ro = new ResizeObserver(() => updateScrollIndicator());
-      ro.observe(el);
-    }
-
-    // Recompute when viewport changes (address bar show/hide, rotation, etc.)
-    window.addEventListener('resize', updateScrollIndicator);
-
-    return () => {
-      cancelAnimationFrame(raf1);
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      cancelAnimationFrame((raf1 as any) ?? 0);
-      ro?.disconnect();
-      window.removeEventListener('resize', updateScrollIndicator);
-    };
-  }, [isOpen, settings.fontSize, settings.textSpacing, isMobile, updateScrollIndicator]);
 
   // Reading guide mouse/touch tracking
   const handlePointerMove = useCallback((e: MouseEvent | TouchEvent) => {
@@ -274,26 +210,6 @@ export function AccessibilityWidget() {
     },
   ];
 
-  const panelClassName = cn(
-    // Mobile: fixed bottom sheet so it can't render off-screen
-    // Use px-based offsets so it won't collide with the button when text size increases.
-    isMobile ? "fixed left-4 right-4 bottom-[88px]" : "absolute bottom-[72px] left-0",
-    "bg-card border border-border rounded-2xl shadow-xl p-4 pr-6",
-    isMobile ? "w-auto" : "w-[280px]",
-    // Needed so our custom scroll indicator (absolute) is positioned correctly
-    "relative z-[1]"
-  );
-
-  const scrollAreaStyle: CSSProperties = {
-    // Constrain height so the panel always becomes internally scrollable
-    // even at large text sizes.
-    maxHeight: isMobile ? 'min(78vh, calc(100dvh - 140px))' : 'min(60vh, calc(100dvh - 96px))',
-    scrollbarWidth: 'thin',
-    scrollbarGutter: 'stable',
-    WebkitOverflowScrolling: 'touch',
-    touchAction: 'pan-y',
-  };
-
   return (
     <>
       {/* Reading Guide Line */}
@@ -313,19 +229,12 @@ export function AccessibilityWidget() {
         </div>
       )}
 
-      {/* Use px-based positioning so the widget doesn't drift/scale when users increase global font size */}
-      <div
-        ref={widgetRef}
-        className="fixed bottom-[16px] left-[16px] z-[100]"
-        role="region"
-        aria-label="Accessibility controls"
-      >
+      <div ref={widgetRef} className="fixed bottom-4 left-4 z-[100]" role="region" aria-label="Accessibility controls">
         {/* Main Toggle Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={cn(
-            // Use fixed px sizes so the icon stays correct at higher text scaling
-            "relative z-[2] w-[56px] h-[56px] rounded-full shadow-lg flex items-center justify-center transition-all duration-300",
+            "w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300",
             "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent",
             isOpen 
               ? "bg-destructive text-destructive-foreground" 
@@ -335,9 +244,9 @@ export function AccessibilityWidget() {
           aria-label={isOpen ? "Close accessibility menu" : "Open accessibility menu"}
         >
           {isOpen ? (
-            <X className="w-[24px] h-[24px]" aria-hidden="true" />
+            <X className="w-6 h-6" aria-hidden="true" />
           ) : (
-            <Accessibility className="w-[28px] h-[28px]" aria-hidden="true" />
+            <Accessibility className="w-7 h-7" aria-hidden="true" />
           )}
         </button>
 
@@ -349,183 +258,123 @@ export function AccessibilityWidget() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.9 }}
               transition={{ duration: 0.2 }}
-              className={panelClassName}
+              className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl p-4 w-[280px] max-h-[70vh] overflow-y-auto"
               role="menu"
               aria-label="Accessibility options"
             >
-              {showScrollIndicator && (
-                <div
-                  className="pointer-events-none absolute right-2 top-3 bottom-3 w-1 rounded-full bg-border/60"
-                  aria-hidden="true"
-                >
-                  <div
-                    className="absolute left-0 right-0 rounded-full bg-accent/70"
-                    style={{
-                      height: `${scrollThumb.heightPct}%`,
-                      top: `${scrollThumb.topPct}%`,
-                    }}
-                  />
-                </div>
-              )}
+              <h3 className="font-semibold text-foreground text-sm mb-4 flex items-center gap-2">
+                <Accessibility className="w-4 h-4 text-accent" aria-hidden="true" />
+                Accessibility Options
+              </h3>
 
-              {/* Scrollable content area */}
-              <div
-                ref={panelScrollRef}
-                onScroll={updateScrollIndicator}
-                className={cn(
-                  "overflow-y-auto scrollbar-thin overscroll-contain",
-                  // Leave room for the indicator on the right so it never overlaps content
-                  "pr-2"
-                )}
-                style={scrollAreaStyle}
-              >
-                <h3 className="font-semibold text-foreground text-sm mb-4 flex items-center gap-2">
-                  <Accessibility className="w-4 h-4 text-accent" aria-hidden="true" />
-                  Accessibility Options
-                </h3>
-
-                {/* Font Size Controls */}
-                <div className="mb-4 p-3 bg-secondary/50 rounded-xl">
-                  <label className="text-xs text-muted-foreground block mb-2 font-medium">
-                    Text Size: {settings.fontSize}%
-                  </label>
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={decreaseFontSize}
-                      disabled={settings.fontSize <= 80}
-                      className={cn(
-                        "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
-                        "bg-background hover:bg-background/80 text-foreground border border-border",
-                        "focus:outline-none focus:ring-2 focus:ring-accent",
-                        "disabled:opacity-50 disabled:cursor-not-allowed"
-                      )}
-                      aria-label="Decrease text size"
-                    >
-                      <Minus className="w-4 h-4" aria-hidden="true" />
-                    </button>
-
-                    <div className="flex-1 h-2 bg-background rounded-full overflow-hidden border border-border">
-                      <div
-                        className="h-full bg-accent transition-all duration-300"
-                        style={{ width: `${((settings.fontSize - 80) / 70) * 100}%` }}
-                      />
-                    </div>
-
-                    <button
-                      onClick={increaseFontSize}
-                      disabled={settings.fontSize >= 150}
-                      className={cn(
-                        "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
-                        "bg-background hover:bg-background/80 text-foreground border border-border",
-                        "focus:outline-none focus:ring-2 focus:ring-accent",
-                        "disabled:opacity-50 disabled:cursor-not-allowed"
-                      )}
-                      aria-label="Increase text size"
-                    >
-                      <Plus className="w-4 h-4" aria-hidden="true" />
-                    </button>
-                  </div>
-                </div>
-
-                {/* Toggle Options */}
-                <div className="space-y-2 mb-4">
-                  {toggleOptions.map(option => {
-                    const Icon = option.icon;
-                    const isActive = settings[option.key];
-
-                    return (
-                      <button
-                        key={option.key}
-                        onClick={() => toggleSetting(option.key)}
-                        className={cn(
-                          "w-full flex items-center gap-3 p-3 rounded-xl transition-colors text-left",
-                          "focus:outline-none focus:ring-2 focus:ring-accent",
-                          isActive
-                            ? "bg-accent text-accent-foreground"
-                            : "bg-secondary/50 text-foreground hover:bg-secondary"
-                        )}
-                        role="menuitemcheckbox"
-                        aria-checked={isActive}
-                      >
-                        <div
-                          className={cn(
-                            "w-8 h-8 rounded-lg flex items-center justify-center",
-                            isActive ? "bg-accent-foreground/20" : "bg-background"
-                          )}
-                        >
-                          <Icon className="w-4 h-4" aria-hidden="true" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <span className="text-sm font-medium block">{option.label}</span>
-                          <span
-                            className={cn(
-                              "text-xs block truncate",
-                              isActive ? "text-accent-foreground/70" : "text-muted-foreground"
-                            )}
-                          >
-                            {option.description}
-                          </span>
-                        </div>
-                        <div
-                          className={cn(
-                            "w-5 h-5 rounded-full border-2 flex items-center justify-center",
-                            isActive
-                              ? "border-accent-foreground bg-accent-foreground"
-                              : "border-border"
-                          )}
-                        >
-                          {isActive && (
-                            <svg
-                              className="w-3 h-3 text-accent"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={3}
-                                d="M5 13l4 4L19 7"
-                              />
-                            </svg>
-                          )}
-                        </div>
-                      </button>
-                    );
-                  })}
-                </div>
-
-                {/* Reset Button */}
-                <button
-                  onClick={resetSettings}
-                  className={cn(
-                    "w-full flex items-center justify-center gap-2 p-3 rounded-xl transition-colors",
-                    "border border-border text-muted-foreground hover:text-foreground hover:bg-secondary",
-                    "focus:outline-none focus:ring-2 focus:ring-accent"
-                  )}
-                  aria-label="Reset all accessibility settings to default"
-                >
-                  <RotateCcw className="w-4 h-4" aria-hidden="true" />
-                  <span className="text-sm font-medium">Reset All Settings</span>
-                </button>
-
-                {/* Close Button pinned to the bottom of the scrollable panel */}
-                <div className="sticky bottom-0 pt-3 bg-card">
-                  <div className="h-px w-full bg-border mb-3" aria-hidden="true" />
+              {/* Font Size Controls */}
+              <div className="mb-4 p-3 bg-secondary/50 rounded-xl">
+                <label className="text-xs text-muted-foreground block mb-2 font-medium">
+                  Text Size: {settings.fontSize}%
+                </label>
+                <div className="flex items-center gap-2">
                   <button
-                    onClick={() => setIsOpen(false)}
+                    onClick={decreaseFontSize}
+                    disabled={settings.fontSize <= 80}
                     className={cn(
-                      "w-full flex items-center justify-center gap-2 p-3 rounded-xl transition-colors",
-                      "bg-primary text-primary-foreground hover:bg-primary/90",
-                      "focus:outline-none focus:ring-2 focus:ring-accent"
+                      "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
+                      "bg-background hover:bg-background/80 text-foreground border border-border",
+                      "focus:outline-none focus:ring-2 focus:ring-accent",
+                      "disabled:opacity-50 disabled:cursor-not-allowed"
                     )}
-                    aria-label="Close accessibility menu"
+                    aria-label="Decrease text size"
                   >
-                    <X className="w-4 h-4" aria-hidden="true" />
-                    <span className="text-sm font-medium">Close</span>
+                    <Minus className="w-4 h-4" aria-hidden="true" />
+                  </button>
+                  
+                  <div className="flex-1 h-2 bg-background rounded-full overflow-hidden border border-border">
+                    <div 
+                      className="h-full bg-accent transition-all duration-300"
+                      style={{ width: `${((settings.fontSize - 80) / 70) * 100}%` }}
+                    />
+                  </div>
+
+                  <button
+                    onClick={increaseFontSize}
+                    disabled={settings.fontSize >= 150}
+                    className={cn(
+                      "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
+                      "bg-background hover:bg-background/80 text-foreground border border-border",
+                      "focus:outline-none focus:ring-2 focus:ring-accent",
+                      "disabled:opacity-50 disabled:cursor-not-allowed"
+                    )}
+                    aria-label="Increase text size"
+                  >
+                    <Plus className="w-4 h-4" aria-hidden="true" />
                   </button>
                 </div>
               </div>
+
+              {/* Toggle Options */}
+              <div className="space-y-2 mb-4">
+                {toggleOptions.map(option => {
+                  const Icon = option.icon;
+                  const isActive = settings[option.key];
+                  
+                  return (
+                    <button
+                      key={option.key}
+                      onClick={() => toggleSetting(option.key)}
+                      className={cn(
+                        "w-full flex items-center gap-3 p-3 rounded-xl transition-colors text-left",
+                        "focus:outline-none focus:ring-2 focus:ring-accent",
+                        isActive 
+                          ? "bg-accent text-accent-foreground" 
+                          : "bg-secondary/50 text-foreground hover:bg-secondary"
+                      )}
+                      role="menuitemcheckbox"
+                      aria-checked={isActive}
+                    >
+                      <div className={cn(
+                        "w-8 h-8 rounded-lg flex items-center justify-center",
+                        isActive ? "bg-accent-foreground/20" : "bg-background"
+                      )}>
+                        <Icon className="w-4 h-4" aria-hidden="true" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <span className="text-sm font-medium block">{option.label}</span>
+                        <span className={cn(
+                          "text-xs block truncate",
+                          isActive ? "text-accent-foreground/70" : "text-muted-foreground"
+                        )}>
+                          {option.description}
+                        </span>
+                      </div>
+                      <div className={cn(
+                        "w-5 h-5 rounded-full border-2 flex items-center justify-center",
+                        isActive 
+                          ? "border-accent-foreground bg-accent-foreground" 
+                          : "border-border"
+                      )}>
+                        {isActive && (
+                          <svg className="w-3 h-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                          </svg>
+                        )}
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Reset Button */}
+              <button
+                onClick={resetSettings}
+                className={cn(
+                  "w-full flex items-center justify-center gap-2 p-3 rounded-xl transition-colors",
+                  "border border-border text-muted-foreground hover:text-foreground hover:bg-secondary",
+                  "focus:outline-none focus:ring-2 focus:ring-accent"
+                )}
+                aria-label="Reset all accessibility settings to default"
+              >
+                <RotateCcw className="w-4 h-4" aria-hidden="true" />
+                <span className="text-sm font-medium">Reset All Settings</span>
+              </button>
             </motion.div>
           )}
         </AnimatePresence>
