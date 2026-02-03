@@ -258,8 +258,17 @@ export function AccessibilityWidget() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.9 }}
               transition={{ duration: 0.2 }}
-              className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl p-4 w-[280px] max-h-[60vh] overflow-y-scroll scrollbar-thin scrollbar-thumb-accent/50 scrollbar-track-secondary"
-              style={{ scrollbarWidth: 'thin', scrollbarGutter: 'stable' }}
+              className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl p-4 w-[280px] overflow-y-auto scrollbar-thin"
+              style={{
+                // On mobile (especially iOS), vh can be unstable when browser chrome shows/hides.
+                // Using dvh keeps the panel constrained so it *always* becomes an internal scroll container,
+                // even when text is scaled up to 150%.
+                maxHeight: 'min(60vh, calc(100dvh - 96px))',
+                scrollbarWidth: 'thin',
+                scrollbarGutter: 'stable',
+                WebkitOverflowScrolling: 'touch',
+                touchAction: 'pan-y',
+              }}
               role="menu"
               aria-label="Accessibility options"
             >
