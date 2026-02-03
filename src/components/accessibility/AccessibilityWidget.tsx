@@ -259,11 +259,12 @@ export function AccessibilityWidget() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.9 }}
               transition={{ duration: 0.2 }}
-              className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl w-[280px] max-h-[60vh] overflow-hidden"
+              className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl w-[280px]"
+              style={{ maxHeight: 'calc(100vh - 120px)' }}
               role="menu"
               aria-label="Accessibility options"
             >
-              <ScrollArea className="h-full max-h-[60vh]">
+              <ScrollArea className="h-full" style={{ maxHeight: 'calc(100vh - 120px)' }}>
                 <div className="p-4">
                   <h3 className="font-semibold text-foreground text-sm mb-4 flex items-center gap-2">
                     <Accessibility className="w-4 h-4 text-accent" aria-hidden="true" />
