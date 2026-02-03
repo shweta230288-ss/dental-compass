@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef, type CSSProperties } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Accessibility, 
@@ -272,6 +272,28 @@ export function AccessibilityWidget() {
     },
   ];
 
+  const panelClassName = cn(
+    // Mobile: fixed bottom sheet so it can't render off-screen
+    isMobile
+      ? "fixed left-4 right-4 bottom-20"
+      : "absolute bottom-16 left-0",
+    "bg-card border border-border rounded-2xl shadow-xl p-4 pr-6",
+    isMobile ? "w-auto" : "w-[280px]",
+    "overflow-y-auto scrollbar-thin",
+    // Helps touch scrolling feel correct and prevents scroll chaining
+    "overscroll-contain"
+  );
+
+  const panelStyle: CSSProperties = {
+    // Constrain height so the panel always becomes internally scrollable
+    // even at large text sizes.
+    maxHeight: isMobile ? 'min(78vh, calc(100dvh - 140px))' : 'min(60vh, calc(100dvh - 96px))',
+    scrollbarWidth: 'thin',
+    scrollbarGutter: 'stable',
+    WebkitOverflowScrolling: 'touch',
+    touchAction: 'pan-y',
+  };
+
   return (
     <>
       {/* Reading Guide Line */}
@@ -322,17 +344,8 @@ export function AccessibilityWidget() {
               transition={{ duration: 0.2 }}
               ref={panelScrollRef}
               onScroll={updateScrollIndicator}
-              className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl p-4 pr-6 w-[280px] overflow-y-auto scrollbar-thin"
-              style={{
-                // On mobile (especially iOS), vh can be unstable when browser chrome shows/hides.
-                // Using dvh keeps the panel constrained so it *always* becomes an internal scroll container,
-                // even when text is scaled up to 150%.
-                maxHeight: 'min(60vh, calc(100dvh - 96px))',
-                scrollbarWidth: 'thin',
-                scrollbarGutter: 'stable',
-                WebkitOverflowScrolling: 'touch',
-                touchAction: 'pan-y',
-              }}
+              className={panelClassName}
+              style={panelStyle}
               role="menu"
               aria-label="Accessibility options"
             >
