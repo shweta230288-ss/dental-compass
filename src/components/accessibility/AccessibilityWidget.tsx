@@ -312,12 +312,19 @@ export function AccessibilityWidget() {
         </div>
       )}
 
-      <div ref={widgetRef} className="fixed bottom-4 left-4 z-[100]" role="region" aria-label="Accessibility controls">
+      {/* Use px-based positioning so the widget doesn't drift/scale when users increase global font size */}
+      <div
+        ref={widgetRef}
+        className="fixed bottom-[16px] left-[16px] z-[100]"
+        role="region"
+        aria-label="Accessibility controls"
+      >
         {/* Main Toggle Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={cn(
-            "w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300",
+            // Use fixed px sizes so the icon stays correct at higher text scaling
+            "w-[56px] h-[56px] rounded-full shadow-lg flex items-center justify-center transition-all duration-300",
             "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent",
             isOpen 
               ? "bg-destructive text-destructive-foreground" 
@@ -327,9 +334,9 @@ export function AccessibilityWidget() {
           aria-label={isOpen ? "Close accessibility menu" : "Open accessibility menu"}
         >
           {isOpen ? (
-            <X className="w-6 h-6" aria-hidden="true" />
+            <X className="w-[24px] h-[24px]" aria-hidden="true" />
           ) : (
-            <Accessibility className="w-7 h-7" aria-hidden="true" />
+            <Accessibility className="w-[28px] h-[28px]" aria-hidden="true" />
           )}
         </button>
 
