@@ -213,6 +213,69 @@
     background-color: hsl(60 100% 50% / 0.5) !important;
   }
 
+  /* Font scaling resilience - prevent layout breaking at larger font sizes */
+  html {
+    /* Use rem-based sizing for better scaling */
+    font-size: clamp(14px, 2vw, 18px);
+  }
+
+  /* Ensure containers handle larger text gracefully */
+  .container,
+  [class*="container"] {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* Buttons and interactive elements - flexible sizing */
+  button,
+  a.btn,
+  [role="button"] {
+    min-height: 2.75rem;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Cards and grid items - ensure flexible height */
+  [class*="card"],
+  [class*="grid"] > * {
+    min-height: min-content;
+    height: auto;
+  }
+
+  /* Prevent text overflow in tight spaces */
+  h1, h2, h3, h4, h5, h6, p {
+    overflow-wrap: break-word;
+  }
+
+  /* Mobile-specific font scaling adjustments */
+  @media (max-width: 768px) {
+    html {
+      font-size: clamp(13px, 3.5vw, 16px);
+    }
+
+    /* Ensure hero content doesn't overflow */
+    .hero-content,
+    [class*="hero"] {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    /* Flexible button layout on mobile with increased font */
+    .flex-col.sm\\:flex-row,
+    .flex.flex-col {
+      gap: 0.75rem;
+    }
+
+    button,
+    a[class*="btn"],
+    [role="button"] {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 0.875rem;
+    }
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }

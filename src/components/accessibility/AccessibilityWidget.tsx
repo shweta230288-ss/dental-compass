@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Accessibility, 
@@ -46,6 +46,30 @@ export function AccessibilityWidget() {
     return defaultSettings;
   });
   const [guidePosition, setGuidePosition] = useState(0);
+  const widgetRef = useRef<HTMLDivElement>(null);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    if (!isOpen) return;
+    
+    const handleClickOutside = (e: MouseEvent | TouchEvent) => {
+      if (widgetRef.current && !widgetRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    // Small delay to prevent immediate close on open
+    const timer = setTimeout(() => {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('touchstart', handleClickOutside);
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [isOpen]);
 
   // Detect mobile device
   useEffect(() => {
@@ -205,7 +229,7 @@ export function AccessibilityWidget() {
         </div>
       )}
 
-      <div className="fixed bottom-4 left-4 z-[100]" role="region" aria-label="Accessibility controls">
+      <div ref={widgetRef} className="fixed bottom-4 left-4 z-[100]" role="region" aria-label="Accessibility controls">
         {/* Main Toggle Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
