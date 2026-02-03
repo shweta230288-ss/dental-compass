@@ -1,18 +1,38 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Accessibility, Plus, Minus, RotateCcw, Type, Moon, Sun, X } from 'lucide-react';
+import { 
+  Accessibility, 
+  Plus, 
+  Minus, 
+  RotateCcw, 
+  Type, 
+  Moon, 
+  X,
+  Link2,
+  AlignJustify,
+  BookOpen,
+  Eye
+} from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface AccessibilitySettings {
   fontSize: number;
   highContrast: boolean;
   reducedMotion: boolean;
+  dyslexiaFont: boolean;
+  textSpacing: boolean;
+  highlightLinks: boolean;
+  readingGuide: boolean;
 }
 
 const defaultSettings: AccessibilitySettings = {
   fontSize: 100,
   highContrast: false,
   reducedMotion: false,
+  dyslexiaFont: false,
+  textSpacing: false,
+  highlightLinks: false,
+  readingGuide: false,
 };
 
 export function AccessibilityWidget() {
@@ -24,6 +44,7 @@ export function AccessibilityWidget() {
     }
     return defaultSettings;
   });
+  const [guidePosition, setGuidePosition] = useState(0);
 
   // Apply settings on mount and when they change
   useEffect(() => {
@@ -44,9 +65,42 @@ export function AccessibilityWidget() {
       document.documentElement.classList.remove('reduce-motion');
     }
 
+    // Dyslexia font
+    if (settings.dyslexiaFont) {
+      document.documentElement.classList.add('dyslexia-font');
+    } else {
+      document.documentElement.classList.remove('dyslexia-font');
+    }
+
+    // Text spacing
+    if (settings.textSpacing) {
+      document.documentElement.classList.add('text-spacing');
+    } else {
+      document.documentElement.classList.remove('text-spacing');
+    }
+
+    // Highlight links
+    if (settings.highlightLinks) {
+      document.documentElement.classList.add('highlight-links');
+    } else {
+      document.documentElement.classList.remove('highlight-links');
+    }
+
     // Save to localStorage
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
   }, [settings]);
+
+  // Reading guide mouse tracking
+  useEffect(() => {
+    if (!settings.readingGuide) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      setGuidePosition(e.clientY);
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, [settings.readingGuide]);
 
   const increaseFontSize = () => {
     setSettings(prev => ({
@@ -62,17 +116,10 @@ export function AccessibilityWidget() {
     }));
   };
 
-  const toggleHighContrast = () => {
+  const toggleSetting = (key: keyof AccessibilitySettings) => {
     setSettings(prev => ({
       ...prev,
-      highContrast: !prev.highContrast
-    }));
-  };
-
-  const toggleReducedMotion = () => {
-    setSettings(prev => ({
-      ...prev,
-      reducedMotion: !prev.reducedMotion
+      [key]: !prev[key]
     }));
   };
 
@@ -80,147 +127,214 @@ export function AccessibilityWidget() {
     setSettings(defaultSettings);
   };
 
+  const toggleOptions = [
+    {
+      key: 'highContrast' as const,
+      label: 'High Contrast',
+      icon: Moon,
+      description: 'White on navy theme'
+    },
+    {
+      key: 'reducedMotion' as const,
+      label: 'Reduce Motion',
+      icon: Eye,
+      description: 'Disable animations'
+    },
+    {
+      key: 'dyslexiaFont' as const,
+      label: 'Dyslexia Font',
+      icon: Type,
+      description: 'OpenDyslexic font'
+    },
+    {
+      key: 'textSpacing' as const,
+      label: 'Text Spacing',
+      icon: AlignJustify,
+      description: 'Increase spacing'
+    },
+    {
+      key: 'highlightLinks' as const,
+      label: 'Highlight Links',
+      icon: Link2,
+      description: 'Make links visible'
+    },
+    {
+      key: 'readingGuide' as const,
+      label: 'Reading Guide',
+      icon: BookOpen,
+      description: 'Line follows cursor'
+    },
+  ];
+
   return (
-    <div className="fixed bottom-4 left-4 z-[100]" role="region" aria-label="Accessibility controls">
-      {/* Main Toggle Button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className={cn(
-          "w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300",
-          "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent",
-          isOpen 
-            ? "bg-destructive text-destructive-foreground" 
-            : "bg-accent text-accent-foreground hover:scale-105"
-        )}
-        aria-expanded={isOpen}
-        aria-label={isOpen ? "Close accessibility menu" : "Open accessibility menu"}
-      >
-        {isOpen ? (
-          <X className="w-6 h-6" aria-hidden="true" />
-        ) : (
-          <Accessibility className="w-7 h-7" aria-hidden="true" />
-        )}
-      </button>
+    <>
+      {/* Reading Guide Line */}
+      {settings.readingGuide && (
+        <div
+          className="fixed left-0 right-0 h-12 pointer-events-none z-[99] transition-transform duration-75"
+          style={{ 
+            top: guidePosition - 24,
+            background: 'linear-gradient(to bottom, transparent 0%, hsl(38 70% 50% / 0.15) 40%, hsl(38 70% 50% / 0.15) 60%, transparent 100%)'
+          }}
+          aria-hidden="true"
+        >
+          <div 
+            className="absolute left-0 right-0 top-1/2 h-0.5 bg-accent/40"
+            style={{ transform: 'translateY(-50%)' }}
+          />
+        </div>
+      )}
 
-      {/* Accessibility Panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            transition={{ duration: 0.2 }}
-            className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl p-4 min-w-[200px]"
-            role="menu"
-            aria-label="Accessibility options"
-          >
-            <h3 className="font-semibold text-foreground text-sm mb-4 flex items-center gap-2">
-              <Accessibility className="w-4 h-4 text-accent" aria-hidden="true" />
-              Accessibility
-            </h3>
+      <div className="fixed bottom-4 left-4 z-[100]" role="region" aria-label="Accessibility controls">
+        {/* Main Toggle Button */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className={cn(
+            "w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300",
+            "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent",
+            isOpen 
+              ? "bg-destructive text-destructive-foreground" 
+              : "bg-accent text-accent-foreground hover:scale-105"
+          )}
+          aria-expanded={isOpen}
+          aria-label={isOpen ? "Close accessibility menu" : "Open accessibility menu"}
+        >
+          {isOpen ? (
+            <X className="w-6 h-6" aria-hidden="true" />
+          ) : (
+            <Accessibility className="w-7 h-7" aria-hidden="true" />
+          )}
+        </button>
 
-            {/* Font Size Controls */}
-            <div className="mb-4">
-              <label className="text-xs text-muted-foreground block mb-2">
-                Text Size: {settings.fontSize}%
-              </label>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={decreaseFontSize}
-                  disabled={settings.fontSize <= 80}
-                  className={cn(
-                    "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
-                    "bg-secondary hover:bg-secondary/80 text-foreground",
-                    "focus:outline-none focus:ring-2 focus:ring-accent",
-                    "disabled:opacity-50 disabled:cursor-not-allowed"
-                  )}
-                  aria-label="Decrease text size"
-                >
-                  <Type className="w-4 h-4" aria-hidden="true" />
-                  <Minus className="w-3 h-3 absolute" aria-hidden="true" />
-                </button>
-                
-                <div className="flex-1 h-2 bg-secondary rounded-full overflow-hidden">
-                  <div 
-                    className="h-full bg-accent transition-all duration-300"
-                    style={{ width: `${((settings.fontSize - 80) / 70) * 100}%` }}
-                  />
-                </div>
-
-                <button
-                  onClick={increaseFontSize}
-                  disabled={settings.fontSize >= 150}
-                  className={cn(
-                    "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
-                    "bg-secondary hover:bg-secondary/80 text-foreground",
-                    "focus:outline-none focus:ring-2 focus:ring-accent",
-                    "disabled:opacity-50 disabled:cursor-not-allowed"
-                  )}
-                  aria-label="Increase text size"
-                >
-                  <Type className="w-5 h-5" aria-hidden="true" />
-                  <Plus className="w-3 h-3 absolute" aria-hidden="true" />
-                </button>
-              </div>
-            </div>
-
-            {/* Toggle Options */}
-            <div className="space-y-2 mb-4">
-              {/* High Contrast */}
-              <button
-                onClick={toggleHighContrast}
-                className={cn(
-                  "w-full flex items-center gap-3 p-2 rounded-lg transition-colors text-left",
-                  "focus:outline-none focus:ring-2 focus:ring-accent",
-                  settings.highContrast 
-                    ? "bg-accent text-accent-foreground" 
-                    : "bg-secondary text-foreground hover:bg-secondary/80"
-                )}
-                role="menuitemcheckbox"
-                aria-checked={settings.highContrast}
-              >
-                {settings.highContrast ? (
-                  <Sun className="w-5 h-5" aria-hidden="true" />
-                ) : (
-                  <Moon className="w-5 h-5" aria-hidden="true" />
-                )}
-                <span className="text-sm font-medium">High Contrast</span>
-              </button>
-
-              {/* Reduced Motion */}
-              <button
-                onClick={toggleReducedMotion}
-                className={cn(
-                  "w-full flex items-center gap-3 p-2 rounded-lg transition-colors text-left",
-                  "focus:outline-none focus:ring-2 focus:ring-accent",
-                  settings.reducedMotion 
-                    ? "bg-accent text-accent-foreground" 
-                    : "bg-secondary text-foreground hover:bg-secondary/80"
-                )}
-                role="menuitemcheckbox"
-                aria-checked={settings.reducedMotion}
-              >
-                <RotateCcw className="w-5 h-5" aria-hidden="true" />
-                <span className="text-sm font-medium">Reduce Motion</span>
-              </button>
-            </div>
-
-            {/* Reset Button */}
-            <button
-              onClick={resetSettings}
-              className={cn(
-                "w-full flex items-center justify-center gap-2 p-2 rounded-lg transition-colors",
-                "border border-border text-muted-foreground hover:text-foreground hover:bg-secondary",
-                "focus:outline-none focus:ring-2 focus:ring-accent"
-              )}
-              aria-label="Reset all accessibility settings to default"
+        {/* Accessibility Panel */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 20, scale: 0.9 }}
+              transition={{ duration: 0.2 }}
+              className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl p-4 w-[280px] max-h-[70vh] overflow-y-auto"
+              role="menu"
+              aria-label="Accessibility options"
             >
-              <RotateCcw className="w-4 h-4" aria-hidden="true" />
-              <span className="text-sm">Reset All</span>
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+              <h3 className="font-semibold text-foreground text-sm mb-4 flex items-center gap-2">
+                <Accessibility className="w-4 h-4 text-accent" aria-hidden="true" />
+                Accessibility Options
+              </h3>
+
+              {/* Font Size Controls */}
+              <div className="mb-4 p-3 bg-secondary/50 rounded-xl">
+                <label className="text-xs text-muted-foreground block mb-2 font-medium">
+                  Text Size: {settings.fontSize}%
+                </label>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={decreaseFontSize}
+                    disabled={settings.fontSize <= 80}
+                    className={cn(
+                      "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
+                      "bg-background hover:bg-background/80 text-foreground border border-border",
+                      "focus:outline-none focus:ring-2 focus:ring-accent",
+                      "disabled:opacity-50 disabled:cursor-not-allowed"
+                    )}
+                    aria-label="Decrease text size"
+                  >
+                    <Minus className="w-4 h-4" aria-hidden="true" />
+                  </button>
+                  
+                  <div className="flex-1 h-2 bg-background rounded-full overflow-hidden border border-border">
+                    <div 
+                      className="h-full bg-accent transition-all duration-300"
+                      style={{ width: `${((settings.fontSize - 80) / 70) * 100}%` }}
+                    />
+                  </div>
+
+                  <button
+                    onClick={increaseFontSize}
+                    disabled={settings.fontSize >= 150}
+                    className={cn(
+                      "w-10 h-10 rounded-full flex items-center justify-center transition-colors",
+                      "bg-background hover:bg-background/80 text-foreground border border-border",
+                      "focus:outline-none focus:ring-2 focus:ring-accent",
+                      "disabled:opacity-50 disabled:cursor-not-allowed"
+                    )}
+                    aria-label="Increase text size"
+                  >
+                    <Plus className="w-4 h-4" aria-hidden="true" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Toggle Options */}
+              <div className="space-y-2 mb-4">
+                {toggleOptions.map(option => {
+                  const Icon = option.icon;
+                  const isActive = settings[option.key];
+                  
+                  return (
+                    <button
+                      key={option.key}
+                      onClick={() => toggleSetting(option.key)}
+                      className={cn(
+                        "w-full flex items-center gap-3 p-3 rounded-xl transition-colors text-left",
+                        "focus:outline-none focus:ring-2 focus:ring-accent",
+                        isActive 
+                          ? "bg-accent text-accent-foreground" 
+                          : "bg-secondary/50 text-foreground hover:bg-secondary"
+                      )}
+                      role="menuitemcheckbox"
+                      aria-checked={isActive}
+                    >
+                      <div className={cn(
+                        "w-8 h-8 rounded-lg flex items-center justify-center",
+                        isActive ? "bg-accent-foreground/20" : "bg-background"
+                      )}>
+                        <Icon className="w-4 h-4" aria-hidden="true" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <span className="text-sm font-medium block">{option.label}</span>
+                        <span className={cn(
+                          "text-xs block truncate",
+                          isActive ? "text-accent-foreground/70" : "text-muted-foreground"
+                        )}>
+                          {option.description}
+                        </span>
+                      </div>
+                      <div className={cn(
+                        "w-5 h-5 rounded-full border-2 flex items-center justify-center",
+                        isActive 
+                          ? "border-accent-foreground bg-accent-foreground" 
+                          : "border-border"
+                      )}>
+                        {isActive && (
+                          <svg className="w-3 h-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                          </svg>
+                        )}
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Reset Button */}
+              <button
+                onClick={resetSettings}
+                className={cn(
+                  "w-full flex items-center justify-center gap-2 p-3 rounded-xl transition-colors",
+                  "border border-border text-muted-foreground hover:text-foreground hover:bg-secondary",
+                  "focus:outline-none focus:ring-2 focus:ring-accent"
+                )}
+                aria-label="Reset all accessibility settings to default"
+              >
+                <RotateCcw className="w-4 h-4" aria-hidden="true" />
+                <span className="text-sm font-medium">Reset All Settings</span>
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </>
   );
 }
