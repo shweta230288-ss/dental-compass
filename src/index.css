@@ -143,24 +143,24 @@
     scroll-behavior: auto !important;
   }
 
-  /* High contrast mode */
+  /* High contrast mode - White on Navy (Kaya branded) */
   html.high-contrast {
-    --background: 0 0% 0%;
+    --background: 210 55% 12%;
     --foreground: 0 0% 100%;
-    --card: 0 0% 5%;
+    --card: 210 50% 15%;
     --card-foreground: 0 0% 100%;
-    --popover: 0 0% 5%;
+    --popover: 210 50% 15%;
     --popover-foreground: 0 0% 100%;
-    --primary: 60 100% 50%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 0 0% 15%;
+    --primary: 38 80% 55%;
+    --primary-foreground: 210 55% 10%;
+    --secondary: 210 45% 20%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 80%;
-    --accent: 60 100% 50%;
-    --accent-foreground: 0 0% 0%;
-    --border: 0 0% 40%;
-    --input: 0 0% 40%;
+    --muted: 210 40% 25%;
+    --muted-foreground: 0 0% 85%;
+    --accent: 38 80% 55%;
+    --accent-foreground: 210 55% 10%;
+    --border: 210 30% 40%;
+    --input: 210 30% 40%;
   }
 
   html.high-contrast a,
