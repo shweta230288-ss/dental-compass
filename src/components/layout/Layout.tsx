@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { SkipLink } from '../accessibility/SkipLink';
 
 interface LayoutProps {
   children: ReactNode;
@@ -9,8 +10,11 @@ interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col">
+      <SkipLink />
       <Header />
-      <main className="flex-1">{children}</main>
+      <main id="main-content" className="flex-1" role="main" tabIndex={-1}>
+        {children}
+      </main>
       <Footer />
     </div>
   );

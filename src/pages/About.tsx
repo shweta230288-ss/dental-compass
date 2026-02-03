@@ -439,6 +439,9 @@ export default function About() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-black/60 flex items-end md:hidden"
             onClick={() => setSelectedMember(null)}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
           >
             <motion.div
               initial={{ y: '100%' }}
@@ -450,19 +453,20 @@ export default function About() {
             >
               <div className="sticky top-0 bg-card pt-4 pb-2 px-5 flex justify-between items-center border-b border-border">
                 <div>
-                  <h3 className="font-serif text-xl font-bold text-foreground">{selectedMember.name}</h3>
+                  <h3 id="modal-title" className="font-serif text-xl font-bold text-foreground">{selectedMember.name}</h3>
                   <p className="text-accent text-sm font-medium">{selectedMember.role}</p>
                 </div>
                 <button 
                   onClick={() => setSelectedMember(null)}
-                  className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center"
+                  className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                  aria-label="Close staff member details"
                 >
-                  <X className="w-5 h-5 text-foreground" />
+                  <X className="w-5 h-5 text-foreground" aria-hidden="true" />
                 </button>
               </div>
               <div className="p-5">
                 <div className="w-32 h-40 rounded-xl overflow-hidden shadow-medium mb-4 mx-auto">
-                  <img src={selectedMember.image} alt={selectedMember.name} className="w-full h-full object-cover object-top" />
+                  <img src={selectedMember.image} alt={`Photo of ${selectedMember.name}, ${selectedMember.role}`} className="w-full h-full object-cover object-top" />
                 </div>
                 <p className="text-muted-foreground text-base leading-relaxed">{selectedMember.bio}</p>
               </div>

@@ -117,12 +117,43 @@
     scroll-behavior: smooth;
   }
 
+  /* Respect user preference for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
+  }
+
+  /* Enhanced focus styles for accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-background;
+  }
+
+  /* Skip link styles */
+  .sr-only:focus {
+    @apply not-sr-only;
+  }
+
+  /* Ensure sufficient color contrast for links */
+  a:focus {
+    @apply outline-none;
   }
 }
 

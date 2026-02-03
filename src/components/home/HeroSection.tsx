@@ -1,20 +1,37 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Phone, Play } from 'lucide-react';
-import { useState } from 'react';
+import { Phone, Play, Pause } from 'lucide-react';
+import { useState, useRef } from 'react';
 
 export function HeroSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const toggleVideo = () => {
+    if (videoRef.current) {
+      if (isVideoPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsVideoPlaying(!isVideoPlaying);
+    }
+  };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section 
+      className="relative min-h-[90vh] flex items-center overflow-hidden"
+      aria-label="Welcome to Kaya Dental"
+    >
       {/* Video Background */}
-      <div className="absolute inset-0 z-0 overflow-hidden bg-kaya-navy">
+      <div className="absolute inset-0 z-0 overflow-hidden bg-kaya-navy" aria-hidden="true">
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
+          aria-hidden="true"
           className="w-full h-full object-cover object-center [transform:translateX(0%)_scale(1.15)] md:[transform:translateX(4%)_scale(1.4)] lg:[transform:translateX(4%)_scale(1.5)] contrast-[1.1] brightness-[1.05] saturate-[1.1]"
           onCanPlay={() => setIsVideoPlaying(true)}
         >
@@ -23,6 +40,16 @@ export function HeroSection() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-kaya-navy/70 via-kaya-navy/40 to-transparent" />
       </div>
+
+      {/* Video Control Button - WCAG 2.2.2 Pause, Stop, Hide */}
+      <button
+        onClick={toggleVideo}
+        className="absolute bottom-20 right-4 z-20 p-3 bg-primary/80 hover:bg-primary text-primary-foreground rounded-full shadow-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+        aria-label={isVideoPlaying ? 'Pause background video' : 'Play background video'}
+        aria-pressed={isVideoPlaying}
+      >
+        {isVideoPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+      </button>
 
       {/* Content */}
       <div className="container relative z-10">
