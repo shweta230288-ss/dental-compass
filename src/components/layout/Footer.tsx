@@ -107,12 +107,12 @@ export function Footer() {
               </li>
               <li>
                 <a 
-                  href="mailto:Cronindental88@gmail.com" 
+                  href="mailto:info@kayadentalbydani.com" 
                   className="flex items-start gap-3 text-primary-foreground/80 hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary rounded-sm"
-                  aria-label="Email us at Cronindental88@gmail.com"
+                  aria-label="Email us at info@kayadentalbydani.com"
                 >
                   <Mail className="w-5 h-5 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-sm">Cronindental88@gmail.com</span>
+                  <span className="text-sm">info@kayadentalbydani.com</span>
                 </a>
               </li>
               <li className="flex items-start gap-3 text-primary-foreground/80">
