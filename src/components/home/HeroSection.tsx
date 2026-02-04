@@ -44,7 +44,7 @@ export function HeroSection() {
       {/* Video Control Button - WCAG 2.2.2 Pause, Stop, Hide */}
       <button
         onClick={toggleVideo}
-        className="absolute bottom-6 right-4 md:bottom-20 z-20 p-2.5 md:p-3 bg-primary/80 hover:bg-primary text-primary-foreground rounded-full shadow-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+        className="absolute top-[max(5rem,calc(env(safe-area-inset-top)+4.5rem))] right-4 bottom-auto md:top-auto md:bottom-20 z-20 p-2.5 md:p-3 bg-primary/80 hover:bg-primary text-primary-foreground rounded-full shadow-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
         aria-label={isVideoPlaying ? 'Pause background video' : 'Play background video'}
         aria-pressed={isVideoPlaying}
       >
