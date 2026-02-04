@@ -259,7 +259,7 @@ export function AccessibilityWidget() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.9 }}
               transition={{ duration: 0.2 }}
-              className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl w-[280px] overflow-hidden"
+              className="absolute bottom-16 left-0 bg-card border border-border rounded-2xl shadow-xl w-[min(320px,calc(100vw-2rem))] overflow-hidden"
               style={{ height: 'min(520px, calc(100vh - 120px))' }}
               role="menu"
               aria-label="Accessibility options"
