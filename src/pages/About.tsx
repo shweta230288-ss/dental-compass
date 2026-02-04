@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Heart, Award, Users, GraduationCap, X } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { SEOHead } from '@/components/seo/SEOHead';
 import drKunalDani from '@/assets/dr-kunal-dani.jpg';
 import officeFrontDesk from '@/assets/office-front-desk.jpg';
 import teamPhoto from '@/assets/team-photo.jpg';
@@ -90,10 +90,11 @@ export default function About() {
     { title: 'Front Office Staff & Treatment Plan Coordinator', members: frontOfficeStaff }
   ];
   return <Layout>
-      <Helmet>
-        <title>About Us | Kaya Dental Leominster MA</title>
-        <meta name="description" content="Meet Dr. Kunal Dani and the Kaya Dental team. Learn about our philosophy of personalized care rooted in warmth, trust, and compassion in Leominster, MA." />
-      </Helmet>
+      <SEOHead
+        title="About Us | Kaya Dental Leominster MA"
+        description="Meet Dr. Kunal Dani and the Kaya Dental team. Learn about our philosophy of personalized care rooted in warmth, trust, and compassion in Leominster, MA."
+        canonicalPath="/about"
+      />
 
       {/* Hero */}
       <section className="bg-primary py-20 text-primary-foreground">

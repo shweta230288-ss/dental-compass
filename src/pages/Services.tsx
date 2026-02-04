@@ -4,7 +4,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 import serviceGeneralDentistry from '@/assets/service-general-dentistry-new.jpg';
 import serviceExamCleaning from '@/assets/service-exam-cleaning-new.jpg';
@@ -64,10 +64,11 @@ export default function Services() {
 
   return (
     <Layout>
-      <Helmet>
-        <title>Dental Services | Kaya Dental Leominster MA</title>
-        <meta name="description" content="Comprehensive dental services at Kaya Dental including cosmetic dentistry, dental implants, Invisalign, teeth whitening, and emergency care in Leominster, MA." />
-      </Helmet>
+      <SEOHead
+        title="Dental Services | Kaya Dental Leominster MA"
+        description="Comprehensive dental services at Kaya Dental including cosmetic dentistry, dental implants, Invisalign, teeth whitening, and emergency care in Leominster, MA."
+        canonicalPath="/services"
+      />
 
       {/* Hero */}
       <section className="bg-primary py-20 text-primary-foreground">

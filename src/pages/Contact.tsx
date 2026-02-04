@@ -2,10 +2,16 @@ import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import { Phone, MapPin, Clock, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { SEOHead } from '@/components/seo/SEOHead';
 
 export default function Contact() {
   return (
     <Layout>
+      <SEOHead
+        title="Contact Us | Kaya Dental Leominster MA"
+        description="Contact Kaya Dental in Leominster, MA. Call (978) 534-4000, email info@kayadentalbydani.com, or visit us at 130 N Main St Suite 1."
+        canonicalPath="/contact"
+      />
       {/* Hero */}
       <section className="bg-primary py-20 text-primary-foreground">
         <div className="container">

@@ -1,6 +1,6 @@
 import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import { SEOHead } from '@/components/seo/SEOHead';
 import { Zap, Camera, Printer, Brain, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import techDigitalXray from '@/assets/tech-digital-xray.jpg';
@@ -66,10 +66,11 @@ const technologies = [
 export default function Technology() {
   return (
     <Layout>
-      <Helmet>
-        <title>Dental Technology | Kaya Dental Leominster MA</title>
-        <meta name="description" content="Experience advanced dental technology at Kaya Dental including digital X-rays, iTero scanners, 3D printing, and AI-powered diagnostics with Overjet." />
-      </Helmet>
+      <SEOHead
+        title="Dental Technology | Kaya Dental Leominster MA"
+        description="Experience advanced dental technology at Kaya Dental including digital X-rays, iTero scanners, 3D printing, and AI-powered diagnostics with Overjet."
+        canonicalPath="/technology"
+      />
 
       {/* Hero */}
       <section className="bg-primary py-20 text-primary-foreground">

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Phone, MapPin, Clock, Mail, FileText, CreditCard, ClipboardList, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { SEOHead } from '@/components/seo/SEOHead';
 const insurances = ['Delta Dental Premier', 'MetLife', 'United Healthcare', 'Blue Cross Blue Shield', 'And many more...'];
 const newPatientInfo = [{
   icon: FileText,
@@ -22,6 +23,11 @@ const newPatientInfo = [{
 }];
 export default function NewPatients() {
   return <Layout>
+      <SEOHead
+        title="New Patients | Kaya Dental Leominster MA"
+        description="Welcome to Kaya Dental! Learn what to expect at your first visit, patient forms, insurance information, and payment options in Leominster, MA."
+        canonicalPath="/new-patients"
+      />
       {/* Hero */}
       <section className="bg-primary py-20 text-primary-foreground">
         <div className="container">
