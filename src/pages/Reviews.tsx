@@ -2,7 +2,7 @@ import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import { Star, Quote, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
+import { SEOHead } from '@/components/seo/SEOHead';
 const reviews = [
   {
     name: 'Shaunah',
@@ -57,6 +57,11 @@ const reviews = [
 export default function Reviews() {
   return (
     <Layout>
+      <SEOHead
+        title="Patient Reviews | Kaya Dental Leominster MA"
+        description="Read 3,400+ five-star reviews from Kaya Dental patients in Leominster, MA. See why patients love Dr. Kunal Dani and our compassionate dental team."
+        canonicalPath="/reviews"
+      />
       {/* Hero */}
       <section className="bg-primary py-20 text-primary-foreground">
         <div className="container">

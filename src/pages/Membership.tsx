@@ -1,6 +1,6 @@
 import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import { SEOHead } from '@/components/seo/SEOHead';
 import { Check, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -104,10 +104,11 @@ const faqs = [
 export default function Membership() {
   return (
     <Layout>
-      <Helmet>
-        <title>Membership Plans | Kaya Dental Leominster MA</title>
-        <meta name="description" content="Save on dental care with Kaya Dental membership plans. No insurance? No problem! Adult, Child, and Periodontal plans available with no waiting periods." />
-      </Helmet>
+      <SEOHead
+        title="Membership Plans | Kaya Dental Leominster MA"
+        description="Save on dental care with Kaya Dental membership plans. No insurance? No problem! Adult, Child, and Periodontal plans available with no waiting periods."
+        canonicalPath="/membership"
+      />
 
       {/* Hero */}
       <section className="bg-primary py-20 text-primary-foreground">
