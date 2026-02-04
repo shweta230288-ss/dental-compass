@@ -41,14 +41,14 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-kaya-navy/70 via-kaya-navy/40 to-transparent" />
       </div>
 
-      {/* Video Control Button - WCAG 2.2.2 Pause, Stop, Hide */}
+      {/* Video Control Button - Desktop only (bottom-right) */}
       <button
         onClick={toggleVideo}
-        className="absolute top-[max(5rem,calc(env(safe-area-inset-top)+4.5rem))] right-4 bottom-auto md:top-auto md:bottom-20 z-20 p-2.5 md:p-3 bg-primary/80 hover:bg-primary text-primary-foreground rounded-full shadow-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+        className="hidden md:flex absolute md:bottom-20 right-4 z-20 p-3 bg-primary/80 hover:bg-primary text-primary-foreground rounded-full shadow-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
         aria-label={isVideoPlaying ? 'Pause background video' : 'Play background video'}
         aria-pressed={isVideoPlaying}
       >
-        {isVideoPlaying ? <Pause className="w-4 h-4 md:w-5 md:h-5" /> : <Play className="w-4 h-4 md:w-5 md:h-5" />}
+        {isVideoPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
       </button>
 
       {/* Content */}
@@ -88,11 +88,11 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-4 items-center"
           >
             <Button
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-8"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-8 w-full sm:w-auto"
               asChild
             >
               <a href="tel:978-534-4000">
@@ -103,11 +103,21 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-accent text-accent hover:bg-accent hover:text-accent-foreground text-base px-8 backdrop-blur-sm"
+              className="border-accent text-accent hover:bg-accent hover:text-accent-foreground text-base px-8 backdrop-blur-sm w-full sm:w-auto"
               asChild
             >
               <a href="#about">Learn More</a>
             </Button>
+            
+            {/* Mobile Video Control - Inline with CTAs */}
+            <button
+              onClick={toggleVideo}
+              className="flex md:hidden p-2.5 bg-primary/80 hover:bg-primary text-primary-foreground rounded-full shadow-lg transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+              aria-label={isVideoPlaying ? 'Pause background video' : 'Play background video'}
+              aria-pressed={isVideoPlaying}
+            >
+              {isVideoPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+            </button>
           </motion.div>
         </div>
       </div>
