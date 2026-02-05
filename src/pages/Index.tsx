@@ -5,7 +5,6 @@ import { PhilosophySection } from '@/components/home/PhilosophySection';
 import { DoctorSection } from '@/components/home/DoctorSection';
 import { ServicesPreview } from '@/components/home/ServicesPreview';
 import { ReviewsPreview } from '@/components/home/ReviewsPreview';
-import { LocationSection } from '@/components/home/LocationSection';
 import { CTASection } from '@/components/home/CTASection';
 import { SEOHead } from '@/components/seo/SEOHead';
 
@@ -24,7 +23,6 @@ const Index = () => {
       <DoctorSection />
       <ServicesPreview />
       <ReviewsPreview />
-      <LocationSection />
       <CTASection />
     </Layout>
   );
