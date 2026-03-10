@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Accessibility, 
+  PersonStanding, 
   Plus, 
   Minus, 
   RotateCcw, 
@@ -247,7 +247,7 @@ export function AccessibilityWidget() {
           {isOpen ? (
             <X className="w-6 h-6" aria-hidden="true" />
           ) : (
-            <Accessibility className="w-7 h-7" aria-hidden="true" />
+            <PersonStanding className="w-7 h-7" aria-hidden="true" />
           )}
         </button>
 
@@ -271,7 +271,7 @@ export function AccessibilityWidget() {
               >
                 <div className="p-4">
                   <h3 className="font-semibold text-foreground text-sm mb-4 flex items-center gap-2">
-                    <Accessibility className="w-4 h-4 text-accent" aria-hidden="true" />
+                    <PersonStanding className="w-4 h-4 text-accent" aria-hidden="true" />
                     Accessibility Options
                   </h3>
 
