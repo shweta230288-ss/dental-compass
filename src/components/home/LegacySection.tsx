@@ -59,7 +59,7 @@ export function LegacySection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="space-y-5 text-muted-foreground leading-relaxed">
+            <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
                 As Dr. Michael Cronin's practice transitions into{' '}
                 <span className="font-semibold text-foreground">Kaya Dental</span>,
