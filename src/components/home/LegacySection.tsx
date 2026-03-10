@@ -37,7 +37,7 @@ export function LegacySection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 gap-12 max-w-4xl mx-auto">
           {/* Photo */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
