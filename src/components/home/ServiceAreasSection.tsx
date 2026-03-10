@@ -48,7 +48,9 @@ export function ServiceAreasSection() {
           <span className="text-accent font-medium text-sm uppercase tracking-wider">
             Conveniently Located Off Route 2
           </span>
+        </motion.div>
       </div>
+    </section>
     </section>
   );
 }
