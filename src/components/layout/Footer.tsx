@@ -58,6 +58,9 @@ export function Footer() {
               "Kaya" meaning body, wellness, and wholeness. We bring expertise and passion 
               together to craft radiant, healthy smiles so you can shine with confidence.
             </p>
+            <p className="text-accent text-sm font-medium italic">
+              Your Trusted Dentist in Leominster
+            </p>
           </div>
 
           {/* Quick Links */}
