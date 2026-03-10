@@ -99,7 +99,7 @@ export function LegacySection() {
               initial={{ opacity: 0, y: 10 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="font-serif text-lg italic text-accent"
+              className="font-serif text-lg italic text-accent font-bold"
             >
               Our name has evolved, but our values remain deeply rooted.
             </motion.p>
