@@ -51,6 +51,9 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <img src={kayaLogo} alt="" className="h-28 w-auto mb-4" aria-hidden="true" />
+            <p className="text-primary-foreground/80 text-sm leading-relaxed mb-2">
+              Your trusted dentist in Leominster, MA.
+            </p>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
               "Kaya" meaning body, wellness, and wholeness. We bring expertise and passion 
               together to craft radiant, healthy smiles so you can shine with confidence.

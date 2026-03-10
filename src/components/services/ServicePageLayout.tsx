@@ -55,7 +55,7 @@ export function ServicePageLayout({
   return (
     <Layout>
       <Helmet>
-        <title>{title} | Kaya Dental Leominster MA</title>
+        <title>{title} | Trusted Dentist in Leominster MA | Kaya Dental</title>
         <meta name="description" content={metaDescription} />
       </Helmet>
 

@@ -91,8 +91,8 @@ export default function About() {
   ];
   return <Layout>
       <SEOHead
-        title="About Us | Kaya Dental Leominster MA"
-        description="Meet Dr. Kunal Dani and the Kaya Dental team. Learn about our philosophy of personalized care rooted in warmth, trust, and compassion in Leominster, MA."
+        title="About Us | Trusted Dentist in Leominster MA | Kaya Dental"
+        description="Meet Dr. Kunal Dani and the Kaya Dental team — your trusted dentist in Leominster, MA. Personalized care rooted in warmth, trust, and compassion."
         canonicalPath="/about"
       />
 

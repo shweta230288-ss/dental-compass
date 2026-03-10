@@ -53,8 +53,8 @@ export function HighlightsSection() {
             Why Choose Kaya Dental?
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            We believe dental care is more than just treating teeth—it's about nurturing 
-            your overall well-being, confidence, and smile.
+            As your trusted dentist in Leominster, we believe dental care is more than just 
+            treating teeth—it's about nurturing your overall well-being, confidence, and smile.
           </p>
         </motion.div>
 

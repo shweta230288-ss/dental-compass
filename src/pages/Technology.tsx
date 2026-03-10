@@ -67,8 +67,8 @@ export default function Technology() {
   return (
     <Layout>
       <SEOHead
-        title="Dental Technology | Kaya Dental Leominster MA"
-        description="Experience advanced dental technology at Kaya Dental including digital X-rays, iTero scanners, 3D printing, and AI-powered diagnostics with Overjet."
+        title="Dental Technology | Trusted Dentist in Leominster MA | Kaya Dental"
+        description="Advanced dental technology from your trusted dentist in Leominster, MA. Digital X-rays, iTero scanners, 3D printing, and AI-powered diagnostics at Kaya Dental."
         canonicalPath="/technology"
       />
 

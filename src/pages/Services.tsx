@@ -65,8 +65,8 @@ export default function Services() {
   return (
     <Layout>
       <SEOHead
-        title="Dental Services | Kaya Dental Leominster MA"
-        description="Comprehensive dental services at Kaya Dental including cosmetic dentistry, dental implants, Invisalign, teeth whitening, and emergency care in Leominster, MA."
+        title="Dental Services | Trusted Dentist in Leominster MA | Kaya Dental"
+        description="Comprehensive dental services from your trusted dentist in Leominster, MA. Cosmetic dentistry, dental implants, Invisalign, teeth whitening, and emergency care."
         canonicalPath="/services"
       />
 
