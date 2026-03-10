@@ -51,6 +51,5 @@ export function ServiceAreasSection() {
         </motion.div>
       </div>
     </section>
-    </section>
   );
 }
