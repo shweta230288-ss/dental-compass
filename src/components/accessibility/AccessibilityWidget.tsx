@@ -236,10 +236,10 @@ export function AccessibilityWidget() {
           onClick={() => setIsOpen(!isOpen)}
           className={cn(
             "w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300",
-            "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent",
+            "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",
             isOpen 
               ? "bg-destructive text-destructive-foreground" 
-              : "bg-accent text-accent-foreground hover:scale-105"
+              : "bg-[hsl(220,90%,50%)] text-white hover:scale-105 border-[3px] border-[hsl(220,90%,50%)] ring-2 ring-white ring-inset"
           )}
           aria-expanded={isOpen}
           aria-label={isOpen ? "Close accessibility menu" : "Open accessibility menu"}
