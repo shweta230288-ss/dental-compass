@@ -90,7 +90,7 @@ export function LegacySection() {
               </div>
             </div>
 
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               Most importantly, we remain what this community has always known us to
               be — a warm, kind, welcoming dental home where patients feel like family.
             </p>
