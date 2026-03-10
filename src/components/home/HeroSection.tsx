@@ -70,7 +70,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-white/90 font-light italic mb-6"
           >
-            Your Trusted Dentist in Leominster — Redefining Comfort & Aesthetics
+            Redefining Comfort & Aesthetics
           </motion.p>
 
           <motion.p
