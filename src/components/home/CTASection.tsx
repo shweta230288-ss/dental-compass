@@ -18,16 +18,16 @@ export function CTASection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="bg-primary rounded-2xl p-8 md:p-12 relative overflow-hidden"
-        >
+          className="bg-primary rounded-2xl p-8 md:p-12 relative overflow-hidden">
+          
           <div className="relative z-10">
             <div className="text-center mb-10">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
                 Ready to Transform Your Smile?
               </h2>
-              <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">
-                As your trusted dentist in Leominster, we're here to help you achieve your best smile.
-                Schedule your appointment today — new patients are always welcome!
+              <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">Schedule your appointment today and experience the Kaya Dental difference. New patients are always welcome!
+
+
               </p>
             </div>
 
@@ -48,8 +48,8 @@ export function CTASection() {
                       href="https://maps.google.com/?q=130+N+Main+St+Suite+1+Leominster+MA+01453"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-accent text-sm hover:underline mt-1 inline-block"
-                    >
+                      className="text-accent text-sm hover:underline mt-1 inline-block">
+                      
                       Get Directions →
                     </a>
                   </div>
@@ -99,13 +99,13 @@ export function CTASection() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Kaya Dental Location"
-                />
+                  title="Kaya Dental Location" />
+                
               </div>
             </div>
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
