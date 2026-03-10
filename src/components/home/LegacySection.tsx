@@ -84,7 +84,7 @@ export function LegacySection() {
                     className="flex items-start gap-3 bg-background rounded-xl p-4 shadow-sm"
                   >
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-foreground">{value}</span>
+                    <span className="text-foreground">{value}</span>
                   </motion.div>
                 ))}
               </div>
