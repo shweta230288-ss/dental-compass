@@ -70,7 +70,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-white/90 font-light italic mb-6"
           >
-            Your Trusted Dentist in Leominster — Redefining Comfort & Aesthetics
+            Redefining Comfort & Aesthetics
           </motion.p>
 
           <motion.p
@@ -79,7 +79,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed"
           >
-            Experience personalized dental care rooted in warmth, trust, and compassion. 
+            Your trusted dentist in Leominster — experience personalized dental care rooted in warmth, trust, and compassion. 
             At Kaya Dental, we bring expertise and passion together to craft radiant, 
             healthy smiles so you can shine with confidence.
           </motion.p>
