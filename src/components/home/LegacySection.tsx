@@ -3,7 +3,6 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { CheckCircle2 } from 'lucide-react';
 import drDaniCronin from '@/assets/dr-dani-dr-cronin.jpg';
-import drDaniLegacy from '@/assets/dr-dani-legacy.jpg';
 
 const values = [
   'Truly patient-centered, individualized treatment',
@@ -39,24 +38,16 @@ export function LegacySection() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Photos Column */}
+          {/* Photo */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="space-y-6"
           >
-            <div className="rounded-2xl overflow-hidden shadow-xl">
+            <div className="rounded-2xl overflow-hidden shadow-xl max-w-lg mx-auto">
               <img
                 src={drDaniCronin}
                 alt="Dr. Michael Cronin and Dr. Kunal Dani at Kaya Dental"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-xl max-w-xs mx-auto">
-              <img
-                src={drDaniLegacy}
-                alt="Dr. Dani continuing the dental legacy in Leominster"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -67,7 +58,6 @@ export function LegacySection() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:pl-4"
           >
             <div className="space-y-5 text-muted-foreground leading-relaxed">
               <p>
