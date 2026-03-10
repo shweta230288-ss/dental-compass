@@ -32,7 +32,7 @@ export function LegacySection() {
             Same Legacy. New Leadership.
           </h2>
           <div className="w-16 h-0.5 bg-accent mx-auto mb-4" />
-          <p className="text-accent font-serif text-lg italic">
+          <p className="text-accent font-serif text-lg italic font-bold">
             60 years — proudly serving the Leominster area since 1961
           </p>
         </motion.div>
