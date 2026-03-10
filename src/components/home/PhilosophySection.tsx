@@ -58,9 +58,9 @@ export function PhilosophySection() {
                 well-being, confidence, and smile.
               </p>
               <p>
-                Every smile tells a story, and we're honored to be part of yours. Our philosophy is 
-                personalized care rooted in warmth, trust, and compassion, guided by a deep commitment 
-                to clinical excellence.
+                Every smile tells a story, and we're honored to be part of yours. As your trusted dentist 
+                in Leominster, our philosophy is personalized care rooted in warmth, trust, and compassion, 
+                guided by a deep commitment to clinical excellence.
               </p>
             </motion.div>
 

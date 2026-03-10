@@ -26,8 +26,8 @@ export function CTASection() {
                 Ready to Transform Your Smile?
               </h2>
               <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">
-                Schedule your appointment today and experience the Kaya Dental difference.
-                New patients are always welcome!
+                As your trusted dentist in Leominster, we're here to help you achieve your best smile.
+                Schedule your appointment today — new patients are always welcome!
               </p>
             </div>
 

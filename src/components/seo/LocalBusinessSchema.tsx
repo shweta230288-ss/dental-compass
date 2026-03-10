@@ -102,7 +102,7 @@ const localBusinessSchema = {
       "name": "Tufts University School of Dental Medicine"
     }
   },
-  "description": "Kaya Dental in Leominster, MA offers comprehensive dental care including cosmetic dentistry, dental implants, Invisalign, and family dentistry with state-of-the-art technology."
+  "description": "Kaya Dental — your trusted dentist in Leominster, MA. Comprehensive dental care including cosmetic dentistry, dental implants, Invisalign, and family dentistry with state-of-the-art technology."
 };
 
 export function LocalBusinessSchema() {

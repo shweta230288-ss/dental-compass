@@ -8,8 +8,8 @@ export default function Contact() {
   return (
     <Layout>
       <SEOHead
-        title="Contact Us | Kaya Dental Leominster MA"
-        description="Contact Kaya Dental in Leominster, MA. Call (978) 534-4000, email info@kayadentalbydani.com, or visit us at 130 N Main St Suite 1."
+        title="Contact Us | Trusted Dentist in Leominster MA | Kaya Dental"
+        description="Contact your trusted dentist in Leominster, MA. Call Kaya Dental at (978) 534-4000, email info@kayadentalbydani.com, or visit us at 130 N Main St Suite 1."
         canonicalPath="/contact"
       />
       {/* Hero */}

@@ -105,8 +105,8 @@ export default function Membership() {
   return (
     <Layout>
       <SEOHead
-        title="Membership Plans | Kaya Dental Leominster MA"
-        description="Save on dental care with Kaya Dental membership plans. No insurance? No problem! Adult, Child, and Periodontal plans available with no waiting periods."
+        title="Membership Plans | Trusted Dentist in Leominster MA | Kaya Dental"
+        description="Save on dental care with Kaya Dental membership plans. Your trusted dentist in Leominster, MA. No insurance? No problem! Plans with no waiting periods."
         canonicalPath="/membership"
       />
 

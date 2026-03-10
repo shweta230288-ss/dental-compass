@@ -12,8 +12,8 @@ const Index = () => {
   return (
     <Layout>
       <SEOHead
-        title="Kaya Dental | Leominster MA Dentist | Redefining Comfort & Aesthetics"
-        description="Kaya Dental in Leominster, MA offers comprehensive dental care including cosmetic dentistry, dental implants, Invisalign, and family dentistry. Call (978) 534-4000."
+        title="Kaya Dental | Trusted Dentist in Leominster MA | Redefining Comfort & Aesthetics"
+        description="Kaya Dental — your trusted dentist in Leominster, MA. Comprehensive dental care including cosmetic dentistry, dental implants, Invisalign, and family dentistry. Call (978) 534-4000."
         canonicalPath=""
       />
       
