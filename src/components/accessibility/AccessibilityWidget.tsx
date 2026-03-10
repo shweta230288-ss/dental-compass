@@ -271,7 +271,7 @@ export function AccessibilityWidget() {
               >
                 <div className="p-4">
                   <h3 className="font-semibold text-foreground text-sm mb-4 flex items-center gap-2">
-                    <Accessibility className="w-4 h-4 text-accent" aria-hidden="true" />
+                    <PersonStanding className="w-4 h-4 text-accent" aria-hidden="true" />
                     Accessibility Options
                   </h3>
 
