@@ -48,7 +48,7 @@ export function LegacySection() {
               <img
                 src={drDaniCronin}
                 alt="Dr. Michael Cronin and Dr. Kunal Dani at Kaya Dental"
-                className="w-full h-[400px] md:h-[500px] object-cover object-[center_25%]"
+                className="w-full object-cover"
               />
             </div>
           </motion.div>
