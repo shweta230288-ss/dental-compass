@@ -7,6 +7,7 @@ import { DoctorSection } from '@/components/home/DoctorSection';
 import { ServicesPreview } from '@/components/home/ServicesPreview';
 import { ReviewsPreview } from '@/components/home/ReviewsPreview';
 import { CTASection } from '@/components/home/CTASection';
+import { ServiceAreasSection } from '@/components/home/ServiceAreasSection';
 import { SEOHead } from '@/components/seo/SEOHead';
 
 const Index = () => {
@@ -25,6 +26,7 @@ const Index = () => {
       <DoctorSection />
       <ServicesPreview />
       <ReviewsPreview />
+      <ServiceAreasSection />
       <CTASection />
     </Layout>
   );
