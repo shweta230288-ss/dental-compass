@@ -247,7 +247,7 @@ export function AccessibilityWidget() {
           {isOpen ? (
             <X className="w-6 h-6" aria-hidden="true" />
           ) : (
-            <Accessibility className="w-7 h-7" aria-hidden="true" />
+            <PersonStanding className="w-7 h-7" aria-hidden="true" />
           )}
         </button>
 
