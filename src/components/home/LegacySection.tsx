@@ -59,7 +59,7 @@ export function LegacySection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
               <p>
                 As Dr. Michael Cronin's practice transitions into{' '}
                 <span className="font-semibold text-foreground">Kaya Dental</span>,
@@ -84,13 +84,13 @@ export function LegacySection() {
                     className="flex items-start gap-3 bg-background rounded-xl p-4 shadow-sm"
                   >
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-foreground">{value}</span>
+                    <span className="text-sm text-foreground">{value}</span>
                   </motion.div>
                 ))}
               </div>
             </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="text-muted-foreground leading-relaxed mb-6">
               Most importantly, we remain what this community has always known us to
               be — a warm, kind, welcoming dental home where patients feel like family.
             </p>
