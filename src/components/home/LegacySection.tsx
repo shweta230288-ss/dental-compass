@@ -5,11 +5,11 @@ import { CheckCircle2 } from 'lucide-react';
 import drDaniCronin from '@/assets/dr-dani-dr-cronin.jpg';
 
 const values = [
-  'Truly patient-centered, individualized treatment',
-  'Clinical expertise grounded in experience and integrity',
-  'Respect for each patient\'s opinions and goals',
-  'Building relationships that last a lifetime',
-];
+'Truly patient-centered, individualized treatment',
+'Clinical expertise grounded in experience and integrity',
+'Respect for each patient\'s opinions and goals',
+'Building relationships that last a lifetime'];
+
 
 export function LegacySection() {
   const ref = useRef(null);
@@ -23,8 +23,8 @@ export function LegacySection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+          className="text-center mb-16">
+          
           <span className="text-accent font-medium text-sm uppercase tracking-wider">
             A New Chapter
           </span>
@@ -42,14 +42,14 @@ export function LegacySection() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
+            transition={{ duration: 0.6, delay: 0.1 }}>
+            
             <div className="rounded-2xl overflow-hidden shadow-xl max-w-lg mx-auto">
-              <img
-                src={drDaniCronin}
-                alt="Dr. Michael Cronin and Dr. Kunal Dani at Kaya Dental"
-                className="w-full h-[400px] md:h-[500px] object-cover object-[center_25%]"
-              />
+              
+
+
+
+              
             </div>
           </motion.div>
 
@@ -57,8 +57,8 @@ export function LegacySection() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+            transition={{ duration: 0.6, delay: 0.2 }}>
+            
             <div className="space-y-5 text-muted-foreground leading-relaxed">
               <p>
                 As Dr. Michael Cronin's practice transitions into{' '}
@@ -75,18 +75,18 @@ export function LegacySection() {
             <div className="mt-8 mb-8">
               <p className="font-semibold text-foreground mb-4">We continue to believe in:</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {values.map((value, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
-                    className="flex items-start gap-3 bg-background rounded-xl p-4 shadow-sm"
-                  >
+                {values.map((value, i) =>
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
+                  className="flex items-start gap-3 bg-background rounded-xl p-4 shadow-sm">
+                  
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-foreground">{value}</span>
                   </motion.div>
-                ))}
+                )}
               </div>
             </div>
 
@@ -99,13 +99,13 @@ export function LegacySection() {
               initial={{ opacity: 0, y: 10 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="font-serif text-lg italic text-accent"
-            >
+              className="font-serif text-lg italic text-accent">
+              
               Our name has evolved, but our values remain deeply rooted.
             </motion.p>
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
