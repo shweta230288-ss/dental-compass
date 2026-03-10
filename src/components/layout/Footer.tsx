@@ -58,8 +58,11 @@ export function Footer() {
               "Kaya" meaning body, wellness, and wholeness. We bring expertise and passion 
               together to craft radiant, healthy smiles so you can shine with confidence.
             </p>
-            <p className="text-accent text-sm font-medium italic mb-6">
+            <p className="text-accent text-sm font-medium italic mb-3">
               Your Trusted Dentist in Leominster
+            </p>
+            <p className="text-primary-foreground/70 text-xs leading-relaxed mb-6">
+              Conveniently located off Route 2, we proudly serve Leominster, Lunenburg, Lancaster, Ayer, Shirley, Ashburnham, Westminster, Princeton, and Gardner.
             </p>
           </div>
 
