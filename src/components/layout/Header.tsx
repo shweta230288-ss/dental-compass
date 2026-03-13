@@ -41,7 +41,7 @@ const navigationItems = [{
 }, {
   name: 'Technology',
   path: '/technology'
-, {
+}, {
   name: 'Membership Plans',
   path: '/membership'
 }, {
