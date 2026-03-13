@@ -12,6 +12,8 @@ import Membership from "./pages/Membership";
 import Reviews from "./pages/Reviews";
 import NewPatients from "./pages/NewPatients";
 import Contact from "./pages/Contact";
+import PaymentPlans from "./pages/PaymentPlans";
+import CherryFinancing from "./pages/CherryFinancing";
 import NotFound from "./pages/NotFound";
 import { ScrollToTop } from "./components/ScrollToTop";
 
