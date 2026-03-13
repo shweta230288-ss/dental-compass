@@ -4,6 +4,9 @@ import { SEOHead } from '@/components/seo/SEOHead';
 
 const CherryFinancing = () => {
   useEffect(() => {
+    // Clean up any previous widget state
+    delete (window as any)._hw;
+
     // Load Google Fonts for Cherry widget
     const link = document.createElement('link');
     link.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@200..900&display=swap';
@@ -11,7 +14,7 @@ const CherryFinancing = () => {
     document.head.appendChild(link);
 
     // Set up _hw queue before script loads
-    (window as any)._hw = (window as any)._hw || function (...args: any[]) {
+    (window as any)._hw = function (...args: any[]) {
       ((window as any)._hw.q = (window as any)._hw.q || []).push(args);
     };
 
@@ -36,6 +39,10 @@ const CherryFinancing = () => {
       },
     }, ['calculator', 'faq', 'testimony', 'hero']);
 
+    // Remove any existing Cherry script first
+    const existingScript = document.getElementById('_hw');
+    if (existingScript) existingScript.remove();
+
     // Load the Cherry widget script
     const script = document.createElement('script');
     script.id = '_hw';
@@ -46,6 +53,12 @@ const CherryFinancing = () => {
     return () => {
       script.remove();
       link.remove();
+      delete (window as any)._hw;
+      // Clear widget containers
+      ['all', 'hero', 'calculator', 'howitworks', 'testimony', 'faq'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = '';
+      });
     };
   }, []);
 
