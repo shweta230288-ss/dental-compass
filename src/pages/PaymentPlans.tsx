@@ -49,7 +49,7 @@ const PaymentPlans = () => {
       {/* Financing Options */}
       <section className="py-16 bg-secondary">
         <div className="container">
-          <h2 className="text-3xl font-serif font-bold text-center mb-12 text-foreground">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-center mb-12 text-foreground">
             Our Financing Partners
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
