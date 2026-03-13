@@ -44,7 +44,7 @@ export function ReviewsPreview() {
             {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 md:w-6 md:h-6 fill-accent text-accent" />)}
           </div>
           <p className="text-muted-foreground text-sm md:text-base">
-            Over 3,400+ five-star reviews on Google
+            Over 3,600+ five-star reviews on Google
           </p>
         </motion.div>
 
