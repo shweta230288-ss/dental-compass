@@ -120,7 +120,7 @@ export default function Reviews() {
                     <Star key={i} className="w-3 h-3 md:w-4 md:h-4 fill-accent text-accent" />
                   ))}
                 </div>
-                <p className="text-foreground text-sm md:text-base mb-4 md:mb-6 leading-relaxed line-clamp-4 md:line-clamp-none">
+                <p className="text-foreground text-sm md:text-base mb-4 md:mb-6 leading-relaxed">
                   "{review.text}"
                 </p>
                 <div>
