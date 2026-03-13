@@ -4,41 +4,48 @@ import { SEOHead } from '@/components/seo/SEOHead';
 
 const CherryFinancing = () => {
   useEffect(() => {
-    // Load Cherry widget script
-    const script = document.createElement('script');
-    script.src = 'https://files.withcherry.com/widgets/widget.js';
-    script.async = true;
-    script.id = '_hw';
-    document.body.appendChild(script);
+    // Load Google Fonts for Cherry widget
+    const link = document.createElement('link');
+    link.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@200..900&display=swap';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
 
-    script.onload = () => {
-      if (typeof (window as any)._hw === 'function') {
-        (window as any)._hw('init', {
-          debug: false,
-          variables: {
-            slug: 'kaya-dental',
-            name: 'Kaya Dental',
-            images: [21],
-            customLogo: '',
-            defaultPurchaseAmount: 2000,
-            customImage: '',
-            imageCategory: 'dental',
-            language: 'en',
-          },
-          styles: {
-            primaryColor: '#0b1548',
-            secondaryColor: '#0b154810',
-            fontFamily: 'Montserrat',
-            headerFontFamily: 'Montserrat',
-          },
-        }, ['calculator', 'faq', 'testimony', 'hero']);
-      }
+    // Set up _hw queue before script loads
+    (window as any)._hw = (window as any)._hw || function (...args: any[]) {
+      ((window as any)._hw.q = (window as any)._hw.q || []).push(args);
     };
 
+    // Init the widget (queued until script loads)
+    (window as any)._hw('init', {
+      debug: false,
+      variables: {
+        slug: 'kaya-dental',
+        name: 'Kaya Dental',
+        images: [21],
+        customLogo: '',
+        defaultPurchaseAmount: 2000,
+        customImage: '',
+        imageCategory: 'dental',
+        language: 'en',
+      },
+      styles: {
+        primaryColor: '#0b1548',
+        secondaryColor: '#0b154810',
+        fontFamily: 'Montserrat',
+        headerFontFamily: 'Montserrat',
+      },
+    }, ['calculator', 'faq', 'testimony', 'hero']);
+
+    // Load the Cherry widget script
+    const script = document.createElement('script');
+    script.id = '_hw';
+    script.src = 'https://files.withcherry.com/widgets/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
     return () => {
-      // Cleanup
-      const el = document.getElementById('_hw');
-      if (el) el.remove();
+      script.remove();
+      link.remove();
     };
   }, []);
 
