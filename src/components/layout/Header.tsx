@@ -48,6 +48,9 @@ const navigationItems = [{
   name: 'Patient Success Stories',
   path: '/reviews'
 }, {
+  name: 'Payment Plans',
+  path: '/payment-plans'
+},  {
   name: 'New Patients',
   path: '/new-patients'
 }, {
