@@ -3,6 +3,7 @@ import { SEOHead } from '@/components/seo/SEOHead';
 import { Link } from 'react-router-dom';
 import { CreditCard, CheckCircle, ArrowRight, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 
 const PaymentPlans = () => {
   return (
