@@ -26,7 +26,7 @@ const PaymentPlans = () => {
             <span className="text-accent font-medium text-sm uppercase tracking-wider">
               Financing Options
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl font-bold mt-2 mb-6">
+            <h1 className="font-serif text-3xl md:text-5xl font-bold mt-2 mb-6">
               Flexible Payment Plans
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
@@ -125,7 +125,7 @@ const PaymentPlans = () => {
       {/* How It Works */}
       <section className="py-16">
         <div className="container max-w-4xl">
-          <h2 className="text-3xl font-serif font-bold text-center mb-12 text-foreground">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-center mb-12 text-foreground">
             How It Works
           </h2>
           <div className="grid sm:grid-cols-3 gap-8">
@@ -149,7 +149,7 @@ const PaymentPlans = () => {
       {/* CTA */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container text-center max-w-2xl">
-          <h2 className="text-3xl font-serif font-bold mb-4">Questions About Financing?</h2>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4">Questions About Financing?</h2>
           <p className="text-lg opacity-90 mb-8">
             Our team is happy to walk you through your options. Give us a call or visit our office to learn more.
           </p>
