@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button';
 import { SEOHead } from '@/components/seo/SEOHead';
 const reviews = [
   {
-    name: 'Donna Jeselson',
-    text: 'Erica did an outstanding job cleaning my teeth and under my gums. Her evaluations of my gum and teeth health and consequential recommendations were excellent. Dr. Dani also did a thorough assessment of my oral health. Stellar team: conscientious, nice, working for your best smile.',
+    name: 'Abenc78',
+    text: 'To start, I usually do not like going to the dentist\'s office since my old dentist retired few years back. I decided to try my kids\' dentist, Dr. Kunal Dani, whom I already knew was excellent from the work he had done on the kids teeth. Dr. Dani is very skilled and worked patiently to assure that I was comfortable. The office staff are kind, accommodating, and upfront with expectations and cost. Highly recommend Dr. Dani.',
     rating: 5,
   },
   {
@@ -30,8 +30,8 @@ const reviews = [
     rating: 5,
   },
   {
-    name: 'Abenc78',
-    text: 'To start, I usually do not like going to the dentist\'s office since my old dentist retired few years back. I decided to try my kids\' dentist, Dr. Kunal Dani, whom I already knew was excellent from the work he had done on the kids teeth. Dr. Dani is very skilled and worked patiently to assure that I was comfortable. The office staff are kind, accommodating, and upfront with expectations and cost. Highly recommend Dr. Dani.',
+    name: 'Donna Jeselson',
+    text: 'Erica did an outstanding job cleaning my teeth and under my gums. Her evaluations of my gum and teeth health and consequential recommendations were excellent. Dr. Dani also did a thorough assessment of my oral health. Stellar team: conscientious, nice, working for your best smile.',
     rating: 5,
   },
   {
