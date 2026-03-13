@@ -31,10 +31,19 @@ export function LegacySection() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-4">
             Same Legacy. New Leadership.
           </h2>
-          <div className="w-16 h-0.5 bg-accent mx-auto mb-4" />
-          <p className="text-accent font-serif text-lg italic font-bold">
-            60 years — proudly serving the Leominster area since 1961
-          </p>
+          <div className="w-16 h-0.5 bg-accent mx-auto mb-6" />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="inline-flex items-center gap-3 bg-accent/10 border border-accent/30 rounded-full px-8 py-3"
+          >
+            <span className="text-accent text-2xl font-serif font-bold">60+</span>
+            <span className="w-px h-6 bg-accent/40" />
+            <p className="text-accent font-serif text-lg italic font-bold">
+              Proudly serving the Leominster area since 1961
+            </p>
+          </motion.div>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-12 max-w-4xl mx-auto">
