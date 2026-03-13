@@ -5,6 +5,36 @@ import { Button } from '@/components/ui/button';
 import { SEOHead } from '@/components/seo/SEOHead';
 const reviews = [
   {
+    name: 'Donna Jeselson',
+    text: 'Erica did an outstanding job cleaning my teeth and under my gums. Her evaluations of my gum and teeth health and consequential recommendations were excellent. Dr. Dani also did a thorough assessment of my oral health. Stellar team: conscientious, nice, working for your best smile.',
+    rating: 5,
+  },
+  {
+    name: 'Richard Ortwein',
+    text: 'This was our first time using Kaya Dental, we were there for a cleaning. A co-worker recommended them. We were very pleased with the service provided. The clerical staff, hygienist, and dentist were all very welcoming and pleasant to interact with. The staff are knowledgeable and do not try to up-sell their services. The office and rooms are very clean and the decor is calming. Would definitely recommend this dentist to anyone.',
+    rating: 5,
+  },
+  {
+    name: 'Beth MacBrian',
+    text: 'I was hesitant to come here as I was not a fan of Dr. Cronin in the past, however I broke 2 teeth and was desperate for help. I\'m happy to say that I was very pleased with the care I received. The office got me in quickly to see Dr. Dani. They were able to squeeze me in for a cleaning and they used some stuff so my gums wouldn\'t hurt! Very happy with the service I got here and I\'ll definitely be back.',
+    rating: 5,
+  },
+  {
+    name: 'Crystal Blanchard',
+    text: 'Dr. Dani and his Staff made my difficult dental journey amazing! My final appointment (from many stages) gave me the best smile I\'ve ever had! I have had bonded teeth for 35 yrs and I couldn\'t be happier with a bridge and veneers. Kaya Dental has important things like a truly skilled and professional Staff. They use advanced technology dental equipment that makes the whole process easy.',
+    rating: 5,
+  },
+  {
+    name: 'Natalia Spicer',
+    text: 'I recently had a filling done by Dr. Kunal Dani, and I can confidently say he\'s one of the most caring and professional dentists I\'ve ever seen. From the moment I sat down, he made sure I felt comfortable and at ease. Dr. Dani was incredibly kind and reassuring. He allowed my kids to stay in the room with me, which made me feel so much more relaxed.',
+    rating: 5,
+  },
+  {
+    name: 'Abenc78',
+    text: 'To start, I usually do not like going to the dentist\'s office since my old dentist retired few years back. I decided to try my kids\' dentist, Dr. Kunal Dani, whom I already knew was excellent from the work he had done on the kids teeth. Dr. Dani is very skilled and worked patiently to assure that I was comfortable. The office staff are kind, accommodating, and upfront with expectations and cost. Highly recommend Dr. Dani.',
+    rating: 5,
+  },
+  {
     name: 'Shaunah',
     text: 'Today was my first visit and it was an outstanding experience! Everyone was professional and exhibited great customer service! Dr. Dani answered all my questions thoroughly and made me feel completely comfortable.',
     rating: 5,
@@ -12,36 +42,6 @@ const reviews = [
   {
     name: 'Michelle R.',
     text: 'My experience with this office this year has been wonderful, and I would absolutely recommend to family and friends. The administrative staff, hygienists, and Dr. Dani are professional, welcoming, and kind. You can tell that everyone in the office enjoys their job, which says a lot. 5/5 is well deserved!',
-    rating: 5,
-  },
-  {
-    name: 'David K.',
-    text: 'Best dental experience I\'ve ever had. The office is modern and clean, the staff is incredibly friendly, and Dr. Dani takes his time to explain everything. I actually look forward to my dental appointments now!',
-    rating: 5,
-  },
-  {
-    name: 'Sarah M.',
-    text: 'I was nervous about getting dental work done but the entire team at Kaya Dental made me feel at ease. They were patient, gentle, and the results exceeded my expectations. Highly recommend!',
-    rating: 5,
-  },
-  {
-    name: 'James L.',
-    text: 'Outstanding service from start to finish. The online scheduling is convenient, wait times are minimal, and the quality of care is exceptional. Dr. Dani is truly passionate about his work.',
-    rating: 5,
-  },
-  {
-    name: 'Patricia W.',
-    text: 'I\'ve been coming to Kaya Dental for over a year now and couldn\'t be happier. The staff remembers my name, the office is always spotless, and Dr. Dani provides excellent care. Worth every penny!',
-    rating: 5,
-  },
-  {
-    name: 'Robert H.',
-    text: 'From the moment I walked in, I felt welcomed. The technology they use is impressive and the team is very knowledgeable. Got my Invisalign here and the results are amazing!',
-    rating: 5,
-  },
-  {
-    name: 'Jennifer C.',
-    text: 'Dr. Dani and his team are fantastic! They take the time to explain procedures and answer all questions. The office has a calming atmosphere which really helps with dental anxiety.',
     rating: 5,
   },
 ];
