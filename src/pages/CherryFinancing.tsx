@@ -3,23 +3,26 @@ import { Layout } from '@/components/layout/Layout';
 import { SEOHead } from '@/components/seo/SEOHead';
 
 const CHERRY_WIDGET_SRC = 'https://files.withcherry.com/widgets/widget.js';
-const CHERRY_SCRIPT_IDS = ['_hw', 'cherry-widget-script'];
+const CHERRY_SCRIPT_ID = '_hw';
 const CHERRY_FONT_ID = 'cherry-widget-font';
 
 type CherryWindow = Window & {
   _hw?: ((...args: any[]) => void) & { q?: any[][] };
-  __cherryWidgetScriptPromise?: Promise<void>;
-  __cherryWidgetLoaded?: boolean;
+  _hw_widgets?: string[];
+  _hw_shared_layout?: unknown;
+  _hw_global_config?: Record<string, unknown>;
+  _hw_floating_config?: Record<string, unknown>;
+  'loaded-_hw'?: boolean;
 };
 
 const CherryFinancing = () => {
   useEffect(() => {
     let isMounted = true;
-    let renderCheckTimeout: number | undefined;
+    let hasRetried = false;
+    let verifyTimeout: number | undefined;
     const win = window as CherryWindow;
 
     const widgetContainerIds = ['all', 'hero', 'calculator', 'howitworks', 'testimony', 'faq'];
-    const widgetSections = ['calculator', 'faq', 'testimony', 'hero'];
 
     const clearWidgetContainers = () => {
       widgetContainerIds.forEach((id) => {
@@ -28,92 +31,46 @@ const CherryFinancing = () => {
       });
     };
 
-    const hasRenderedContent = () =>
-      widgetContainerIds.some((id) => {
-        const el = document.getElementById(id);
-        return Boolean(el && el.childElementCount > 0);
-      });
-
-    const getExistingScript = () => {
-      const bySrc = document.querySelector(`script[src="${CHERRY_WIDGET_SRC}"]`) as HTMLScriptElement | null;
-      if (bySrc) return bySrc;
-
-      for (const id of CHERRY_SCRIPT_IDS) {
-        const byId = document.getElementById(id) as HTMLScriptElement | null;
-        if (byId) return byId;
-      }
-
-      return null;
+    const hasRenderedContent = () => {
+      const root = document.getElementById('all');
+      return Boolean(root && root.childElementCount > 0);
     };
 
-    const ensureQueue = () => {
-      if (typeof win._hw === 'function') return;
+    const resetWidgetRuntime = () => {
+      const existingScript = document.getElementById(CHERRY_SCRIPT_ID);
+      if (existingScript) existingScript.remove();
 
-      const queue = ((...args: any[]) => {
-        (queue.q = queue.q || []).push(args);
+      document
+        .querySelectorAll(`script[src="${CHERRY_WIDGET_SRC}"]`)
+        .forEach((scriptEl) => scriptEl.remove());
+
+      document.querySelectorAll('.widget-mount').forEach((mount) => mount.remove());
+
+      delete win._hw;
+      delete win._hw_widgets;
+      delete win._hw_shared_layout;
+      delete win._hw_global_config;
+      delete win._hw_floating_config;
+      delete win['loaded-_hw'];
+    };
+
+    const ensureFont = () => {
+      if (document.getElementById(CHERRY_FONT_ID)) return;
+
+      const link = document.createElement('link');
+      link.id = CHERRY_FONT_ID;
+      link.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@200..900&display=swap';
+      link.rel = 'stylesheet';
+      document.head.appendChild(link);
+    };
+
+    const initQueue = () => {
+      const queueFn = ((...args: any[]) => {
+        (queueFn.q = queueFn.q || []).push(args);
       }) as CherryWindow['_hw'];
 
-      win._hw = queue;
-      console.info('[CherryWidget] queue initialized');
-    };
+      win._hw = queueFn;
 
-    const ensureScript = () => {
-      if (win.__cherryWidgetLoaded) return Promise.resolve();
-      if (win.__cherryWidgetScriptPromise) return win.__cherryWidgetScriptPromise;
-
-      win.__cherryWidgetScriptPromise = new Promise<void>((resolve, reject) => {
-        const onLoad = (script: HTMLScriptElement) => {
-          script.dataset.loaded = 'true';
-          win.__cherryWidgetLoaded = true;
-          console.info('[CherryWidget] script loaded');
-          resolve();
-        };
-
-        const onError = (script: HTMLScriptElement) => {
-          console.error('[CherryWidget] script failed to load');
-          win.__cherryWidgetLoaded = false;
-          win.__cherryWidgetScriptPromise = undefined;
-          script.remove();
-          reject(new Error('Cherry widget script failed to load'));
-        };
-
-        const existingScript = getExistingScript();
-
-        if (existingScript) {
-          if (existingScript.dataset.loaded === 'true') {
-            win.__cherryWidgetLoaded = true;
-            resolve();
-            return;
-          }
-
-          existingScript.addEventListener('load', () => onLoad(existingScript), { once: true });
-          existingScript.addEventListener('error', () => onError(existingScript), { once: true });
-          console.info('[CherryWidget] waiting for existing script to finish loading');
-          return;
-        }
-
-        const script = document.createElement('script');
-        script.id = '_hw';
-        script.src = CHERRY_WIDGET_SRC;
-        script.async = true;
-        script.crossOrigin = 'anonymous';
-
-        script.addEventListener('load', () => onLoad(script), { once: true });
-        script.addEventListener('error', () => onError(script), { once: true });
-
-        document.body.appendChild(script);
-        console.info('[CherryWidget] script appended to DOM');
-      });
-
-      return win.__cherryWidgetScriptPromise;
-    };
-
-    const initWidget = () => {
-      if (!isMounted || typeof win._hw !== 'function') return;
-
-      clearWidgetContainers();
-
-      console.info('[CherryWidget] init called');
       win._hw(
         'init',
         {
@@ -135,67 +92,56 @@ const CherryFinancing = () => {
             headerFontFamily: 'Montserrat',
           },
         },
-        widgetSections,
+        ['all'],
       );
     };
 
-    const forceReloadAndRetry = async () => {
-      const existing = getExistingScript();
-      if (existing) existing.remove();
-
-      win.__cherryWidgetLoaded = false;
-      win.__cherryWidgetScriptPromise = undefined;
-
-      ensureQueue();
-      await ensureScript();
+    const bootstrapWidget = (allowRetry: boolean) => {
       if (!isMounted) return;
-      initWidget();
-    };
 
-    const bootstrap = async () => {
+      resetWidgetRuntime();
       clearWidgetContainers();
+      ensureFont();
+      initQueue();
 
-      if (!document.getElementById(CHERRY_FONT_ID)) {
-        const link = document.createElement('link');
-        link.id = CHERRY_FONT_ID;
-        link.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@200..900&display=swap';
-        link.rel = 'stylesheet';
-        document.head.appendChild(link);
-      }
+      const script = document.createElement('script');
+      script.id = CHERRY_SCRIPT_ID;
+      script.src = CHERRY_WIDGET_SRC;
+      script.async = true;
+      script.crossOrigin = 'anonymous';
 
-      ensureQueue();
+      script.addEventListener('error', () => {
+        console.error('[CherryWidget] script request failed');
+        if (!allowRetry || !isMounted || hasRetried) return;
 
-      try {
-        await ensureScript();
+        hasRetried = true;
+        window.setTimeout(() => bootstrapWidget(false), 800);
+      });
+
+      script.addEventListener('load', () => {
         if (!isMounted) return;
 
-        requestAnimationFrame(() => {
-          if (!isMounted) return;
-          initWidget();
-        });
-
-        renderCheckTimeout = window.setTimeout(async () => {
+        verifyTimeout = window.setTimeout(() => {
           if (!isMounted || hasRenderedContent()) return;
 
-          console.warn('[CherryWidget] no content rendered after init; retrying with full script reload');
+          console.warn('[CherryWidget] loaded but not rendered; forcing one re-bootstrap');
 
-          try {
-            await forceReloadAndRetry();
-          } catch (error) {
-            console.error('[CherryWidget] retry failed', error);
-          }
-        }, 3000);
-      } catch (error) {
-        console.error('[CherryWidget] bootstrap failed', error);
-      }
+          if (!allowRetry || hasRetried) return;
+          hasRetried = true;
+          bootstrapWidget(false);
+        }, 2200);
+      });
+
+      document.body.appendChild(script);
     };
 
-    bootstrap();
+    bootstrapWidget(true);
 
     return () => {
       isMounted = false;
-      if (renderCheckTimeout) window.clearTimeout(renderCheckTimeout);
+      if (verifyTimeout) window.clearTimeout(verifyTimeout);
       clearWidgetContainers();
+      resetWidgetRuntime();
     };
   }, []);
 
