@@ -45,12 +45,12 @@ const navigationItems = [{
   name: 'Membership Plans',
   path: '/membership'
 }, {
+  name: 'Payment Plans',
+  path: '/payment-plans'
+}, {
   name: 'Patient Success Stories',
   path: '/reviews'
 }, {
-  name: 'Payment Plans',
-  path: '/payment-plans'
-},  {
   name: 'New Patients',
   path: '/new-patients'
 }, {
