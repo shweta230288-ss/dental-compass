@@ -123,9 +123,8 @@ export default function Reviews() {
                 <p className="text-foreground text-sm md:text-base mb-4 md:mb-6 leading-relaxed line-clamp-4 md:line-clamp-none">
                   "{review.text}"
                 </p>
-                <div className="flex items-center justify-between">
+                <div>
                   <p className="font-semibold text-foreground text-sm md:text-base">{review.name}</p>
-                  <p className="text-xs md:text-sm text-muted-foreground">{review.date}</p>
                 </div>
               </motion.div>
             ))}
