@@ -44,7 +44,7 @@ export function LegacySection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <div className="rounded-2xl overflow-hidden shadow-xl max-w-lg mx-auto">
+            <div className="rounded-2xl overflow-hidden shadow-xl max-w-2xl mx-auto">
               <img
                 src={drDaniCronin}
                 alt="Dr. Michael Cronin and Dr. Kunal Dani at Kaya Dental"
