@@ -38,7 +38,7 @@ export function LegacySection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="inline-flex items-center gap-3 bg-accent/10 border border-accent/30 rounded-full px-8 py-3"
           >
-            <span className="text-accent text-lg font-serif font-bold">60+ years of service</span>
+            <span className="text-accent text-lg font-serif font-extrabold">60+ years of service</span>
             <span className="w-px h-6 bg-accent/40" />
             <p className="text-accent font-serif text-lg italic font-bold">
               Proudly serving the Leominster area since 1961
