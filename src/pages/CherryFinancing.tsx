@@ -3,7 +3,7 @@ import { Layout } from '@/components/layout/Layout';
 import { SEOHead } from '@/components/seo/SEOHead';
 
 const CHERRY_WIDGET_SRC = 'https://files.withcherry.com/widgets/widget.js';
-const CHERRY_SCRIPT_ID = 'cherry-widget-script';
+const CHERRY_SCRIPT_IDS = ['_hw', 'cherry-widget-script'];
 const CHERRY_FONT_ID = 'cherry-widget-font';
 
 type CherryWindow = Window & {
@@ -15,8 +15,11 @@ type CherryWindow = Window & {
 const CherryFinancing = () => {
   useEffect(() => {
     let isMounted = true;
+    let renderCheckTimeout: number | undefined;
     const win = window as CherryWindow;
+
     const widgetContainerIds = ['all', 'hero', 'calculator', 'howitworks', 'testimony', 'faq'];
+    const widgetSections = ['calculator', 'faq', 'testimony', 'hero'];
 
     const clearWidgetContainers = () => {
       widgetContainerIds.forEach((id) => {
@@ -25,12 +28,33 @@ const CherryFinancing = () => {
       });
     };
 
+    const hasRenderedContent = () =>
+      widgetContainerIds.some((id) => {
+        const el = document.getElementById(id);
+        return Boolean(el && el.childElementCount > 0);
+      });
+
+    const getExistingScript = () => {
+      const bySrc = document.querySelector(`script[src="${CHERRY_WIDGET_SRC}"]`) as HTMLScriptElement | null;
+      if (bySrc) return bySrc;
+
+      for (const id of CHERRY_SCRIPT_IDS) {
+        const byId = document.getElementById(id) as HTMLScriptElement | null;
+        if (byId) return byId;
+      }
+
+      return null;
+    };
+
     const ensureQueue = () => {
       if (typeof win._hw === 'function') return;
+
       const queue = ((...args: any[]) => {
         (queue.q = queue.q || []).push(args);
       }) as CherryWindow['_hw'];
+
       win._hw = queue;
+      console.info('[CherryWidget] queue initialized');
     };
 
     const ensureScript = () => {
@@ -38,64 +62,47 @@ const CherryFinancing = () => {
       if (win.__cherryWidgetScriptPromise) return win.__cherryWidgetScriptPromise;
 
       win.__cherryWidgetScriptPromise = new Promise<void>((resolve, reject) => {
-        const markLoaded = () => {
+        const onLoad = (script: HTMLScriptElement) => {
+          script.dataset.loaded = 'true';
           win.__cherryWidgetLoaded = true;
+          console.info('[CherryWidget] script loaded');
           resolve();
         };
 
-        const existingScript = document.getElementById(CHERRY_SCRIPT_ID) as HTMLScriptElement | null;
+        const onError = (script: HTMLScriptElement) => {
+          console.error('[CherryWidget] script failed to load');
+          win.__cherryWidgetLoaded = false;
+          win.__cherryWidgetScriptPromise = undefined;
+          script.remove();
+          reject(new Error('Cherry widget script failed to load'));
+        };
+
+        const existingScript = getExistingScript();
 
         if (existingScript) {
           if (existingScript.dataset.loaded === 'true') {
-            markLoaded();
+            win.__cherryWidgetLoaded = true;
+            resolve();
             return;
           }
 
-          existingScript.addEventListener(
-            'load',
-            () => {
-              existingScript.dataset.loaded = 'true';
-              markLoaded();
-            },
-            { once: true },
-          );
-
-          existingScript.addEventListener(
-            'error',
-            () => {
-              win.__cherryWidgetScriptPromise = undefined;
-              reject(new Error('Cherry widget script failed to load'));
-            },
-            { once: true },
-          );
-
+          existingScript.addEventListener('load', () => onLoad(existingScript), { once: true });
+          existingScript.addEventListener('error', () => onError(existingScript), { once: true });
+          console.info('[CherryWidget] waiting for existing script to finish loading');
           return;
         }
 
         const script = document.createElement('script');
-        script.id = CHERRY_SCRIPT_ID;
+        script.id = '_hw';
         script.src = CHERRY_WIDGET_SRC;
         script.async = true;
+        script.crossOrigin = 'anonymous';
 
-        script.addEventListener(
-          'load',
-          () => {
-            script.dataset.loaded = 'true';
-            markLoaded();
-          },
-          { once: true },
-        );
-
-        script.addEventListener(
-          'error',
-          () => {
-            win.__cherryWidgetScriptPromise = undefined;
-            reject(new Error('Cherry widget script failed to load'));
-          },
-          { once: true },
-        );
+        script.addEventListener('load', () => onLoad(script), { once: true });
+        script.addEventListener('error', () => onError(script), { once: true });
 
         document.body.appendChild(script);
+        console.info('[CherryWidget] script appended to DOM');
       });
 
       return win.__cherryWidgetScriptPromise;
@@ -106,6 +113,7 @@ const CherryFinancing = () => {
 
       clearWidgetContainers();
 
+      console.info('[CherryWidget] init called');
       win._hw(
         'init',
         {
@@ -127,8 +135,21 @@ const CherryFinancing = () => {
             headerFontFamily: 'Montserrat',
           },
         },
-        widgetContainerIds,
+        widgetSections,
       );
+    };
+
+    const forceReloadAndRetry = async () => {
+      const existing = getExistingScript();
+      if (existing) existing.remove();
+
+      win.__cherryWidgetLoaded = false;
+      win.__cherryWidgetScriptPromise = undefined;
+
+      ensureQueue();
+      await ensureScript();
+      if (!isMounted) return;
+      initWidget();
     };
 
     const bootstrap = async () => {
@@ -148,22 +169,24 @@ const CherryFinancing = () => {
         await ensureScript();
         if (!isMounted) return;
 
-        initWidget();
-
-        window.setTimeout(() => {
+        requestAnimationFrame(() => {
           if (!isMounted) return;
+          initWidget();
+        });
 
-          const hasRendered = widgetContainerIds.some((id) => {
-            const el = document.getElementById(id);
-            return Boolean(el && el.childElementCount > 0);
-          });
+        renderCheckTimeout = window.setTimeout(async () => {
+          if (!isMounted || hasRenderedContent()) return;
 
-          if (!hasRendered) {
-            initWidget();
+          console.warn('[CherryWidget] no content rendered after init; retrying with full script reload');
+
+          try {
+            await forceReloadAndRetry();
+          } catch (error) {
+            console.error('[CherryWidget] retry failed', error);
           }
-        }, 1200);
+        }, 3000);
       } catch (error) {
-        console.error('Cherry widget failed to load', error);
+        console.error('[CherryWidget] bootstrap failed', error);
       }
     };
 
@@ -171,6 +194,7 @@ const CherryFinancing = () => {
 
     return () => {
       isMounted = false;
+      if (renderCheckTimeout) window.clearTimeout(renderCheckTimeout);
       clearWidgetContainers();
     };
   }, []);
