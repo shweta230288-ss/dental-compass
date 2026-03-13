@@ -54,10 +54,10 @@ const PaymentPlans = () => {
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Cherry Financing */}
-            <div className="bg-card rounded-xl shadow-soft border border-border p-8 flex flex-col">
-              <div className="flex items-center gap-3 mb-4">
+            <div className="bg-card rounded-xl shadow-soft border border-border p-5 sm:p-8 flex flex-col">
+              <div className="flex flex-wrap items-center gap-3 mb-4">
                 <CreditCard className="w-8 h-8 text-accent" />
-                <h3 className="text-2xl font-serif font-bold text-foreground">Cherry Financing</h3>
+                <h3 className="text-xl sm:text-2xl leading-tight font-serif font-bold text-foreground">Cherry Financing</h3>
               </div>
               <p className="text-muted-foreground mb-6 flex-1">
                 Cherry offers simple, transparent payment plans with no hidden fees. Apply in seconds and get approved for the care you need — right from our office or online.
@@ -76,8 +76,8 @@ const PaymentPlans = () => {
                   </li>
                 ))}
               </ul>
-              <Link to="/payment-plans/cherry">
-                <Button className="w-full" size="lg">
+              <Link to="/payment-plans/cherry" className="block w-full">
+                <Button className="w-full whitespace-normal text-center h-auto py-3" size="lg">
                   Explore Cherry Financing
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
@@ -85,10 +85,10 @@ const PaymentPlans = () => {
             </div>
 
             {/* CareCredit */}
-            <div className="bg-card rounded-xl shadow-soft border border-border p-8 flex flex-col">
-              <div className="flex items-center gap-3 mb-4">
+            <div className="bg-card rounded-xl shadow-soft border border-border p-5 sm:p-8 flex flex-col">
+              <div className="flex flex-wrap items-center gap-3 mb-4">
                 <CreditCard className="w-8 h-8 text-accent" />
-                <h3 className="text-2xl font-serif font-bold text-foreground">CareCredit</h3>
+                <h3 className="text-xl sm:text-2xl leading-tight font-serif font-bold text-foreground">CareCredit</h3>
               </div>
               <p className="text-muted-foreground mb-6 flex-1">
                 CareCredit is a trusted healthcare credit card accepted at over 250,000 providers nationwide. Enjoy promotional financing options on dental treatments large and small.
@@ -111,8 +111,9 @@ const PaymentPlans = () => {
                 href="https://www.carecredit.com/apply/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="block w-full"
               >
-                <Button className="w-full" size="lg">
+                <Button className="w-full whitespace-normal text-center h-auto py-3" size="lg">
                   Apply for CareCredit
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
