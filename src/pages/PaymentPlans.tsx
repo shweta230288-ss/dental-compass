@@ -3,6 +3,7 @@ import { SEOHead } from '@/components/seo/SEOHead';
 import { Link } from 'react-router-dom';
 import { CreditCard, CheckCircle, ArrowRight, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 
 const PaymentPlans = () => {
   return (
@@ -14,14 +15,24 @@ const PaymentPlans = () => {
       />
 
       {/* Hero */}
-      <section className="bg-primary text-primary-foreground py-20">
-        <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
-            Flexible Payment Plans
-          </h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
-            Quality dental care shouldn't be out of reach. We offer flexible financing options to fit every budget.
-          </p>
+      <section className="bg-primary py-20 text-primary-foreground">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl"
+          >
+            <span className="text-accent font-medium text-sm uppercase tracking-wider">
+              Financing Options
+            </span>
+            <h1 className="font-serif text-4xl md:text-5xl font-bold mt-2 mb-6">
+              Flexible Payment Plans
+            </h1>
+            <p className="text-primary-foreground/80 text-lg leading-relaxed" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
+              Quality dental care shouldn't be out of reach. We offer flexible financing options to fit every budget.
+            </p>
+          </motion.div>
         </div>
       </section>
 
