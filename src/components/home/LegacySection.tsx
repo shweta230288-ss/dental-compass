@@ -31,19 +31,32 @@ export function LegacySection() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-4">
             Same Legacy. New Leadership.
           </h2>
-          <div className="w-16 h-0.5 bg-accent mx-auto mb-6" />
+          <div className="w-16 h-0.5 bg-accent mx-auto mb-8" />
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="inline-flex items-center gap-3 bg-accent/10 border border-accent/30 rounded-full px-8 py-3"
+            initial={{ opacity: 0, y: 10 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="flex items-center justify-center gap-4 md:gap-6"
           >
-            <span className="text-accent text-2xl font-serif font-bold">60+</span>
-            <span className="w-px h-6 bg-accent/40" />
-            <p className="text-accent font-serif text-lg italic font-bold">
-              Proudly serving the Leominster area since 1961
-            </p>
+            <div className="text-center">
+              <span className="block text-accent font-serif text-2xl md:text-3xl font-bold">1961</span>
+              <span className="text-xs text-muted-foreground uppercase tracking-wider">Est.</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <div className="w-2 h-2 rounded-full bg-accent" />
+              <div className="w-16 md:w-28 h-px bg-gradient-to-r from-accent to-accent/30" />
+              <div className="w-1.5 h-1.5 rounded-full bg-accent/50" />
+              <div className="w-10 md:w-20 h-px bg-gradient-to-r from-accent/30 to-accent" />
+              <div className="w-2 h-2 rounded-full bg-accent" />
+            </div>
+            <div className="text-center">
+              <span className="block text-accent font-serif text-2xl md:text-3xl font-bold">Today</span>
+              <span className="text-xs text-muted-foreground uppercase tracking-wider">60+ years</span>
+            </div>
           </motion.div>
+          <p className="text-accent font-serif text-lg italic font-bold mt-4">
+            Proudly serving the Leominster area
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 gap-12 max-w-4xl mx-auto">
