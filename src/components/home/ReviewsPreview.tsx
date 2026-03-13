@@ -5,16 +5,16 @@ import { Star, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 const reviews = [{
-  name: 'Shaunah',
-  text: 'Today was my first visit and it was an outstanding experience! Everyone was professional and exhibited great customer service! Dr. Dani answered all my questions thoroughly.',
+  name: 'Donna Jeselson',
+  text: 'Erica did an outstanding job cleaning my teeth and under my gums. Her evaluations of my gum and teeth health and consequential recommendations were excellent. Dr. Dani also did a thorough assessment of my oral health. Stellar team!',
   rating: 5
 }, {
-  name: 'Michelle R.',
-  text: 'My experience with this office has been wonderful, and I would absolutely recommend to family and friends. The administrative staff, hygienists, and Dr. Dani are professional, welcoming, and kind.',
+  name: 'Crystal Blanchard',
+  text: 'Dr. Dani and his Staff made my difficult dental journey amazing! My final appointment gave me the best smile I\'ve ever had! Kaya Dental has a truly skilled and professional Staff with advanced technology.',
   rating: 5
 }, {
-  name: 'David K.',
-  text: 'You can tell that everyone in the office enjoys their job, which says a lot. 5/5 is well deserved, I\'d give 6/5 if possible! Best dental experience I\'ve ever had.',
+  name: 'Richard Ortwein',
+  text: 'We were very pleased with the service provided. The clerical staff, hygienist, and dentist were all very welcoming and pleasant to interact with. The office and rooms are very clean and the decor is calming.',
   rating: 5
 }];
 export function ReviewsPreview() {
