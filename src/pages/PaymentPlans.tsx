@@ -19,7 +19,7 @@ const PaymentPlans = () => {
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">
             Flexible Payment Plans
           </h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90">
+          <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
             Quality dental care shouldn't be out of reach. We offer flexible financing options to fit every budget.
           </p>
         </div>
