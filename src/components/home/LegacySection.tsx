@@ -40,7 +40,7 @@ export function LegacySection() {
           >
             <span className="text-accent text-lg font-serif font-extrabold">60+ years of service</span>
             <span className="w-px h-6 bg-accent/40" />
-            <p className="text-accent font-serif text-lg italic font-bold">
+            <p className="text-accent font-serif text-lg italic font-extrabold">
               Proudly serving the Leominster area since 1961
             </p>
           </motion.div>
