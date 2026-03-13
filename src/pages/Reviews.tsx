@@ -51,7 +51,7 @@ export default function Reviews() {
     <Layout>
       <SEOHead
         title="Patient Reviews | Trusted Dentist in Leominster MA | Kaya Dental"
-        description="Read 3,400+ five-star reviews from Kaya Dental patients. See why we're the trusted dentist in Leominster, MA. Dr. Kunal Dani and our compassionate team."
+        description="Read 3,600+ five-star reviews from Kaya Dental patients. See why we're the trusted dentist in Leominster, MA. Dr. Kunal Dani and our compassionate team."
         canonicalPath="/reviews"
       />
       {/* Hero */}
