@@ -26,7 +26,7 @@ const PaymentPlans = () => {
             <span className="text-accent font-medium text-sm uppercase tracking-wider">
               Financing Options
             </span>
-            <h1 className="font-serif text-4xl md:text-5xl font-bold mt-2 mb-6">
+            <h1 className="font-serif text-3xl md:text-5xl font-bold mt-2 mb-6">
               Flexible Payment Plans
             </h1>
             <p className="text-primary-foreground/80 text-lg leading-relaxed" style={{ hyphens: 'none', wordBreak: 'normal', overflowWrap: 'normal' }}>
