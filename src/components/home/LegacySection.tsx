@@ -7,7 +7,7 @@ import drDaniCronin from '@/assets/dr-dani-dr-cronin.jpg';
 const values = [
   'Truly patient-centered, individualized treatment',
   'Clinical expertise grounded in experience and integrity',
-  'Respect for each patient\'s opinions and goals',
+  'Respect for each patient\'s treatment needs and goals',
   'Building relationships that last a lifetime',
 ];
 
