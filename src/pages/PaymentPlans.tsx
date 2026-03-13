@@ -149,7 +149,7 @@ const PaymentPlans = () => {
       {/* CTA */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container text-center max-w-2xl">
-          <h2 className="text-3xl font-serif font-bold mb-4">Questions About Financing?</h2>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4">Questions About Financing?</h2>
           <p className="text-lg opacity-90 mb-8">
             Our team is happy to walk you through your options. Give us a call or visit our office to learn more.
           </p>
