@@ -5,16 +5,16 @@ import { Star, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 const reviews = [{
-  name: 'Donna Jeselson',
-  text: 'Erica did an outstanding job cleaning my teeth and under my gums. Her evaluations of my gum and teeth health and consequential recommendations were excellent. Dr. Dani also did a thorough assessment of my oral health. Stellar team!',
-  rating: 5
-}, {
-  name: 'Crystal Blanchard',
-  text: 'Dr. Dani and his Staff made my difficult dental journey amazing! My final appointment gave me the best smile I\'ve ever had! Kaya Dental has a truly skilled and professional Staff with advanced technology.',
+  name: 'Abenc78',
+  text: 'I decided to try my kids\' dentist, Dr. Kunal Dani, whom I already knew was excellent from the work he had done on the kids teeth. Dr. Dani is very skilled and worked patiently to assure that I was comfortable. Highly recommend Dr. Dani.',
   rating: 5
 }, {
   name: 'Richard Ortwein',
   text: 'We were very pleased with the service provided. The clerical staff, hygienist, and dentist were all very welcoming and pleasant to interact with. The office and rooms are very clean and the decor is calming.',
+  rating: 5
+}, {
+  name: 'Beth MacBrian',
+  text: 'I\'m happy to say that I was very pleased with the care I received. The office got me in quickly to see Dr. Dani. Very happy with the service I got here and I\'ll definitely be back.',
   rating: 5
 }];
 export function ReviewsPreview() {
