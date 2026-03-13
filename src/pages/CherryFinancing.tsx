@@ -2,6 +2,10 @@ import { useEffect } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { SEOHead } from '@/components/seo/SEOHead';
 
+const CHERRY_WIDGET_SRC = 'https://files.withcherry.com/widgets/widget.js';
+const CHERRY_SCRIPT_ID = 'cherry-widget-script';
+const CHERRY_FONT_ID = 'cherry-widget-font';
+
 const CherryFinancing = () => {
   useEffect(() => {
     let isMounted = true;
@@ -15,8 +19,13 @@ const CherryFinancing = () => {
       });
     };
 
+    const resetWidgetRuntime = () => {
+      const existingScript = document.getElementById(CHERRY_SCRIPT_ID);
+      if (existingScript) existingScript.remove();
+      delete (window as any)._hw;
+    };
+
     const ensureQueue = () => {
-      if (typeof (window as any)._hw === 'function') return;
       (window as any)._hw = function (...args: any[]) {
         ((window as any)._hw.q = (window as any)._hw.q || []).push(args);
       };
@@ -51,10 +60,11 @@ const CherryFinancing = () => {
     };
 
     clearWidgetContainers();
+    resetWidgetRuntime();
 
-    if (!document.getElementById('cherry-widget-font')) {
+    if (!document.getElementById(CHERRY_FONT_ID)) {
       const link = document.createElement('link');
-      link.id = 'cherry-widget-font';
+      link.id = CHERRY_FONT_ID;
       link.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@200..900&display=swap';
       link.rel = 'stylesheet';
       document.head.appendChild(link);
@@ -62,36 +72,25 @@ const CherryFinancing = () => {
 
     ensureQueue();
 
-    const existingScript = document.getElementById('cherry-widget-script') as HTMLScriptElement | null;
-
-    if (existingScript) {
-      if (existingScript.dataset.loaded === 'true') {
+    const script = document.createElement('script');
+    script.id = CHERRY_SCRIPT_ID;
+    script.src = CHERRY_WIDGET_SRC;
+    script.async = true;
+    script.addEventListener(
+      'load',
+      () => {
+        if (!isMounted) return;
         initWidget();
-      } else {
-        existingScript.addEventListener('load', initWidget, { once: true });
-      }
-    } else {
-      const script = document.createElement('script');
-      script.id = 'cherry-widget-script';
-      script.src = 'https://files.withcherry.com/widgets/widget.js';
-      script.async = true;
-      script.addEventListener(
-        'load',
-        () => {
-          script.dataset.loaded = 'true';
-          initWidget();
-        },
-        { once: true },
-      );
-      document.body.appendChild(script);
-    }
+      },
+      { once: true },
+    );
+
+    document.body.appendChild(script);
 
     return () => {
       isMounted = false;
       clearWidgetContainers();
-      if (existingScript && existingScript.dataset.loaded !== 'true') {
-        existingScript.removeEventListener('load', initWidget);
-      }
+      resetWidgetRuntime();
     };
   }, []);
 
