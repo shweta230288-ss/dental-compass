@@ -101,7 +101,7 @@ const PaymentPlans = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button className="w-full" size="lg" variant="outline">
+                <Button className="w-full" size="lg">
                   Apply for CareCredit
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
