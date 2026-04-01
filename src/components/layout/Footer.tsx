@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from 'lucide-react';
 import kayaLogo from '@/assets/kaya-logo.png';
 const quickLinks = [{
   name: 'About Us',
