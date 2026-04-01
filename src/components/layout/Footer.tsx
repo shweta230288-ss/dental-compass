@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from 'lucide-react';
 import kayaLogo from '@/assets/kaya-logo.png';
 const quickLinks = [{
   name: 'About Us',
@@ -58,9 +58,29 @@ export function Footer() {
               "Kaya" meaning body, wellness, and wholeness. We bring expertise and passion 
               together to craft radiant, healthy smiles so you can shine with confidence.
             </p>
-            <p className="text-accent text-sm font-medium italic mb-6">
+            <p className="text-accent text-sm font-medium italic mb-4">
               Your Trusted Dentist in Leominster
             </p>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.facebook.com/profile.php?id=61581590236875"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground/80 hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary rounded-sm"
+                aria-label="Visit our Facebook page"
+              >
+                <Facebook className="w-6 h-6" aria-hidden="true" />
+              </a>
+              <a
+                href="https://www.instagram.com/kayadentalbydani/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground/80 hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-primary rounded-sm"
+                aria-label="Visit our Instagram page"
+              >
+                <Instagram className="w-6 h-6" aria-hidden="true" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
