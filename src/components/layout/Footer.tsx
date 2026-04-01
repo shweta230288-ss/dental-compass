@@ -81,6 +81,7 @@ export function Footer() {
                 <Instagram className="w-6 h-6" aria-hidden="true" />
               </a>
             </div>
+          </div>
 
           {/* Quick Links */}
           <nav aria-label="Quick links">
