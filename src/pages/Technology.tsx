@@ -1,8 +1,9 @@
 import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import { SEOHead } from '@/components/seo/SEOHead';
-import { Zap, Camera, Printer, Brain, Phone, Scan } from 'lucide-react';
+import { Zap, Camera, Printer, Brain, Scan } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { CallNowButton } from '@/components/shared/CallNowButton';
 import techDigitalXray from '@/assets/tech-digital-xray.jpg';
 import techIteroScanner from '@/assets/tech-itero-scanner.jpg';
 import tech3dPrinter from '@/assets/tech-3d-printer.jpg';
