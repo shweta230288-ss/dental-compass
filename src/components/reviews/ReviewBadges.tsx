@@ -62,9 +62,10 @@ export function ReviewBadges({ variant = 'light', size = 'md', className }: Revi
         label: 'Read our 5.0 star verified patient reviews on Demandforce (opens in a new tab)',
         icon: <BadgeCheck className="w-7 h-7 flex-shrink-0 text-accent" />,
         rating: '5.0',
-        source: 'Verified Patient Reviews',
-        count: '3,600+ reviews',
+        source: 'Demandforce',
+        count: '3,600+ Patient Reviews',
       },
+
     ];
 
     return (
@@ -146,8 +147,9 @@ export function ReviewBadges({ variant = 'light', size = 'md', className }: Revi
         </span>
         <span className="text-sm font-semibold whitespace-nowrap">5.0 Stars</span>
         <span className="opacity-40">|</span>
-        <span className="text-sm font-semibold whitespace-nowrap">3,600+ Patient Reviews</span>
+        <span className="text-sm font-semibold whitespace-nowrap">3,600+ Demandforce Reviews</span>
       </a>
+
     </div>
   );
 }
