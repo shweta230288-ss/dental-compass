@@ -6,6 +6,8 @@ export default function Orthodontics() {
   return (
     <ServicePageLayout
       title="Orthodontics"
+      heroHeadline="A Straighter, Healthier Bite for Every Age with Orthodontics in Leominster, MA"
+      canonicalPath="/services/orthodontics"
       metaDescription="Orthodontic treatment at Kaya Dental in Leominster, MA. Invisalign and braces for straighter teeth and a beautiful smile. Schedule your consultation."
       heroSubtitle="Straight Teeth, Beautiful Smile"
       heroDescription="Orthodontic treatment does more than create a beautiful smile—it improves your bite, makes teeth easier to clean, and can prevent long-term dental problems. At Kaya Dental, we offer modern orthodontic solutions including Invisalign clear aligners for teens and adults."

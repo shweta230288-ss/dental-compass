@@ -6,6 +6,8 @@ export default function FamilyDentistry() {
   return (
     <ServicePageLayout
       title="Family Dentistry"
+      heroHeadline="One Trusted Dental Home for Every Age with Family Dentistry in Leominster, MA"
+      canonicalPath="/services/family-dentistry"
       metaDescription="Family dentistry at Kaya Dental in Leominster, MA. Comprehensive dental care for patients of all ages. Schedule appointments for the whole family."
       heroSubtitle="Care for the Whole Family"
       heroDescription="At Kaya Dental, we welcome patients of all ages and provide dental care that grows with your family. From a child's first dental visit to senior care, our team creates positive experiences that build healthy habits for a lifetime of beautiful smiles."

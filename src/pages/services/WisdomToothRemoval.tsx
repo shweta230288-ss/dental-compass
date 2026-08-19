@@ -6,6 +6,8 @@ export default function WisdomToothRemoval() {
   return (
     <ServicePageLayout
       title="Wisdom Tooth Removal"
+      heroHeadline="Comfortable, Same-Day Relief with Wisdom Tooth Removal in Leominster, MA"
+      canonicalPath="/services/wisdom-tooth-removal"
       metaDescription="Gentle wisdom tooth extraction at Kaya Dental in Leominster, MA. Expert care for impacted and problematic wisdom teeth. Schedule your consultation."
       heroSubtitle="Oral Surgery"
       heroDescription="Wisdom teeth, also known as third molars, often cause problems because there isn't enough room in the mouth for them to emerge properly. At Kaya Dental, we provide comfortable, expert wisdom tooth removal to prevent pain, infection, and damage to neighboring teeth."
