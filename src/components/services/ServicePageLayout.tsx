@@ -236,7 +236,7 @@ export function ServicePageLayout({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="max-w-3xl"
+            className="max-w-4xl"
           >
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4 break-words">
               Compassionate {title} for Leominster Families
