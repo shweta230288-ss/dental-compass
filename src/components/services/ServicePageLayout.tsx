@@ -68,7 +68,9 @@ export function ServicePageLayout({
   faqs,
   relatedServices,
   canonicalPath,
+  showMembershipBanner = true,
 }: ServicePageLayoutProps) {
+
   const headline = heroHeadline ?? title;
   const pageTitle = `${title} Leominster MA | Kaya Dental`;
   const canonicalUrl = canonicalPath ? `${BASE_URL}${canonicalPath}` : undefined;
