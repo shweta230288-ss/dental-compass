@@ -117,9 +117,13 @@ export function ServicePageLayout({
       priceRange: '$$',
       aggregateRating: {
         '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '700',
+        ratingValue: '5',
+        bestRating: '5',
+        worstRating: '1',
+        reviewCount: '3639',
+        url: 'https://local.demandforce.com/b/leominsterdentistry',
       },
+      sameAs: ['https://local.demandforce.com/b/leominsterdentistry'],
     },
   };
 
