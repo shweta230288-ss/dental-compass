@@ -258,8 +258,9 @@ export function ServicePageLayout({
 
       {/* Detailed Description Sections */}
       {detailedDescription && detailedDescription.length > 0 && (
-        <section className="py-16 bg-background">
+        <section className="pt-8 lg:pt-12 pb-16 bg-background">
           <div className="container">
+
             <div className="space-y-16">
               {detailedDescription.map((section, index) => (
                 <motion.div
