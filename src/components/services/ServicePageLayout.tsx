@@ -17,7 +17,7 @@ interface ServicePageLayoutProps {
   title: string;
   metaDescription: string;
   heroSubtitle: string;
-  /** Benefit-driven headline. Defaults to "[title] in Leominster, MA". */
+  /** Benefit-driven headline. Defaults to the service title. */
   heroHeadline?: string;
   heroDescription: string;
   heroImage?: string;
