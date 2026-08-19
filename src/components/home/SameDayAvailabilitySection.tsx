@@ -35,7 +35,7 @@ export function SameDayAvailabilitySection() {
                   id="same-day-heading"
                   className="font-serif text-2xl md:text-3xl font-bold text-white leading-tight"
                 >
-                  Same-Day Appointments Available
+                  Dental Emergency? Same-Day Appointments Available
                 </h2>
               </div>
             </div>
@@ -43,9 +43,10 @@ export function SameDayAvailabilitySection() {
             {/* Description */}
             <div className="flex-1">
               <p className="text-white/85 text-base md:text-lg leading-relaxed">
-                Need to be seen today? Call our Leominster office and we will do
-                everything we can to get you in as soon as possible — whether it is a
-                sudden toothache, a broken tooth, or a schedule that simply cannot wait.
+                We reserve time every day for emergency dental patients in Leominster, and
+                walk-ins are welcome as availability permits. Toothache, broken tooth, or a
+                knocked-out tooth — call our office and we will do everything we can to get
+                you in and out of pain as fast as possible.
               </p>
             </div>
 
