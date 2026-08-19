@@ -169,6 +169,7 @@ export function ServicePageLayout({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
+              className="min-w-0"
             >
               <span className="text-accent font-medium text-sm uppercase tracking-wider">
                 {heroSubtitle}
@@ -177,12 +178,13 @@ export function ServicePageLayout({
                 {headline}
               </h1>
 
-              {/* Dual review trust badges */}
-              <ReviewBadges variant="light" className="mb-6" />
-
-              <p className="text-primary-foreground/80 text-base lg:text-lg leading-relaxed mb-6 lg:mb-8">
+              <p className="text-primary-foreground/80 text-base lg:text-lg leading-relaxed mb-6">
                 {heroDescription}
               </p>
+
+              {/* Dual review trust badges */}
+              <ReviewBadges variant="light" size="lg" className="mb-6 lg:mb-8" />
+
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button size="lg" variant="secondary" className="w-full sm:w-auto h-auto whitespace-normal py-3" asChild>
                   <a href={PHONE_TEL} className="inline-flex items-center justify-center gap-2 font-semibold">
