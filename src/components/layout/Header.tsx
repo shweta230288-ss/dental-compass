@@ -217,11 +217,32 @@ export function Header() {
                 <div key={item.name}>
                   <Link 
                     to={item.path} 
-                    className={`block py-3 text-base font-medium border-b border-border/50 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-inset ${location.pathname === item.path ? 'text-accent' : 'text-foreground'}`}
+                    className={`block py-3 text-base font-medium border-b border-border/50 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-inset ${
+                      item.children
+                        ? item.children.some(child => location.pathname === child.path || location.pathname.startsWith(child.path + '/'))
+                          ? 'text-accent'
+                          : 'text-foreground'
+                        : location.pathname === item.path || location.pathname.startsWith(item.path + '/')
+                          ? 'text-accent'
+                          : 'text-foreground'
+                    }`}
                     aria-current={location.pathname === item.path ? 'page' : undefined}
                   >
                     {item.name}
                   </Link>
+                  {item.children && (
+                    <div className="pl-4 border-l-2 border-border/50 ml-2 space-y-1">
+                      {item.children.map(child => (
+                        <Link
+                          key={child.name}
+                          to={child.path}
+                          className={`block py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:ring-inset ${location.pathname === child.path || location.pathname.startsWith(child.path + '/') ? 'text-accent' : 'text-muted-foreground'}`}
+                        >
+                          {child.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
               <div className="pt-4 space-y-3">
