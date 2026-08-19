@@ -1,5 +1,6 @@
 import { Layout } from '@/components/layout/Layout';
 import { HeroSection } from '@/components/home/HeroSection';
+import { SameDayAvailabilitySection } from '@/components/home/SameDayAvailabilitySection';
 import { HighlightsSection } from '@/components/home/HighlightsSection';
 import { PhilosophySection } from '@/components/home/PhilosophySection';
 import { LegacySection } from '@/components/home/LegacySection';
@@ -12,6 +13,7 @@ import { ServiceAreasSection } from '@/components/home/ServiceAreasSection';
 import { EmergencyBanner } from '@/components/home/EmergencyBanner';
 import { SEOHead } from '@/components/seo/SEOHead';
 
+
 const Index = () => {
   return (
     <Layout>
@@ -22,6 +24,7 @@ const Index = () => {
       />
       
       <HeroSection />
+      <SameDayAvailabilitySection />
       <HighlightsSection />
       <PhilosophySection />
       <LegacySection />
