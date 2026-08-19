@@ -6,11 +6,11 @@ export default function DentalFillings() {
   return (
     <ServicePageLayout
       title="Dental Fillings"
-      heroHeadline="Stop Cavities Early with Tooth-Colored Dental Fillings in Leominster, MA"
+      heroHeadline="Tooth-Colored Fillings That Stop Cavities Early"
       canonicalPath="/services/dental-fillings"
       metaDescription="Tooth-colored dental fillings at Kaya Dental in Leominster, MA. Natural-looking cavity treatment that preserves your smile. Schedule your appointment."
       heroSubtitle="Cavity Treatment"
-      heroDescription="Cavities are one of the most common dental problems, but they're also one of the easiest to treat when caught early. At Kaya Dental, we use tooth-colored composite fillings that blend seamlessly with your natural teeth while providing durable, long-lasting protection."
+      heroDescription="Cavities are one of the most common dental problems, but they're also one of the easiest to treat when caught early. At Kaya Dental in Leominster, MA, we use tooth-colored composite fillings that blend seamlessly with your natural teeth while providing durable, long-lasting protection."
       heroImage={heroImage}
       icon={Circle}
       detailedDescription={[

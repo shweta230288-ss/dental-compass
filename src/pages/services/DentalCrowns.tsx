@@ -6,11 +6,11 @@ export default function DentalCrowns() {
   return (
     <ServicePageLayout
       title="Dental Crowns"
-      heroHeadline="Restore Strength to Damaged Teeth with Dental Crowns in Leominster, MA"
+      heroHeadline="Dental Crowns That Restore Strength and Confidence"
       canonicalPath="/services/dental-crowns"
       metaDescription="Custom dental crowns at Kaya Dental in Leominster, MA. Restore damaged teeth with natural-looking, durable crowns. Schedule your consultation today."
       heroSubtitle="Restore & Protect"
-      heroDescription="Dental crowns are versatile restorations that can repair damaged teeth, protect weakened teeth, and improve your smile's appearance. At Kaya Dental, we create custom crowns that match your natural teeth perfectly for seamless, long-lasting results."
+      heroDescription="Dental crowns are versatile restorations that can repair damaged teeth, protect weakened teeth, and improve your smile's appearance. At Kaya Dental in Leominster, MA, we create custom crowns that match your natural teeth perfectly for seamless, long-lasting results."
       heroImage={heroImage}
       icon={Crown}
       detailedDescription={[

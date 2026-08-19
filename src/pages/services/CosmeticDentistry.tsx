@@ -6,11 +6,11 @@ export default function CosmeticDentistry() {
   return (
     <ServicePageLayout
       title="Cosmetic Dentistry"
-      heroHeadline="Smile with Confidence Again with Cosmetic Dentistry in Leominster, MA"
+      heroHeadline="Cosmetic Dentistry Designed So You Can Smile with Confidence"
       canonicalPath="/services/cosmetic-dentistry"
       metaDescription="Transform your smile with cosmetic dentistry at Kaya Dental in Leominster, MA. Veneers, whitening, bonding, and smile makeovers. Schedule your consultation."
       heroSubtitle="Smile Transformation"
-      heroDescription="Your smile is one of the first things people notice about you. At Kaya Dental, we offer a full range of cosmetic dentistry services designed to enhance your smile's appearance and boost your confidence. From subtle improvements to complete smile makeovers, we help you achieve the smile you've always wanted."
+      heroDescription="Your smile is one of the first things people notice about you. At Kaya Dental in Leominster, MA, we offer a full range of cosmetic dentistry services designed to enhance your smile's appearance and boost your confidence. From subtle improvements to complete smile makeovers, we help you achieve the smile you've always wanted."
       heroImage={heroImage}
       icon={Smile}
       detailedDescription={[

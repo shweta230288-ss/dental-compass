@@ -6,11 +6,11 @@ export default function DentalImplants() {
   return (
     <ServicePageLayout
       title="Dental Implants"
-      heroHeadline="Replace Missing Teeth for Good with Dental Implants in Leominster, MA"
+      heroHeadline="Dental Implants That Replace Missing Teeth for Good"
       canonicalPath="/services/dental-implants"
       metaDescription="Dental implants at Kaya Dental in Leominster, MA. Replace missing teeth with natural-looking, permanent solutions. Schedule your implant consultation today."
       heroSubtitle="Permanent Tooth Replacement"
-      heroDescription="Missing teeth affect far more than just your smile. They can change the way you eat, speak, and feel about yourself. At Kaya Dental, we offer state-of-the-art dental implants—one of the most advanced, reliable, and natural-looking solutions for replacing missing teeth."
+      heroDescription="Missing teeth affect far more than just your smile. They can change the way you eat, speak, and feel about yourself. At Kaya Dental in Leominster, MA, we offer state-of-the-art dental implants—one of the most advanced, reliable, and natural-looking solutions for replacing missing teeth."
       heroImage={heroImage}
       icon={Layers}
       detailedDescription={[

@@ -6,11 +6,11 @@ export default function Dentures() {
   return (
     <ServicePageLayout
       title="Dentures"
-      heroHeadline="Eat, Speak, and Smile Comfortably Again with Dentures in Leominster, MA"
+      heroHeadline="Custom Dentures That Let You Eat, Speak, and Smile Comfortably"
       canonicalPath="/services/dentures"
       metaDescription="Custom dentures at Kaya Dental in Leominster, MA. Full and partial dentures that look natural and fit comfortably. Restore your smile today."
       heroSubtitle="Replace Missing Teeth"
-      heroDescription="Missing multiple teeth or all of your teeth can significantly impact your quality of life. At Kaya Dental, we create custom dentures that restore your smile, improve your ability to eat and speak, and boost your confidence. Modern dentures are more comfortable and natural-looking than ever before."
+      heroDescription="Missing multiple teeth or all of your teeth can significantly impact your quality of life. At Kaya Dental in Leominster, MA, we create custom dentures that restore your smile, improve your ability to eat and speak, and boost your confidence. Modern dentures are more comfortable and natural-looking than ever before."
       heroImage={heroImage}
       icon={LayoutGrid}
       detailedDescription={[
