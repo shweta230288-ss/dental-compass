@@ -173,7 +173,7 @@ export default function Technology() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-primary rounded-2xl p-10 md:p-16 text-center"
+            className="bg-primary rounded-2xl p-10 md:p-16 text-center text-primary-foreground"
           >
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
               Experience the Difference

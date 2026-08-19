@@ -150,7 +150,7 @@ export default function Reviews() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center max-w-3xl mx-auto text-primary-foreground"
           >
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
               Ready to Experience the Difference?
