@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Star, Quote, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { SEOHead } from '@/components/seo/SEOHead';
+import { ReviewBadges } from '@/components/reviews/ReviewBadges';
 const reviews = [
   {
     name: 'Abenc78',
@@ -69,25 +70,8 @@ export default function Reviews() {
             <h1 className="font-serif text-4xl md:text-5xl font-bold mt-2 mb-6">
               What Our Patients Say
             </h1>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="flex items-center gap-2 bg-primary-foreground/10 rounded-xl px-4 py-3 border border-accent/50">
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                  ))}
-                </div>
-                <span className="text-xl font-bold">4.9</span>
-                <span className="text-primary-foreground/70 text-sm">Google</span>
-              </div>
-              <div className="flex items-center gap-2 bg-primary-foreground/10 rounded-xl px-4 py-3 border border-accent/50">
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                  ))}
-                </div>
-                <span className="text-xl font-bold">5.0</span>
-                <span className="text-primary-foreground/70 text-sm">Demandforce</span>
-              </div>
+            <div className="mb-6">
+              <ReviewBadges variant="light" size="lg" />
             </div>
             <p className="text-primary-foreground/80 text-lg">
               Over 700+ five-star reviews on{' '}
