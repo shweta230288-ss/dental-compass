@@ -6,110 +6,110 @@ export default function RootCanal() {
   return (
     <ServicePageLayout
       title="Root Canal Therapy"
-      heroHeadline="Root Canal Therapy That Ends Tooth Pain and Saves Your Natural Tooth"
+      heroHeadline="A Root Canal Is How We End Your Pain, Not Cause It"
       canonicalPath="/services/root-canal"
-      metaDescription="Gentle root canal treatment at Kaya Dental in Leominster, MA. Save your natural tooth and relieve pain with modern, comfortable endodontic care."
+      metaDescription="Gentle, comfortable root canal treatment at Kaya Dental in Leominster, MA, just off Route 2. Save your natural tooth and finally get relief from tooth pain."
       heroSubtitle="Save Your Natural Tooth"
-      heroDescription="Root canal therapy has an undeserved reputation for being painful, but modern techniques make the procedure comfortable and effective. At Kaya Dental in Leominster, MA, we use advanced technology to perform gentle root canals that relieve pain and save your natural tooth."
+      heroDescription="If someone mentions 'root canal' and your stomach drops, you're not alone — but the horror stories don't match modern dentistry. At Kaya Dental in Leominster, MA, we use gentle techniques and precise imaging so the procedure feels a lot like getting a filling, and it's what finally makes the pain stop."
       heroImage={heroImage}
       icon={Target}
       detailedDescription={[
         {
-          title: 'What Is a Root Canal?',
-          content: `A root canal is a procedure to treat infection or inflammation inside a tooth. Each tooth contains soft tissue called pulp, which includes nerves and blood vessels. When the pulp becomes infected due to decay, cracks, or injury, it can cause severe pain and lead to abscess if left untreated.
+          title: 'What\'s Actually Happening Inside Your Tooth',
+          content: `Deep inside each tooth is soft tissue called pulp, containing nerves and blood vessels. When decay, a crack, or an injury lets bacteria reach that pulp, it becomes infected or inflamed — which is usually what's causing your pain in the first place.
 
-During a root canal, we remove the infected pulp, clean and shape the inside of the tooth, then seal it to prevent future infection. The tooth is then restored with a crown to protect it and restore full function.`,
+A root canal simply removes that infected tissue, cleans and seals the space inside the tooth, and protects it with a crown. Rather than losing the tooth, you keep it, and the infection that was hurting you is gone for good.`,
         },
         {
-          title: 'Modern Root Canals Are Comfortable',
-          content: `Thanks to modern anesthesia, advanced instruments, and refined techniques, root canal treatment today is typically no more uncomfortable than getting a filling. In fact, most patients report that the procedure relieves the pain they were experiencing, not causes it.
+          title: 'Why the "Painful Root Canal" Reputation Is Outdated',
+          content: `Older techniques and less effective anesthesia gave root canals a bad name decades ago, but that's not the procedure we perform today. With modern numbing, precise CBCT 3D imaging to map your tooth's anatomy, and refined instruments, most patients say it feels similar to a routine filling.
 
-We take extra care to ensure your comfort throughout the procedure. If you're anxious about treatment, we can discuss options to help you feel more relaxed.`,
+We know some patients are anxious about needles or being in the chair, so we take extra time to make sure you're comfortable before we start and check in with you throughout. Dr. Kunal Dani and Dr. Amy Majzoub will walk you through every step so there are no surprises.`,
         },
       ]}
       benefits={[
-        'Relieves severe tooth pain',
-        'Saves your natural tooth',
-        'Prevents spread of infection',
-        'Maintains your natural smile',
-        'Comfortable with modern techniques',
-        'High success rate (95%+)',
-        'Preserves jawbone structure',
-        'Avoids more costly replacements',
+        'Ends severe tooth pain, often immediately',
+        'Saves your natural tooth instead of extracting it',
+        'Stops infection from spreading further',
+        'Keeps your smile and bite looking natural',
+        'Performed comfortably with modern anesthesia',
+        'Backed by precise CBCT 3D imaging',
+        'Protects your jawbone and neighboring teeth',
+        'Membership plan and financing available if you\'re uninsured',
       ]}
       whatToExpect={[
         {
-          title: 'Diagnosis and Anesthesia',
-          description: 'We take digital X-rays—and CBCT 3D imaging when needed—to see the exact extent of infection and root anatomy, then thoroughly numb the area so you\'ll be completely comfortable.',
+          title: 'A Careful Look and Complete Numbing',
+          description: 'We use digital X-rays and CBCT 3D imaging when needed to see exactly what\'s happening, then thoroughly numb the area so you feel calm, comfortable, and pain-free.',
         },
         {
-          title: 'Access and Cleaning',
-          description: 'We create a small opening in the tooth and carefully remove the infected pulp, then clean and shape the root canals.',
+          title: 'Gently Clearing the Infection',
+          description: 'We create a small opening, carefully remove the infected tissue, and clean and shape the space inside the tooth.',
         },
         {
-          title: 'Filling the Canals',
-          description: 'The cleaned canals are filled with a biocompatible material and sealed to prevent future infection.',
+          title: 'Sealing It Up',
+          description: 'The cleaned space is filled with a biocompatible material and sealed to keep infection from coming back.',
         },
         {
-          title: 'Crown Placement',
-          description: 'We place a custom dental crown to protect the treated tooth and restore its full strength and function.',
+          title: 'Protecting Your Tooth Long-Term',
+          description: 'We place a custom crown so your tooth is strong, comfortable, and ready for everyday use again.',
         },
       ]}
       additionalInfo={[
         {
           title: 'Signs You May Need a Root Canal',
           items: [
-            'Severe, persistent toothache',
-            'Sensitivity to hot or cold',
-            'Darkening of the tooth',
-            'Swelling in the gums',
-            'Pimple on the gums',
-            'Pain when chewing or biting',
+            'A toothache that won\'t let up',
+            'Sharp sensitivity to hot or cold',
+            'A tooth that\'s darkening',
+            'Swelling near the gum line',
+            'A small bump on the gums',
+            'Pain when chewing or biting down',
           ],
         },
         {
           title: 'Root Canal vs. Extraction',
           items: [
-            'Saves your natural tooth',
-            'Maintains natural bite',
-            'Preserves jawbone',
-            'Often less expensive overall',
-            'Avoids implant or bridge',
-            'Natural teeth function best',
+            'Keeps your natural tooth in place',
+            'Preserves your natural bite',
+            'Protects your jawbone over time',
+            'Often more affordable than replacement',
+            'Avoids the need for an implant or bridge',
+            'Your own tooth still works best',
           ],
         },
         {
-          title: 'After Your Root Canal',
+          title: 'Caring for Your Tooth Afterward',
           items: [
-            'Some tenderness is normal',
-            'Over-the-counter pain relief usually sufficient',
-            'Avoid chewing on that side initially',
-            'Return for crown placement',
-            'Care for it like natural teeth',
-            'Regular checkups important',
+            'Mild tenderness for a few days is normal',
+            'Over-the-counter pain relief is usually enough',
+            'Avoid chewing on that side until your crown is placed',
+            'Come back for your crown appointment',
+            'Brush and floss it like any other tooth',
+            'Keep up with regular checkups',
           ],
         },
       ]}
       faqs={[
         {
-          question: 'Is a root canal painful?',
-          answer: 'Modern root canals are performed with effective anesthesia and are typically no more uncomfortable than getting a filling. Most patients are relieved that the severe pain they were experiencing goes away after treatment.',
+          question: 'Is a root canal actually painful?',
+          answer: 'With modern anesthesia, most patients feel about the same as they would getting a filling — and many are relieved to find the toothache they came in with disappears. If you\'re nervous about needles or pain, tell our team; we\'ll make sure you\'re fully comfortable before we start. Call us with any questions ahead of your visit.',
         },
         {
-          question: 'How long does a root canal take?',
-          answer: 'Most root canals can be completed in one appointment lasting 60-90 minutes. Complex cases may require two visits. We\'ll provide a timeline based on your specific situation.',
+          question: 'How much does a root canal cost?',
+          answer: 'Cost depends on which tooth is involved and its condition, so we\'ll give you clear pricing before any treatment begins. If you\'re uninsured, we offer a membership plan plus Cherry and CareCredit financing to help make treatment manageable. Call our office and we can talk through your options.',
         },
         {
-          question: 'Why do I need a crown after a root canal?',
-          answer: 'A crown protects the treated tooth, which can become more brittle after the procedure. The crown restores the tooth\'s strength and appearance, helping it last for many years.',
+          question: 'Can I go back to work the same day?',
+          answer: 'Most patients return to work or normal activities right after their appointment, since local anesthesia wears off within a few hours. Some tenderness for a day or two is normal but usually doesn\'t stop daily activities. Let us know if your job requires anything specific and we\'ll plan around it.',
         },
         {
-          question: 'How long will my treated tooth last?',
-          answer: 'With proper care, a tooth treated with a root canal can last a lifetime. Regular brushing, flossing, and dental checkups are essential for long-term success.',
+          question: 'How long does recovery take?',
+          answer: 'Most people feel back to normal within a few days, with any mild soreness managed easily with over-the-counter pain relievers. Full healing happens gradually as your crown is placed and the tooth settles in. Call us if discomfort lingers or worsens so we can take a look.',
         },
         {
-          question: 'What happens if I don\'t get a root canal?',
-          answer: 'Without treatment, the infection can spread to surrounding teeth and bone, cause an abscess, and eventually lead to tooth loss. Untreated dental infections can also affect your overall health.',
+          question: 'Can I get in the same day if I\'m in pain?',
+          answer: 'We do our best to see patients in pain as quickly as possible, often the same day. Call us right away and we\'ll get you on the schedule and provide guidance for managing discomfort until your visit.',
         },
       ]}
       relatedServices={[

@@ -6,110 +6,110 @@ export default function EmergencyDentistry() {
   return (
     <ServicePageLayout
       title="Emergency Dentistry"
-      heroHeadline="Emergency Dental Care With Fast Relief When You Need It Most"
+      heroHeadline="In Pain Right Now? We'll Get You Out of It Today"
       canonicalPath="/services/emergency-dentistry"
-      metaDescription="Same-day emergency dental care at Kaya Dental in Leominster, MA. Toothache, broken tooth, knocked-out tooth—we're here when you need us."
+      metaDescription="Same-day emergency dental care at Kaya Dental in Leominster, MA, just off Route 2. Toothache, broken tooth, or knocked-out tooth—call now and we'll take care of you."
       heroSubtitle="Urgent Dental Care"
-      heroDescription="Dental emergencies don't wait for convenient times. At Kaya Dental in Leominster, MA, we reserve time in our schedule for same-day emergency appointments because we understand that dental pain and injuries need immediate attention. When you're in pain, call us—we're here to help."
+      heroDescription="You don't have to keep hurting until your regular appointment. Kaya Dental in Leominster, MA holds space in our schedule every day for patients in pain, so if you're dealing with a toothache, break, or injury, call us now — we'll see you as quickly as we can and walk you through what to do until then."
       heroImage={heroImage}
       icon={AlertTriangle}
       detailedDescription={[
         {
-          title: 'What Is a Dental Emergency?',
-          content: `A dental emergency is any situation involving your teeth, gums, or mouth that requires immediate attention. This includes severe pain that disrupts your daily activities, trauma to teeth or mouth, uncontrolled bleeding, swelling that affects breathing or swallowing, or infection with fever.
+          title: 'Not Sure If It\'s an Emergency? Call Anyway.',
+          content: `You don't need a medical degree to know something is wrong — that's our job. If you're in pain that won't let up, a tooth got knocked loose or out, you're swollen, bleeding, or just feel like something isn't right, pick up the phone. We'll ask a few quick questions, help you figure out what's going on, and get you in as soon as we possibly can.
 
-If you're unsure whether your situation is an emergency, call us. Our team will help you determine the best course of action and get you the care you need as quickly as possible.`,
+There's no judgment here, whether it's been years since your last cleaning or this came out of nowhere. Our Leominster team, led by Dr. Kunal Dani and Dr. Amy Majzoub, has treated every kind of dental emergency and we're ready for yours.`,
         },
         {
-          title: 'Prompt Care for Better Outcomes',
-          content: `Quick action during a dental emergency can mean the difference between saving and losing a tooth. For knocked-out teeth, reimplantation is most successful within 30-60 minutes. For infections, prompt treatment prevents spread and serious complications.
+          title: 'Fast, Precise Care That Protects Your Tooth',
+          content: `Time matters in a dental emergency, but so does getting the diagnosis right the first time. That's why we use CBCT 3D imaging to see exactly what's happening beneath the surface — the crack, the infection, the position of a loosened tooth — so we can treat it correctly instead of guessing.
 
-We're equipped to handle a wide range of dental emergencies, from severe toothaches and broken teeth to dental abscesses and trauma injuries. Our goal is to relieve your pain and address the underlying problem quickly.`,
+Our approach is always to save your natural tooth whenever possible. Whether it's a severe toothache, a broken tooth, or a knocked-out tooth, our goal is simple: stop the pain fast and fix the problem for good.`,
         },
       ]}
       benefits={[
-        'Same-day emergency appointments',
-        'Quick pain relief',
-        'Advanced diagnostic technology',
-        'Experienced emergency care',
-        'Comprehensive treatment options',
-        'After-hours guidance available',
-        'Compassionate, calm care',
-        'Follow-up care coordination',
+        'Same-day emergency appointments whenever possible',
+        'Fast, effective pain relief',
+        'CBCT 3D imaging for an accurate diagnosis',
+        'Calm, judgment-free care from Dr. Dani and Dr. Majzoub',
+        'Treatment options explained in plain language',
+        'Guidance over the phone before your visit',
+        'Gentle care for anxious and nervous patients',
+        'Membership plan and financing options for uninsured patients',
       ]}
       whatToExpect={[
         {
-          title: 'Call Us Immediately',
-          description: 'When you call with an emergency, we\'ll prioritize your case and get you in as soon as possible.',
+          title: 'Call Us First',
+          description: 'Tell us what happened. We\'ll give you immediate advice, calm you down, and get you on the schedule as soon as possible, often the same day.',
         },
         {
-          title: 'Rapid Assessment',
-          description: 'We quickly evaluate your condition, take any necessary X-rays, and determine the best treatment approach.',
+          title: 'A Gentle, Thorough Look',
+          description: 'We\'ll examine the area and use digital or CBCT imaging when needed so we understand exactly what\'s going on before we touch a thing.',
         },
         {
-          title: 'Pain Relief and Treatment',
-          description: 'Our first priority is relieving your pain. We then address the underlying cause of the emergency.',
+          title: 'Relief Comes First',
+          description: 'Our first job is getting you comfortable. Once your pain is under control, we\'ll explain your options and treat the underlying cause.',
         },
         {
-          title: 'Follow-Up Care',
-          description: 'After emergency treatment, we schedule follow-up appointments to ensure complete healing and long-term solutions.',
+          title: 'A Plan for What\'s Next',
+          description: 'We\'ll make sure you know how to care for yourself at home and schedule any follow-up so this doesn\'t happen again.',
         },
       ]}
       additionalInfo={[
         {
-          title: 'Common Dental Emergencies',
+          title: 'Common Reasons Patients Call Us',
           items: [
-            'Severe toothache',
-            'Knocked-out tooth',
-            'Cracked or broken tooth',
-            'Lost filling or crown',
-            'Dental abscess or infection',
-            'Injury to gums or mouth',
+            'A toothache that won\'t quit',
+            'A knocked-out or loosened tooth',
+            'A cracked or broken tooth',
+            'A lost filling or crown',
+            'Swelling or a suspected infection',
+            'An injury to the gums, lips, or mouth',
           ],
         },
         {
-          title: 'While You Wait',
+          title: 'What to Do Until You Reach Us',
           items: [
-            'Rinse with warm salt water',
-            'Apply cold compress for swelling',
-            'Take over-the-counter pain reliever',
-            'Save any tooth fragments',
-            'Keep knocked-out tooth moist',
-            'Avoid aspirin on gums',
+            'Rinse gently with warm salt water',
+            'Apply a cold compress to any swelling',
+            'Take an over-the-counter pain reliever as directed',
+            'Save any broken tooth pieces',
+            'Keep a knocked-out tooth moist in milk',
+            'Avoid placing aspirin directly on the gums',
           ],
         },
         {
-          title: 'When to Go to the ER',
+          title: 'When to Head to the ER Instead',
           items: [
-            'Uncontrolled bleeding',
-            'Difficulty breathing or swallowing',
-            'Severe facial swelling',
-            'Jaw fracture',
-            'High fever with swelling',
+            'Bleeding that won\'t stop',
+            'Trouble breathing or swallowing',
+            'Significant facial swelling',
+            'A suspected jaw fracture',
+            'Fever along with swelling',
             'Facial trauma with other injuries',
           ],
         },
       ]}
       faqs={[
         {
-          question: 'What should I do if a tooth is knocked out?',
-          answer: 'Handle the tooth by the crown (not the root), gently rinse if dirty, and try to place it back in the socket. If that\'s not possible, keep it moist in milk or saliva and get to us within 30-60 minutes for the best chance of saving it.',
+          question: 'Can you really see me today?',
+          answer: 'We reserve time in our schedule specifically for patients in pain, so a same-day visit is possible in most cases. Call us as soon as you notice a problem and we\'ll tell you exactly when we can fit you in.',
         },
         {
-          question: 'How do I manage severe tooth pain at home?',
-          answer: 'Rinse with warm salt water, take over-the-counter pain medication as directed, apply a cold compress to reduce swelling, and avoid hot, cold, or sweet foods. Then call us for an emergency appointment.',
+          question: 'Will treatment be painful?',
+          answer: 'Our priority in an emergency is comfort, not just repair — we use effective numbing and gentle techniques so you\'re not white-knuckling through the visit. Most patients tell us the relief starts as soon as we begin. If you\'re especially nervous, just tell our team and we\'ll talk through comfort options together.',
         },
         {
-          question: 'What if I have a dental emergency after hours?',
-          answer: 'Call our office and follow the instructions for after-hours emergencies. We provide guidance for immediate care and can often arrange an early morning appointment.',
+          question: 'What if I don\'t have insurance or can\'t afford it right now?',
+          answer: 'We never want cost to stand between you and getting out of pain. We offer a membership plan for uninsured patients along with Cherry and CareCredit financing, so we can find a way to get you treated. Call us and we\'ll talk through the options before you come in.',
         },
         {
-          question: 'Is a lost filling or crown an emergency?',
-          answer: 'While not always as urgent as severe pain or trauma, a lost filling or crown should be addressed quickly to prevent further damage or sensitivity. Call us to schedule a prompt appointment.',
+          question: 'Will I be able to go back to work or school afterward?',
+          answer: 'Many emergency visits, like treating a toothache or repairing a chip, don\'t require any downtime at all. If your treatment does call for a bit of rest, we\'ll let you know exactly what to expect so you can plan accordingly. Just ask us during your visit and we\'ll give you a straight answer.',
         },
         {
-          question: 'How can I prevent dental emergencies?',
-          answer: 'Wear a mouthguard during sports, avoid chewing ice or hard objects, don\'t use teeth as tools, maintain good oral hygiene, and keep regular dental appointments to catch problems early.',
+          question: 'What if my emergency happens after hours?',
+          answer: 'Call our office anyway — our voicemail includes guidance for urgent situations, and we\'ll help you decide whether it can wait until morning or needs immediate attention. We do our best to fit urgent patients in first thing the next day.',
         },
       ]}
       relatedServices={[

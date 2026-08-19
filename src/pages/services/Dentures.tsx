@@ -8,108 +8,105 @@ export default function Dentures() {
       title="Dentures"
       heroHeadline="Custom Dentures That Let You Eat, Speak, and Smile Comfortably"
       canonicalPath="/services/dentures"
-      metaDescription="Custom dentures at Kaya Dental in Leominster, MA. Full and partial dentures that look natural and fit comfortably. Restore your smile today."
+      metaDescription="Comfortable, natural-looking custom dentures at Kaya Dental in Leominster, MA. Full, partial, and implant-supported options. Call to schedule your consultation."
       heroSubtitle="Replace Missing Teeth"
-      heroDescription="Missing multiple teeth or all of your teeth can significantly impact your quality of life. At Kaya Dental in Leominster, MA, we create custom dentures that restore your smile, improve your ability to eat and speak, and boost your confidence. Modern dentures are more comfortable and natural-looking than ever before."
+      heroDescription="Missing several teeth — or all of them — can make everyday things like eating dinner out or laughing in photos feel stressful. At Kaya Dental in Leominster, MA, we design custom dentures that fit comfortably and look like your own teeth, so you can get back to living without thinking about your smile."
       heroImage={heroImage}
       icon={LayoutGrid}
       detailedDescription={[
         {
-          title: 'Types of Dentures We Offer',
-          content: `We offer several types of dentures to meet different needs. Full dentures replace all teeth in the upper or lower arch and rest on the gums. Partial dentures replace some missing teeth and attach to your remaining natural teeth.
+          title: 'Dentures Built Around Your Life',
+          content: `Everyone's situation is different, so we offer several paths forward. Full dentures replace an entire arch of teeth and rest gently on your gums. Partial dentures fill in gaps while working with the healthy teeth you still have.
 
-For patients seeking maximum stability, implant-supported dentures anchor to dental implants placed in the jawbone. These "snap-on" dentures won't slip or shift, allowing you to eat, speak, and smile with complete confidence.`,
+If stability matters most to you — no worrying about slipping while you eat or talk — implant-supported dentures anchor securely so you can bite into an apple or laugh out loud without a second thought. Dr. Kunal Dani and Dr. Amy Majzoub will help you decide what fits your mouth, lifestyle, and budget.`,
         },
         {
-          title: 'Modern Denture Technology',
-          content: `Today's dentures are crafted from advanced materials that look remarkably natural. The teeth are designed to match your facial features, skin tone, and remaining natural teeth for a seamless appearance.
+          title: 'Comfortable, Natural-Looking, and Made for You',
+          content: `Today's dentures look far more lifelike than what you may remember from years past. We shade and shape the teeth to suit your face, and our digital scanning technology helps us get a precise, comfortable fit from the start — cutting down on the sore spots and adjustments that used to be common.
 
-We take careful measurements and impressions to ensure your dentures fit comfortably. Our digital technology helps us create dentures with precise fit and natural aesthetics that restore both function and appearance.`,
+There's an adjustment period with any new denture, and that's normal — we'll be with you through it, making small tweaks until eating and speaking feel natural again.`,
         },
       ]}
       benefits={[
-        'Restore ability to eat and chew',
-        'Improve speech clarity',
-        'Support facial structure',
-        'Boost confidence and self-esteem',
-        'Custom-made for natural appearance',
-        'Multiple options available',
-        'Implant-supported options for stability',
-        'Affordable tooth replacement',
+        'Eat the foods you\'ve been avoiding',
+        'Speak clearly without worrying about slipping',
+        'Support your natural facial shape',
+        'Feel confident smiling and laughing again',
+        'Custom shading and shaping for a natural look',
+        'Implant-supported options if stability matters most to you',
+        'A plan that fits your budget, including financing options',
+        'Ongoing adjustments so your fit stays comfortable',
       ]}
       whatToExpect={[
         {
-          title: 'Consultation and Planning',
-          description: 'We examine your mouth, discuss your goals, and determine the best type of denture for your needs.',
+          title: 'A Conversation About Your Goals',
+          description: 'We\'ll examine your mouth and talk honestly about what matters most to you — comfort, stability, cost — before recommending a path forward.',
         },
         {
-          title: 'Impressions and Measurements',
-          description: 'We take detailed impressions and measurements to ensure your dentures fit perfectly and look natural.',
+          title: 'Precise Impressions',
+          description: 'We take careful measurements and impressions so your dentures are shaped specifically for your mouth, not a generic mold.',
         },
         {
-          title: 'Try-In Appointment',
-          description: 'You\'ll try a wax model of your dentures so we can make adjustments before the final version is made.',
+          title: 'A Trial Fit You Can See and Feel',
+          description: 'You\'ll try on a preview version so we can fine-tune fit and appearance together before anything is finalized.',
         },
         {
-          title: 'Final Fitting',
-          description: 'Your completed dentures are carefully fitted and adjusted for optimal comfort and function.',
+          title: 'Your Final, Comfortable Fit',
+          description: 'We carefully fit your finished dentures and see you again afterward to make any small adjustments as you settle in.',
         },
       ]}
       additionalInfo={[
         {
           title: 'Full Dentures',
           items: [
-            'Replace all teeth in an arch',
-            'Rest on the gums',
-            'Custom-fitted for comfort',
-            'Natural-looking teeth and gums',
-            'Removable for cleaning',
-            'Periodic adjustments may be needed',
+            'Replace a complete upper or lower arch',
+            'Rest comfortably on the gums',
+            'Custom-fitted to your mouth',
+            'Natural-looking teeth and gum tone',
+            'Simple to remove and clean',
           ],
         },
         {
           title: 'Partial Dentures',
           items: [
-            'Replace some missing teeth',
-            'Attach to remaining teeth',
-            'Prevent remaining teeth from shifting',
-            'Removable for cleaning',
-            'Can be upgraded to full dentures',
-            'Metal or acrylic frameworks',
+            'Fill in gaps from missing teeth',
+            'Work with your remaining natural teeth',
+            'Keep other teeth from shifting out of place',
+            'Removable for easy cleaning',
+            'Can be upgraded later if needed',
           ],
         },
         {
           title: 'Implant-Supported Dentures',
           items: [
-            'Maximum stability and comfort',
-            'No slipping or sliding',
-            'Better chewing ability',
-            'Preserve jawbone',
-            'Can be fixed or removable',
-            'Long-lasting solution',
+            'The most stable, secure option',
+            'No slipping while eating or speaking',
+            'Helps protect your jawbone over time',
+            'Available as fixed or removable',
+            'A long-term investment in comfort',
           ],
         },
       ]}
       faqs={[
         {
-          question: 'How long does it take to get dentures?',
-          answer: 'The denture process typically takes several weeks, including consultations, impressions, try-ins, and adjustments. If extractions are needed, additional healing time is required.',
+          question: 'How long before I have my new dentures?',
+          answer: 'The process usually spans a few visits over several weeks so we can take impressions, check the fit, and make refinements together. If any teeth need to come out first, we\'ll build in time to heal comfortably. Call our office and we\'ll map out a timeline that works for you.',
         },
         {
-          question: 'Will dentures affect how I eat and speak?',
-          answer: 'There\'s an adjustment period when you first get dentures. With practice, most patients adapt within a few weeks and can eat and speak normally. We provide guidance to help you adjust.',
+          question: 'Will it feel strange to eat and talk with dentures?',
+          answer: 'It\'s normal to notice an adjustment period at first, but most patients feel comfortable within a few weeks of everyday practice. We\'ll give you tips to speed up that process and check in to make sure the fit feels right. If something feels off longer than expected, just give us a call.',
         },
         {
-          question: 'How do I care for my dentures?',
-          answer: 'Remove and rinse dentures after eating, brush them daily with a denture brush and cleanser, and soak them overnight. Also brush your gums, tongue, and palate daily, and visit us for regular checkups.',
+          question: 'What do dentures cost, and are there payment options?',
+          answer: 'Cost depends on the type of denture and any preparation your mouth needs, and we\'ll go over pricing clearly before you commit to anything. Our membership plan and Cherry/CareCredit financing are both available if you\'re uninsured or want to spread out payments. Ask our team about what fits your situation.',
         },
         {
-          question: 'How long do dentures last?',
-          answer: 'With proper care, dentures typically last 5-10 years. However, your mouth changes over time, so dentures may need relining or replacement to maintain a good fit.',
+          question: 'How do I take care of my dentures?',
+          answer: 'Rinse them after eating, brush them daily with a denture-specific cleanser, and give your gums and tongue a gentle brushing too. Keeping up with regular checkups helps us catch fit changes early. We\'re happy to walk you through a simple daily routine at your visit.',
         },
         {
-          question: 'What are the alternatives to dentures?',
-          answer: 'Alternatives include dental implants (for individual teeth) or implant-supported dentures (for multiple teeth). During your consultation, we\'ll discuss all options to help you make the best choice.',
+          question: 'Are dental implants a better option for me than dentures?',
+          answer: 'It depends on your bone health, budget, and how much stability matters to you — there\'s no single right answer for everyone. Some patients choose implant-supported dentures for extra security, while others do very well with traditional dentures. Come in for a consultation and we\'ll help you decide honestly.',
         },
       ]}
       relatedServices={[

@@ -8,108 +8,105 @@ export default function DentalFillings() {
       title="Dental Fillings"
       heroHeadline="Tooth-Colored Fillings That Stop Cavities Early"
       canonicalPath="/services/dental-fillings"
-      metaDescription="Tooth-colored dental fillings at Kaya Dental in Leominster, MA. Natural-looking cavity treatment that preserves your smile. Schedule your appointment."
+      metaDescription="Comfortable, tooth-colored fillings at Kaya Dental in Leominster, MA. Gentle cavity care that blends into your smile. Call our office to schedule."
       heroSubtitle="Cavity Treatment"
-      heroDescription="Cavities are one of the most common dental problems, but they're also one of the easiest to treat when caught early. At Kaya Dental in Leominster, MA, we use tooth-colored composite fillings that blend seamlessly with your natural teeth while providing durable, long-lasting protection."
+      heroDescription="A little tooth sensitivity or a dark spot doesn't have to turn into a bigger problem. At Kaya Dental in Leominster, MA, we treat cavities early with tooth-colored composite fillings that blend right into your smile — quick, comfortable, and usually done in one visit."
       heroImage={heroImage}
       icon={Circle}
       detailedDescription={[
         {
-          title: 'What Are Dental Fillings?',
-          content: `Dental fillings are restorations used to repair teeth damaged by decay (cavities). When bacteria in your mouth produce acids that erode tooth enamel, a cavity forms. Left untreated, cavities can grow larger and cause pain, infection, or even tooth loss.
+          title: 'Catching Cavities Before They Grow',
+          content: `A cavity starts small — a little sensitivity to sweets or cold, maybe a spot you can see in the mirror. Left alone, it can grow and eventually cause real pain or infection. Treated early with a filling, it's a simple, low-stress fix.
 
-Fillings restore the tooth's shape, function, and integrity while preventing further decay. At Kaya Dental, we primarily use composite (tooth-colored) fillings that match your natural tooth color for an invisible repair.`,
+At Kaya Dental, we use composite (tooth-colored) fillings almost exclusively. They bond directly to your tooth, which lets us keep more of your natural, healthy structure instead of removing extra tooth the way older techniques required.`,
         },
         {
-          title: 'Tooth-Colored Composite Fillings',
-          content: `Unlike older amalgam (silver) fillings, composite fillings are made of a tooth-colored resin that blends naturally with your teeth. They bond directly to the tooth structure, which often allows us to preserve more of your natural tooth.
+          title: 'Fillings You Won\'t Even Notice',
+          content: `Unlike the dark metal fillings of the past, composite fillings are shaded to match your tooth so the repair disappears into your smile. They're free of mercury and hold up well to everyday chewing on both front and back teeth.
 
-Composite fillings are mercury-free, durable, and provide an excellent seal against further decay. They're suitable for both front and back teeth and can also be used to repair chipped or worn teeth.`,
+If you've been avoiding a checkup because of old memories of the drill, know that our approach today is gentler and faster — most patients are surprised how easy the appointment turns out to be. Give us a call and let's get it looked at.`,
         },
       ]}
       benefits={[
-        'Matches your natural tooth color',
-        'Preserves more tooth structure',
-        'Mercury-free and biocompatible',
-        'Bonds strongly to the tooth',
-        'Durable and long-lasting',
-        'Can repair chips and cracks too',
-        'Single-visit treatment',
-        'Minimal post-treatment sensitivity',
+        'Blends naturally into your smile — no dark spots',
+        'Preserves more of your healthy, natural tooth',
+        'Mercury-free and gentle on your body',
+        'Bonds securely so it holds up to daily use',
+        'Usually finished in a single, quick visit',
+        'Stops small cavities before they turn into bigger problems',
+        'Minimal soreness afterward',
+        'Affordable option, with financing available if needed',
       ]}
       whatToExpect={[
         {
-          title: 'Anesthesia',
-          description: 'We gently numb the area around the affected tooth so you won\'t feel any discomfort during the procedure.',
+          title: 'Getting You Numb and Comfortable',
+          description: 'We gently numb the area first, so you\'re relaxed and shouldn\'t feel anything during treatment.',
         },
         {
-          title: 'Decay Removal',
-          description: 'We carefully remove the decayed portion of the tooth, preserving as much healthy tooth structure as possible.',
+          title: 'Clearing Away the Decay',
+          description: 'We carefully remove just the decayed part of the tooth, keeping as much of your healthy structure as possible.',
         },
         {
-          title: 'Filling Placement',
-          description: 'The composite material is applied in layers, with each layer hardened using a special curing light.',
+          title: 'Filling and Bonding',
+          description: 'The tooth-colored material is layered in and set with a curing light, bonding tightly to your tooth.',
         },
         {
-          title: 'Shaping and Polishing',
-          description: 'We shape and polish the filling to match your natural bite and ensure a comfortable, natural feel.',
+          title: 'A Bite That Feels Right',
+          description: 'We shape and polish the filling so it feels smooth and natural when you bite down — no rough edges.',
         },
       ]}
       additionalInfo={[
         {
-          title: 'Signs You May Need a Filling',
+          title: 'Signs Worth Getting Checked',
           items: [
-            'Toothache or sensitivity',
-            'Visible holes in teeth',
-            'Dark spots on teeth',
-            'Pain when biting or chewing',
-            'Food getting stuck in teeth',
-            'Rough or sharp tooth edges',
+            'A twinge with sweets, hot, or cold',
+            'A visible dark spot or small hole',
+            'Discomfort when you bite down',
+            'Food that keeps catching in one spot',
+            'A rough or sharp edge on a tooth',
           ],
         },
         {
-          title: 'Composite vs. Amalgam',
+          title: 'Why We Choose Composite',
           items: [
-            'Composite: Tooth-colored',
-            'Composite: Mercury-free',
-            'Composite: Bonds to tooth',
-            'Composite: More conservative',
-            'Amalgam: Silver appearance',
-            'We recommend composite fillings',
+            'Matches your natural tooth color',
+            'Free of mercury',
+            'Bonds directly to your tooth',
+            'Lets us keep more healthy structure',
+            'A conservative, tooth-preserving choice',
           ],
         },
         {
-          title: 'Caring for Your Filling',
+          title: 'Taking Care of Your Filling',
           items: [
-            'Wait until numbness wears off to eat',
-            'Brush and floss normally',
-            'Avoid very hard foods',
-            'Report any sensitivity',
-            'Keep regular dental appointments',
-            'Fillings can last many years',
+            'Wait until numbness fades before eating',
+            'Brush and floss as usual',
+            'Go easy on very hard or sticky foods',
+            'Let us know if anything feels off',
+            'Keep up with your regular visits',
           ],
         },
       ]}
       faqs={[
         {
-          question: 'Do fillings hurt?',
-          answer: 'The procedure is performed with local anesthesia, so you shouldn\'t feel pain during treatment. You may experience some sensitivity for a few days afterward, which typically resolves on its own.',
+          question: 'Will a filling hurt?',
+          answer: 'You shouldn\'t feel pain during the procedure since we numb the area completely beforehand. Some patients notice mild sensitivity for a day or two afterward, which fades on its own. If dental anxiety has kept you away, tell us — we\'ll take things at your pace, and you can always call ahead to talk it through.',
         },
         {
-          question: 'How long do fillings last?',
-          answer: 'Composite fillings typically last 5-10 years or longer with proper care. Factors affecting longevity include the size and location of the filling, your bite, and your oral hygiene habits.',
+          question: 'How long will a filling last?',
+          answer: 'A well-placed composite filling typically lasts many years, especially with good home care and regular checkups. How long it lasts depends a bit on where it is and your bite. Come see us for a checkup and we can tell you how yours is holding up.',
         },
         {
-          question: 'Can I replace my old silver fillings?',
-          answer: 'Yes! Many patients choose to replace their old amalgam fillings with tooth-colored composites for aesthetic reasons. We can evaluate your existing fillings and discuss replacement options.',
+          question: 'Can I get my old silver fillings replaced?',
+          answer: 'Yes — many patients choose to swap old dark fillings for tooth-colored ones for a more natural look. We\'ll take a look and let you know if it makes sense for your teeth. Call our Leominster office to set up an evaluation.',
         },
         {
-          question: 'How do I prevent cavities?',
-          answer: 'Prevent cavities by brushing twice daily with fluoride toothpaste, flossing daily, limiting sugary foods and drinks, and visiting us regularly for checkups and cleanings.',
+          question: 'What does a filling cost, and what if I don\'t have insurance?',
+          answer: 'Fillings are one of the more affordable dental treatments, and we\'ll always share clear pricing before we begin. If you\'re uninsured, our membership plan or Cherry/CareCredit financing can help make it manageable. Just ask our team when you call.',
         },
         {
-          question: 'What if my cavity is too large for a filling?',
-          answer: 'Large cavities may require alternative treatments such as dental crowns or onlays. During your exam, we\'ll recommend the best option based on the extent of damage and remaining tooth structure.',
+          question: 'What if the cavity is too big for a simple filling?',
+          answer: 'If decay is more extensive, a crown or other restoration may serve you better long-term, and we\'ll explain exactly why if that\'s the case. We\'ll never push you toward more treatment than you actually need. Schedule a visit and we\'ll give you an honest recommendation.',
         },
       ]}
       relatedServices={[
