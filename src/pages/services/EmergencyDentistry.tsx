@@ -10,7 +10,7 @@ export default function EmergencyDentistry() {
       canonicalPath="/services/emergency-dentistry"
       metaDescription="Same-day emergency dental care at Kaya Dental in Leominster, MA. Toothache, broken tooth, knocked-out tooth—we're here when you need us."
       heroSubtitle="Urgent Dental Care"
-      heroDescription="Dental emergencies don't wait for convenient times. At Kaya Dental, we reserve time in our schedule for same-day emergency appointments because we understand that dental pain and injuries need immediate attention. When you're in pain, call us—we're here to help."
+      heroDescription="Dental emergencies don't wait for convenient times. At Kaya Dental in Leominster, MA, we reserve time in our schedule for same-day emergency appointments because we understand that dental pain and injuries need immediate attention. When you're in pain, call us—we're here to help."
       heroImage={heroImage}
       icon={AlertTriangle}
       detailedDescription={[

@@ -10,7 +10,7 @@ export default function ExamCleaning() {
       canonicalPath="/services/exam-cleaning"
       metaDescription="Professional dental exams and cleanings at Kaya Dental in Leominster, MA. Preventive care to maintain a healthy smile. Schedule your appointment today."
       heroSubtitle="Preventive Care"
-      heroDescription="Regular dental exams and professional cleanings are the foundation of a healthy smile. At Kaya Dental, we use advanced technology to detect problems early, remove harmful plaque and tartar, and help you maintain optimal oral health between visits."
+      heroDescription="Regular dental exams and professional cleanings are the foundation of a healthy smile. At Kaya Dental in Leominster, MA, we use advanced technology to detect problems early, remove harmful plaque and tartar, and help you maintain optimal oral health between visits."
       heroImage={heroImage}
       icon={ClipboardCheck}
       detailedDescription={[

@@ -10,7 +10,7 @@ export default function GeneralDentistry() {
       canonicalPath="/services/general-dentistry"
       metaDescription="Comprehensive general dentistry services at Kaya Dental in Leominster, MA. From routine checkups to restorative care, we keep your smile healthy."
       heroSubtitle="Comprehensive Dental Care"
-      heroDescription="General dentistry forms the foundation of a healthy smile. At Kaya Dental, we provide comprehensive care for patients of all ages, from routine cleanings and exams to restorative treatments that keep your teeth and gums healthy for life."
+      heroDescription="General dentistry forms the foundation of a healthy smile. At Kaya Dental in Leominster, MA, we provide comprehensive care for patients of all ages, from routine cleanings and exams to restorative treatments that keep your teeth and gums healthy for life."
       heroImage={heroImage}
       icon={Stethoscope}
       detailedDescription={[
