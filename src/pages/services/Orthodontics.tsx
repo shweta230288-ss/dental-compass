@@ -12,6 +12,7 @@ export default function Orthodontics() {
       metaDescription="Orthodontic care at Kaya Dental in Leominster, MA. Invisalign and orthodontic guidance for kids, teens, and adults, with digital treatment planning. Call to schedule a consultation."
       heroSubtitle="Straight Teeth, Healthier Smile"
       heroDescription="A straighter smile isn't just about appearance, it's about a bite that feels right and teeth that are actually easier to keep healthy. At Kaya Dental in Leominster, MA, we guide families throughout Lunenburg, Lancaster, and Westminster through orthodontic options, including Invisalign, at whatever age they're ready to start."
+      introDescription="A misaligned bite or crooked teeth can make cleaning harder and leave you feeling self-conscious. We evaluate kids, teens, and adults in Leominster and recommend the right orthodontic path, often with Invisalign, for a healthier, more confident smile."
       heroImage={heroImage}
       icon={Ruler}
       detailedDescription={[

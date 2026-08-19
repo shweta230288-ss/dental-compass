@@ -12,6 +12,7 @@ export default function DentalImplants() {
       metaDescription="Natural-looking, permanent dental implants at Kaya Dental in Leominster, MA. Precise CBCT 3D planning and a gentle, conservative approach. Call to schedule your consultation."
       heroSubtitle="Permanent Tooth Replacement"
       heroDescription="A missing tooth can quietly change how you eat, speak, and smile in photos. At Kaya Dental in Leominster, MA, Dr. Kunal Dani and Dr. Amy Majzoub use precise CBCT 3D imaging to plan implants that look, feel, and function like your own teeth — so you can stop thinking about the gap and get back to your life."
+      introDescription="A missing tooth can slowly change your bite, your face, and your confidence. Our Leominster implant consultations use 3D imaging to plan a lasting replacement that looks and functions like a real tooth."
       heroImage={heroImage}
       icon={Layers}
       detailedDescription={[

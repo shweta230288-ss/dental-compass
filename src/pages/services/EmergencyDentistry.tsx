@@ -11,6 +11,7 @@ export default function EmergencyDentistry() {
       metaDescription="Same-day emergency dental care at Kaya Dental in Leominster, MA, just off Route 2. Toothache, broken tooth, or knocked-out tooth—call now and we'll take care of you."
       heroSubtitle="Urgent Dental Care"
       heroDescription="You don't have to keep hurting until your regular appointment. Kaya Dental in Leominster, MA holds space in our schedule every day for patients in pain, so if you're dealing with a toothache, break, or injury, call us now — we'll see you as quickly as we can and walk you through what to do until then."
+      introDescription="Dental pain does not wait for a convenient time, and neither should relief. We hold same-day space in our Leominster schedule for patients dealing with toothaches, broken teeth, and injuries, so you can get out of pain fast."
       heroImage={heroImage}
       icon={AlertTriangle}
       detailedDescription={[

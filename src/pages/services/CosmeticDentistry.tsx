@@ -12,6 +12,7 @@ export default function CosmeticDentistry() {
       metaDescription="Love your smile again with cosmetic dentistry at Kaya Dental in Leominster, MA. Veneers, whitening, bonding, and smile makeovers from Dr. Kunal Dani and Dr. Amy Majzoub. Call to schedule your consultation."
       heroSubtitle="Smile Transformation"
       heroDescription="Maybe you cover your mouth when you laugh, avoid photos, or feel like your smile doesn't match how confident you feel inside. At Kaya Dental in Leominster, MA, we help patients from Lunenburg, Lancaster, and Gardner get a smile they're genuinely excited to show off, with a natural look, never an overdone one."
+      introDescription="If you find yourself hiding your smile in photos or covering your mouth when you laugh, you are not alone. Our Leominster cosmetic consultations are designed to understand what bothers you and create a natural-looking plan that fits your goals and budget."
       heroImage={heroImage}
       icon={Smile}
       detailedDescription={[
