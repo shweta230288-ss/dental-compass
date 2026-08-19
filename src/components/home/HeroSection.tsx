@@ -100,18 +100,9 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 items-center"
+            className="flex flex-col sm:flex-row gap-4 items-start"
           >
-            <Button
-              size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground text-base px-8 w-full sm:w-auto"
-              asChild
-            >
-              <a href="tel:978-534-4000">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now
-              </a>
-            </Button>
+            <CallNowButton size="lg" fullWidth className="sm:w-auto" />
             <Button
               size="lg"
               variant="outline"
