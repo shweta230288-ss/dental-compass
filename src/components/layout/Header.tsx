@@ -42,11 +42,18 @@ const navigationItems = [{
   name: 'Technology',
   path: '/technology'
 }, {
-  name: 'Membership Plans',
-  path: '/membership'
-}, {
-  name: 'Payment Plans',
-  path: '/payment-plans'
+  name: 'Financials',
+  path: '/membership',
+  children: [{
+    name: 'Membership Plans',
+    path: '/membership'
+  }, {
+    name: 'Payment Plans',
+    path: '/payment-plans'
+  }, {
+    name: 'Cherry Financing',
+    path: '/payment-plans/cherry'
+  }]
 }, {
   name: 'Patient Success Stories',
   path: '/reviews'
