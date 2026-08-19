@@ -5,6 +5,7 @@ import { useRef, useState } from 'react';
 import { Heart, Award, Users, GraduationCap, X } from 'lucide-react';
 import { SEOHead } from '@/components/seo/SEOHead';
 import drKunalDani from '@/assets/dr-kunal-dani.jpg';
+import amyPhotoAsset from '@/assets/amy-majzoub.jpg.asset.json';
 import officeFrontDesk from '@/assets/office-front-desk.jpg';
 import teamPhoto from '@/assets/team-photo.jpg';
 import officeReception from '@/assets/office-reception.jpg';
