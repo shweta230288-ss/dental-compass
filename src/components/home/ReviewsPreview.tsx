@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Quote } from 'lucide-react';
+import { Star, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ReviewBadges } from '@/components/reviews/ReviewBadges';
+
 
 const reviews = [{
   name: 'Abenc78',
