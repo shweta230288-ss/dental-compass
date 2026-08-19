@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { CreditCard, ShieldCheck, Sparkles, ArrowRight, Wallet } from 'lucide-react';
+import { CreditCard, ShieldCheck, Sparkles, Phone, ArrowRight, Wallet } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { CallNowButton } from '@/components/shared/CallNowButton';
 
 const insurances = [
   'Delta Dental Premier',
@@ -11,6 +10,8 @@ const insurances = [
   'Blue Cross Blue Shield',
   'And many more...',
 ];
+
+const PHONE_TEL = 'tel:9785344000';
 
 interface InsuranceFinancingSectionProps {
   showMembershipBanner?: boolean;
@@ -150,7 +151,12 @@ export function InsuranceFinancingSection({
           viewport={{ once: true }}
           className="max-w-4xl mx-auto mt-8 text-center"
         >
-          <CallNowButton size="lg" showNumber="never" />
+          <Button variant="outline" className="h-auto whitespace-normal py-3" asChild>
+            <a href={PHONE_TEL} className="inline-flex items-center justify-center gap-2">
+              <Phone className="w-4 h-4 flex-shrink-0" />
+              Ask About Financing
+            </a>
+          </Button>
         </motion.div>
       </div>
     </section>

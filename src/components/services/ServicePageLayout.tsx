@@ -2,15 +2,16 @@ import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Check, ShieldCheck, CreditCard, HeartHandshake, GraduationCap } from 'lucide-react';
+import { ArrowRight, Check, Phone, ShieldCheck, CreditCard, HeartHandshake, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { LucideIcon } from 'lucide-react';
 import drDani from '@/assets/dr-kunal-dani.jpg';
 import { ReviewBadges } from '@/components/reviews/ReviewBadges';
 import { InsuranceFinancingSection } from '@/components/services/InsuranceFinancingSection';
-import { CallNowButton } from '@/components/shared/CallNowButton';
 
+const PHONE_TEL = 'tel:9785344000';
+const PHONE_DISPLAY = '(978) 534-4000';
 const BASE_URL = 'https://kayadentalbydani.com';
 
 interface ServicePageLayoutProps {
@@ -193,8 +194,13 @@ export function ServicePageLayout({
               {/* Dual review trust badges */}
               <ReviewBadges variant="light" size="lg" className="mb-6 lg:mb-8" />
 
-              <div className="flex flex-col sm:flex-row gap-3 items-start">
-                <CallNowButton size="lg" fullWidth className="sm:w-auto" />
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button size="lg" variant="secondary" className="w-full sm:w-auto h-auto whitespace-normal py-3" asChild>
+                  <a href={PHONE_TEL} className="inline-flex items-center justify-center gap-2 font-semibold">
+                    <Phone className="w-5 h-5 flex-shrink-0" />
+                    Call Now {PHONE_DISPLAY}
+                  </a>
+                </Button>
                 <Button
                   size="lg"
                   variant="outline"
@@ -549,8 +555,18 @@ export function ServicePageLayout({
               Contact our Leominster office today to speak directly with our team and secure your
               visit.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-start">
-              <CallNowButton size="lg" fullWidth className="sm:w-auto" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="w-full sm:w-auto h-auto whitespace-normal py-4 text-base md:text-lg font-semibold"
+                asChild
+              >
+                <a href={PHONE_TEL} className="inline-flex items-center justify-center gap-2">
+                  <Phone className="w-5 h-5 flex-shrink-0" />
+                  Call Now {PHONE_DISPLAY}
+                </a>
+              </Button>
               <Button
                 size="lg"
                 variant="outline"
