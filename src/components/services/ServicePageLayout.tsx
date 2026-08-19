@@ -362,7 +362,40 @@ export function ServicePageLayout({
         </div>
       </section>
 
+      {/* Additional Info Sections */}
+      {additionalInfo && additionalInfo.length > 0 && (
+        <section className="py-16 bg-secondary">
+          <div className="container">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {additionalInfo.map((info, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-card rounded-xl p-6 border border-border"
+                >
+                  <h3 className="font-serif text-xl font-bold text-foreground mb-4 break-words">
+                    {info.title}
+                  </h3>
+                  <ul className="space-y-2">
+                    {info.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start gap-2 text-muted-foreground">
+                        <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
+                        <span className="text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* FAQ Accordion */}
+
       {faqs.length > 0 && (
         <section className="py-16 bg-muted/30">
           <div className="container">
@@ -457,37 +490,6 @@ export function ServicePageLayout({
         </div>
       </section>
 
-      {/* Additional Info Sections */}
-      {additionalInfo && additionalInfo.length > 0 && (
-        <section className="py-16 bg-secondary">
-          <div className="container">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {additionalInfo.map((info, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-card rounded-xl p-6 border border-border"
-                >
-                  <h3 className="font-serif text-xl font-bold text-foreground mb-4 break-words">
-                    {info.title}
-                  </h3>
-                  <ul className="space-y-2">
-                    {info.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start gap-2 text-muted-foreground">
-                        <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
-                        <span className="text-sm">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Insurance & Financing */}
       <InsuranceFinancingSection showMembershipBanner={showMembershipBanner} />
