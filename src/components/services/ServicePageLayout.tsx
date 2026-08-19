@@ -228,8 +228,9 @@ export function ServicePageLayout({
       </section>
 
       {/* Problem & Solution intro */}
-      <section className="py-12 lg:py-16 bg-background">
+      <section className="pt-12 lg:pt-16 pb-8 lg:pb-12 bg-background">
         <div className="container">
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -257,8 +258,9 @@ export function ServicePageLayout({
 
       {/* Detailed Description Sections */}
       {detailedDescription && detailedDescription.length > 0 && (
-        <section className="py-16 bg-background">
+        <section className="pt-8 lg:pt-12 pb-16 bg-background">
           <div className="container">
+
             <div className="space-y-16">
               {detailedDescription.map((section, index) => (
                 <motion.div
@@ -267,17 +269,20 @@ export function ServicePageLayout({
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
-                  className="grid lg:grid-cols-2 gap-12 items-center"
+                  className="grid lg:grid-cols-2 gap-12 items-start"
                 >
                   <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                     <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6 break-words">
                       {section.title}
                     </h2>
                     <div className="prose prose-lg max-w-none">
-                      <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                        {section.content}
-                      </p>
+                      {section.content.split(/\n\s*\n/).map((paragraph, pIndex) => (
+                        <p key={pIndex} className="text-muted-foreground leading-relaxed mb-4 last:mb-0">
+                          {paragraph.trim()}
+                        </p>
+                      ))}
                     </div>
+
                   </div>
                   {section.image && (
                     <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
