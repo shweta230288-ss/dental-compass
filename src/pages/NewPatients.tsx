@@ -1,9 +1,10 @@
 import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
-import { Phone, MapPin, Clock, Mail, FileText, CreditCard, ClipboardList, AlertTriangle } from 'lucide-react';
+import { MapPin, Clock, Mail, FileText, CreditCard, ClipboardList, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '@/components/seo/SEOHead';
+import { CallNowButton } from '@/components/shared/CallNowButton';
 const insurances = ['Delta Dental Premier', 'MetLife', 'United Healthcare', 'Blue Cross Blue Shield', 'And many more...'];
 const newPatientInfo = [{
   icon: FileText,
@@ -277,19 +278,14 @@ export default function NewPatients() {
           duration: 0.6
         }} viewport={{
           once: true
-        }} className="bg-primary rounded-2xl p-10 md:p-16 text-center">
+        }} className="bg-primary rounded-2xl p-10 md:p-16 text-center text-primary-foreground">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
               Ready to Schedule Your First Visit?
             </h2>
             <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
               We can't wait to meet you! Call us today to schedule your appointment.
             </p>
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
-              <a href="tel:978-534-4000">
-                <Phone className="w-5 h-5 mr-2" />
-                Call (978) 534-4000
-              </a>
-            </Button>
+            <CallNowButton size="lg" />
           </motion.div>
         </div>
       </section>
