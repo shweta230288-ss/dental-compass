@@ -9,6 +9,7 @@ import { ServicesPreview } from '@/components/home/ServicesPreview';
 import { ReviewsPreview } from '@/components/home/ReviewsPreview';
 import { CTASection } from '@/components/home/CTASection';
 import { ServiceAreasSection } from '@/components/home/ServiceAreasSection';
+import { EmergencyBanner } from '@/components/home/EmergencyBanner';
 import { SEOHead } from '@/components/seo/SEOHead';
 
 const Index = () => {
@@ -27,6 +28,7 @@ const Index = () => {
       <DoctorSection />
       <DoctorAmySection />
       <ServicesPreview />
+      <EmergencyBanner />
       <ReviewsPreview />
       <ServiceAreasSection />
       <CTASection />

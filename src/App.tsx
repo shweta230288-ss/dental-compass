@@ -14,6 +14,7 @@ import NewPatients from "./pages/NewPatients";
 import Contact from "./pages/Contact";
 import PaymentPlans from "./pages/PaymentPlans";
 import CherryFinancing from "./pages/CherryFinancing";
+import EmergencyDentalCare from "./pages/EmergencyDentalCare";
 import NotFound from "./pages/NotFound";
 import { ScrollToTop } from "./components/ScrollToTop";
 
@@ -69,6 +70,7 @@ const App = () => (
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/new-patients" element={<NewPatients />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/emergency-dental-care" element={<EmergencyDentalCare />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
