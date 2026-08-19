@@ -71,7 +71,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.35 }}
             className="mb-6"
           >
-            <ReviewBadges variant="light" />
+            <ReviewBadges variant="light" size="lg" />
           </motion.div>
 
           <motion.p
