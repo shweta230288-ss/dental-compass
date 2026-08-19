@@ -8,82 +8,82 @@ export default function FamilyDentistry() {
       title="Family Dentistry"
       heroHeadline="Family Dentistry That Feels Like One Trusted Dental Home"
       canonicalPath="/services/family-dentistry"
-      metaDescription="Family dentistry at Kaya Dental in Leominster, MA. Comprehensive dental care for patients of all ages. Schedule appointments for the whole family."
+      metaDescription="Family dentistry at Kaya Dental in Leominster, MA. A welcoming dental home for every age, serving families in Lunenburg, Lancaster, Sterling, and Fitchburg."
       heroSubtitle="Care for the Whole Family"
-      heroDescription="At Kaya Dental in Leominster, MA, we welcome patients of all ages and provide dental care that grows with your family. From a child's first dental visit to senior care, our team creates positive experiences that build healthy habits for a lifetime of beautiful smiles."
+      heroDescription="From your toddler's first checkup to your parents' senior care, Kaya Dental in Leominster, MA gives every generation of your family one comfortable, judgment-free dental home. Families throughout Lunenburg, Lancaster, Sterling, and the Fitchburg area trust us to make each visit easier than the last."
       heroImage={heroImage}
       icon={Users}
       detailedDescription={[
         {
-          title: 'One Dental Home for Everyone',
-          content: `Having one dental office for the entire family makes it easier to schedule appointments, coordinate care, and build relationships with your dental team. We understand the unique needs of patients at every age and stage of life.
+          title: 'One Dental Home, Every Generation Welcome',
+          content: `Kaya means body in Sanskrit — a reminder that we care for the whole person, at every age, not just a set of teeth. Our office has served the Leominster community since 1961, and today, under Dr. Kunal Dani and associate dentist Dr. Amy Majzoub, we're still that same familiar, trusted place, now with the technology to match.
 
-Our office is designed to be welcoming for children while providing sophisticated care for adults. We take pride in creating positive experiences that help children develop good oral health habits and overcome any dental anxiety.`,
+We know bringing a nervous child — or a nervous adult — to the dentist can feel like a gamble at a new practice. Our team takes the time to explain everything simply, move at your child's pace, and treat every visit as a chance to build trust, not just check a box.`,
         },
         {
-          title: 'Age-Appropriate Care',
-          content: `Children, teens, adults, and seniors all have different dental needs. Our team is trained to provide age-appropriate care, from teaching toddlers how to brush to managing the complex dental needs that can come with aging.
+          title: 'Age-Appropriate Care That Grows With You',
+          content: `From teaching a toddler how to brush to helping a parent navigate more complex dental needs later in life, we tailor every visit to the person in the chair. Our conservative, tooth-preserving philosophy means we recommend only what truly benefits each family member — never more.
 
-We believe in preventive care and education for all ages. By catching problems early and helping patients understand how to care for their teeth at home, we help families maintain healthy smiles for generations.`,
+If your family recently lost its longtime dentist to a practice change or retirement, we understand how unsettling that can feel. We're happy to review your records, pick up where things left off, and become the steady dental home your family can count on for years to come.`,
         },
       ]}
       benefits={[
-        'Convenient care for all ages in one location',
-        'Appointments scheduled together when possible',
-        'Child-friendly, welcoming environment',
-        'Experienced with pediatric dental needs',
-        'Teen orthodontic evaluations',
-        'Adult preventive and restorative care',
-        'Senior dental services',
-        'Building healthy habits early',
+        'One welcoming office for every age in your family',
+        'Appointments coordinated together when possible',
+        'Gentle, patient approach with nervous or first-time kids',
+        'Judgment-free care if it\'s been a while for anyone',
+        'Conservative treatment recommendations you can trust',
+        'Digital iTero scanning instead of messy impressions',
+        'Membership plan for family members without insurance',
+        'A steady dental home for decades, not just one visit',
       ]}
       whatToExpect={[
         {
-          title: 'Welcoming Environment',
-          description: 'Our office is designed to put patients of all ages at ease, with a friendly team and comfortable treatment areas.',
+          title: 'A Welcoming First Impression',
+          description: 'Our team greets every family member warmly, taking extra time with nervous kids or adults who haven\'t visited a dentist in a while.',
         },
         {
-          title: 'Age-Appropriate Exams',
-          description: 'We tailor our approach to each patient\'s age and needs, making visits positive experiences for children and efficient for adults.',
+          title: 'Exams Paced to Each Person',
+          description: 'We adjust our approach for each age and comfort level, making the visit reassuring for children and efficient for busy parents.',
         },
         {
-          title: 'Education for Every Age',
-          description: 'We teach children proper brushing and flossing techniques while keeping adults informed about maintaining their oral health.',
+          title: 'Clear, Kind Explanations',
+          description: 'We explain what we see in simple terms for kids and straightforward terms for adults — no jargon, no pressure, just honest guidance.',
         },
         {
-          title: 'Coordinated Family Care',
-          description: 'We can often schedule multiple family members on the same day, making it easier to manage everyone\'s dental care.',
+          title: 'Scheduling That Fits Your Life',
+          description: 'When possible, we book multiple family members back-to-back or on the same day, so dental care doesn\'t take over your calendar.',
         },
       ]}
       additionalInfo={[
         {
-          title: 'Children\'s Dental Care',
+          title: 'For Your Little Ones',
           items: [
             'First dental visit by age 1',
-            'Gentle exams and cleanings',
+            'Gentle, unhurried exams and cleanings',
             'Dental sealants',
             'Fluoride treatments',
-            'Habit counseling',
+            'Habit and thumb-sucking guidance',
             'Orthodontic evaluations',
           ],
         },
         {
-          title: 'Teen Dental Care',
+          title: 'For Teens',
           items: [
-            'Cavity prevention',
+            'Cavity prevention coaching',
             'Sports mouthguards',
-            'Orthodontic treatment',
+            'Orthodontic treatment options',
             'Wisdom teeth monitoring',
-            'Oral hygiene coaching',
+            'Confidence-building oral hygiene tips',
             'Cosmetic consultations',
           ],
         },
         {
-          title: 'Adult & Senior Care',
+          title: 'For Adults & Seniors',
           items: [
             'Preventive care and cleanings',
-            'Restorative treatments',
-            'Cosmetic dentistry',
+            'Conservative restorative treatments',
+            'Cosmetic dentistry options',
             'Gum disease treatment',
             'Dentures and implants',
             'Oral cancer screenings',
@@ -93,23 +93,23 @@ We believe in preventive care and education for all ages. By catching problems e
       faqs={[
         {
           question: 'When should my child first visit the dentist?',
-          answer: 'The American Academy of Pediatric Dentistry recommends a child\'s first dental visit by age 1 or within 6 months of the first tooth appearing. Early visits help establish a dental home and catch any issues early.',
+          answer: 'We recommend a first visit by age 1 or within six months of the first tooth coming in. Early, low-pressure visits help your child build comfort with the dentist and let us catch anything worth watching early. Call us to schedule a gentle first appointment.',
         },
         {
-          question: 'Can I schedule my whole family on the same day?',
-          answer: 'Yes! We understand busy family schedules and do our best to accommodate multiple family members in back-to-back or simultaneous appointments whenever possible.',
+          question: 'Can our whole family come in on the same day?',
+          answer: 'In most cases, yes. We know coordinating a family\'s schedule is hard enough without separate dental trips, so we do our best to book everyone back-to-back or on one visit. Contact our Leominster office and we\'ll find a schedule that works.',
         },
         {
-          question: 'How do you handle children who are nervous about the dentist?',
-          answer: 'Our team is experienced with anxious patients of all ages. We use gentle techniques, explain procedures in kid-friendly terms, and take our time to ensure every child feels comfortable and safe.',
+          question: 'My child is terrified of the dentist — can you help?',
+          answer: 'Absolutely — this is one of the most common concerns families bring to us. We move at your child\'s pace, explain everything in kid-friendly terms, and never force a visit that isn\'t going well. Call us ahead of time and we\'ll plan the appointment around your child\'s comfort.',
         },
         {
-          question: 'Do you offer orthodontic evaluations for children?',
-          answer: 'Yes, we monitor your child\'s dental development and recommend orthodontic evaluations at the appropriate age, typically around age 7. We also offer Invisalign for teens and adults.',
+          question: 'What if we don\'t have dental insurance for the whole family?',
+          answer: 'We offer an in-house membership plan built for families without insurance, along with Cherry and CareCredit financing to spread out costs. Give us a call and we can talk through what makes sense for your household.',
         },
         {
-          question: 'What services do you offer for seniors?',
-          answer: 'We provide comprehensive care for seniors including dentures, implants, gum disease treatment, dry mouth management, and coordination with medical providers for patients with complex health needs.',
+          question: 'Our previous dentist retired or the practice changed hands — can we switch?',
+          answer: 'Yes, and we make it simple. We\'ll request your family\'s records and continue your care with the same conservative, unhurried approach we\'ve offered Leominster families since 1961. Reach out to get everyone set up as new patients.',
         },
       ]}
       relatedServices={[

@@ -8,63 +8,63 @@ export default function ExamCleaning() {
       title="Exam & Cleaning"
       heroHeadline="Dental Exams and Cleanings That Keep Problems Away"
       canonicalPath="/services/exam-cleaning"
-      metaDescription="Professional dental exams and cleanings at Kaya Dental in Leominster, MA. Preventive care to maintain a healthy smile. Schedule your appointment today."
+      metaDescription="Dental exams and cleanings at Kaya Dental in Leominster, MA. Comfortable, judgment-free preventive care for patients from Lunenburg, Lancaster, and Sterling."
       heroSubtitle="Preventive Care"
-      heroDescription="Regular dental exams and professional cleanings are the foundation of a healthy smile. At Kaya Dental in Leominster, MA, we use advanced technology to detect problems early, remove harmful plaque and tartar, and help you maintain optimal oral health between visits."
+      heroDescription="A checkup and cleaning shouldn't feel intimidating. At Kaya Dental in Leominster, MA — just off Route 2 and convenient to Lunenburg, Lancaster, and Sterling — we use gentle techniques and advanced imaging to catch problems early and keep your visit as comfortable as possible."
       heroImage={heroImage}
       icon={ClipboardCheck}
       detailedDescription={[
         {
-          title: 'Why Regular Checkups Matter',
-          content: `Many dental problems develop silently without obvious symptoms until they become serious. Regular checkups allow us to catch issues like cavities, gum disease, and oral cancer in their earliest stages when they're easiest to treat.
+          title: 'Why Regular Checkups Matter — Even If It\'s Been a While',
+          content: `Dental problems often develop quietly, with no pain until they've become bigger and more expensive to fix. If it's been years since your last cleaning, you're not alone, and you won't be judged when you walk through our door — we'll simply help you get back on track at a pace that feels manageable.
 
-Professional cleanings remove plaque and tartar that can't be eliminated by brushing and flossing alone. This helps prevent cavities, gum disease, and bad breath while keeping your teeth looking their best.`,
+Professional cleanings remove the plaque and tartar that brushing and flossing can't reach on their own, helping prevent cavities, gum disease, and bad breath. Our conservative philosophy means we'll only recommend further treatment when it truly benefits you.`,
         },
         {
-          title: 'Advanced Technology for Better Detection',
-          content: `We use cutting-edge technology to provide the most thorough examinations possible. Our Overjet AI technology helps detect cavities earlier than traditional methods, while digital X-rays provide clear images with minimal radiation exposure.
+          title: 'Comfortable, Advanced Detection',
+          content: `Dr. Kunal Dani and Dr. Amy Majzoub use AI-assisted imaging to spot cavities earlier than traditional methods, along with digital X-rays that use minimal radiation. When a closer look is needed, our in-office CBCT 3D scanner captures your teeth, bone, and sinuses in under a minute — no outside imaging referral or extra appointment required.
 
-When a deeper look is needed, our in-office CBCT cone beam scanner produces a full 3D view of your teeth, bone, and sinuses in under a minute—no outside imaging referral required. Our iTero scanner can create detailed 3D images of your teeth, helping us identify problems and track changes over time. This technology allows us to provide you with the most accurate diagnoses and effective treatment plans.`,
+Our iTero digital scanner also lets us track changes in your smile over time without the mess of traditional impressions. Together, this technology means fewer surprises, more accurate answers, and a visit that respects your time and comfort.`,
         },
       ]}
       benefits={[
-        'Early detection of dental problems',
-        'Professional removal of plaque and tartar',
-        'Fresher breath and cleaner teeth',
-        'Prevention of cavities and gum disease',
-        'Oral cancer screening included',
-        'Personalized home care recommendations',
-        'Digital X-rays with minimal radiation',
-        'AI-assisted cavity detection',
+        'Early detection before small issues become costly',
+        'A calm, judgment-free visit no matter how long it\'s been',
+        'Gentle removal of plaque and tartar for a fresher smile',
+        'Oral cancer screening included in every exam',
+        'Minimal-radiation digital X-rays',
+        'AI-assisted cavity detection for more accurate answers',
+        'Clear pricing conversation before any additional treatment',
+        'Membership plan available if you\'re without insurance',
       ]}
       whatToExpect={[
         {
-          title: 'Medical History Review',
-          description: 'We update your medical and dental history to ensure safe, appropriate care.',
+          title: 'A Relaxed Welcome',
+          description: 'We update your history and talk through any concerns or anxiety first, so nothing about your visit feels rushed or unfamiliar.',
         },
         {
-          title: 'Comprehensive Examination',
-          description: 'Dr. Dani thoroughly examines your teeth, gums, tongue, and oral tissues for any signs of problems.',
+          title: 'A Thorough, Gentle Exam',
+          description: 'Dr. Dani or Dr. Majzoub carefully checks your teeth, gums, and oral tissues, narrating what they see so there are no surprises.',
         },
         {
-          title: 'Professional Cleaning',
-          description: 'Our hygienist removes plaque and tartar buildup, then polishes your teeth for a smooth, clean finish.',
+          title: 'A Comfortable Cleaning',
+          description: 'Our hygienist gently removes plaque and tartar buildup and polishes your teeth, checking in with you along the way.',
         },
         {
-          title: 'Review and Recommendations',
-          description: 'We discuss our findings, answer your questions, and provide personalized tips for home care.',
+          title: 'Honest Next Steps',
+          description: 'We review any findings, answer every question, and give you a clear, judgment-free plan for keeping your smile healthy.',
         },
       ]}
       additionalInfo={[
         {
           title: 'During Your Exam',
           items: [
-            'Visual examination of all teeth',
+            'Gentle visual examination of all teeth',
             'Gum health assessment',
             'Oral cancer screening',
             'Bite and jaw evaluation',
             'Existing restoration check',
-            'Digital X-rays if needed',
+            'Digital X-rays only when needed',
           ],
         },
         {
@@ -73,9 +73,9 @@ When a deeper look is needed, our in-office CBCT cone beam scanner produces a fu
             'Tartar (calculus) removal',
             'Plaque removal',
             'Teeth polishing',
-            'Flossing demonstration',
-            'Fluoride treatment (optional)',
-            'Home care instruction',
+            'Flossing tips tailored to you',
+            'Optional fluoride treatment',
+            'Judgment-free home care guidance',
           ],
         },
         {
@@ -86,30 +86,30 @@ When a deeper look is needed, our in-office CBCT cone beam scanner produces a fu
             'Use fluoride toothpaste',
             'Limit sugary foods and drinks',
             'Replace toothbrush every 3 months',
-            'Call us with any concerns',
+            'Call us anytime with a concern',
           ],
         },
       ]}
       faqs={[
         {
-          question: 'How often should I get a dental checkup?',
-          answer: 'Most patients should visit every 6 months for routine exams and cleanings. However, some patients may benefit from more frequent visits depending on their oral health needs. We\'ll recommend the best schedule for you.',
+          question: 'It\'s been years since my last cleaning — will you make me feel bad about it?',
+          answer: 'Never. We see this often, and our only goal is to help you move forward comfortably. We\'ll check things over, explain what we find in plain language, and build a plan that meets you where you are. Call us whenever you\'re ready to schedule.',
         },
         {
-          question: 'What if I have dental anxiety?',
-          answer: 'We understand dental anxiety is common and take steps to ensure your comfort. Our gentle approach, calming environment, and open communication help anxious patients feel at ease. Let us know your concerns so we can help.',
+          question: 'What if I don\'t have dental insurance?',
+          answer: 'We offer an in-house membership plan designed for patients without insurance, as well as Cherry and CareCredit financing to help spread out any costs. Reach out to our Leominster office and we\'ll help you find an option that fits.',
         },
         {
-          question: 'Are dental X-rays safe?',
-          answer: 'Yes, our digital X-rays use significantly less radiation than traditional X-rays. We follow strict guidelines and only take X-rays when necessary for diagnosis or treatment planning.',
+          question: 'I have real dental anxiety — how do you handle that?',
+          answer: 'We take dental anxiety seriously and build our visits around your comfort, explaining each step before we do it and slowing down whenever you need. Let us know about your anxiety when you call, and we\'ll tailor your appointment around it.',
         },
         {
-          question: 'Why do I need cleanings if I brush and floss?',
-          answer: 'Even with excellent home care, plaque can harden into tartar that can only be removed with professional instruments. Cleanings also reach areas that are difficult to clean at home and help prevent gum disease.',
+          question: 'Are dental X-rays safe, and will I be pressured into extra treatment?',
+          answer: 'Our digital X-rays use significantly less radiation than older methods, and we only take them when they genuinely help your care. Following our conservative philosophy, we\'ll never recommend treatment you don\'t need — every option is explained clearly before you decide.',
         },
         {
-          question: 'What is involved in an oral cancer screening?',
-          answer: 'During your exam, we visually inspect your mouth, tongue, and throat for any unusual spots, lumps, or discoloration. We also feel for any abnormalities in the neck and jaw area. Early detection is key for successful treatment.',
+          question: 'Can I bring my nervous child for their cleaning too?',
+          answer: 'Of course. Our team is experienced with nervous first-timers of every age and takes extra time to explain things simply and keep the visit positive. Call us and we can schedule a gentle appointment for the whole family.',
         },
       ]}
       relatedServices={[

@@ -8,108 +8,105 @@ export default function DentalCrowns() {
       title="Dental Crowns"
       heroHeadline="Dental Crowns That Restore Strength and Confidence"
       canonicalPath="/services/dental-crowns"
-      metaDescription="Custom dental crowns at Kaya Dental in Leominster, MA. Restore damaged teeth with natural-looking, durable crowns. Schedule your consultation today."
+      metaDescription="Custom, natural-looking dental crowns at Kaya Dental in Leominster, MA. Gentle, conservative care from Dr. Kunal Dani and Dr. Amy Majzoub. Call to schedule your visit."
       heroSubtitle="Restore & Protect"
-      heroDescription="Dental crowns are versatile restorations that can repair damaged teeth, protect weakened teeth, and improve your smile's appearance. At Kaya Dental in Leominster, MA, we create custom crowns that match your natural teeth perfectly for seamless, long-lasting results."
+      heroDescription="If a cracked, worn, or heavily filled tooth has you avoiding certain foods or hiding your smile in photos, a crown can quietly fix that. At Kaya Dental in Leominster, MA, we craft crowns using digital iTero scanning so they match your natural teeth and feel right the first time — no guesswork, no goopy impressions."
       heroImage={heroImage}
       icon={Crown}
       detailedDescription={[
         {
-          title: 'What Are Dental Crowns?',
-          content: `A dental crown is a custom-made cap that covers the entire visible portion of a tooth above the gum line. Crowns are designed to restore the tooth's shape, size, strength, and appearance while protecting it from further damage.
+          title: 'A Cap That Gives Your Tooth Its Life Back',
+          content: `Think of a crown as a custom-fitted cover that goes over a tooth that's cracked, worn down, or weakened — protecting it and giving it back its strength, shape, and natural look. You won't be stuck with a bulky, obvious "fake tooth" feeling; our crowns are shaped and shaded to blend in so well that even you may forget which tooth it is.
 
-Modern dental crowns can be made from various materials including porcelain, ceramic, metal alloys, or a combination. We'll help you choose the best material based on the location of the tooth, your bite, and your aesthetic preferences.`,
+We take a conservative approach, which means we only remove what truly needs to go. Dr. Kunal Dani and Dr. Amy Majzoub will walk you through material options in plain language, so you understand exactly what's happening and why — never pressure, just a clear recommendation.`,
         },
         {
-          title: 'When Are Crowns Recommended?',
-          content: `Dental crowns are recommended in many situations: to protect a weak tooth from breaking, restore a tooth that's already broken or severely worn, cover a tooth with a large filling, hold a dental bridge in place, cover a dental implant, or improve the appearance of a misshapen or discolored tooth.
+          title: 'When a Crown Is the Right Call',
+          content: `You might need a crown if a tooth is cracked, badly worn, holding a large old filling together, finishing off a root canal, or simply doesn't look the way you'd like anymore. If you've been putting off a chipped or sensitive tooth because you're worried about pain or cost, you're not alone — most of our patients felt the same way before their first visit.
 
-Crowns are also placed after root canal therapy to protect the treated tooth and restore its full function. With proper care, dental crowns can last 10-15 years or longer.`,
+Once placed, a well-cared-for crown is built to go the distance, so this is a fix you make once and then get back to living — eating, laughing, and smiling without a second thought.`,
         },
       ]}
       benefits={[
-        'Restore strength to damaged teeth',
-        'Natural-looking, seamless appearance',
-        'Long-lasting durability (10-15+ years)',
-        'Protect teeth from further damage',
-        'Custom-made for perfect fit',
-        'Multiple material options available',
-        'Improve bite and chewing function',
-        'Enhance smile aesthetics',
+        'Stop pain and sensitivity from a cracked or weakened tooth',
+        'Get a crown that blends in — most people can\'t tell it\'s there',
+        'Keep more of your natural tooth thanks to our conservative approach',
+        'Digital iTero scanning means no messy impressions',
+        'Built to hold up for years of normal eating and talking',
+        'Protect a tooth so it doesn\'t need to be pulled later',
+        'Chew and bite with confidence again',
+        'Financing and membership options if you're uninsured or budgeting',
       ]}
       whatToExpect={[
         {
-          title: 'Consultation and Preparation',
-          description: 'We examine your tooth, take X-rays, and discuss the best crown option for your needs. The tooth is prepared and shaped.',
+          title: 'A Relaxed Consultation',
+          description: 'We\'ll look at the tooth, take any needed images, and talk through your options in everyday language — no rushing, no lecture, just an honest recommendation.',
         },
         {
-          title: 'Digital Impressions',
-          description: 'Using our iTero scanner, we create precise digital impressions of your teeth—no messy traditional impressions needed.',
+          title: 'Comfortable Digital Scanning',
+          description: 'Our iTero scanner captures a precise 3D image of your tooth in minutes, so you skip the messy putty tray most people dread.',
         },
         {
-          title: 'Temporary Crown',
-          description: 'A temporary crown protects your tooth while your permanent crown is being crafted by our dental lab.',
+          title: 'A Temporary That Keeps You Comfortable',
+          description: 'While your custom crown is being made, a temporary covers and protects the tooth so you can keep eating and speaking normally.',
         },
         {
-          title: 'Final Placement',
-          description: 'Once ready, we check the fit and color match, then permanently bond your new crown in place.',
+          title: 'A Confident Fit',
+          description: 'When your crown is ready, we check the fit, shape, and color against your smile before bonding it securely in place.',
         },
       ]}
       additionalInfo={[
         {
-          title: 'Crown Materials',
+          title: 'Crown Materials, In Plain English',
           items: [
-            'All-ceramic: Most natural appearance',
-            'Porcelain-fused-to-metal: Durability + aesthetics',
-            'Gold alloy: Maximum strength',
-            'Zirconia: Strong and tooth-colored',
-            'E-max: Premium aesthetics',
-            'We help you choose the best option',
+            'All-ceramic: looks the most like a real tooth',
+            'Porcelain-fused-to-metal: extra durability where you bite hardest',
+            'Zirconia: strong and still tooth-colored',
+            'E-max: a premium, lifelike option for front teeth',
+            'We\'ll recommend the best fit for your smile and budget',
           ],
         },
         {
-          title: 'Conditions Treated',
+          title: 'When Patients Usually Need a Crown',
           items: [
-            'Cracked or broken teeth',
-            'Severely decayed teeth',
-            'Worn down teeth',
-            'After root canal therapy',
-            'Teeth with large fillings',
-            'Cosmetic improvements',
+            'A tooth cracked or chipped from an accident or grinding',
+            'A tooth weakened by a large, old filling',
+            'A tooth after root canal treatment',
+            'A tooth that\'s worn down or misshapen',
+            'A tooth you\'d simply like to look better',
           ],
         },
         {
-          title: 'Crown Care Tips',
+          title: 'Living With Your New Crown',
           items: [
-            'Brush and floss normally',
-            'Avoid chewing ice or hard objects',
-            'Wear a nightguard if you grind teeth',
-            'Visit us for regular checkups',
-            'Report any discomfort promptly',
-            'Maintain good oral hygiene',
+            'Brush and floss just like your other teeth',
+            'Skip chewing ice or hard candy',
+            'Ask about a nightguard if you grind your teeth',
+            'Keep up with regular checkups',
+            'Call us right away if anything feels off',
           ],
         },
       ]}
       faqs={[
         {
-          question: 'How long do dental crowns last?',
-          answer: 'With proper care, dental crowns typically last 10-15 years, and many last even longer. Factors affecting longevity include oral hygiene habits, diet, teeth grinding, and the crown material.',
+          question: 'Will getting a crown hurt?',
+          answer: 'No — we numb the area thoroughly before we start, so you shouldn\'t feel pain during the appointment. Afterward it\'s normal to notice mild tenderness for a day or two, and it fades quickly. If you\'re nervous about the visit, tell us and we\'ll go at your pace — just give us a call.',
         },
         {
-          question: 'Is getting a crown painful?',
-          answer: 'The procedure is performed under local anesthesia, so you shouldn\'t feel pain during treatment. Some patients experience mild sensitivity after the anesthesia wears off, which typically resolves within a few days.',
+          question: 'How much will a crown cost me?',
+          answer: 'Cost depends on the tooth and material, and we\'ll always give you clear pricing before any work begins — no surprises. If you don\'t have insurance, our membership plan and Cherry or CareCredit financing can spread out the cost. Call our Leominster office and we\'ll talk through what fits your budget.',
         },
         {
-          question: 'How many visits are required?',
-          answer: 'Traditional crowns typically require two visits: one for preparation and impressions, and one for placement. In some cases, same-day crowns may be available using CAD/CAM technology.',
+          question: 'Will my crown actually look natural?',
+          answer: 'Yes — we match the shade, shape, and translucency to your surrounding teeth, and most patients say friends and family can\'t tell which tooth was treated. Digital scanning helps us get that fit and color right the first time. Come in and see samples for yourself.',
         },
         {
-          question: 'Will my crown look natural?',
-          answer: 'Absolutely! We carefully match the color, shape, and size of your crown to your natural teeth. Most people can\'t tell the difference between a well-made crown and a natural tooth.',
+          question: 'How many appointments will this take?',
+          answer: 'Most crowns take two visits — one to prepare the tooth and scan it, and a second to bond your finished crown. You'll leave the first visit with a comfortable temporary so there\'s no gap in your smile. We\'ll schedule around your work day whenever we can.',
         },
         {
-          question: 'Can a crown fall off?',
-          answer: 'While rare, crowns can occasionally come loose due to decay, improper fit, or trauma. If your crown feels loose or comes off, contact us immediately. We can often recement it if caught early.',
+          question: 'What if my crown ever feels loose?',
+          answer: 'It\'s uncommon, but if it happens, call us right away rather than waiting — we can often fix it quickly before it becomes a bigger issue. Don\'t try to glue it yourself. Just give our office a call and we\'ll get you in.',
         },
       ]}
       relatedServices={[
