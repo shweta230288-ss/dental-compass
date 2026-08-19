@@ -274,10 +274,13 @@ export function ServicePageLayout({
                       {section.title}
                     </h2>
                     <div className="prose prose-lg max-w-none">
-                      <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
-                        {section.content}
-                      </p>
+                      {section.content.split(/\n\s*\n/).map((paragraph, pIndex) => (
+                        <p key={pIndex} className="text-muted-foreground leading-relaxed mb-4 last:mb-0">
+                          {paragraph.trim()}
+                        </p>
+                      ))}
                     </div>
+
                   </div>
                   {section.image && (
                     <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
