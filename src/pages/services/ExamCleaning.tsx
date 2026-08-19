@@ -24,7 +24,7 @@ Professional cleanings remove plaque and tartar that can't be eliminated by brus
           title: 'Advanced Technology for Better Detection',
           content: `We use cutting-edge technology to provide the most thorough examinations possible. Our Overjet AI technology helps detect cavities earlier than traditional methods, while digital X-rays provide clear images with minimal radiation exposure.
 
-Our iTero scanner can create detailed 3D images of your teeth, helping us identify problems and track changes over time. This technology allows us to provide you with the most accurate diagnoses and effective treatment plans.`,
+When a deeper look is needed, our in-office CBCT cone beam scanner produces a full 3D view of your teeth, bone, and sinuses in under a minute—no outside imaging referral required. Our iTero scanner can create detailed 3D images of your teeth, helping us identify problems and track changes over time. This technology allows us to provide you with the most accurate diagnoses and effective treatment plans.`,
         },
       ]}
       benefits={[

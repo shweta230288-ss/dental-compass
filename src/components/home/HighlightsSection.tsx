@@ -27,7 +27,7 @@ const highlights = [
 {
   icon: Sparkles,
   title: 'Modern Technology',
-  description: 'Digital X-rays, 3D printing, AI diagnostics, and more'
+  description: 'CBCT 3D imaging, digital X-rays, 3D printing, AI diagnostics, and more'
 },
 {
   icon: Shield,

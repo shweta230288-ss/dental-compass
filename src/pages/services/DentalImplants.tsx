@@ -41,7 +41,7 @@ Unlike other tooth replacement options, dental implants prevent bone loss in the
       whatToExpect={[
         {
           title: 'Consultation and Planning',
-          description: 'We evaluate your oral health, bone levels, and smile goals using advanced imaging to create a personalized treatment plan.',
+          description: 'We evaluate your oral health, bone levels, and smile goals using our in-office CBCT 3D cone beam scan to measure bone volume and map nerves for a precise, personalized plan.',
         },
         {
           title: 'Implant Placement',

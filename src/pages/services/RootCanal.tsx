@@ -40,7 +40,7 @@ We take extra care to ensure your comfort throughout the procedure. If you're an
       whatToExpect={[
         {
           title: 'Diagnosis and Anesthesia',
-          description: 'We take X-rays to see the extent of infection, then thoroughly numb the area so you\'ll be completely comfortable.',
+          description: 'We take digital X-rays—and CBCT 3D imaging when needed—to see the exact extent of infection and root anatomy, then thoroughly numb the area so you\'ll be completely comfortable.',
         },
         {
           title: 'Access and Cleaning',
