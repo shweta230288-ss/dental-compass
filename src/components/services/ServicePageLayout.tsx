@@ -176,17 +176,8 @@ export function ServicePageLayout({
                 {headline}
               </h1>
 
-              {/* Trust badge */}
-              <div className="inline-flex flex-wrap items-center gap-2 rounded-full bg-primary-foreground/10 border border-accent/40 px-4 py-2 mb-6">
-                <span className="flex items-center gap-0.5 text-accent">
-                  {[0, 1, 2, 3, 4].map((i) => (
-                    <Star key={i} className="w-4 h-4 fill-current" />
-                  ))}
-                </span>
-                <span className="text-sm font-semibold">4.9 Stars</span>
-                <span className="hidden sm:inline text-primary-foreground/40">|</span>
-                <span className="text-sm font-semibold">Over 700+ Satisfied Patients</span>
-              </div>
+              {/* Dual review trust badges */}
+              <ReviewBadges variant="light" className="mb-6" />
 
               <p className="text-primary-foreground/80 text-base lg:text-lg leading-relaxed mb-6 lg:mb-8">
                 {heroDescription}
