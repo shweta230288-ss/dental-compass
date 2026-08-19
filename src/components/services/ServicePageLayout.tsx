@@ -48,7 +48,10 @@ interface ServicePageLayoutProps {
   }[];
   /** Canonical path, e.g. /services/dental-implants */
   canonicalPath?: string;
+  /** Whether to show the "No Insurance? No Problem!" membership banner. */
+  showMembershipBanner?: boolean;
 }
+
 
 export function ServicePageLayout({
   title,
