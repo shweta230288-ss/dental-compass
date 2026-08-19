@@ -42,11 +42,18 @@ const navigationItems = [{
   name: 'Technology',
   path: '/technology'
 }, {
-  name: 'Membership Plans',
-  path: '/membership'
-}, {
-  name: 'Payment Plans',
-  path: '/payment-plans'
+  name: 'Financials',
+  path: '/membership',
+  children: [{
+    name: 'Membership Plans',
+    path: '/membership'
+  }, {
+    name: 'Payment Plans',
+    path: '/payment-plans'
+  }, {
+    name: 'Cherry Financing',
+    path: '/payment-plans/cherry'
+  }]
 }, {
   name: 'Patient Success Stories',
   path: '/reviews'
@@ -131,7 +138,15 @@ export function Header() {
                 >
                   <Link 
                     to={item.path} 
-                    className={`flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors rounded-md hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 ${location.pathname === item.path || location.pathname.startsWith(item.path + '/') ? 'text-accent' : 'text-foreground'}`}
+                    className={`flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors rounded-md hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 ${
+                      item.children
+                        ? item.children.some(child => location.pathname === child.path || location.pathname.startsWith(child.path + '/'))
+                          ? 'text-accent'
+                          : 'text-foreground'
+                        : location.pathname === item.path || location.pathname.startsWith(item.path + '/')
+                          ? 'text-accent'
+                          : 'text-foreground'
+                    }`}
                     aria-current={location.pathname === item.path ? 'page' : undefined}
                     aria-expanded={item.children ? activeDropdown === item.name : undefined}
                     aria-haspopup={item.children ? 'true' : undefined}
@@ -202,11 +217,32 @@ export function Header() {
                 <div key={item.name}>
                   <Link 
                     to={item.path} 
-                    className={`block py-3 text-base font-medium border-b border-border/50 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-inset ${location.pathname === item.path ? 'text-accent' : 'text-foreground'}`}
+                    className={`block py-3 text-base font-medium border-b border-border/50 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-inset ${
+                      item.children
+                        ? item.children.some(child => location.pathname === child.path || location.pathname.startsWith(child.path + '/'))
+                          ? 'text-accent'
+                          : 'text-foreground'
+                        : location.pathname === item.path || location.pathname.startsWith(item.path + '/')
+                          ? 'text-accent'
+                          : 'text-foreground'
+                    }`}
                     aria-current={location.pathname === item.path ? 'page' : undefined}
                   >
                     {item.name}
                   </Link>
+                  {item.children && (
+                    <div className="pl-4 border-l-2 border-border/50 ml-2 space-y-1">
+                      {item.children.map(child => (
+                        <Link
+                          key={child.name}
+                          to={child.path}
+                          className={`block py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:ring-inset ${location.pathname === child.path || location.pathname.startsWith(child.path + '/') ? 'text-accent' : 'text-muted-foreground'}`}
+                        >
+                          {child.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
               <div className="pt-4 space-y-3">
