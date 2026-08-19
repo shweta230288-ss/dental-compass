@@ -1,9 +1,10 @@
 import { Layout } from '@/components/layout/Layout';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { Link } from 'react-router-dom';
-import { CreditCard, CheckCircle, ArrowRight, Phone } from 'lucide-react';
+import { CreditCard, CheckCircle, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import { CallNowButton } from '@/components/shared/CallNowButton';
 
 const PaymentPlans = () => {
   return (
@@ -154,12 +155,7 @@ const PaymentPlans = () => {
           <p className="text-lg opacity-90 mb-8">
             Our team is happy to walk you through your options. Give us a call or visit our office to learn more.
           </p>
-          <a href="tel:978-534-4000">
-            <Button size="lg" variant="secondary" className="gap-2">
-              <Phone className="w-5 h-5" />
-              Call (978) 534-4000
-            </Button>
-          </a>
+          <CallNowButton size="lg" variant="secondary" />
         </div>
       </section>
     </Layout>
