@@ -286,6 +286,71 @@ export default function About() {
         </div>
       </section>
 
+      {/* Meet Dr. Amy Majzoub */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="order-1"
+            >
+              <div className="rounded-2xl overflow-hidden shadow-medium">
+                <img
+                  alt="Dr. Amy Majzoub, DMD"
+                  className="w-full h-auto object-cover"
+                  src={amyPhotoAsset.url}
+                />
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="order-2"
+            >
+              <span className="text-accent font-medium text-sm uppercase tracking-wider">
+                Meet Our Doctor
+              </span>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
+                Dr. Amy Majzoub, DMD
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Dr. Amy Majzoub is proud to provide compassionate, personalized dental care built on trust, honesty, and lasting patient relationships. She believes in preserving natural teeth whenever possible and creating thoughtful treatment plans that prioritize long-term oral health and patient comfort.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                A graduate of the University of Connecticut School of Dental Medicine, Dr. Majzoub combines strong clinical expertise with a gentle, patient-centered approach. She is known for taking the time to listen carefully, explain treatment options clearly, and help patients feel confident and comfortable in every step of their care.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Outside of the office, Dr. Majzoub enjoys traveling and making memories with her husband and daughter. She values family deeply and brings that same warmth into her practice, treating every patient like part of her extended family. She looks forward to helping you and your loved ones achieve healthy, confident smiles for years to come.
+              </p>
+              
+              <div className="bg-gradient-to-br from-primary to-kaya-navy-dark rounded-xl p-6 text-primary-foreground">
+                <GraduationCap className="w-8 h-8 text-accent mb-3" />
+                <h3 className="font-serif text-lg font-bold mb-3">Education & Credentials</h3>
+                <ul className="space-y-2 text-primary-foreground/90 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">•</span>
+                    Doctor of Dental Medicine (DMD), University of Connecticut School of Dental Medicine
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">•</span>
+                    Compassionate, patient-centered care focused on long-term oral health
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">•</span>
+                    Dedicated to preserving natural teeth and building lasting patient relationships
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Meet the Staff */}
       <section className="py-20 bg-background">
         <div className="container">
