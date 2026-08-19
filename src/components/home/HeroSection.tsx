@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Phone, Play, Pause } from 'lucide-react';
 import { useState, useRef } from 'react';
+import { ReviewBadges } from '@/components/reviews/ReviewBadges';
 
 export function HeroSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
@@ -64,10 +65,19 @@ export function HeroSection() {
             <span className="text-accent">Kaya Dental</span>
           </motion.h1>
 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.35 }}
+            className="mb-6"
+          >
+            <ReviewBadges variant="light" />
+          </motion.div>
+
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
             className="text-xl md:text-2xl text-white/90 font-light italic mb-6"
           >
             Redefining Comfort & Aesthetics

@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { LucideIcon } from 'lucide-react';
 import drDani from '@/assets/dr-kunal-dani.jpg';
+import { ReviewBadges } from '@/components/reviews/ReviewBadges';
 
 const PHONE_TEL = 'tel:9785344000';
 const PHONE_DISPLAY = '(978) 534-4000';
