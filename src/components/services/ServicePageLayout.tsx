@@ -8,6 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { LucideIcon } from 'lucide-react';
 import drDani from '@/assets/dr-kunal-dani.jpg';
 import { ReviewBadges } from '@/components/reviews/ReviewBadges';
+import { InsuranceFinancingSection } from '@/components/services/InsuranceFinancingSection';
 
 const PHONE_TEL = 'tel:9785344000';
 const PHONE_DISPLAY = '(978) 534-4000';
