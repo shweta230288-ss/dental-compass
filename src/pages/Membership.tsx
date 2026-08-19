@@ -214,17 +214,7 @@ export default function Membership() {
                     </li>
                   ))}
                 </ul>
-                <Button
-                  className={`w-full ${plan.popular ? 'bg-accent hover:bg-accent/90 text-accent-foreground' : ''}`}
-                  variant={plan.popular ? 'default' : 'outline'}
-                  size="sm"
-                  asChild
-                >
-                  <a href="tel:9785344000">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Enroll Today
-                  </a>
-                </Button>
+                <CallNowButton size="default" showNumber="never" fullWidth className="w-full" />
               </motion.div>
             ))}
           </div>
