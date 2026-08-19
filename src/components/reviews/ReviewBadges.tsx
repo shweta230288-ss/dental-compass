@@ -147,8 +147,9 @@ export function ReviewBadges({ variant = 'light', size = 'md', className }: Revi
         </span>
         <span className="text-sm font-semibold whitespace-nowrap">5.0 Stars</span>
         <span className="opacity-40">|</span>
-        <span className="text-sm font-semibold whitespace-nowrap">3,600+ Patient Reviews</span>
+        <span className="text-sm font-semibold whitespace-nowrap">3,600+ Demandforce Reviews</span>
       </a>
+
     </div>
   );
 }
