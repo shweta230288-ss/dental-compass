@@ -6,7 +6,7 @@ export default function EmergencyDentistry() {
   return (
     <ServicePageLayout
       title="Emergency Dentistry"
-      heroHeadline="Fast Relief When You Need It Most with Emergency Dentistry in Leominster, MA"
+      heroHeadline="Emergency Dental Care With Fast Relief When You Need It Most"
       canonicalPath="/services/emergency-dentistry"
       metaDescription="Same-day emergency dental care at Kaya Dental in Leominster, MA. Toothache, broken tooth, knocked-out tooth—we're here when you need us."
       heroSubtitle="Urgent Dental Care"

@@ -6,7 +6,7 @@ export default function Orthodontics() {
   return (
     <ServicePageLayout
       title="Orthodontics"
-      heroHeadline="A Straighter, Healthier Bite for Every Age with Orthodontics in Leominster, MA"
+      heroHeadline="Orthodontic Care for a Straighter, Healthier Bite at Every Age"
       canonicalPath="/services/orthodontics"
       metaDescription="Orthodontic treatment at Kaya Dental in Leominster, MA. Invisalign and braces for straighter teeth and a beautiful smile. Schedule your consultation."
       heroSubtitle="Straight Teeth, Beautiful Smile"

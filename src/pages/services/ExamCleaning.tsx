@@ -6,7 +6,7 @@ export default function ExamCleaning() {
   return (
     <ServicePageLayout
       title="Exam & Cleaning"
-      heroHeadline="Stay Ahead of Problems with Dental Exams & Cleanings in Leominster, MA"
+      heroHeadline="Dental Exams and Cleanings That Keep Problems Away"
       canonicalPath="/services/exam-cleaning"
       metaDescription="Professional dental exams and cleanings at Kaya Dental in Leominster, MA. Preventive care to maintain a healthy smile. Schedule your appointment today."
       heroSubtitle="Preventive Care"

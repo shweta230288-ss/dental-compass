@@ -6,7 +6,7 @@ export default function GeneralDentistry() {
   return (
     <ServicePageLayout
       title="General Dentistry"
-      heroHeadline="Complete, Gentle Care for Your Whole Smile with General Dentistry in Leominster, MA"
+      heroHeadline="Complete, Gentle Dental Care for Your Whole Smile"
       canonicalPath="/services/general-dentistry"
       metaDescription="Comprehensive general dentistry services at Kaya Dental in Leominster, MA. From routine checkups to restorative care, we keep your smile healthy."
       heroSubtitle="Comprehensive Dental Care"

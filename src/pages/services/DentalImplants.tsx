@@ -6,7 +6,7 @@ export default function DentalImplants() {
   return (
     <ServicePageLayout
       title="Dental Implants"
-      heroHeadline="Replace Missing Teeth for Good with Dental Implants in Leominster, MA"
+      heroHeadline="Dental Implants That Replace Missing Teeth for Good"
       canonicalPath="/services/dental-implants"
       metaDescription="Dental implants at Kaya Dental in Leominster, MA. Replace missing teeth with natural-looking, permanent solutions. Schedule your implant consultation today."
       heroSubtitle="Permanent Tooth Replacement"

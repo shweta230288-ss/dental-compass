@@ -6,7 +6,7 @@ export default function CosmeticDentistry() {
   return (
     <ServicePageLayout
       title="Cosmetic Dentistry"
-      heroHeadline="Smile with Confidence Again with Cosmetic Dentistry in Leominster, MA"
+      heroHeadline="Cosmetic Dentistry Designed So You Can Smile with Confidence"
       canonicalPath="/services/cosmetic-dentistry"
       metaDescription="Transform your smile with cosmetic dentistry at Kaya Dental in Leominster, MA. Veneers, whitening, bonding, and smile makeovers. Schedule your consultation."
       heroSubtitle="Smile Transformation"

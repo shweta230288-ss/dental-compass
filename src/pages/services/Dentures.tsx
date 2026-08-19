@@ -6,7 +6,7 @@ export default function Dentures() {
   return (
     <ServicePageLayout
       title="Dentures"
-      heroHeadline="Eat, Speak, and Smile Comfortably Again with Dentures in Leominster, MA"
+      heroHeadline="Custom Dentures That Let You Eat, Speak, and Smile Comfortably"
       canonicalPath="/services/dentures"
       metaDescription="Custom dentures at Kaya Dental in Leominster, MA. Full and partial dentures that look natural and fit comfortably. Restore your smile today."
       heroSubtitle="Replace Missing Teeth"

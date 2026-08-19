@@ -6,7 +6,7 @@ export default function DentalFillings() {
   return (
     <ServicePageLayout
       title="Dental Fillings"
-      heroHeadline="Stop Cavities Early with Tooth-Colored Dental Fillings in Leominster, MA"
+      heroHeadline="Tooth-Colored Fillings That Stop Cavities Early"
       canonicalPath="/services/dental-fillings"
       metaDescription="Tooth-colored dental fillings at Kaya Dental in Leominster, MA. Natural-looking cavity treatment that preserves your smile. Schedule your appointment."
       heroSubtitle="Cavity Treatment"

@@ -6,7 +6,7 @@ export default function Invisalign() {
   return (
     <ServicePageLayout
       title="Invisalign"
-      heroHeadline="Straighten Your Teeth Without Metal Braces with Invisalign in Leominster, MA"
+      heroHeadline="Invisalign Clear Aligners That Straighten Teeth Without Metal Braces"
       canonicalPath="/services/invisalign"
       metaDescription="Invisalign clear aligners at Kaya Dental in Leominster, MA. Straighten your teeth discreetly with comfortable, removable aligners. Schedule your consultation today."
       heroSubtitle="Clear Aligners"
