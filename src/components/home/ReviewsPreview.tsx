@@ -43,12 +43,10 @@ export function ReviewsPreview() {
           <h2 className="font-serif text-2xl md:text-4xl font-bold text-foreground mt-1 md:mt-2 mb-2 md:mb-4">
             What Our Patients Say
           </h2>
-          <div className="flex items-center justify-center gap-1 md:gap-2 mb-2 md:mb-4">
-            {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 md:w-6 md:h-6 fill-accent text-accent" />)}
+          <div className="flex items-center justify-center mt-3 md:mt-4">
+            <ReviewBadges variant="dark" size="lg" />
           </div>
-          <p className="text-muted-foreground text-sm md:text-base">
-            Over 3,600+ five-star reviews on Google
-          </p>
+
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10">
