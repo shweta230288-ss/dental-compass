@@ -212,31 +212,29 @@ export function Header() {
             aria-modal="true"
             aria-label="Mobile navigation menu"
           >
-            <nav className="container py-4" aria-label="Mobile navigation">
-              {navigationItems.map(item => (
-                <div key={item.name}>
+            <nav className="container py-3 divide-y divide-border/50" aria-label="Mobile navigation">
+              {navigationItems.map(item => {
+                const isActiveGroup = item.children
+                  ? item.children.some(child => location.pathname === child.path || location.pathname.startsWith(child.path + '/'))
+                  : location.pathname === item.path || location.pathname.startsWith(item.path + '/');
+                return (
+                <div key={item.name} className="py-2">
                   <Link 
                     to={item.path} 
-                    className={`block py-3 text-base font-medium border-b border-border/50 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-inset ${
-                      item.children
-                        ? item.children.some(child => location.pathname === child.path || location.pathname.startsWith(child.path + '/'))
-                          ? 'text-accent'
-                          : 'text-foreground'
-                        : location.pathname === item.path || location.pathname.startsWith(item.path + '/')
-                          ? 'text-accent'
-                          : 'text-foreground'
+                    className={`block px-1 py-2.5 text-base font-semibold tracking-tight rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:ring-inset ${
+                      isActiveGroup ? 'text-accent' : 'text-foreground'
                     }`}
                     aria-current={location.pathname === item.path ? 'page' : undefined}
                   >
                     {item.name}
                   </Link>
                   {item.children && (
-                    <div className="pl-4 border-l-2 border-border/50 ml-2 space-y-1">
+                    <div className="mt-1 ml-1 pl-4 border-l border-border/60 flex flex-col">
                       {item.children.map(child => (
                         <Link
                           key={child.name}
                           to={child.path}
-                          className={`block py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:ring-inset ${location.pathname === child.path || location.pathname.startsWith(child.path + '/') ? 'text-accent' : 'text-muted-foreground'}`}
+                          className={`block py-2 text-sm leading-snug rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:ring-inset ${location.pathname === child.path || location.pathname.startsWith(child.path + '/') ? 'text-accent font-medium' : 'text-muted-foreground'}`}
                         >
                           {child.name}
                         </Link>
@@ -244,7 +242,9 @@ export function Header() {
                     </div>
                   )}
                 </div>
-              ))}
+                );
+              })}
+
               <div className="pt-4 space-y-3">
                 <a 
                   href="tel:978-534-4000" 
