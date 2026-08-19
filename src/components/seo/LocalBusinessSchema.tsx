@@ -39,10 +39,21 @@ const localBusinessSchema = {
   "priceRange": "$$",
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "3400"
+    "ratingValue": "5",
+    "bestRating": "5",
+    "worstRating": "1",
+    "reviewCount": "3639",
+    "itemReviewed": {
+      "@type": "Dentist",
+      "name": "Kaya Dental",
+      "@id": "https://kayadentalbydani.com"
+    },
+    "url": "https://local.demandforce.com/b/leominsterdentistry"
   },
   "sameAs": [
+    "https://local.demandforce.com/b/leominsterdentistry",
+    "https://www.facebook.com/profile.php?id=61581590236875",
+    "https://www.instagram.com/kayadentalbydani/",
     "https://www.google.com/maps?cid=kaya-dental-leominster"
   ],
   "hasOfferCatalog": {
