@@ -39,9 +39,8 @@ export function CallNowButton({
       {showNumber !== 'never' && (
         <span
           className={cn(
-            'text-sm font-medium tracking-wide',
-            showNumber === 'desktop' && 'hidden md:inline',
-            'text-accent-foreground/80'
+            'text-sm font-medium tracking-wide text-current',
+            showNumber === 'desktop' && 'hidden md:inline'
           )}
         >
           {PHONE_DISPLAY}
