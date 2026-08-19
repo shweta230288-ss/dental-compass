@@ -362,7 +362,48 @@ export function ServicePageLayout({
         </div>
       </section>
 
+      {/* FAQ Accordion */}
+      {faqs.length > 0 && (
+        <section className="py-16 bg-muted/30">
+          <div className="container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-10"
+            >
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4 break-words">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Common questions about {title.toLowerCase()} in Leominster, MA.
+              </p>
+            </motion.div>
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <AccordionItem
+                    key={index}
+                    value={`faq-${index}`}
+                    className="bg-card rounded-xl border border-border px-5 border-b"
+                  >
+                    <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground text-base leading-relaxed">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Dentist Authority */}
+
       <section className="py-16 bg-background">
         <div className="container">
           <motion.div
