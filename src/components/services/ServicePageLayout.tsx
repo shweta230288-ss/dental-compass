@@ -65,7 +65,7 @@ export function ServicePageLayout({
   relatedServices,
   canonicalPath,
 }: ServicePageLayoutProps) {
-  const headline = heroHeadline ?? `${title} in Leominster, MA`;
+  const headline = heroHeadline ?? title;
   const pageTitle = `${title} Leominster MA | Kaya Dental`;
   const canonicalUrl = canonicalPath ? `${BASE_URL}${canonicalPath}` : undefined;
 
