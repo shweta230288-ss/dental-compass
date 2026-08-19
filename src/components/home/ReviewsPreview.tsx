@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Star, Quote } from 'lucide-react';
+import { Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { ReviewBadges } from '@/components/reviews/ReviewBadges';
+
 const reviews = [{
   name: 'Abenc78',
   text: 'I decided to try my kids\' dentist, Dr. Kunal Dani, whom I already knew was excellent from the work he had done on the kids teeth. Dr. Dani is very skilled and worked patiently to assure that I was comfortable. Highly recommend Dr. Dani.',
