@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Phone, Play, Pause } from 'lucide-react';
+import { Play, Pause } from 'lucide-react';
 import { useState, useRef } from 'react';
 import { ReviewBadges } from '@/components/reviews/ReviewBadges';
+import { CallNowButton } from '@/components/shared/CallNowButton';
 
 export function HeroSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
