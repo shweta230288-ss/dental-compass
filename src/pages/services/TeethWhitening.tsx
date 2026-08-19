@@ -12,6 +12,7 @@ export default function TeethWhitening() {
       metaDescription="Professional teeth whitening at Kaya Dental in Leominster, MA. Brighten your smile safely, comfortably, and effectively with in-office and take-home options. Call to schedule."
       heroSubtitle="Brighter, Whiter Smile"
       heroDescription="If years of coffee, tea, or just time have left your smile looking duller than you'd like, you're not alone, and it's easier to fix than you think. At Kaya Dental in Leominster, MA, we help patients throughout Lunenburg, Lancaster, and Ashburnham get a noticeably brighter smile safely, without the guesswork of drugstore kits."
+      introDescription="A dull or stained smile can make you feel older or less confident than you really are. Our professional whitening options in Leominster give you brighter, more vibrant results than store-bought kits, safely and without the guesswork."
       heroImage={heroImage}
       icon={Sparkles}
       detailedDescription={[

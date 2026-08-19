@@ -21,6 +21,8 @@ interface ServicePageLayoutProps {
   /** Benefit-driven headline. Defaults to the service title. */
   heroHeadline?: string;
   heroDescription: string;
+  /** Optional, service-specific intro paragraph for the section below the hero. */
+  introDescription?: string;
   heroImage?: string;
   icon: LucideIcon;
   benefits: string[];
@@ -59,6 +61,7 @@ export function ServicePageLayout({
   heroSubtitle,
   heroHeadline,
   heroDescription,
+  introDescription,
   heroImage,
   icon: Icon,
   benefits,
@@ -239,18 +242,11 @@ export function ServicePageLayout({
             className="max-w-4xl"
           >
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4 break-words">
-              Compassionate {title} for Leominster Families
+              {introDescription ? `${title} Tailored to You in Leominster, MA` : `Compassionate ${title} for Leominster Families`}
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              If you have been putting off care because you are worried about pain, cost, or feeling
-              judged, you are not alone — and you are in the right place. Patients across Leominster,
-              Lunenburg, Lancaster, and Gardner come to Kaya Dental because we listen first, explain
-              every option in plain language, and never rush you into treatment.
-            </p>
             <p className="text-muted-foreground leading-relaxed">
-              Our goal is simple: help you feel comfortable in the chair and confident about your
-              smile again. From your first phone call to your follow-up visit, our Leominster, MA
-              team keeps things gentle, transparent, and centered on what matters most to you.
+              {introDescription ??
+                `If you have been putting off care because you are worried about pain, cost, or feeling judged, you are not alone. Patients across Leominster, Lunenburg, Lancaster, and Gardner come to Kaya Dental because we listen first, explain every option in plain language, and never rush you into treatment. Our goal is simple: help you feel comfortable in the chair and confident about your smile again.`}
             </p>
           </motion.div>
         </div>

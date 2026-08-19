@@ -11,6 +11,7 @@ export default function GeneralDentistry() {
       metaDescription="General dentistry at Kaya Dental in Leominster, MA. Judgment-free, comprehensive care for patients from Lunenburg, Lancaster, Sterling, and the Fitchburg area."
       heroSubtitle="Comprehensive Dental Care"
       heroDescription="Whether it's been six months or several years since your last visit, you'll find a welcoming, judgment-free team at Kaya Dental in Leominster, MA. We serve patients throughout Lunenburg, Lancaster, Sterling, and the Fitchburg area with honest, unhurried care — no lectures, no pressure, just a clear plan for your smile."
+      introDescription="Whether you are overdue for a checkup or looking for a new dental home in Leominster, you will find honest, unhurried care here. Dr. Kunal Dani and Dr. Amy Majzoub take time to understand your history, answer your questions, and build a prevention plan that fits your life."
       heroImage={heroImage}
       icon={Stethoscope}
       detailedDescription={[

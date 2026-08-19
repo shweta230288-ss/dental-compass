@@ -11,6 +11,7 @@ export default function Dentures() {
       metaDescription="Comfortable, natural-looking custom dentures at Kaya Dental in Leominster, MA. Full, partial, and implant-supported options. Call to schedule your consultation."
       heroSubtitle="Replace Missing Teeth"
       heroDescription="Missing several teeth — or all of them — can make everyday things like eating dinner out or laughing in photos feel stressful. At Kaya Dental in Leominster, MA, we design custom dentures that fit comfortably and look like your own teeth, so you can get back to living without thinking about your smile."
+      introDescription="Missing teeth can affect the way you eat, speak, and feel about your smile. We design custom dentures for Leominster patients that look natural, fit comfortably, and let you get back to enjoying everyday moments."
       heroImage={heroImage}
       icon={LayoutGrid}
       detailedDescription={[

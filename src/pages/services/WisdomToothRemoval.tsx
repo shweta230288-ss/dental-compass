@@ -11,6 +11,7 @@ export default function WisdomToothRemoval() {
       metaDescription="Gentle wisdom tooth removal at Kaya Dental in Leominster, MA, just off Route 2. Comfortable care for impacted or painful wisdom teeth. Call to schedule."
       heroSubtitle="Oral Surgery"
       heroDescription="Wisdom teeth cause problems because there's often simply not enough room for them — and the pain, pressure, or crowding they cause can be a lot to deal with. At Kaya Dental in Leominster, MA, we make wisdom tooth removal as comfortable and straightforward as possible, so you can put it behind you."
+      introDescription="When wisdom teeth cause pain, pressure, or crowding, removing them can bring real relief. We plan every extraction with 3D imaging and a focus on comfort, so you can recover smoothly and stop worrying about the back of your mouth."
       heroImage={heroImage}
       icon={Minus}
       detailedDescription={[

@@ -12,6 +12,7 @@ export default function Invisalign() {
       metaDescription="Invisalign clear aligners at Kaya Dental in Leominster, MA. Straighten your teeth discreetly and comfortably with digital iTero scanning. Call to schedule your consultation."
       heroSubtitle="Clear Aligners"
       heroDescription="Wishing your teeth were straighter but not thrilled about the idea of metal brackets at work or in photos? Invisalign lets adults and teens throughout Leominster, MA and nearby Lunenburg and Lancaster straighten their smile with clear, comfortable, removable aligners that fit quietly into everyday life."
+      introDescription="Crooked or crowded teeth can affect your confidence and your oral health, but traditional braces are not your only option. Our Leominster Invisalign consultations use digital scanning to map a clear, discreet path to a straighter smile."
       heroImage={heroImage}
       icon={AlignCenter}
       detailedDescription={[

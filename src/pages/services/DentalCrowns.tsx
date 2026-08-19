@@ -11,6 +11,7 @@ export default function DentalCrowns() {
       metaDescription="Custom, natural-looking dental crowns at Kaya Dental in Leominster, MA. Gentle, conservative care from Dr. Kunal Dani and Dr. Amy Majzoub. Call to schedule your visit."
       heroSubtitle="Restore & Protect"
       heroDescription="If a cracked, worn, or heavily filled tooth has you avoiding certain foods or hiding your smile in photos, a crown can quietly fix that. At Kaya Dental in Leominster, MA, we craft crowns using digital iTero scanning so they match your natural teeth and feel right the first time — no guesswork, no goopy impressions."
+      introDescription="A cracked or weakened tooth can make eating uncomfortable and smiling self-conscious. Our Leominster crowns are custom-crafted to restore strength and blend in naturally, so you can chew and laugh without a second thought."
       heroImage={heroImage}
       icon={Crown}
       detailedDescription={[

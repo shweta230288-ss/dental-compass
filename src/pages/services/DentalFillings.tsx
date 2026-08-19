@@ -11,6 +11,7 @@ export default function DentalFillings() {
       metaDescription="Comfortable, tooth-colored fillings at Kaya Dental in Leominster, MA. Gentle cavity care that blends into your smile. Call our office to schedule."
       heroSubtitle="Cavity Treatment"
       heroDescription="A little tooth sensitivity or a dark spot doesn't have to turn into a bigger problem. At Kaya Dental in Leominster, MA, we treat cavities early with tooth-colored composite fillings that blend right into your smile — quick, comfortable, and usually done in one visit."
+      introDescription="A small cavity is easiest to treat before it becomes a bigger problem. Our Leominster office uses tooth-colored fillings that bond naturally to your tooth, keeping your repair discreet and your healthy structure intact."
       heroImage={heroImage}
       icon={Circle}
       detailedDescription={[

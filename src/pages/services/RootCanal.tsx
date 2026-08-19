@@ -11,6 +11,7 @@ export default function RootCanal() {
       metaDescription="Gentle, comfortable root canal treatment at Kaya Dental in Leominster, MA, just off Route 2. Save your natural tooth and finally get relief from tooth pain."
       heroSubtitle="Save Your Natural Tooth"
       heroDescription="If someone mentions 'root canal' and your stomach drops, you're not alone — but the horror stories don't match modern dentistry. At Kaya Dental in Leominster, MA, we use gentle techniques and precise imaging so the procedure feels a lot like getting a filling, and it's what finally makes the pain stop."
+      introDescription="A toothache or deep infection can make it hard to focus on anything else. Our Leominster team uses gentle, modern techniques and precise imaging to relieve the pain, save your natural tooth, and get you back to normal."
       heroImage={heroImage}
       icon={Target}
       detailedDescription={[

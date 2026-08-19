@@ -11,6 +11,7 @@ export default function ExamCleaning() {
       metaDescription="Dental exams and cleanings at Kaya Dental in Leominster, MA. Comfortable, judgment-free preventive care for patients from Lunenburg, Lancaster, and Sterling."
       heroSubtitle="Preventive Care"
       heroDescription="A checkup and cleaning shouldn't feel intimidating. At Kaya Dental in Leominster, MA — just off Route 2 and convenient to Lunenburg, Lancaster, and Sterling — we use gentle techniques and advanced imaging to catch problems early and keep your visit as comfortable as possible."
+      introDescription="Regular exams and cleanings are the simplest way to avoid bigger problems later. At our Leominster office, we use gentle techniques and modern imaging to catch issues early, remove buildup comfortably, and keep your smile on track without judgment."
       heroImage={heroImage}
       icon={ClipboardCheck}
       detailedDescription={[

@@ -11,6 +11,7 @@ export default function FamilyDentistry() {
       metaDescription="Family dentistry at Kaya Dental in Leominster, MA. A welcoming dental home for every age, serving families in Lunenburg, Lancaster, Sterling, and Fitchburg."
       heroSubtitle="Care for the Whole Family"
       heroDescription="From your toddler's first checkup to your parents' senior care, Kaya Dental in Leominster, MA gives every generation of your family one comfortable, judgment-free dental home. Families throughout Lunenburg, Lancaster, Sterling, and the Fitchburg area trust us to make each visit easier than the last."
+      introDescription="From your child's first visit to your parents' senior care, our Leominster office treats every generation of your family under one roof. We coordinate appointments, explain things in plain language, and keep visits calm so your whole family feels comfortable coming back."
       heroImage={heroImage}
       icon={Users}
       detailedDescription={[
