@@ -43,7 +43,7 @@ export function DoctorAmySection() {
               transition={{ duration: 0.6 }}
             >
               <span className="text-accent font-medium text-sm uppercase tracking-wider">
-                Meet Your Dentist
+                Associate Dentist
               </span>
             </motion.div>
 
