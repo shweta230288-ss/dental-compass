@@ -8,10 +8,10 @@ export default function EmergencyDentistry() {
       title="Emergency Dentistry"
       heroHeadline="In Pain Right Now? We'll Get You Out of It Today"
       canonicalPath="/services/emergency-dentistry"
-      metaDescription="Same-day emergency dental care at Kaya Dental in Leominster, MA, just off Route 2. Toothache, broken tooth, or knocked-out tooth—call now and we'll take care of you."
+      metaDescription="Same-day emergency dental visits and walk-ins welcome as availability permits at Kaya Dental in Leominster, MA, just off Route 2. Toothache, broken tooth, or knocked-out tooth—call (978) 534-4000."
       heroSubtitle="Urgent Dental Care"
       heroDescription="You don't have to keep hurting until your regular appointment. Kaya Dental in Leominster, MA holds space in our schedule every day for patients in pain, so if you're dealing with a toothache, break, or injury, call us now — we'll see you as quickly as we can and walk you through what to do until then."
-      introDescription="Dental pain does not wait for a convenient time, and neither should relief. We hold same-day space in our Leominster schedule for patients dealing with toothaches, broken teeth, and injuries, so you can get out of pain fast."
+      introDescription="Dental pain does not wait for a convenient time, and neither should relief. We hold same-day space in our Leominster schedule for patients dealing with toothaches, broken teeth, and injuries — and we welcome emergency walk-ins as availability permits — so you can get out of pain fast."
       heroImage={heroImage}
       icon={AlertTriangle}
       detailedDescription={[
@@ -29,7 +29,8 @@ Our approach is always to save your natural tooth whenever possible. Whether it'
         },
       ]}
       benefits={[
-        'Same-day emergency appointments whenever possible',
+        'Same-day emergency visits as availability permits',
+        'Walk-in emergency patients welcome — call ahead if you can',
         'Fast, effective pain relief',
         'CBCT 3D imaging for an accurate diagnosis',
         'Calm, judgment-free care from Dr. Dani and Dr. Majzoub',
