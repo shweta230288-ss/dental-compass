@@ -5,6 +5,7 @@ import heroImage from '@/assets/service-cosmetic-dentistry-new.jpg';
 export default function CosmeticDentistry() {
   return (
     <ServicePageLayout
+      showMembershipBanner={false}
       title="Cosmetic Dentistry"
       heroHeadline="Cosmetic Dentistry Designed So You Can Smile with Confidence"
       canonicalPath="/services/cosmetic-dentistry"

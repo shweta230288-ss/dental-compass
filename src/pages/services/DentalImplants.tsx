@@ -5,6 +5,7 @@ import heroImage from '@/assets/service-dental-implants-new.jpg';
 export default function DentalImplants() {
   return (
     <ServicePageLayout
+      showMembershipBanner={false}
       title="Dental Implants"
       heroHeadline="Dental Implants That Replace Missing Teeth for Good"
       canonicalPath="/services/dental-implants"

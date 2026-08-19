@@ -48,7 +48,10 @@ interface ServicePageLayoutProps {
   }[];
   /** Canonical path, e.g. /services/dental-implants */
   canonicalPath?: string;
+  /** Whether to show the "No Insurance? No Problem!" membership banner. */
+  showMembershipBanner?: boolean;
 }
+
 
 export function ServicePageLayout({
   title,
@@ -65,7 +68,9 @@ export function ServicePageLayout({
   faqs,
   relatedServices,
   canonicalPath,
+  showMembershipBanner = true,
 }: ServicePageLayoutProps) {
+
   const headline = heroHeadline ?? title;
   const pageTitle = `${title} Leominster MA | Kaya Dental`;
   const canonicalUrl = canonicalPath ? `${BASE_URL}${canonicalPath}` : undefined;
@@ -439,7 +444,8 @@ export function ServicePageLayout({
       )}
 
       {/* Insurance & Financing */}
-      <InsuranceFinancingSection />
+      <InsuranceFinancingSection showMembershipBanner={showMembershipBanner} />
+
 
 
       {/* FAQ Accordion */}

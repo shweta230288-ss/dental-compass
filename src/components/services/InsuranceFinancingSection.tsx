@@ -13,7 +13,13 @@ const insurances = [
 
 const PHONE_TEL = 'tel:9785344000';
 
-export function InsuranceFinancingSection() {
+interface InsuranceFinancingSectionProps {
+  showMembershipBanner?: boolean;
+}
+
+export function InsuranceFinancingSection({
+  showMembershipBanner = true,
+}: InsuranceFinancingSectionProps) {
   return (
     <section className="py-16 bg-secondary">
       <div className="container">
@@ -55,38 +61,40 @@ export function InsuranceFinancingSection() {
         </div>
 
         {/* No insurance banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto mb-10"
-        >
-          <Link to="/membership" className="block group">
-            <div className="bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10 border-2 border-accent/30 rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent/60 hover:shadow-lg hover:shadow-accent/10">
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-                <div className="flex items-center gap-5">
-                  <div className="flex-shrink-0 w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Sparkles className="w-7 h-7 text-accent" />
+        {showMembershipBanner && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto mb-10"
+          >
+            <Link to="/membership" className="block group">
+              <div className="bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10 border-2 border-accent/30 rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent/60 hover:shadow-lg hover:shadow-accent/10">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+                  <div className="flex items-center gap-5">
+                    <div className="flex-shrink-0 w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Sparkles className="w-7 h-7 text-accent" />
+                    </div>
+                    <div className="text-center md:text-left">
+                      <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground mb-1">
+                        No Insurance? No Problem!
+                      </h3>
+                      <p className="text-muted-foreground text-sm" style={{ hyphens: 'none' }}>
+                        Join our in-house membership plan — save up to{' '}
+                        <span className="text-accent font-semibold">$300+</span> annually
+                      </p>
+                    </div>
                   </div>
-                  <div className="text-center md:text-left">
-                    <h3 className="font-serif text-xl md:text-2xl font-bold text-foreground mb-1">
-                      No Insurance? No Problem!
-                    </h3>
-                    <p className="text-muted-foreground text-sm" style={{ hyphens: 'none' }}>
-                      Join our in-house membership plan — save up to{' '}
-                      <span className="text-accent font-semibold">$300+</span> annually
-                    </p>
-                  </div>
+                  <span className="flex-shrink-0 inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-full font-medium group-hover:gap-3 transition-all duration-300">
+                    View Plans
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
                 </div>
-                <span className="flex-shrink-0 inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-full font-medium group-hover:gap-3 transition-all duration-300">
-                  View Plans
-                  <ArrowRight className="w-4 h-4" />
-                </span>
               </div>
-            </div>
-          </Link>
-        </motion.div>
+            </Link>
+          </motion.div>
+        )}
 
         {/* Financing options */}
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -135,7 +143,7 @@ export function InsuranceFinancingSection() {
           ))}
         </div>
 
-        {/* In-house financing note */}
+        {/* Ask about financing call CTA */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -143,10 +151,6 @@ export function InsuranceFinancingSection() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto mt-8 text-center"
         >
-          <p className="text-muted-foreground text-sm mb-5" style={{ hyphens: 'none' }}>
-            We also offer <strong className="text-foreground">in-house financing</strong> and will
-            verify your benefits with a clear estimate before treatment begins.
-          </p>
           <Button variant="outline" className="h-auto whitespace-normal py-3" asChild>
             <a href={PHONE_TEL} className="inline-flex items-center justify-center gap-2">
               <Phone className="w-4 h-4 flex-shrink-0" />
@@ -158,3 +162,4 @@ export function InsuranceFinancingSection() {
     </section>
   );
 }
+
