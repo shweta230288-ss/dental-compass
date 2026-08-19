@@ -65,15 +65,6 @@ export function HeroSection() {
             <span className="text-accent">Kaya Dental</span>
           </motion.h1>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.35 }}
-            className="mb-6"
-          >
-            <ReviewBadges variant="light" size="lg" />
-          </motion.div>
-
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -93,6 +84,16 @@ export function HeroSection() {
             At Kaya Dental, we bring expertise and passion together to craft radiant, 
             healthy smiles so you can shine with confidence.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="mb-8"
+          >
+            <ReviewBadges variant="light" size="lg" />
+          </motion.div>
+
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
