@@ -228,8 +228,9 @@ export function ServicePageLayout({
       </section>
 
       {/* Problem & Solution intro */}
-      <section className="py-12 lg:py-16 bg-background">
+      <section className="pt-12 lg:pt-16 pb-8 lg:pb-12 bg-background">
         <div className="container">
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
