@@ -29,9 +29,6 @@ const navigationItems = [{
     name: 'Emergency Dentistry',
     path: '/services/emergency-dentistry'
   }, {
-    name: 'Emergency Dental Care',
-    path: '/emergency-dental-care'
-  }, {
     name: 'Dental Implants',
     path: '/services/dental-implants'
   }, {
