@@ -35,7 +35,7 @@ Once placed, a well-cared-for crown is built to go the distance, so this is a fi
         'Built to hold up for years of normal eating and talking',
         'Protect a tooth so it doesn\'t need to be pulled later',
         'Chew and bite with confidence again',
-        'Financing and membership options if you're uninsured or budgeting',
+        'Financing and membership options if you\'re uninsured or budgeting',
       ]}
       whatToExpect={[
         {
@@ -102,7 +102,7 @@ Once placed, a well-cared-for crown is built to go the distance, so this is a fi
         },
         {
           question: 'How many appointments will this take?',
-          answer: 'Most crowns take two visits — one to prepare the tooth and scan it, and a second to bond your finished crown. You'll leave the first visit with a comfortable temporary so there\'s no gap in your smile. We\'ll schedule around your work day whenever we can.',
+          answer: 'Most crowns take two visits — one to prepare the tooth and scan it, and a second to bond your finished crown. You\'ll leave the first visit with a comfortable temporary so there\'s no gap in your smile. We\'ll schedule around your work day whenever we can.',
         },
         {
           question: 'What if my crown ever feels loose?',
