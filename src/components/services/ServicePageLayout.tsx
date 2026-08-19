@@ -21,6 +21,8 @@ interface ServicePageLayoutProps {
   /** Benefit-driven headline. Defaults to the service title. */
   heroHeadline?: string;
   heroDescription: string;
+  /** Optional, service-specific intro paragraph for the section below the hero. */
+  introDescription?: string;
   heroImage?: string;
   icon: LucideIcon;
   benefits: string[];
@@ -59,6 +61,7 @@ export function ServicePageLayout({
   heroSubtitle,
   heroHeadline,
   heroDescription,
+  introDescription,
   heroImage,
   icon: Icon,
   benefits,
