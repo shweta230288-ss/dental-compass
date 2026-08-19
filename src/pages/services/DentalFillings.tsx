@@ -98,15 +98,15 @@ If you've been avoiding a checkup because of old memories of the drill, know tha
         },
         {
           question: 'Can I get my old silver fillings replaced?',
-          answer: 'Yes — many patients choose to swap old dark fillings for tooth-colored ones for a more natural look. We'll take a look and let you know if it makes sense for your teeth. Call our Leominster office to set up an evaluation.',
+          answer: 'Yes — many patients choose to swap old dark fillings for tooth-colored ones for a more natural look. We\'ll take a look and let you know if it makes sense for your teeth. Call our Leominster office to set up an evaluation.',
         },
         {
           question: 'What does a filling cost, and what if I don\'t have insurance?',
-          answer: 'Fillings are one of the more affordable dental treatments, and we\'ll always share clear pricing before we begin. If you're uninsured, our membership plan or Cherry/CareCredit financing can help make it manageable. Just ask our team when you call.',
+          answer: 'Fillings are one of the more affordable dental treatments, and we\'ll always share clear pricing before we begin. If you\'re uninsured, our membership plan or Cherry/CareCredit financing can help make it manageable. Just ask our team when you call.',
         },
         {
           question: 'What if the cavity is too big for a simple filling?',
-          answer: 'If decay is more extensive, a crown or other restoration may serve you better long-term, and we\'ll explain exactly why if that's the case. We'll never push you toward more treatment than you actually need. Schedule a visit and we'll give you an honest recommendation.',
+          answer: 'If decay is more extensive, a crown or other restoration may serve you better long-term, and we\'ll explain exactly why if that\'s the case. We\'ll never push you toward more treatment than you actually need. Schedule a visit and we\'ll give you an honest recommendation.',
         },
       ]}
       relatedServices={[

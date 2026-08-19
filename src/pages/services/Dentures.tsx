@@ -90,23 +90,23 @@ There's an adjustment period with any new denture, and that's normal — we'll b
       faqs={[
         {
           question: 'How long before I have my new dentures?',
-          answer: 'The process usually spans a few visits over several weeks so we can take impressions, check the fit, and make refinements together. If any teeth need to come out first, we'll build in time to heal comfortably. Call our office and we'll map out a timeline that works for you.',
+          answer: 'The process usually spans a few visits over several weeks so we can take impressions, check the fit, and make refinements together. If any teeth need to come out first, we\'ll build in time to heal comfortably. Call our office and we\'ll map out a timeline that works for you.',
         },
         {
           question: 'Will it feel strange to eat and talk with dentures?',
-          answer: 'It's normal to notice an adjustment period at first, but most patients feel comfortable within a few weeks of everyday practice. We'll give you tips to speed up that process and check in to make sure the fit feels right. If something feels off longer than expected, just give us a call.',
+          answer: 'It\'s normal to notice an adjustment period at first, but most patients feel comfortable within a few weeks of everyday practice. We\'ll give you tips to speed up that process and check in to make sure the fit feels right. If something feels off longer than expected, just give us a call.',
         },
         {
           question: 'What do dentures cost, and are there payment options?',
-          answer: 'Cost depends on the type of denture and any preparation your mouth needs, and we'll go over pricing clearly before you commit to anything. Our membership plan and Cherry/CareCredit financing are both available if you're uninsured or want to spread out payments. Ask our team about what fits your situation.',
+          answer: 'Cost depends on the type of denture and any preparation your mouth needs, and we\'ll go over pricing clearly before you commit to anything. Our membership plan and Cherry/CareCredit financing are both available if you\'re uninsured or want to spread out payments. Ask our team about what fits your situation.',
         },
         {
           question: 'How do I take care of my dentures?',
-          answer: 'Rinse them after eating, brush them daily with a denture-specific cleanser, and give your gums and tongue a gentle brushing too. Keeping up with regular checkups helps us catch fit changes early. We're happy to walk you through a simple daily routine at your visit.',
+          answer: 'Rinse them after eating, brush them daily with a denture-specific cleanser, and give your gums and tongue a gentle brushing too. Keeping up with regular checkups helps us catch fit changes early. We\'re happy to walk you through a simple daily routine at your visit.',
         },
         {
           question: 'Are dental implants a better option for me than dentures?',
-          answer: 'It depends on your bone health, budget, and how much stability matters to you — there's no single right answer for everyone. Some patients choose implant-supported dentures for extra security, while others do very well with traditional dentures. Come in for a consultation and we'll help you decide honestly.',
+          answer: 'It depends on your bone health, budget, and how much stability matters to you — there\'s no single right answer for everyone. Some patients choose implant-supported dentures for extra security, while others do very well with traditional dentures. Come in for a consultation and we\'ll help you decide honestly.',
         },
       ]}
       relatedServices={[

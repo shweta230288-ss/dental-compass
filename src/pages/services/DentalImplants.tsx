@@ -32,7 +32,7 @@ While your body heals and bonds with the implant, we make sure you're not left w
         'Look, feel, and function like your own teeth',
         'Protect your jawbone from the shrinking that follows tooth loss',
         'Keep your facial shape looking like you',
-        'Eat what you want again once you've healed',
+        'Eat what you want again once you\'ve healed',
         'Built to last for years with normal care',
         'Leave your healthy neighboring teeth untouched',
         'Speak and smile without worrying about slipping',
@@ -45,11 +45,11 @@ While your body heals and bonds with the implant, we make sure you're not left w
         },
         {
           title: 'A Gentle Placement Visit',
-          description: 'The implant is placed with a minimally invasive approach, often in under an hour, with local anesthesia so you're comfortable throughout.',
+          description: 'The implant is placed with a minimally invasive approach, often in under an hour, with local anesthesia so you\'re comfortable throughout.',
         },
         {
           title: 'Healing, With You Looking and Living Normally',
-          description: 'While the implant bonds with your jawbone, we'll fit you with a comfortable option so your smile and daily routine aren't put on hold in the meantime.',
+          description: 'While the implant bonds with your jawbone, we\'ll fit you with a comfortable option so your smile and daily routine aren\'t put on hold in the meantime.',
         },
         {
           title: 'Your Finished, Natural-Looking Smile',
@@ -91,23 +91,23 @@ While your body heals and bonds with the implant, we make sure you're not left w
       faqs={[
         {
           question: 'Is getting an implant painful?',
-          answer: 'Most patients tell us it felt easier than they expected — often more comfortable than a tooth extraction. We numb the area thoroughly, and any soreness afterward is usually mild and manageable with over-the-counter medication. If dental anxiety is holding you back, mention it when you call and we'll make sure you're comfortable every step of the way.',
+          answer: 'Most patients tell us it felt easier than they expected — often more comfortable than a tooth extraction. We numb the area thoroughly, and any soreness afterward is usually mild and manageable with over-the-counter medication. If dental anxiety is holding you back, mention it when you call and we\'ll make sure you\'re comfortable every step of the way.',
         },
         {
           question: 'What will an implant cost me, and can I afford it?',
-          answer: 'Implants are an investment, but we'll always walk you through pricing clearly before starting, and they often save money over time compared to repeatedly replacing bridges or dentures. If you're uninsured or want to spread out the cost, we offer Cherry and CareCredit financing. Call our Leominster office and we'll talk through options that work for your budget.',
+          answer: 'Implants are an investment, but we\'ll always walk you through pricing clearly before starting, and they often save money over time compared to repeatedly replacing bridges or dentures. If you\'re uninsured or want to spread out the cost, we offer Cherry and CareCredit financing. Call our Leominster office and we\'ll talk through options that work for your budget.',
         },
         {
           question: 'Am I too old, or is my bone loss too advanced, for an implant?',
-          answer: 'Many patients who were told years ago that they weren't candidates are surprised to learn that today's techniques, including bone grafting, open up more options than before. Our CBCT 3D imaging lets us see exactly what we're working with and plan accordingly. Schedule a consultation and we'll give you an honest answer for your specific case.',
+          answer: 'Many patients who were told years ago that they weren\'t candidates are surprised to learn that today\'s techniques, including bone grafting, open up more options than before. Our CBCT 3D imaging lets us see exactly what we\'re working with and plan accordingly. Schedule a consultation and we\'ll give you an honest answer for your specific case.',
         },
         {
           question: 'Will I be without a tooth while it heals?',
-          answer: 'No — we'll fit you with a comfortable option so your smile and ability to eat and speak aren't interrupted while your implant bonds with the bone. Healing takes some time, but you won't be left with a visible gap in the meantime. We'll walk you through exactly what to expect at your consultation.',
+          answer: 'No — we\'ll fit you with a comfortable option so your smile and ability to eat and speak aren\'t interrupted while your implant bonds with the bone. Healing takes some time, but you won\'t be left with a visible gap in the meantime. We\'ll walk you through exactly what to expect at your consultation.',
         },
         {
           question: 'How long will my implant last?',
-          answer: 'With good oral hygiene, regular checkups, and avoiding tobacco, an implant is designed to last for many years, often a lifetime. It's one of the most durable tooth-replacement options available today. Give us a call and we can talk through what long-term care looks like for you.',
+          answer: 'With good oral hygiene, regular checkups, and avoiding tobacco, an implant is designed to last for many years, often a lifetime. It\'s one of the most durable tooth-replacement options available today. Give us a call and we can talk through what long-term care looks like for you.',
         },
       ]}
       relatedServices={[
