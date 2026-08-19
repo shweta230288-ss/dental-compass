@@ -313,7 +313,7 @@ export default function About() {
               className="order-2"
             >
               <span className="text-accent font-medium text-sm uppercase tracking-wider">
-                Meet Our Doctor
+                Associate Dentist
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
                 Dr. Amy Majzoub, DMD
