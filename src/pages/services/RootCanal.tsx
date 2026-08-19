@@ -6,6 +6,8 @@ export default function RootCanal() {
   return (
     <ServicePageLayout
       title="Root Canal Therapy"
+      heroHeadline="End Tooth Pain and Save Your Natural Tooth with Root Canal Therapy in Leominster, MA"
+      canonicalPath="/services/root-canal"
       metaDescription="Gentle root canal treatment at Kaya Dental in Leominster, MA. Save your natural tooth and relieve pain with modern, comfortable endodontic care."
       heroSubtitle="Save Your Natural Tooth"
       heroDescription="Root canal therapy has an undeserved reputation for being painful, but modern techniques make the procedure comfortable and effective. At Kaya Dental, we use advanced technology to perform gentle root canals that relieve pain and save your natural tooth."

@@ -6,6 +6,8 @@ export default function TeethWhitening() {
   return (
     <ServicePageLayout
       title="Teeth Whitening"
+      heroHeadline="Get a Brighter Smile in One Visit with Teeth Whitening in Leominster, MA"
+      canonicalPath="/services/teeth-whitening"
       metaDescription="Professional teeth whitening at Kaya Dental in Leominster, MA. Brighten your smile safely and effectively with in-office and take-home whitening options."
       heroSubtitle="Brighter, Whiter Smile"
       heroDescription="A bright, white smile can boost your confidence and make a lasting impression. At Kaya Dental, we offer professional teeth whitening treatments that deliver dramatic results safely and effectively—far superior to over-the-counter products."
