@@ -236,7 +236,7 @@ export function ServicePageLayout({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="max-w-3xl"
+            className="max-w-4xl"
           >
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4 break-words">
               Compassionate {title} for Leominster Families
@@ -269,9 +269,13 @@ export function ServicePageLayout({
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
-                  className="grid lg:grid-cols-2 gap-12 items-start"
+                  className={
+                    section.image
+                      ? 'grid lg:grid-cols-2 gap-12 items-start'
+                      : 'max-w-4xl'
+                  }
                 >
-                  <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
+                  <div className={section.image && index % 2 === 1 ? 'lg:order-2' : ''}>
                     <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6 break-words">
                       {section.title}
                     </h2>
@@ -284,6 +288,7 @@ export function ServicePageLayout({
                     </div>
 
                   </div>
+
                   {section.image && (
                     <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
                       <img
