@@ -25,6 +25,22 @@ const technologies = [
     ],
   },
   {
+    icon: Scan,
+    title: 'CBCT 3D Cone Beam Imaging',
+    image: techCbct,
+    description: 'Our in-office CBCT (Cone Beam Computed Tomography) scanner captures a complete three-dimensional view of your teeth, jawbone, nerves, sinuses, and airway in a single scan that takes under a minute. Unlike flat, two-dimensional X-rays, 3D cone beam imaging lets us see bone volume and anatomy from every angle, so we can plan dental implants, root canals, extractions, and airway concerns with exceptional precision—right here in Leominster, with no need for an outside imaging referral.',
+    benefits: [
+      'Full 3D view of teeth, bone, nerves, and sinuses',
+      'Scan completed in under a minute',
+      'Precise dental implant planning and placement',
+      'Guided root canal and wisdom tooth evaluation',
+      'Lower radiation than a traditional medical CT scan',
+      'No referral to an outside imaging center',
+      'See your own scan on screen during your visit',
+    ],
+  },
+  {
+
     icon: Camera,
     title: 'Digital Intraoral Scanners',
     image: techIteroScanner,
