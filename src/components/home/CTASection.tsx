@@ -3,6 +3,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Phone, MapPin, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { CallNowButton } from '@/components/shared/CallNowButton';
 
 export function CTASection() {
   const ref = useRef(null);
@@ -81,12 +82,7 @@ export function CTASection() {
                   </div>
                 </div>
 
-                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground w-full sm:w-auto mt-2" asChild>
-                  <a href="tel:978-534-4000">
-                    <Phone className="w-5 h-5 mr-2" />
-                    Call to Schedule
-                  </a>
-                </Button>
+                <CallNowButton size="lg" fullWidth className="sm:w-auto mt-2" />
               </div>
 
               {/* Map */}

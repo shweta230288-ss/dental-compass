@@ -1,9 +1,10 @@
 import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
-import { Phone, MapPin, Clock, Mail, FileText, CreditCard, ClipboardList, AlertTriangle } from 'lucide-react';
+import { MapPin, Clock, Mail, FileText, CreditCard, ClipboardList, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '@/components/seo/SEOHead';
+import { CallNowButton } from '@/components/shared/CallNowButton';
 const insurances = ['Delta Dental Premier', 'MetLife', 'United Healthcare', 'Blue Cross Blue Shield', 'And many more...'];
 const newPatientInfo = [{
   icon: FileText,
