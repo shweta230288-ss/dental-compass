@@ -169,6 +169,7 @@ export function ServicePageLayout({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
+              className="min-w-0"
             >
               <span className="text-accent font-medium text-sm uppercase tracking-wider">
                 {heroSubtitle}
