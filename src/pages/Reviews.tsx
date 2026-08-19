@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Star, Quote, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { SEOHead } from '@/components/seo/SEOHead';
+import { ReviewBadges } from '@/components/reviews/ReviewBadges';
 const reviews = [
   {
     name: 'Abenc78',
