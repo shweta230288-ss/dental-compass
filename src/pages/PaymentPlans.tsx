@@ -155,7 +155,7 @@ const PaymentPlans = () => {
           <p className="text-lg opacity-90 mb-8">
             Our team is happy to walk you through your options. Give us a call or visit our office to learn more.
           </p>
-          <CallNowButton size="lg" variant="secondary" />
+          <CallNowButton size="lg" />
         </div>
       </section>
     </Layout>
