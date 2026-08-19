@@ -9,51 +9,51 @@ export default function DentalImplants() {
       title="Dental Implants"
       heroHeadline="Dental Implants That Replace Missing Teeth for Good"
       canonicalPath="/services/dental-implants"
-      metaDescription="Dental implants at Kaya Dental in Leominster, MA. Replace missing teeth with natural-looking, permanent solutions. Schedule your implant consultation today."
+      metaDescription="Natural-looking, permanent dental implants at Kaya Dental in Leominster, MA. Precise CBCT 3D planning and a gentle, conservative approach. Call to schedule your consultation."
       heroSubtitle="Permanent Tooth Replacement"
-      heroDescription="Missing teeth affect far more than just your smile. They can change the way you eat, speak, and feel about yourself. At Kaya Dental in Leominster, MA, we offer state-of-the-art dental implants—one of the most advanced, reliable, and natural-looking solutions for replacing missing teeth."
+      heroDescription="A missing tooth can quietly change how you eat, speak, and smile in photos. At Kaya Dental in Leominster, MA, Dr. Kunal Dani and Dr. Amy Majzoub use precise CBCT 3D imaging to plan implants that look, feel, and function like your own teeth — so you can stop thinking about the gap and get back to your life."
       heroImage={heroImage}
       icon={Layers}
       detailedDescription={[
         {
-          title: 'What Are Dental Implants?',
-          content: `A dental implant is an artificial tooth root—typically made of biocompatible titanium—that is surgically placed into the jawbone. Once the implant integrates with the bone, it serves as a stable foundation for a custom dental crown, bridge, or denture.
+          title: 'A Real Root, A Real Fix',
+          content: `A dental implant replaces not just the visible part of a missing tooth but the root underneath it — the part most other options can't address. A small titanium post is placed in the jawbone, and once it's settled in, it becomes a sturdy base for a custom crown that's shaped and shaded to match your smile.
 
-The final result is a replacement tooth that looks, feels, and functions like a natural tooth. Unlike removable dentures or bridges that rely on neighboring teeth for support, dental implants are independent, secure, and designed to last for many years.`,
+Because an implant stands on its own, we don't need to touch your healthy neighboring teeth to support it, unlike a bridge. It's an investment in your long-term comfort, not just a quick patch.`,
         },
         {
-          title: 'Why Dental Implants Are the Gold Standard',
-          content: `Dental implants are widely considered the gold standard for tooth replacement because they address both the visible tooth and the missing root beneath the gumline. Many patients are surprised to learn that implants are more affordable than expected, the procedure is relatively painless, and placement of a single dental implant often takes less than an hour.
+          title: 'Why So Many Patients Choose Implants',
+          content: `Implants are popular because they solve the whole problem — missing tooth and missing root — while keeping your jawbone healthy and your face looking like you. Many patients come in expecting the process to be painful or unaffordable, and are relieved to learn placement is usually quick and well-tolerated, with manageable soreness afterward.
 
-Unlike other tooth replacement options, dental implants prevent bone loss in the jaw, maintain facial structure, and don't require altering adjacent healthy teeth.`,
+While your body heals and bonds with the implant, we make sure you're not left without a tooth — we'll talk through a comfortable temporary option so your daily life and appearance aren't interrupted along the way.`,
         },
       ]}
       benefits={[
-        'Look, feel, and function like natural teeth',
-        'Prevent bone loss in the jaw',
-        'Preserve facial structure and appearance',
-        'No dietary restrictions once healed',
-        'Long-lasting—can last decades with proper care',
-        'Don\'t require altering adjacent teeth',
-        'Improve speech and comfort',
-        'Easy to care for like natural teeth',
+        'Look, feel, and function like your own teeth',
+        'Protect your jawbone from the shrinking that follows tooth loss',
+        'Keep your facial shape looking like you',
+        'Eat what you want again once you've healed',
+        'Built to last for years with normal care',
+        'Leave your healthy neighboring teeth untouched',
+        'Speak and smile without worrying about slipping',
+        'Financing available if cost is a concern',
       ]}
       whatToExpect={[
         {
-          title: 'Consultation and Planning',
-          description: 'We evaluate your oral health, bone levels, and smile goals using our in-office CBCT 3D cone beam scan to measure bone volume and map nerves for a precise, personalized plan.',
+          title: 'A Clear, Personalized Plan',
+          description: 'Using our in-office CBCT 3D scan, we map your jawbone and nerves precisely, so your plan is tailored to your mouth — not a one-size-fits-all approach.',
         },
         {
-          title: 'Implant Placement',
-          description: 'The titanium implant is gently placed into the jawbone in a minimally invasive procedure, often taking less than an hour.',
+          title: 'A Gentle Placement Visit',
+          description: 'The implant is placed with a minimally invasive approach, often in under an hour, with local anesthesia so you're comfortable throughout.',
         },
         {
-          title: 'Healing and Integration',
-          description: 'Over 3-6 months, the implant integrates with the bone (osseointegration), creating a strong, stable foundation.',
+          title: 'Healing, With You Looking and Living Normally',
+          description: 'While the implant bonds with your jawbone, we'll fit you with a comfortable option so your smile and daily routine aren't put on hold in the meantime.',
         },
         {
-          title: 'Final Restoration',
-          description: 'Once healed, a custom-made crown, bridge, or denture is attached to the implant, restoring your complete smile.',
+          title: 'Your Finished, Natural-Looking Smile',
+          description: 'Once healing is complete, we attach your custom crown, bridge, or denture — and your new tooth is ready for everyday life.',
         },
       ]}
       additionalInfo={[
@@ -61,56 +61,53 @@ Unlike other tooth replacement options, dental implants prevent bone loss in the
           title: 'What Implants Can Replace',
           items: [
             'A single missing tooth',
-            'Multiple missing teeth in a row',
-            'All teeth (implant-supported dentures)',
-            'Failing or damaged teeth',
-            'Uncomfortable removable dentures',
-            'Teeth lost due to injury or decay',
+            'Several missing teeth in a row',
+            'A full arch, with implant-supported dentures',
+            'A failing or damaged tooth',
+            'An uncomfortable removable denture',
           ],
         },
         {
-          title: 'Implants vs. Dentures',
+          title: 'Implants Compared to Dentures',
           items: [
-            'Secure and stable—no slipping',
-            'Feel natural when eating and speaking',
-            'Preserve jawbone health',
-            'No adhesives required',
-            'No removal for cleaning',
-            'Long-term investment in oral health',
+            'Stay firmly in place — no slipping',
+            'Feel natural when eating and talking',
+            'Help preserve your jawbone',
+            'No adhesives or nightly removal',
+            'A long-term investment in your smile',
           ],
         },
         {
-          title: 'Ideal Candidates',
+          title: 'Is an Implant Right for You?',
           items: [
-            'Healthy adults with missing teeth',
-            'Those unhappy with dentures',
-            'Adequate bone or candidates for grafting',
-            'Good oral hygiene habits',
-            'Non-smokers or willing to quit',
-            'Seeking a permanent solution',
+            'Healthy adults with one or more missing teeth',
+            'Anyone frustrated with a loose denture',
+            'Most patients qualify, even with some bone loss',
+            'Willing to keep up good oral hygiene',
+            'Looking for a lasting solution, not a repeat fix',
           ],
         },
       ]}
       faqs={[
         {
-          question: 'Is dental implant surgery painful?',
-          answer: 'Most patients report that implant placement is more comfortable than a tooth extraction. The procedure is performed under local anesthesia, and most patients experience only mild soreness afterward—easily managed with over-the-counter pain medication.',
+          question: 'Is getting an implant painful?',
+          answer: 'Most patients tell us it felt easier than they expected — often more comfortable than a tooth extraction. We numb the area thoroughly, and any soreness afterward is usually mild and manageable with over-the-counter medication. If dental anxiety is holding you back, mention it when you call and we'll make sure you're comfortable every step of the way.',
         },
         {
-          question: 'How long do dental implants last?',
-          answer: 'With proper care, dental implants can last many years or even a lifetime. Regular dental checkups, good oral hygiene, and avoiding tobacco use all contribute to long-term success.',
+          question: 'What will an implant cost me, and can I afford it?',
+          answer: 'Implants are an investment, but we'll always walk you through pricing clearly before starting, and they often save money over time compared to repeatedly replacing bridges or dentures. If you're uninsured or want to spread out the cost, we offer Cherry and CareCredit financing. Call our Leominster office and we'll talk through options that work for your budget.',
         },
         {
-          question: 'Am I a candidate for dental implants?',
-          answer: 'Most healthy adults with missing teeth are candidates for dental implants. Even patients who have been told they\'re not candidates may be surprised by modern implant techniques, including bone grafting options.',
+          question: 'Am I too old, or is my bone loss too advanced, for an implant?',
+          answer: 'Many patients who were told years ago that they weren't candidates are surprised to learn that today's techniques, including bone grafting, open up more options than before. Our CBCT 3D imaging lets us see exactly what we're working with and plan accordingly. Schedule a consultation and we'll give you an honest answer for your specific case.',
         },
         {
-          question: 'How much do dental implants cost?',
-          answer: 'While dental implants may have a higher upfront cost than other options, they\'re often more cost-effective long-term. Unlike bridges or dentures that may need replacement, implants are designed to last decades. We offer financing options to make treatment accessible.',
+          question: 'Will I be without a tooth while it heals?',
+          answer: 'No — we'll fit you with a comfortable option so your smile and ability to eat and speak aren't interrupted while your implant bonds with the bone. Healing takes some time, but you won't be left with a visible gap in the meantime. We'll walk you through exactly what to expect at your consultation.',
         },
         {
-          question: 'How long does the entire process take?',
-          answer: 'The complete process typically takes 3-6 months, allowing time for the implant to integrate with your jawbone. Some patients may qualify for same-day implants in certain situations.',
+          question: 'How long will my implant last?',
+          answer: 'With good oral hygiene, regular checkups, and avoiding tobacco, an implant is designed to last for many years, often a lifetime. It's one of the most durable tooth-replacement options available today. Give us a call and we can talk through what long-term care looks like for you.',
         },
       ]}
       relatedServices={[
