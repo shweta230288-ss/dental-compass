@@ -31,14 +31,79 @@ function GoogleGlyph({ className }: { className?: string }) {
 interface ReviewBadgesProps {
   /** 'light' for badges on dark backgrounds, 'dark' for badges on light backgrounds */
   variant?: 'light' | 'dark';
+  /** 'md' compact pills, 'lg' prominent cards */
+  size?: 'md' | 'lg';
   className?: string;
 }
 
-export function ReviewBadges({ variant = 'light', className }: ReviewBadgesProps) {
+export function ReviewBadges({ variant = 'light', size = 'md', className }: ReviewBadgesProps) {
   const pill =
     variant === 'light'
       ? 'bg-primary-foreground/10 border-accent/40 text-primary-foreground hover:bg-primary-foreground/20'
       : 'bg-card border-border text-foreground hover:bg-muted';
+
+  if (size === 'lg') {
+    const card =
+      variant === 'light'
+        ? 'bg-primary-foreground/[0.08] border-accent/50 text-primary-foreground hover:bg-primary-foreground/[0.16] hover:border-accent'
+        : 'bg-card border-border text-foreground hover:border-accent/60 hover:bg-muted';
+
+    const items = [
+      {
+        href: GOOGLE_REVIEWS_URL,
+        label: 'Read our 4.9 star Google reviews (opens in a new tab)',
+        icon: <GoogleGlyph className="w-7 h-7 flex-shrink-0" />,
+        rating: '4.9',
+        source: 'Google Reviews',
+        count: '700+ reviews',
+      },
+      {
+        href: DEMANDFORCE_REVIEWS_URL,
+        label: 'Read our 5.0 star verified patient reviews on Demandforce (opens in a new tab)',
+        icon: <BadgeCheck className="w-7 h-7 flex-shrink-0 text-accent" />,
+        rating: '5.0',
+        source: 'Verified Patient Reviews',
+        count: '3,600+ reviews',
+      },
+    ];
+
+    return (
+      <div
+        className={cn(
+          'grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-xl',
+          className
+        )}
+      >
+        {items.map((item) => (
+          <a
+            key={item.source}
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={item.label}
+            className={cn(
+              'group flex items-center gap-3 rounded-2xl border-2 px-4 py-3.5 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2',
+              card
+            )}
+          >
+            {item.icon}
+            <div className="min-w-0">
+              <div className="flex items-center gap-2">
+                <span className="text-xl font-bold leading-none">{item.rating}</span>
+                <span className="flex items-center gap-0.5 text-accent">
+                  {[0, 1, 2, 3, 4].map((i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                  ))}
+                </span>
+              </div>
+              <div className="mt-1 text-[13px] font-semibold leading-tight">{item.source}</div>
+              <div className="text-[12px] opacity-75 leading-tight">{item.count}</div>
+            </div>
+          </a>
+        ))}
+      </div>
+    );
+  }
 
   return (
     <div className={cn('flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5', className)}>
