@@ -444,7 +444,8 @@ export function ServicePageLayout({
       )}
 
       {/* Insurance & Financing */}
-      <InsuranceFinancingSection />
+      <InsuranceFinancingSection showMembershipBanner={showMembershipBanner} />
+
 
 
       {/* FAQ Accordion */}
