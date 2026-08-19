@@ -8,6 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { LucideIcon } from 'lucide-react';
 import drDani from '@/assets/dr-kunal-dani.jpg';
 import { ReviewBadges } from '@/components/reviews/ReviewBadges';
+import { InsuranceFinancingSection } from '@/components/services/InsuranceFinancingSection';
 
 const PHONE_TEL = 'tel:9785344000';
 const PHONE_DISPLAY = '(978) 534-4000';
@@ -438,46 +439,8 @@ export function ServicePageLayout({
       )}
 
       {/* Insurance & Financing */}
-      <section className="py-16 bg-background">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto bg-card border border-border rounded-2xl p-6 md:p-10 shadow-soft"
-          >
-            <div className="flex items-start gap-3 mb-4">
-              <CreditCard className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground break-words">
-                Insurance &amp; Flexible Financing
-              </h2>
-            </div>
-            <p className="text-muted-foreground leading-relaxed mb-4" style={{ hyphens: 'none' }}>
-              We accept popular insurance networks and offer flexible monthly payment options through
-              Cherry financing to help split your treatment into budget-friendly monthly costs with
-              no hidden fees.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6" style={{ hyphens: 'none' }}>
-              We also offer <strong className="text-foreground">in-house financing</strong> and an
-              in-house membership plan for patients without insurance — so cost never has to stand
-              between you and the care you need. Our team will verify your benefits and give you a
-              clear estimate before treatment begins.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button className="w-full sm:w-auto h-auto whitespace-normal py-3" asChild>
-                <Link to="/payment-plans">Explore Payment Plans</Link>
-              </Button>
-              <Button variant="outline" className="w-full sm:w-auto h-auto whitespace-normal py-3" asChild>
-                <a href={PHONE_TEL} className="inline-flex items-center justify-center gap-2">
-                  <Phone className="w-4 h-4 flex-shrink-0" />
-                  Ask About Financing
-                </a>
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <InsuranceFinancingSection />
+
 
       {/* FAQ Accordion */}
       {faqs.length > 0 && (
