@@ -1,12 +1,14 @@
 import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import { SEOHead } from '@/components/seo/SEOHead';
-import { Zap, Camera, Printer, Brain, Phone } from 'lucide-react';
+import { Zap, Camera, Printer, Brain, Phone, Scan } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import techDigitalXray from '@/assets/tech-digital-xray.jpg';
 import techIteroScanner from '@/assets/tech-itero-scanner.jpg';
 import tech3dPrinter from '@/assets/tech-3d-printer.jpg';
 import techAiOverjet from '@/assets/tech-ai-overjet.jpg';
+import techCbct from '@/assets/tech-cbct-scanner.jpg';
+
 
 const technologies = [
   {
@@ -23,6 +25,22 @@ const technologies = [
     ],
   },
   {
+    icon: Scan,
+    title: 'CBCT 3D Cone Beam Imaging',
+    image: techCbct,
+    description: 'Our in-office CBCT (Cone Beam Computed Tomography) scanner captures a complete three-dimensional view of your teeth, jawbone, nerves, sinuses, and airway in a single scan that takes under a minute. Unlike flat, two-dimensional X-rays, 3D cone beam imaging lets us see bone volume and anatomy from every angle, so we can plan dental implants, root canals, extractions, and airway concerns with exceptional precision—right here in Leominster, with no need for an outside imaging referral.',
+    benefits: [
+      'Full 3D view of teeth, bone, nerves, and sinuses',
+      'Scan completed in under a minute',
+      'Precise dental implant planning and placement',
+      'Guided root canal and wisdom tooth evaluation',
+      'Lower radiation than a traditional medical CT scan',
+      'No referral to an outside imaging center',
+      'See your own scan on screen during your visit',
+    ],
+  },
+  {
+
     icon: Camera,
     title: 'Digital Intraoral Scanners',
     image: techIteroScanner,
@@ -67,8 +85,8 @@ export default function Technology() {
   return (
     <Layout>
       <SEOHead
-        title="Dental Technology | Trusted Dentist in Leominster MA | Kaya Dental"
-        description="Advanced dental technology from your trusted dentist in Leominster, MA. Digital X-rays, iTero scanners, 3D printing, and AI-powered diagnostics at Kaya Dental."
+        title="Dental Technology & CBCT 3D Imaging | Leominster MA | Kaya Dental"
+        description="Advanced dental technology from your trusted dentist in Leominster, MA. CBCT 3D cone beam imaging, digital X-rays, iTero scanners, 3D printing, and AI diagnostics."
         canonicalPath="/technology"
       />
 

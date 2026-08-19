@@ -24,7 +24,7 @@ Our general dentistry services include everything from routine checkups and clea
           title: 'Advanced Technology for Better Care',
           content: `We use the latest dental technology to provide more accurate diagnoses and more comfortable treatments. Our digital X-rays expose you to significantly less radiation than traditional X-rays while providing clearer images.
 
-Our Overjet AI technology helps us detect cavities and other issues earlier than ever before, while our iTero scanner eliminates the need for messy traditional impressions. All of this technology works together to give you the best possible dental experience.`,
+Our in-office CBCT 3D cone beam scanner captures a complete three-dimensional view of your teeth, jawbone, nerves, and sinuses in under a minute, which is invaluable for implant planning, root canals, and extractions. Our Overjet AI technology helps us detect cavities and other issues earlier than ever before, while our iTero scanner eliminates the need for messy traditional impressions. All of this technology works together to give you the best possible dental experience.`,
         },
       ]}
       benefits={[
@@ -60,7 +60,7 @@ Our Overjet AI technology helps us detect cavities and other issues earlier than
           title: 'Our General Services',
           items: [
             'Comprehensive exams and cleanings',
-            'Digital X-rays and imaging',
+            'Digital X-rays and CBCT 3D imaging',
             'Tooth-colored fillings',
             'Dental sealants',
             'Fluoride treatments',

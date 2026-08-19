@@ -167,7 +167,8 @@ export default function NewPatients() {
                 </li>
                 <li>
                   <strong className="text-foreground">Digital X-Rays</strong> – We use advanced digital X-rays 
-                  to safely capture a complete view of your oral health.
+                  to safely capture a complete view of your oral health, plus in-office CBCT 3D cone beam
+                  imaging when a more detailed, three-dimensional view is needed.
                 </li>
                 <li>
                   <strong className="text-foreground">Personalized Treatment Discussion</strong> – We'll review our 

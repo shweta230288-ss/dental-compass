@@ -184,7 +184,7 @@ export default function About() {
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-foreground">Advanced Technology</h4>
-                  <p className="text-sm text-muted-foreground">Digital scanners, 3D printing</p>
+                  <p className="text-sm text-muted-foreground">CBCT 3D imaging, digital scanners, 3D printing</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
