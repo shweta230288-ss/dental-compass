@@ -5,6 +5,7 @@ import heroImage from '@/assets/service-orthodontics-new.jpg';
 export default function Orthodontics() {
   return (
     <ServicePageLayout
+      showMembershipBanner={false}
       title="Orthodontics"
       heroHeadline="Orthodontic Care for a Straighter, Healthier Bite at Every Age"
       canonicalPath="/services/orthodontics"

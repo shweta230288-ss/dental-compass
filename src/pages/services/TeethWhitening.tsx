@@ -5,6 +5,7 @@ import heroImage from '@/assets/service-teeth-whitening-new.jpg';
 export default function TeethWhitening() {
   return (
     <ServicePageLayout
+      showMembershipBanner={false}
       title="Teeth Whitening"
       heroHeadline="Professional Teeth Whitening for a Brighter Smile in One Visit"
       canonicalPath="/services/teeth-whitening"

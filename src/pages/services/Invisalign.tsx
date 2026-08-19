@@ -5,6 +5,7 @@ import heroImage from '@/assets/service-invisalign-new.jpg';
 export default function Invisalign() {
   return (
     <ServicePageLayout
+      showMembershipBanner={false}
       title="Invisalign"
       heroHeadline="Invisalign Clear Aligners That Straighten Teeth Without Metal Braces"
       canonicalPath="/services/invisalign"
