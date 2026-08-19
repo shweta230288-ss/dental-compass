@@ -12,8 +12,6 @@ const insurances = [
   'And many more...',
 ];
 
-const PHONE_TEL = 'tel:9785344000';
-
 interface InsuranceFinancingSectionProps {
   showMembershipBanner?: boolean;
 }
