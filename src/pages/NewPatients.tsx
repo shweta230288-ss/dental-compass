@@ -285,12 +285,7 @@ export default function NewPatients() {
             <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
               We can't wait to meet you! Call us today to schedule your appointment.
             </p>
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
-              <a href="tel:978-534-4000">
-                <Phone className="w-5 h-5 mr-2" />
-                Call (978) 534-4000
-              </a>
-            </Button>
+            <CallNowButton size="lg" />
           </motion.div>
         </div>
       </section>

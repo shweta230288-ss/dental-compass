@@ -1,14 +1,10 @@
 import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import { SEOHead } from '@/components/seo/SEOHead';
-import { Check, Phone } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { CallNowButton } from '@/components/shared/CallNowButton';
 
 const plans = [
   {
@@ -218,13 +214,13 @@ export default function Membership() {
                     </li>
                   ))}
                 </ul>
-                <Button 
+                <Button
                   className={`w-full ${plan.popular ? 'bg-accent hover:bg-accent/90 text-accent-foreground' : ''}`}
                   variant={plan.popular ? 'default' : 'outline'}
                   size="sm"
                   asChild
                 >
-                  <a href="tel:978-534-4000">
+                  <a href="tel:9785344000">
                     <Phone className="w-4 h-4 mr-2" />
                     Enroll Today
                   </a>

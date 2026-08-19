@@ -181,16 +181,7 @@ export default function Technology() {
               Ready to experience modern dentistry with state-of-the-art technology? 
               Schedule your appointment today and see the difference advanced care can make.
             </p>
-            <Button
-              size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground"
-              asChild
-            >
-              <a href="tel:978-534-4000">
-                <Phone className="w-5 h-5 mr-2" />
-                Call (978) 534-4000
-              </a>
-            </Button>
+            <CallNowButton size="lg" />
           </motion.div>
         </div>
       </section>
