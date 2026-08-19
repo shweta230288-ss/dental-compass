@@ -2,7 +2,7 @@ import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Check, Phone, Star, ShieldCheck, CreditCard, HeartHandshake, GraduationCap } from 'lucide-react';
+import { ArrowRight, Check, Phone, ShieldCheck, CreditCard, HeartHandshake, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { LucideIcon } from 'lucide-react';
