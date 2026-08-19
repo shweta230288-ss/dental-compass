@@ -138,7 +138,15 @@ export function Header() {
                 >
                   <Link 
                     to={item.path} 
-                    className={`flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors rounded-md hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 ${location.pathname === item.path || location.pathname.startsWith(item.path + '/') ? 'text-accent' : 'text-foreground'}`}
+                    className={`flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors rounded-md hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 ${
+                      item.children
+                        ? item.children.some(child => location.pathname === child.path || location.pathname.startsWith(child.path + '/'))
+                          ? 'text-accent'
+                          : 'text-foreground'
+                        : location.pathname === item.path || location.pathname.startsWith(item.path + '/')
+                          ? 'text-accent'
+                          : 'text-foreground'
+                    }`}
                     aria-current={location.pathname === item.path ? 'page' : undefined}
                     aria-expanded={item.children ? activeDropdown === item.name : undefined}
                     aria-haspopup={item.children ? 'true' : undefined}
