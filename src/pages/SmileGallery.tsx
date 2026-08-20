@@ -7,6 +7,7 @@ import { ReviewBadges } from '@/components/reviews/ReviewBadges';
 import traumaCase1 from '@/assets/trauma-case-1.png.asset.json';
 import traumaCase2 from '@/assets/trauma-case-2.png.asset.json';
 import allOnXCase from '@/assets/all-on-x-case.png.asset.json';
+import cosmeticCrownsCase from '@/assets/cosmetic-crowns-case.png.asset.json';
 
 const cases = [
   {
