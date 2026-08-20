@@ -45,9 +45,6 @@ const navigationItems = [{
   name: 'Financials',
   path: '/membership',
   children: [{
-    name: 'View All Financials',
-    path: '/membership'
-  }, {
     name: 'Membership Plans',
     path: '/membership'
   }, {
