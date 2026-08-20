@@ -48,7 +48,7 @@ export function SameDayAvailabilitySection() {
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-row gap-2 shrink-0">
+            <div className="flex flex-col sm:flex-row gap-2 shrink-0">
               <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground whitespace-nowrap">
                 <a href="tel:978-534-4000">
                   <Phone className="w-4 h-4 mr-1.5" />
