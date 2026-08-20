@@ -71,7 +71,7 @@ export default function SmileGallery() {
               single visit.
             </p>
             <div className="mt-8">
-              <ReviewBadges variant="large" />
+              <ReviewBadges variant="light" size="lg" />
             </div>
           </motion.div>
         </div>
