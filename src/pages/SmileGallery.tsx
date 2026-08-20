@@ -38,13 +38,13 @@ const cases = [
 const highlights = [
   {
     icon: Clock,
-    title: 'Same-Day Trauma Care',
-    text: 'Chipped or broken a tooth? We reserve time each day for urgent visits so you are not waiting in discomfort.',
+    title: 'Same-Day Appointments',
+    text: 'Need care quickly? We reserve time each day for urgent visits so you can get relief without the long wait.',
   },
   {
     icon: Sparkles,
     title: 'Natural-Looking Results',
-    text: 'Shade-matched composite materials blend seamlessly with your surrounding teeth.',
+    text: 'Shade-matched materials and precise technique help every restoration blend beautifully with your smile.',
   },
   {
     icon: ShieldCheck,
