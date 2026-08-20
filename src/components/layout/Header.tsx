@@ -39,9 +39,6 @@ const navigationItems = [{
     path: '/services/teeth-whitening'
   }]
 }, {
-  name: 'Emergency Care',
-  path: '/emergency-dental-care'
-}, {
   name: 'Technology',
   path: '/technology'
 }, {
