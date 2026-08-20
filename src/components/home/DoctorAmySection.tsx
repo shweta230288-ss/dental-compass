@@ -3,7 +3,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, GraduationCap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import amyPhotoAsset from '@/assets/amy-majzoub.jpg.asset.json';
 
 export function DoctorAmySection() {
@@ -63,10 +63,14 @@ export function DoctorAmySection() {
               className="space-y-4 text-muted-foreground leading-relaxed mb-8"
             >
               <p>
-                Dr. Amy Majzoub is proud to provide compassionate, personalized dental care built on trust, honesty, and lasting patient relationships. She believes in preserving natural teeth whenever possible and creating thoughtful treatment plans that prioritize long-term oral health and patient comfort.
+                Dr. Amy Majzoub brings a gentle, patient-centered approach to every appointment, 
+                blending clinical excellence with genuine compassion. She takes time to listen, 
+                explain options clearly, and create treatment plans that feel right for your goals 
+                and comfort.
               </p>
               <p>
-                A graduate of the University of Connecticut School of Dental Medicine, Dr. Majzoub combines strong clinical expertise with a gentle, patient-centered approach. She is known for taking the time to listen carefully, explain treatment options clearly, and help patients feel confident and comfortable in every step of their care.
+                "I believe dental care should feel personal, not rushed. My goal is to help every 
+                patient feel confident and cared for, from the first hello to the final result."
               </p>
             </motion.div>
 
@@ -74,34 +78,10 @@ export function DoctorAmySection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-gradient-to-br from-primary to-kaya-navy-dark rounded-xl p-6 text-primary-foreground mb-8"
-            >
-              <GraduationCap className="w-8 h-8 text-accent mb-3" />
-              <h3 className="font-serif text-lg font-bold mb-3">Education & Credentials</h3>
-              <ul className="space-y-2 text-primary-foreground/90 text-sm">
-                <li className="flex items-start gap-2">
-                  <span className="text-accent">•</span>
-                  Doctor of Dental Medicine (DMD), University of Connecticut School of Dental Medicine
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-accent">•</span>
-                  Compassionate, patient-centered approach with a focus on long-term oral health
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-accent">•</span>
-                  Committed to preserving natural teeth whenever possible
-                </li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 }}
             >
               <Button variant="default" size="lg" asChild>
                 <Link to="/about" className="inline-flex items-center">
-                  Meet Our Team
+                  Learn More About Dr. Amy
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>
@@ -112,3 +92,4 @@ export function DoctorAmySection() {
     </section>
   );
 }
+
