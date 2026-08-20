@@ -58,7 +58,7 @@ const navigationItems = [{
   name: 'Smile Gallery',
   path: '/smile-gallery'
 }, {
-  name: 'Patient Success Stories',
+  name: 'Patient Reviews',
   path: '/reviews'
 }, {
   name: 'New Patients',

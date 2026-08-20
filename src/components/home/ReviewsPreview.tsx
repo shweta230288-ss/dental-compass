@@ -38,7 +38,7 @@ export function ReviewsPreview() {
         duration: 0.6
       }} className="text-center mb-8 md:mb-14">
           <span className="text-accent font-medium text-xs md:text-sm uppercase tracking-wider">
-            Patient Success Stories
+            Patient Reviews
           </span>
           <h2 className="font-serif text-2xl md:text-4xl font-bold text-foreground mt-1 md:mt-2 mb-2 md:mb-4">
             What Our Patients Say
