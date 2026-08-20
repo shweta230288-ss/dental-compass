@@ -68,21 +68,18 @@ export function LegacySection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}>
             
-            <div className="space-y-5 text-muted-foreground leading-relaxed">
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                As Dr. Michael Cronin's practice transitions into{' '}
+                As Dr. Michael Cronin's practice becomes{' '}
                 <span className="font-semibold text-foreground">Kaya Dental</span>,
-                our commitment remains exactly the same.
-              </p>
-              <p>
-                For over 60 years, patients have trusted this practice for clinical
-                excellence, thoughtful care, and relationships that span generations.
-                That foundation does not change.
+                our commitment to Leominster families remains unchanged. For over 60 years,
+                patients have trusted this practice for clinical excellence, thoughtful care,
+                and relationships that span generations.
               </p>
             </div>
 
-            <div className="mt-8 mb-8">
-              <p className="font-semibold text-foreground mb-4">We continue to believe in:</p>
+            <div className="mt-6 mb-6">
+              <p className="font-semibold text-foreground mb-3">We continue to believe in:</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {values.map((value, i) =>
                 <motion.div
@@ -90,7 +87,7 @@ export function LegacySection() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
-                  className="flex items-start gap-3 bg-background rounded-xl p-4 shadow-sm">
+                  className="flex items-start gap-3 bg-background rounded-xl p-3 shadow-sm">
                   
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-foreground">{value}</span>
@@ -98,11 +95,6 @@ export function LegacySection() {
                 )}
               </div>
             </div>
-
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Most importantly, we remain what this community has always known us to
-              be — a warm, kind, welcoming dental home where patients feel like family.
-            </p>
 
             <motion.p
               initial={{ opacity: 0, y: 10 }}
