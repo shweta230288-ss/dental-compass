@@ -55,6 +55,9 @@ const navigationItems = [{
     path: '/payment-plans/cherry'
   }]
 }, {
+  name: 'Smile Gallery',
+  path: '/smile-gallery'
+}, {
   name: 'Patient Success Stories',
   path: '/reviews'
 }, {

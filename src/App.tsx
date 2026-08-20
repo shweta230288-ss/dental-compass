@@ -15,6 +15,7 @@ import Contact from "./pages/Contact";
 import PaymentPlans from "./pages/PaymentPlans";
 import CherryFinancing from "./pages/CherryFinancing";
 import EmergencyDentalCare from "./pages/EmergencyDentalCare";
+import SmileGallery from "./pages/SmileGallery";
 import NotFound from "./pages/NotFound";
 import { ScrollToTop } from "./components/ScrollToTop";
 
@@ -67,6 +68,7 @@ const App = () => (
             <Route path="/membership" element={<Membership />} />
             <Route path="/payment-plans" element={<PaymentPlans />} />
             <Route path="/payment-plans/cherry" element={<CherryFinancing />} />
+            <Route path="/smile-gallery" element={<SmileGallery />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/new-patients" element={<NewPatients />} />
             <Route path="/contact" element={<Contact />} />
