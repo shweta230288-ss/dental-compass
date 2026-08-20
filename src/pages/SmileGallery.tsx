@@ -38,13 +38,13 @@ const cases = [
 const highlights = [
   {
     icon: Clock,
-    title: 'Same-Day Trauma Care',
-    text: 'Chipped or broken a tooth? We reserve time each day for urgent visits so you are not waiting in discomfort.',
+    title: 'Same-Day Appointments',
+    text: 'Need care quickly? We reserve time each day for urgent visits so you can get relief without the long wait.',
   },
   {
     icon: Sparkles,
     title: 'Natural-Looking Results',
-    text: 'Shade-matched composite materials blend seamlessly with your surrounding teeth.',
+    text: 'Shade-matched materials and precise technique help every restoration blend beautifully with your smile.',
   },
   {
     icon: ShieldCheck,
@@ -57,13 +57,13 @@ export default function SmileGallery() {
   return (
     <Layout>
       <SEOHead
-        title="Smile Gallery | Dental Trauma Before & After Results in Leominster, MA"
-        description="See real before and after dental trauma cases from Kaya Dental, your trusted dentist in Leominster, MA. Chipped and broken teeth restored with same-day bonding."
+        title="Smile Gallery | Before & After Results in Leominster, MA | Kaya Dental"
+        description="Explore real before and after smile transformations from Kaya Dental, your trusted dentist in Leominster, MA. See results from bonding, implants, All-on-X, and more."
         canonicalPath="/smile-gallery"
       />
 
       {/* Hero */}
-      <section className="py-16 md:py-24 bg-secondary/30">
+      <section className="bg-primary py-20 text-primary-foreground">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -71,13 +71,13 @@ export default function SmileGallery() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
               Smile Gallery
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Real results from real patients. These dental trauma cases were treated right here in
-              Leominster, MA — chipped, broken, and fractured teeth rebuilt comfortably, often in a
-              single visit.
+            <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed">
+              Real results from real patients. These before and after photos showcase the kind of
+              transformations we create every day right here in Leominster, MA — from subtle repairs
+              to full smile makeovers.
             </p>
             <div className="mt-8">
               <ReviewBadges variant="light" size="lg" />
@@ -91,11 +91,11 @@ export default function SmileGallery() {
         <div className="container">
           <div className="max-w-3xl mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Dental Trauma Before &amp; After
+              Before &amp; After Transformations
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Accidents happen — a fall, a sports injury, or biting into something hard. Each photo
-              below shows an actual case treated at Kaya Dental.
+              Every smile has a story. Each photo below shows an actual case treated at Kaya Dental,
+              reflecting the personalized care and attention we bring to every visit.
             </p>
           </div>
 
@@ -162,11 +162,11 @@ export default function SmileGallery() {
       <section className="py-16 md:py-20 bg-background">
         <div className="container text-center max-w-2xl mx-auto">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Broken or Chipped a Tooth?
+            Ready to Transform Your Smile?
           </h2>
           <p className="text-muted-foreground mb-8 leading-relaxed">
-            Call us and we will do everything we can to see you the same day. Our team will walk you
-            through your options, costs, and timing before anything begins.
+            Schedule a consultation and discover what is possible for your smile. Our team will walk
+            you through your options, costs, and timing before anything begins.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
@@ -176,7 +176,7 @@ export default function SmileGallery() {
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href="/services/emergency-dentistry">Learn More</a>
+              <a href="/services">Explore Services</a>
             </Button>
           </div>
         </div>
