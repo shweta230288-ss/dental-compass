@@ -34,6 +34,14 @@ const cases = [
     summary:
       'A patient struggling with multiple failing teeth received a complete, implant-supported full-arch restoration. The result is a secure, natural-looking smile rebuilt for long-term comfort and confidence.',
   },
+  {
+    title: 'Cosmetic Crowns Transformation',
+    image: cosmeticCrownsCase.url,
+    alt: 'Before and after photos of cosmetic dental crowns placed at Kaya Dental in Leominster, MA',
+    treatment: 'Custom ceramic crowns',
+    summary:
+      'A damaged and discolored front tooth was restored with a custom ceramic crown that matched the shape, shade, and translucency of the surrounding teeth for a seamless result.',
+  },
 ];
 
 const highlights = [
