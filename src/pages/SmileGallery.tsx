@@ -25,6 +25,14 @@ const cases = [
     summary:
       'Uneven, chipped edges from dental trauma were smoothed and rebuilt to restore a balanced, natural-looking smile line while preserving as much original enamel as possible.',
   },
+  {
+    title: 'Full-Mouth Restoration with All-on-X',
+    image: allOnXCase.url,
+    alt: 'Before and after photos of a full-mouth restoration using All-on-X dental implants at Kaya Dental in Leominster, MA',
+    treatment: 'All-on-X implant-supported restoration',
+    summary:
+      'A patient struggling with multiple failing teeth received a complete, implant-supported full-arch restoration. The result is a secure, natural-looking smile rebuilt for long-term comfort and confidence.',
+  },
 ];
 
 const highlights = [
