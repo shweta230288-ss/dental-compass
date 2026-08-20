@@ -39,15 +39,15 @@ const navigationItems = [{
     path: '/services/teeth-whitening'
   }]
 }, {
-  name: 'Emergency Care',
-  path: '/emergency-dental-care'
-}, {
   name: 'Technology',
   path: '/technology'
 }, {
   name: 'Financials',
   path: '/membership',
   children: [{
+    name: 'View All Financials',
+    path: '/membership'
+  }, {
     name: 'Membership Plans',
     path: '/membership'
   }, {
