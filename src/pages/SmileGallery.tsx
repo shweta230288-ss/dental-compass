@@ -162,11 +162,11 @@ export default function SmileGallery() {
       <section className="py-16 md:py-20 bg-background">
         <div className="container text-center max-w-2xl mx-auto">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Broken or Chipped a Tooth?
+            Ready to Transform Your Smile?
           </h2>
           <p className="text-muted-foreground mb-8 leading-relaxed">
-            Call us and we will do everything we can to see you the same day. Our team will walk you
-            through your options, costs, and timing before anything begins.
+            Schedule a consultation and discover what is possible for your smile. Our team will walk
+            you through your options, costs, and timing before anything begins.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
@@ -176,7 +176,7 @@ export default function SmileGallery() {
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href="/services/emergency-dentistry">Learn More</a>
+              <a href="/services">Explore Services</a>
             </Button>
           </div>
         </div>
