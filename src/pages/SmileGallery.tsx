@@ -7,6 +7,7 @@ import { ReviewBadges } from '@/components/reviews/ReviewBadges';
 import traumaCase1 from '@/assets/trauma-case-1.png.asset.json';
 import traumaCase2 from '@/assets/trauma-case-2.png.asset.json';
 import allOnXCase from '@/assets/all-on-x-case.png.asset.json';
+import cosmeticCrownsCase from '@/assets/cosmetic-crowns-case.png.asset.json';
 
 const cases = [
   {
@@ -32,6 +33,14 @@ const cases = [
     treatment: 'All-on-X implant-supported restoration',
     summary:
       'A patient struggling with multiple failing teeth received a complete, implant-supported full-arch restoration. The result is a secure, natural-looking smile rebuilt for long-term comfort and confidence.',
+  },
+  {
+    title: 'Cosmetic Crowns Transformation',
+    image: cosmeticCrownsCase.url,
+    alt: 'Before and after photos of cosmetic dental crowns placed at Kaya Dental in Leominster, MA',
+    treatment: 'Custom ceramic crowns',
+    summary:
+      'A damaged and discolored front tooth was restored with a custom ceramic crown that matched the shape, shade, and translucency of the surrounding teeth for a seamless result.',
   },
 ];
 
