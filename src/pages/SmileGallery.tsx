@@ -57,13 +57,13 @@ export default function SmileGallery() {
   return (
     <Layout>
       <SEOHead
-        title="Smile Gallery | Dental Trauma Before & After Results in Leominster, MA"
-        description="See real before and after dental trauma cases from Kaya Dental, your trusted dentist in Leominster, MA. Chipped and broken teeth restored with same-day bonding."
+        title="Smile Gallery | Before & After Results in Leominster, MA | Kaya Dental"
+        description="Explore real before and after smile transformations from Kaya Dental, your trusted dentist in Leominster, MA. See results from bonding, implants, All-on-X, and more."
         canonicalPath="/smile-gallery"
       />
 
       {/* Hero */}
-      <section className="py-16 md:py-24 bg-secondary/30">
+      <section className="bg-primary py-20 text-primary-foreground">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -71,13 +71,13 @@ export default function SmileGallery() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
               Smile Gallery
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Real results from real patients. These dental trauma cases were treated right here in
-              Leominster, MA — chipped, broken, and fractured teeth rebuilt comfortably, often in a
-              single visit.
+            <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed">
+              Real results from real patients. These before and after photos showcase the kind of
+              transformations we create every day right here in Leominster, MA — from subtle repairs
+              to full smile makeovers.
             </p>
             <div className="mt-8">
               <ReviewBadges variant="light" size="lg" />
