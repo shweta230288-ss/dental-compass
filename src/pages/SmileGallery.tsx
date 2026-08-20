@@ -91,11 +91,11 @@ export default function SmileGallery() {
         <div className="container">
           <div className="max-w-3xl mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Dental Trauma Before &amp; After
+              Before &amp; After Transformations
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Accidents happen — a fall, a sports injury, or biting into something hard. Each photo
-              below shows an actual case treated at Kaya Dental.
+              Every smile has a story. Each photo below shows an actual case treated at Kaya Dental,
+              reflecting the personalized care and attention we bring to every visit.
             </p>
           </div>
 
