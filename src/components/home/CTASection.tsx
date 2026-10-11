@@ -74,7 +74,8 @@ export function CTASection() {
                   <div>
                     <h3 className="font-semibold text-primary-foreground mb-1">Office Hours</h3>
                     <div className="text-primary-foreground/80 text-sm space-y-0.5">
-                      <p>Mon - Thu: 8AM - 5PM</p>
+                      <p>Mon, Tue, Thu: 8AM - 5PM</p>
+                      <p>Wed: 7AM - 5PM</p>
                       <p>Fri: 7AM - 2PM</p>
                       <p>Sat & Sun: Closed</p>
                     </div>

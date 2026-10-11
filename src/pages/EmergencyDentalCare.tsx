@@ -134,10 +134,11 @@ const emergencySchema = {
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+      dayOfWeek: ['Monday', 'Tuesday', 'Thursday'],
       opens: '08:00',
       closes: '17:00',
     },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Wednesday', opens: '07:00', closes: '17:00' },
     { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday', opens: '07:00', closes: '14:00' },
   ],
   availableService: {
@@ -233,7 +234,7 @@ export default function EmergencyDentalCare() {
             Same-day emergency appointments available as availability permits
           </p>
           <p className="text-sm md:text-base opacity-90">
-            Mon–Thu 8:00 a.m. – 5:00 p.m. · Fri 7:00 a.m. – 2:00 p.m.
+            Mon, Tue & Thu 8:00 a.m. – 5:00 p.m. · Wed 7:00 a.m. – 5:00 p.m. · Fri 7:00 a.m. – 2:00 p.m.
           </p>
         </div>
       </section>
