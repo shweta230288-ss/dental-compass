@@ -1,7 +1,8 @@
 import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import { SEOHead } from '@/components/seo/SEOHead';
-import { Zap, Camera, Printer, Brain, Phone, Scan } from 'lucide-react';
+import { Zap, Camera, Brain, Phone, Scan, Leaf, Gem, Clock } from 'lucide-react';
+import crownsCase from '@/assets/cosmetic-crowns-case.png.asset.json';
 import { Button } from '@/components/ui/button';
 import techDigitalXray from '@/assets/tech-digital-xray.jpg';
 import techIteroScanner from '@/assets/tech-itero-scanner.jpg';
@@ -51,19 +52,6 @@ const technologies = [
       'Faster treatment planning',
       'Real-time visualization',
       'Perfect for Invisalign treatment',
-    ],
-  },
-  {
-    icon: Printer,
-    title: '3D Printing Technology',
-    image: tech3dPrinter,
-    description: 'With in-house 3D printing, we can create custom dental appliances, surgical guides, and temporary restorations right here in our office. This means faster turnaround times and perfectly fitted solutions.',
-    benefits: [
-      'Same-day dental appliances',
-      'Precise surgical guides',
-      'Custom night guards and retainers',
-      'Reduced wait times',
-      'Perfect fit every time',
     ],
   },
   {
@@ -160,6 +148,69 @@ export default function Technology() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Advanced 3D Printing & Restorative Dentistry */}
+      <section className="py-20 md:py-28 bg-secondary" aria-labelledby="midas-heading">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <span className="text-accent font-medium text-xs md:text-sm uppercase tracking-[0.2em]">
+                Advanced 3D Printing &amp; Restorative Dentistry
+              </span>
+              <h2 id="midas-heading" className="font-serif text-3xl md:text-4xl font-bold text-primary mt-3 mb-6 leading-tight">
+                Precision-Crafted Restorations. Inspired by Nature.
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                At Kaya Dental, we combine SprintRay Midas 3D printing with a tooth-preserving approach to modern dentistry.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Using <strong className="text-foreground font-semibold">advanced ceramic-filled restorative materials</strong>, we create custom crowns, inlays, and onlays designed for natural-looking beauty and precise fit. These innovative restorations can help preserve healthy tooth structure when appropriate, with the added convenience of same-day treatment for select cases.
+              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-8">
+                Our broader in-office 3D printing capabilities also support custom dental appliances, night guards, and surgical guides.
+              </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+                {[
+                  { icon: Leaf, label: 'Preserve Natural Teeth' },
+                  { icon: Gem, label: 'Advanced Materials' },
+                  { icon: Clock, label: 'Same-Day Options' },
+                ].map(({ icon: Icon, label }) => (
+                  <li key={label} className="flex items-center gap-3 bg-card rounded-xl px-4 py-3 shadow-card">
+                    <Icon className="w-5 h-5 text-accent flex-shrink-0" />
+                    <span className="text-sm font-medium text-foreground">{label}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
+                <a href="tel:978-534-4000">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call (978) 534-4000
+                </a>
+              </Button>
+            </div>
+            <div className="relative pb-16 lg:pb-0">
+              <div className="rounded-2xl overflow-hidden shadow-medium">
+                <img
+                  src={crownsCase.url}
+                  alt="Natural-looking custom crown restoring a discolored front tooth at Kaya Dental"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full aspect-[4/3] object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-2 left-4 lg:-left-8 lg:-bottom-10 w-2/5 rounded-xl overflow-hidden shadow-medium border-4 border-background">
+                <img
+                  src={tech3dPrinter}
+                  alt="In-office 3D printer producing precise dental restorations"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full aspect-square object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
