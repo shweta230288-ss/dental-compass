@@ -28,6 +28,12 @@ Because an implant stands on its own, we don't need to touch your healthy neighb
 
 While your body heals and bonds with the implant, we make sure you're not left without a tooth — we'll talk through a comfortable temporary option so your daily life and appearance aren't interrupted along the way.`,
         },
+        {
+          title: 'All-on-X: A Full New Smile on Just a Few Implants',
+          content: `If you're missing most or all of your teeth — or living with a denture you don't love — All-on-X treatment can rebuild an entire arch of teeth on as few as four to six strategically placed implants. Instead of one implant per tooth, a fixed, non-removable bridge of natural-looking teeth is secured to the implants, giving you a complete smile that stays put when you eat, laugh, and speak.
+
+At Kaya Dental, we provide All-on-X treatment for full mouth rehabilitation, planned digitally from start to finish with our in-office CBCT 3D imaging. In many cases, patients leave with a functional set of temporary teeth the same day their implants are placed — you never have to go without a smile. It's a life-changing option for patients with failing teeth or uncomfortable dentures, and we'll walk you through whether it's the right fit for you at a consultation.`,
+        },
       ]}
       benefits={[
         'Look, feel, and function like your own teeth',
