@@ -45,6 +45,11 @@ const reviews = [
     text: 'My experience with this office this year has been wonderful, and I would absolutely recommend to family and friends. The administrative staff, hygienists, and Dr. Dani are professional, welcoming, and kind. You can tell that everyone in the office enjoys their job, which says a lot. 5/5 is well deserved!',
     rating: 5,
   },
+  {
+    name: 'Madeline Lane',
+    text: "I can't say enough great things about Kaya Dental! I had always been very self-conscious about the gap next to one of my teeth, and it really affected my confidence. The dentist was incredibly understanding, compassionate, and took the time to listen to my concerns. They were able to fix my tooth with a bonding procedure, and the results have been amazing. I couldn't be happier with my smile. The entire team is kind, professional, and truly cares about their patients. They are so much more than just a dentist, they genuinely want to help people feel their best. I highly recommend Kaya Dental to anyone looking for exceptional care!",
+    rating: 5,
+  },
 ];
 
 export default function Reviews() {
