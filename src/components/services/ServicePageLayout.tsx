@@ -2,11 +2,10 @@ import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Check, Phone, ShieldCheck, CreditCard, HeartHandshake, GraduationCap } from 'lucide-react';
+import { ArrowRight, Check, Phone, CreditCard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { LucideIcon } from 'lucide-react';
-import drDani from '@/assets/dr-kunal-dani.jpg';
 import { ReviewBadges } from '@/components/reviews/ReviewBadges';
 import { InsuranceFinancingSection } from '@/components/services/InsuranceFinancingSection';
 
@@ -440,69 +439,23 @@ export function ServicePageLayout({
         </section>
       )}
 
-      {/* Dentist Authority */}
-
-      <section className="py-16 bg-background">
+      {/* Meet Our Dentists link */}
+      <section className="py-12 bg-background">
         <div className="container">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="grid lg:grid-cols-[minmax(0,340px)_1fr] gap-8 lg:gap-12 items-center max-w-5xl mx-auto"
+            className="flex justify-center"
           >
-            <img
-              src={drDani}
-              alt="Dr. Kunal Dani, DMD — dentist in Leominster, MA"
-              className="rounded-2xl shadow-lg w-full h-auto object-cover"
-            />
-            <div>
-              <span className="text-accent font-medium text-sm uppercase tracking-wider">
-                Meet Your Dentists
-              </span>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mt-2 mb-4">
-                Dr. Kunal Dani, DMD
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Dr. Dani earned his dental degree from Tufts University School of Dental Medicine and
-                continues advanced clinical training each year in implant dentistry, cosmetic
-                restorations, and clear aligner therapy. That ongoing education means Leominster
-                patients get modern, evidence-based care without leaving their community.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Just as important as technique is comfort. Dr. Dani takes the time to explain your
-                options, answer every question, and build a plan that respects your budget, your
-                schedule, and your goals.
-              </p>
-              <div className="grid sm:grid-cols-3 gap-4">
-                <div className="flex items-start gap-2">
-                  <GraduationCap className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Tufts-trained, DMD</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <HeartHandshake className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Gentle, patient-first care</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <ShieldCheck className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">
-                    Serving Leominster since 1961
-                  </span>
-                </div>
-              </div>
-              <div className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-1 rounded-xl border border-border bg-card px-4 py-3">
-                <span className="text-sm text-muted-foreground">
-                  Also welcoming new patients:
-                </span>
-                <Link
-                  to="/about#dr-amy"
-                  className="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline"
-                >
-                  Dr. Amy Majzoub
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-            </div>
+            <Link
+              to="/about#dr-dani"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm md:text-base font-semibold text-foreground transition-all duration-300 hover:border-accent hover:text-accent hover:shadow-medium"
+            >
+              Meet Our Dentists
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </motion.div>
         </div>
       </section>
