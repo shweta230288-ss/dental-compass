@@ -1,7 +1,7 @@
 import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import { SEOHead } from '@/components/seo/SEOHead';
-import { Zap, Camera, Brain, Phone, Scan, Leaf, Gem, Clock } from 'lucide-react';
+import { Zap, Camera, Brain, Phone, Scan, Gem } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import techDigitalXray from '@/assets/tech-digital-xray.jpg';
 import techIteroScanner from '@/assets/tech-itero-scanner.jpg';
