@@ -34,6 +34,8 @@ import Dentures from "./pages/services/Dentures";
 import EmergencyDentistry from "./pages/services/EmergencyDentistry";
 import Orthodontics from "./pages/services/Orthodontics";
 import WisdomToothRemoval from "./pages/services/WisdomToothRemoval";
+import AllOnX from "./pages/services/AllOnX";
+import FullMouthReconstruction from "./pages/services/FullMouthReconstruction";
 
 const queryClient = new QueryClient();
 
@@ -63,6 +65,8 @@ const App = () => (
             <Route path="/services/emergency-dentistry" element={<EmergencyDentistry />} />
             <Route path="/services/orthodontics" element={<Orthodontics />} />
             <Route path="/services/wisdom-tooth-removal" element={<WisdomToothRemoval />} />
+            <Route path="/services/all-on-x" element={<AllOnX />} />
+            <Route path="/services/full-mouth-reconstruction" element={<FullMouthReconstruction />} />
             <Route path="/technology" element={<Technology />} />
             
             <Route path="/membership" element={<Membership />} />
