@@ -75,7 +75,7 @@ export default function About() {
   // Front Office Staff & Treatment Plan Coordinator
   const frontOfficeStaff = [{
     name: 'Shaz',
-    role: 'Front Desk',
+    role: 'Insurance (Wizard) Co-ordinator',
     image: staffShaz,
     bio: "Shaz is from Leominster and has always been passionate about the dental field. With over eight years of experience, she loves helping patients and making every visit a positive one. Shaz has been with Kaya Dental since mid 2024 and always brings great energy to the office! Outside of work, she is all about family time, her Shih Tzu Cocoa, traveling whenever she can, and saying yes to adventures! Whether it's beach days, hikes, concerts, or sporting events, if there's good energy, good people & music, or something fun happening, chances are you'll find her right there!"
   }, {
