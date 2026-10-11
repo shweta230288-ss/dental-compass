@@ -232,7 +232,7 @@ export default function About() {
             once: true
           }} className="order-2 lg:order-2">
               <span className="text-accent font-medium text-sm uppercase tracking-wider">
-                Meet Our Doctor
+                Meet Our Doctors
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
                 Dr. Kunal Dani, DMD
@@ -317,7 +317,7 @@ export default function About() {
               className="order-2"
             >
               <span className="text-accent font-medium text-sm uppercase tracking-wider">
-                Associate Dentist
+                Meet Our Doctors
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
                 Dr. Amy Majzoub, DMD

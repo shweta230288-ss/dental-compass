@@ -498,7 +498,7 @@ export function ServicePageLayout({
                   to="/about#dr-amy"
                   className="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline"
                 >
-                  Dr. Amy Majzoub, Associate Dentist
+                  Dr. Amy Majzoub
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
