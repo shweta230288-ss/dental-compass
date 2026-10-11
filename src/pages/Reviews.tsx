@@ -50,6 +50,11 @@ const reviews = [
     text: "I can't say enough great things about Kaya Dental! I had always been very self-conscious about the gap next to one of my teeth, and it really affected my confidence. The dentist was incredibly understanding, compassionate, and took the time to listen to my concerns. They were able to fix my tooth with a bonding procedure, and the results have been amazing. I couldn't be happier with my smile. The entire team is kind, professional, and truly cares about their patients. They are so much more than just a dentist, they genuinely want to help people feel their best. I highly recommend Kaya Dental to anyone looking for exceptional care!",
     rating: 5,
   },
+  {
+    name: 'Mary Ann',
+    text: 'I had a great experience at Kaya Dental!! The minute I walked in the door the office staff was very welcoming. I then met Dr. Dani who was great!! He was very personable, thorough and knowledgeable. He did an exceptional job repairing my tooth!! I would highly recommend Dr. Dani and Kaya Dental for any Dental problem you may have!',
+    rating: 5,
+  },
 ];
 
 export default function Reviews() {
