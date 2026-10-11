@@ -20,6 +20,8 @@ import serviceDentalCrowns from '@/assets/service-dental-crowns-new.jpg';
 import serviceEmergencyDentistry from '@/assets/service-emergency-dentistry-new.jpg';
 import serviceOrthodontics from '@/assets/service-orthodontics-new.jpg';
 import serviceWisdomTooth from '@/assets/service-wisdom-tooth-new.jpg';
+import serviceAllOnX from '@/assets/service-all-on-x-new.jpg';
+import serviceFullMouthReconstruction from '@/assets/service-full-mouth-reconstruction-new.jpg';
 
 const allServices = [
   {
@@ -46,6 +48,8 @@ const allServices = [
       { title: 'Dental Crowns', path: '/services/dental-crowns', description: 'Restore damaged teeth with custom-fitted crowns.', image: serviceDentalCrowns },
       { title: 'Dentures', path: '/services/dentures', description: 'Custom dentures for a natural-looking smile.', image: serviceDentures },
       { title: 'Dental Implants', path: '/services/dental-implants', description: 'Permanent tooth replacement that looks and feels natural.', image: serviceDentalImplants },
+      { title: 'All-on-X Implants', path: '/services/all-on-x', description: 'A complete, fixed arch of teeth supported by implants.', image: serviceAllOnX },
+      { title: 'Full Mouth Reconstruction', path: '/services/full-mouth-reconstruction', description: 'A personalized plan to rebuild your entire smile.', image: serviceFullMouthReconstruction },
     ],
   },
   {
