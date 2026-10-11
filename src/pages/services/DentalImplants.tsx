@@ -2,12 +2,13 @@ import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { Layers } from 'lucide-react';
 import heroImage from '@/assets/service-dental-implants-new.jpg';
 import allOnXCaseAsset from '@/assets/all-on-x-case.png.asset.json';
+import { AllOnXConsultationForm } from '@/components/services/AllOnXConsultationForm';
 
 export default function DentalImplants() {
   return (
     <ServicePageLayout
-        showMembershipBanner={false}
-        extraSections={<AllOnXConsultationForm />}
+      showMembershipBanner={false}
+      extraSections={<AllOnXConsultationForm />}
       title="Dental Implants"
       heroHeadline="Dental Implants That Replace Missing Teeth for Good"
       canonicalPath="/services/dental-implants"
