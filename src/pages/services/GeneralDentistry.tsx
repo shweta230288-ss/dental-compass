@@ -25,7 +25,9 @@ We follow a conservative, tooth-preserving philosophy, which means we'll never p
           title: 'Modern Technology, Gentler Visits',
           content: `We invest in technology that makes your visits faster, more comfortable, and more accurate. Digital X-rays use significantly less radiation, and our in-office CBCT 3D scanner captures a complete picture of your teeth, jaw, and nerves in under a minute — helpful when planning implants, root canals, or extractions without sending you elsewhere.
 
-Our iTero digital scanner replaces messy, gag-inducing impressions with a quick digital scan, and our AI-assisted imaging helps us catch small issues before they become big, expensive problems. It all adds up to fewer surprises and a more comfortable chair-side experience.`,
+Our iTero digital scanner replaces messy, gag-inducing impressions with a quick digital scan, and our AI-assisted imaging helps us catch small issues before they become big, expensive problems. It all adds up to fewer surprises and a more comfortable chair-side experience.
+
+That same technology also means fewer appointments when a tooth needs a restoration. Using our in-office 3D printer, we design and print custom crowns, inlays, and onlays from ceramic-filled materials that closely match natural tooth structure — so a repair that once meant weeks of temporaries and multiple visits can often be completed the same day, while preserving as much of your healthy tooth as possible.`,
         },
       ]}
       benefits={[
