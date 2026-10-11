@@ -202,7 +202,7 @@ export default function About() {
       </section>
 
       {/* Meet Dr. Dani */}
-      <section className="py-20 bg-secondary">
+      <section id="dr-dani" className="py-20 bg-secondary scroll-mt-24">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{
@@ -232,7 +232,7 @@ export default function About() {
             once: true
           }} className="order-2 lg:order-2">
               <span className="text-accent font-medium text-sm uppercase tracking-wider">
-                Meet Our Doctor
+                Meet Our Doctors
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
                 Dr. Kunal Dani, DMD
@@ -291,7 +291,7 @@ export default function About() {
       </section>
 
       {/* Meet Dr. Amy Majzoub */}
-      <section className="py-20 bg-background">
+      <section id="dr-amy" className="py-20 bg-background scroll-mt-24">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -317,7 +317,7 @@ export default function About() {
               className="order-2"
             >
               <span className="text-accent font-medium text-sm uppercase tracking-wider">
-                Associate Dentist
+                Meet Our Doctors
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
                 Dr. Amy Majzoub, DMD

@@ -458,7 +458,7 @@ export function ServicePageLayout({
             />
             <div>
               <span className="text-accent font-medium text-sm uppercase tracking-wider">
-                Meet Your Dentist
+                Meet Your Dentists
               </span>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mt-2 mb-4">
                 Dr. Kunal Dani, DMD
@@ -489,6 +489,18 @@ export function ServicePageLayout({
                     Serving Leominster since 1961
                   </span>
                 </div>
+              </div>
+              <div className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-1 rounded-xl border border-border bg-card px-4 py-3">
+                <span className="text-sm text-muted-foreground">
+                  Also welcoming new patients:
+                </span>
+                <Link
+                  to="/about#dr-amy"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline"
+                >
+                  Dr. Amy Majzoub
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
             </div>
           </motion.div>
