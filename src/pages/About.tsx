@@ -261,6 +261,10 @@ export default function About() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-accent">•</span>
+                    Fellow, International Dental Implant Association
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent">•</span>
                     Advanced training in Cosmetic Dentistry and Biomimetic Dentistry
                   </li>
                   <li className="flex items-start gap-2">

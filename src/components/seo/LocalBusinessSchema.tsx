@@ -111,6 +111,10 @@ const localBusinessSchema = {
     "alumniOf": {
       "@type": "EducationalOrganization",
       "name": "Tufts University School of Dental Medicine"
+    },
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Fellow, International Dental Implant Association"
     }
   },
   "description": "Kaya Dental — your trusted dentist in Leominster, MA. Comprehensive dental care including cosmetic dentistry, dental implants, Invisalign, and family dentistry with state-of-the-art technology."
