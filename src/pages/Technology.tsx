@@ -153,25 +153,51 @@ export default function Technology() {
       </section>
 
       {/* Advanced 3D Printing & Restorative Dentistry */}
-      <section className="py-20 md:py-28 bg-secondary" aria-labelledby="midas-heading">
+      <section className="py-20 bg-secondary" aria-labelledby="midas-heading">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="text-accent font-medium text-xs md:text-sm uppercase tracking-[0.2em]">
-              Advanced 3D Printing &amp; Restorative Dentistry
-            </span>
-            <h2 id="midas-heading" className="font-serif text-3xl md:text-4xl font-bold text-primary mt-3 mb-6 leading-tight">
-              Precision-Crafted Restorations. Inspired by Nature.
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              At Kaya Dental, we combine SprintRay Midas 3D printing with a tooth-preserving approach to modern dentistry.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Using <strong className="text-foreground font-semibold">advanced ceramic-filled restorative materials</strong>, we create custom crowns, inlays, and onlays designed for natural-looking beauty and precise fit. These innovative restorations can help preserve healthy tooth structure when appropriate, with the added convenience of same-day treatment for select cases.
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-10">
-              Our broader in-office 3D printing capabilities also support custom dental appliances, night guards, and surgical guides.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center"
+          >
+            <div className="lg:order-2">
+              <div className="flex items-center gap-3 mb-4 md:mb-6 md:block">
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Gem className="w-6 h-6 md:w-8 md:h-8 text-accent" />
+                </div>
+                <h2 id="midas-heading" className="font-serif text-xl md:text-3xl font-bold text-foreground md:mt-6">
+                  Precision-Crafted Restorations. Inspired by Nature.
+                </h2>
+              </div>
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4">
+                At Kaya Dental, we combine SprintRay Midas 3D printing with a tooth-preserving approach to modern dentistry. Using <strong className="text-foreground font-semibold">advanced ceramic-filled restorative materials</strong>, we create custom crowns, inlays, and onlays designed for natural-looking beauty and precise fit.
+              </p>
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4 md:mb-6">
+                Our broader in-office 3D printing capabilities also support custom dental appliances, night guards, and surgical guides.
+              </p>
+              <h4 className="font-semibold text-foreground text-sm md:text-base mb-2 md:mb-3">Key Benefits:</h4>
+              <ul className="grid grid-cols-1 gap-1 md:gap-2 mb-6">
+                {[
+                  'Preserve natural, healthy tooth structure',
+                  'Advanced ceramic-filled restorative materials',
+                  'Same-day treatment options for select cases',
+                ].map((benefit) => (
+                  <li key={benefit} className="flex items-center gap-2 md:gap-3 text-muted-foreground text-xs md:text-base">
+                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-accent flex-shrink-0" />
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
+                <a href="tel:978-534-4000">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call (978) 534-4000
+                </a>
+              </Button>
+            </div>
+            <div className="lg:order-1 grid grid-cols-1 gap-5">
               {[
                 {
                   src: tech3dPrintCrown.url,
@@ -184,7 +210,7 @@ export default function Technology() {
                   caption: 'Inlays and onlays printed in a single appointment',
                 },
               ].map(({ src, alt, caption }) => (
-                <figure key={caption} className="text-left">
+                <figure key={caption}>
                   <div className="rounded-2xl overflow-hidden shadow-medium">
                     <img
                       src={src}
@@ -198,25 +224,7 @@ export default function Technology() {
                 </figure>
               ))}
             </div>
-            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
-              {[
-                { icon: Leaf, label: 'Preserve Natural Teeth' },
-                { icon: Gem, label: 'Advanced Materials' },
-                { icon: Clock, label: 'Same-Day Options' },
-              ].map(({ icon: Icon, label }) => (
-                <li key={label} className="flex items-center justify-center gap-3 bg-card rounded-xl px-4 py-3 shadow-card">
-                  <Icon className="w-5 h-5 text-accent flex-shrink-0" />
-                  <span className="text-sm font-medium text-foreground">{label}</span>
-                </li>
-              ))}
-            </ul>
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" asChild>
-              <a href="tel:978-534-4000">
-                <Phone className="w-5 h-5 mr-2" />
-                Call (978) 534-4000
-              </a>
-            </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
 
