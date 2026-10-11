@@ -6,7 +6,8 @@ import allOnXCaseAsset from '@/assets/all-on-x-case.png.asset.json';
 export default function DentalImplants() {
   return (
     <ServicePageLayout
-      showMembershipBanner={false}
+        showMembershipBanner={false}
+        extraSections={<AllOnXConsultationForm />}
       title="Dental Implants"
       heroHeadline="Dental Implants That Replace Missing Teeth for Good"
       canonicalPath="/services/dental-implants"
