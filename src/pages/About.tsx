@@ -202,7 +202,7 @@ export default function About() {
       </section>
 
       {/* Meet Dr. Dani */}
-      <section className="py-20 bg-secondary">
+      <section id="dr-dani" className="py-20 bg-secondary scroll-mt-24">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{
@@ -291,7 +291,7 @@ export default function About() {
       </section>
 
       {/* Meet Dr. Amy Majzoub */}
-      <section className="py-20 bg-background">
+      <section id="dr-amy" className="py-20 bg-background scroll-mt-24">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
