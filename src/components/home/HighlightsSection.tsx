@@ -8,7 +8,7 @@ const highlights = [
   {
     icon: Award,
     title: 'Clinical Excellence',
-    description: 'Experienced Leominster dentists delivering precise, modern care tailored to your goals and comfort.'
+    description: 'Evidence-based, biomimetic dentistry delivered with advanced technology — precise, proven care tailored to your goals and comfort.'
   },
   {
     icon: Heart,
