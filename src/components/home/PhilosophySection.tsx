@@ -60,7 +60,10 @@ export function PhilosophySection() {
               <p>
                 Every smile tells a story, and we're honored to be part of yours. As your trusted dentist 
                 in Leominster, our philosophy is personalized care rooted in warmth, trust, and compassion, 
-                guided by a deep commitment to clinical excellence.
+                guided by a deep commitment to clinical excellence. Our approach combines evidence-based, 
+                biomimetic, and advanced dentistry — treatments proven by science and designed to work 
+                with your body, preserving as much of your natural tooth structure as possible while 
+                restoring strength, comfort, and beauty.
               </p>
             </motion.div>
 
