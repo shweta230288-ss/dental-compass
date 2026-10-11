@@ -308,6 +308,13 @@ export function ServicePageLayout({
         </section>
       )}
 
+      {/* Optional page-specific content, e.g. a consultation request form */}
+      {extraSections && (
+        <section className="pb-16 bg-background">
+          <div className="container">{extraSections}</div>
+        </section>
+      )}
+
       {/* Benefits */}
       <section className="py-16 bg-secondary">
         <div className="container">
