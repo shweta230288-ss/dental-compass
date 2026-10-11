@@ -12,6 +12,8 @@
   <url><loc>https://kayadentalbydani.com/services/invisalign</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://kayadentalbydani.com/services/dental-crowns</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://kayadentalbydani.com/services/dental-implants</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://kayadentalbydani.com/services/all-on-x</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://kayadentalbydani.com/services/full-mouth-reconstruction</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://kayadentalbydani.com/services/root-canal</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://kayadentalbydani.com/services/dentures</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://kayadentalbydani.com/services/emergency-dentistry</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
@@ -22,6 +24,7 @@
   <url><loc>https://kayadentalbydani.com/payment-plans</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://kayadentalbydani.com/payment-plans/cherry</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://kayadentalbydani.com/reviews</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://kayadentalbydani.com/smile-gallery</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://kayadentalbydani.com/new-patients</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://kayadentalbydani.com/emergency-dental-care</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://kayadentalbydani.com/contact</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
