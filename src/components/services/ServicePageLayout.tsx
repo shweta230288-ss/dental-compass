@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
@@ -51,6 +52,8 @@ interface ServicePageLayoutProps {
   canonicalPath?: string;
   /** Whether to show the "No Insurance? No Problem!" membership banner. */
   showMembershipBanner?: boolean;
+  /** Optional extra content rendered directly after the in-depth sections, e.g. a consultation form. */
+  extraSections?: ReactNode;
 }
 
 
@@ -71,6 +74,7 @@ export function ServicePageLayout({
   relatedServices,
   canonicalPath,
   showMembershipBanner = true,
+  extraSections,
 }: ServicePageLayoutProps) {
 
   const headline = heroHeadline ?? title;
