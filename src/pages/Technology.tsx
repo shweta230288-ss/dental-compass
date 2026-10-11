@@ -7,6 +7,8 @@ import techDigitalXray from '@/assets/tech-digital-xray.jpg';
 import techIteroScanner from '@/assets/tech-itero-scanner.jpg';
 import techAiOverjet from '@/assets/tech-ai-overjet.jpg';
 import techCbct from '@/assets/tech-cbct-scanner.jpg';
+import tech3dPrintCrown from '@/assets/3d-print-crown-in-hand.jpg.asset.json';
+import tech3dPrintInlayOnlay from '@/assets/3d-print-inlay-onlay.jpg.asset.json';
 
 
 const technologies = [
@@ -166,9 +168,36 @@ export default function Technology() {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Using <strong className="text-foreground font-semibold">advanced ceramic-filled restorative materials</strong>, we create custom crowns, inlays, and onlays designed for natural-looking beauty and precise fit. These innovative restorations can help preserve healthy tooth structure when appropriate, with the added convenience of same-day treatment for select cases.
             </p>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-8">
+            <p className="text-muted-foreground text-sm leading-relaxed mb-10">
               Our broader in-office 3D printing capabilities also support custom dental appliances, night guards, and surgical guides.
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
+              {[
+                {
+                  src: tech3dPrintCrown.url,
+                  alt: 'Hand holding a 3D printed dental crown model with the in-office printer behind it',
+                  caption: 'A custom crown model, printed in our office',
+                },
+                {
+                  src: tech3dPrintInlayOnlay.url,
+                  alt: 'Hand holding a printed dental inlay and onlay next to a model of teeth',
+                  caption: 'Inlays and onlays printed in a single appointment',
+                },
+              ].map(({ src, alt, caption }) => (
+                <figure key={caption} className="text-left">
+                  <div className="rounded-2xl overflow-hidden shadow-medium">
+                    <img
+                      src={src}
+                      alt={alt}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full aspect-[16/10] object-cover"
+                    />
+                  </div>
+                  <figcaption className="text-xs text-muted-foreground mt-3 px-1">{caption}</figcaption>
+                </figure>
+              ))}
+            </div>
             <ul className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
               {[
                 { icon: Leaf, label: 'Preserve Natural Teeth' },
