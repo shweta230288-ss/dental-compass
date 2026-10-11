@@ -1,11 +1,14 @@
 import { ServicePageLayout } from '@/components/services/ServicePageLayout';
 import { Layers } from 'lucide-react';
 import heroImage from '@/assets/service-dental-implants-new.jpg';
+import allOnXCaseAsset from '@/assets/all-on-x-case.png.asset.json';
+import { AllOnXConsultationForm } from '@/components/services/AllOnXConsultationForm';
 
 export default function DentalImplants() {
   return (
     <ServicePageLayout
       showMembershipBanner={false}
+      extraSections={<AllOnXConsultationForm />}
       title="Dental Implants"
       heroHeadline="Dental Implants That Replace Missing Teeth for Good"
       canonicalPath="/services/dental-implants"
@@ -33,6 +36,9 @@ While your body heals and bonds with the implant, we make sure you're not left w
           content: `If you're missing most or all of your teeth — or living with a denture you don't love — All-on-X treatment can rebuild an entire arch of teeth on as few as four to six strategically placed implants. Instead of one implant per tooth, a fixed, non-removable bridge of natural-looking teeth is secured to the implants, giving you a complete smile that stays put when you eat, laugh, and speak.
 
 At Kaya Dental, we provide All-on-X treatment for full mouth rehabilitation, planned digitally from start to finish with our in-office CBCT 3D imaging. In many cases, patients leave with a functional set of temporary teeth the same day their implants are placed — you never have to go without a smile. It's a life-changing option for patients with failing teeth or uncomfortable dentures, and we'll walk you through whether it's the right fit for you at a consultation.`,
+          image: allOnXCaseAsset.url,
+          imageAlt:
+            'Before and after photographs of a full mouth rehabilitation at Kaya Dental in Leominster, MA — worn, broken teeth restored with a fixed All-on-X arch of natural-looking teeth',
         },
       ]}
       benefits={[
