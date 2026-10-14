@@ -19,6 +19,7 @@ import staffRachel from '@/assets/staff-rachel.jpg';
 import staffShaz from '@/assets/staff-shaz.jpg';
 import staffYari from '@/assets/staff-yari.jpg';
 import staffIsabela from '@/assets/staff-isabela.jpg';
+import staffClaribel from '@/assets/staff-claribel.png.asset.json';
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -74,6 +75,11 @@ export default function About() {
 
   // Front Office Staff & Treatment Plan Coordinator
   const frontOfficeStaff = [{
+    name: 'Claribel',
+    role: 'Business Lead',
+    image: staffClaribel.url,
+    bio: "With over 15 years of dental practice leadership across New England, Claribel oversees the business side of Kaya Dental. Her background spans patient coordination, practice management, and regional operations, giving her a well-rounded understanding of what makes a dental office run smoothly. A proud Leominster local, she loves serving her own community and creating a warm, welcoming experience for every patient, from the first phone call to checkout."
+  }, {
     name: 'Shaz',
     role: 'Insurance (Wizard) Co-ordinator',
     image: staffShaz,
